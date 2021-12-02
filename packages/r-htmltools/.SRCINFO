@@ -1,0 +1,24 @@
+pkgbase = r-htmltools
+	pkgdesc = Tools for HTML
+	pkgver = 0.5.2
+	pkgrel = 1
+	url = https://cran.r-project.org/package=htmltools
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	depends = r>=2.14.1
+	depends = r-digest
+	depends = r-base64enc
+	depends = r-rlang>=0.4.10
+	depends = r-fastmap
+	optdepends = r-markdown
+	optdepends = r-testthat
+	optdepends = r-withr
+	optdepends = r-cairo
+	optdepends = r-ragg
+	optdepends = r-shiny
+	source = https://cran.r-project.org/src/contrib/htmltools_0.5.2.tar.gz
+	sha256sums = 7dc7d50436e5a82a5801f85bcd2f572a06a98b4027d71aa17b4854ec9b2767fb
+
+pkgname = r-htmltools

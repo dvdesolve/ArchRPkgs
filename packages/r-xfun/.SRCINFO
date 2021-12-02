@@ -1,0 +1,27 @@
+pkgbase = r-xfun
+	pkgdesc = Supporting Functions for Packages Maintained by "Yihui Xie"
+	pkgver = 0.28
+	pkgrel = 1
+	url = https://cran.r-project.org/package=xfun
+	arch = i686
+	arch = x86_64
+	license = MIT
+	depends = r
+	optdepends = r-testit
+	optdepends = r-rstudioapi
+	optdepends = r-tinytex
+	optdepends = r-mime
+	optdepends = r-markdown
+	optdepends = r-knitr
+	optdepends = r-htmltools
+	optdepends = r-remotes
+	optdepends = r-pak
+	optdepends = r-rhub
+	optdepends = r-renv
+	optdepends = r-curl
+	optdepends = r-jsonlite
+	optdepends = r-rmarkdown
+	source = https://cran.r-project.org/src/contrib/xfun_0.28.tar.gz
+	sha256sums = 0b5be439de8bceb166d98de956eacc7c723378f8af8feef8169ca40c0a683b32
+
+pkgname = r-xfun
