@@ -1,0 +1,14 @@
+pkgbase = r-r6
+	pkgdesc = Encapsulated Classes with Reference Semantics
+	pkgver = 2.5.1
+	pkgrel = 1
+	url = https://cran.r-project.org/package=R6
+	arch = any
+	license = MIT
+	depends = r>=3.0
+	optdepends = r-testthat
+	optdepends = r-pryr
+	source = https://cran.r-project.org/src/contrib/R6_2.5.1.tar.gz
+	sha256sums = 8d92bd29c2ed7bf15f2778618ffe4a95556193d21d8431a7f75e7e5fc102bf48
+
+pkgname = r-r6

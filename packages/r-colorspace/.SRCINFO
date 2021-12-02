@@ -1,0 +1,30 @@
+pkgbase = r-colorspace
+	pkgdesc = A Toolbox for Manipulating and Assessing Colors and Palettes
+	pkgver = 2.0.2
+	pkgrel = 1
+	url = https://cran.r-project.org/package=colorspace
+	arch = i686
+	arch = x86_64
+	license = BSD3
+	depends = r>=3.0.0
+	optdepends = r-kernlab
+	optdepends = r-mvtnorm
+	optdepends = r-vcd
+	optdepends = r-shiny
+	optdepends = r-shinyjs
+	optdepends = r-ggplot2
+	optdepends = r-dplyr
+	optdepends = r-scales
+	optdepends = r-png
+	optdepends = r-jpeg
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	optdepends = r-rcolorbrewer
+	optdepends = r-rcartocolor
+	optdepends = r-scico
+	optdepends = r-viridis
+	optdepends = r-wesanderson
+	source = https://cran.r-project.org/src/contrib/colorspace_2.0-2.tar.gz
+	sha256sums = b891cd2ec129ed5f116429345947bcaadc33969758a108521eb0cf36bd12183a
+
+pkgname = r-colorspace
