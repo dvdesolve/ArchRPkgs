@@ -5,7 +5,6 @@ r-askpass
 r-assertthat
 r-backports
 r-bas
-r-base64enc
 r-bh
 r-bindr
 r-bindrcpp
@@ -78,12 +77,10 @@ r-ecb
 r-editdata
 r-egg
 r-emt
-r-evaluate
 r-exact
 r-expm
 r-extrafont
 r-extrafontdb
-r-fastmap
 r-fields
 r-filehash
 r-fontawesome
@@ -130,10 +127,7 @@ r-gower
 r-gridextra
 r-gtools
 r-haven
-r-highr
 r-hms
-r-htmltools
-r-htmlwidgets
 r-httpuv
 r-httr
 r-hunspell
@@ -149,8 +143,6 @@ r-isoweek
 r-iterators
 r-jpeg
 r-jquerylib
-r-jsonlite
-r-knitr
 r-lambda.r
 r-later
 r-latticeextra
@@ -187,7 +179,6 @@ r-miniui
 r-minpack.lm
 r-minqa
 r-misc3d
-r-mkl
 r-mnormt
 r-modelmetrics
 r-modelr
@@ -256,7 +247,6 @@ r-reprex
 r-reshape2
 r-rex
 r-rgdal
-r-rgl
 r-rhtslib
 r-rinside
 r-rio
@@ -302,9 +292,6 @@ r-splus2r
 r-squarem
 r-stanheaders
 r-statmod
-r-stringi
-r-stringr
-r-studio-for-linux-bin
 r-summarizedexperiment
 r-swirl
 r-sys
@@ -334,7 +321,6 @@ r-waldo
 r-webshot
 r-whisker
 r-wk
-r-xfun
 r-xml
 r-xml2
 r-xmlparsedata
@@ -342,7 +328,6 @@ r-xopen
 r-xtable
 r-xts
 r-xvector
-r-yaml
 r-zeallot
 r-zip
 r-zlibbioc
