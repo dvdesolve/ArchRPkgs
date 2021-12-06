@@ -1,0 +1,21 @@
+pkgbase = r-e1071
+	pkgdesc = Misc Functions of the Department of Statistics, Probability Theory Group (Formerly: E1071), TU Wien
+	pkgver = 1.7.9
+	pkgrel = 1
+	url = https://cran.r-project.org/package=e1071
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	depends = r
+	depends = r-proxy
+	optdepends = r-mlbench
+	optdepends = r-randomforest
+	optdepends = r-rpart
+	optdepends = r-sparsem
+	optdepends = r-xtable
+	optdepends = r-slam
+	source = https://cran.r-project.org/src/contrib/e1071_1.7-9.tar.gz
+	sha256sums = 9bf9a15e7ce0b9b1a57ce3048d29cbea7f2a5bb2e91271b1b6aaafe07c852226
+
+pkgname = r-e1071

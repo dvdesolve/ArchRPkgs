@@ -1,0 +1,31 @@
+pkgbase = r-car
+	pkgdesc = Companion to Applied Regression
+	pkgver = 3.0.12
+	pkgrel = 1
+	url = https://cran.r-project.org/package=car
+	arch = any
+	license = GPL2
+	license = GPL3
+	depends = r>=3.5.0
+	depends = r-cardata>=3.0.0
+	depends = r-abind
+	depends = r-pbkrtest>=0.4.4
+	depends = r-quantreg
+	depends = r-maptools
+	depends = r-lme4>=1.1.27.1
+	optdepends = r-alr4
+	optdepends = r-coxme
+	optdepends = r-effects
+	optdepends = r-knitr
+	optdepends = r-leaps
+	optdepends = r-lmtest
+	optdepends = r-matrixmodels
+	optdepends = r-rgl
+	optdepends = r-rio
+	optdepends = r-sandwich
+	optdepends = r-sparsem
+	optdepends = r-survey
+	source = https://cran.r-project.org/src/contrib/car_3.0-12.tar.gz
+	sha256sums = b899a6efae3842a90a2349d381dbcf4b4ed36bd03108ebe7380e81120e457302
+
+pkgname = r-car

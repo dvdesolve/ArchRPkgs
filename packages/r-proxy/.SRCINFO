@@ -1,0 +1,14 @@
+pkgbase = r-proxy
+	pkgdesc = Distance and Similarity Measures
+	pkgver = 0.4.26
+	pkgrel = 1
+	url = https://cran.r-project.org/package=proxy
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = r>=3.4.0
+	optdepends = r-cba
+	source = https://cran.r-project.org/src/contrib/proxy_0.4-26.tar.gz
+	sha256sums = 676bad821343974e0297a0566c4bf0cf0ea890104906a745b87d3b5989c81a4d
+
+pkgname = r-proxy

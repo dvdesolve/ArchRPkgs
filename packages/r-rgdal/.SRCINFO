@@ -1,0 +1,25 @@
+pkgbase = r-rgdal
+	pkgdesc = Bindings for the 'Geospatial' Data Abstraction Library
+	pkgver = 1.5.27
+	pkgrel = 1
+	url = https://cran.r-project.org/package=rgdal
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	depends = r>=3.5.0
+	depends = r-sp>=1.1.0
+	depends = proj
+	depends = gdal
+	optdepends = r-knitr
+	optdepends = r-dbi
+	optdepends = r-rsqlite
+	optdepends = r-maptools
+	optdepends = r-mapview
+	optdepends = r-rmarkdown
+	optdepends = r-curl
+	optdepends = r-rgeos
+	source = https://cran.r-project.org/src/contrib/rgdal_1.5-27.tar.gz
+	sha256sums = 62a555ed7b5424dd0252b3764e3542fb30c524d06e8245215bcfaedd84ee5756
+
+pkgname = r-rgdal
