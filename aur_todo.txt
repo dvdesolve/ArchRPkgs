@@ -13,15 +13,12 @@ r-biostrings
 r-bis
 r-bit
 r-bit64
-r-bitops
 r-blob
 r-blogdown
 r-bookdown
 r-brew
 r-brio
 r-bsda
-r-bslib
-r-cachem
 r-callr
 r-catools
 r-cellranger
@@ -31,7 +28,6 @@ r-clipr
 r-clisymbols
 r-coda
 r-coin
-r-commonmark
 r-conquer
 r-corpus
 r-corrplot
@@ -55,7 +51,6 @@ r-dicekriging
 r-dichromat
 r-diffobj
 r-docopt
-r-dotcall64
 r-dtplyr
 r-ecb
 r-editdata
@@ -65,15 +60,10 @@ r-exact
 r-expm
 r-extrafont
 r-extrafontdb
-r-fields
 r-filehash
-r-fontawesome
 r-forcats
 r-formatr
-r-formula
-r-formula.tools
 r-fredr
-r-fs
 r-futile.logger
 r-futile.options
 r-gargle
@@ -101,11 +91,9 @@ r-gitcreds
 r-gld
 r-googledrive
 r-googlesheets4
-r-gridextra
 r-gtools
 r-haven
 r-hms
-r-httpuv
 r-httr
 r-hunspell
 r-hwriter
@@ -127,7 +115,6 @@ r-lmodel2
 r-lmom
 r-loo
 r-manipulatewidget
-r-maps
 r-markdown
 r-mathjaxr
 r-matrixgenerics
@@ -137,8 +124,6 @@ r-metadynminer
 r-metadynminer-git
 r-metadynminer3d
 r-metadynminer3d-git
-r-metr
-r-mime
 r-miniui
 r-minpack.lm
 r-misc3d
@@ -152,7 +137,6 @@ r-mvtnorm
 r-nortest
 r-openssl
 r-openxlsx
-r-operator.tools
 r-optparse
 r-pbdzmq
 r-pkgbuild
@@ -174,12 +158,10 @@ r-r.oo
 r-r.utils
 r-r2html
 r-r5r
-r-rappdirs
 r-raster
 r-rcmdcheck
 r-rcompanion
 r-rcppparallel
-r-rcurl
 r-readr
 r-readxl
 r-rematch
@@ -209,7 +191,6 @@ r-rvest
 r-s2
 r-s4vectors
 r-sandwich
-r-sass
 r-selectr
 r-servr
 r-sessioninfo
@@ -217,14 +198,11 @@ r-sf
 r-sfheaders
 r-sfsmisc
 r-sha3sum
-r-shiny
 r-shinyjs
 r-shinywidgets
 r-shortread
 r-simpleitk
 r-snow
-r-sourcetools
-r-spam
 r-spelling
 r-splus2r
 r-stanheaders
@@ -249,7 +227,6 @@ r-unix
 r-usethis
 r-uuid
 r-v8
-r-viridis
 r-vroom
 r-waldo
 r-webshot
@@ -259,7 +236,6 @@ r-xml
 r-xml2
 r-xmlparsedata
 r-xopen
-r-xtable
 r-xts
 r-xvector
 r-zeallot

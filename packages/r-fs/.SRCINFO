@@ -1,0 +1,24 @@
+pkgbase = r-fs
+	pkgdesc = Cross-Platform File System Operations Based on 'libuv'
+	pkgver = 1.5.1
+	pkgrel = 1
+	url = https://cran.r-project.org/package=fs
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = make
+	depends = r>=3.1
+	optdepends = r-testthat
+	optdepends = r-covr
+	optdepends = r-pillar
+	optdepends = r-tibble
+	optdepends = r-crayon
+	optdepends = r-rmarkdown
+	optdepends = r-knitr
+	optdepends = r-withr
+	optdepends = r-spelling
+	optdepends = r-vctrs
+	source = https://cran.r-project.org/src/contrib/fs_1.5.1.tar.gz
+	sha256sums = e1c7ebeab0322a171b871422efdccb02c63b797a98b694ccb4423ed20e3c8e62
+
+pkgname = r-fs
