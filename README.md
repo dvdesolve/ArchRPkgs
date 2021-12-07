@@ -23,3 +23,6 @@ Please also note that this repository can contain some extra packages which are 
 
 ## Reporting bugs, problems, requests
 To propose your ideas, report bugs etc. feel free to use issues mechanism of GitHub.
+
+## TODO
+Not of all AUR R packages have been migrated here so far. You can consult `aur_todo.txt` and help with porting them here, if you want.
