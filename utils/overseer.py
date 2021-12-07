@@ -4,16 +4,12 @@
 
 ## import necessary modules
 import argparse
-import git
-import json
 import multiprocessing
 import os
 import re
-import shutil
 import sys
-import tempfile
 from urllib.error import URLError, HTTPError
-from urllib.parse import urlencode, urlparse
+from urllib.parse import urlparse
 from urllib.request import urlopen
 
 
@@ -86,8 +82,6 @@ PKGS_DEFAULT = [
         "stats4", "survival", "tcltk", "tools", "utils"
         ]
 
-GIT_REPO = "https://github.com/dvdesolve/ArchRPkgs.git"
-
 SUPPORTED_REPOS = [
     {
         "name": "CRAN",
@@ -115,7 +109,7 @@ SCRIPT_VERSION = "0.1.0"
 def check_updates(package):
     """ check updates for single package """
 
-    # some repositories are not supported yet
+    # check for compatible upstream repository
     domain = "{uri.netloc}".format(uri=urlparse(package["URL"])).lower()
 
     if not any(r["url"] == domain for r in SUPPORTED_REPOS):
@@ -220,18 +214,13 @@ def checker_worker(packages, total, finished, output):
 def check():
     """ check packages for updates """
 
-    # create temporary directory for repo cloning
-    t = tempfile.mkdtemp()
-
-    # clone base repository
-    git.Repo.clone_from(GIT_REPO, t, branch="master", depth=1)
-
-    # prepare future package list
+    # prepare shared package list
     pkglist = []
 
     # traverse all available packages in our repository
-    for root, subdirs, files in os.walk(os.path.join(t, "packages")):
+    for root, subdirs, files in os.walk(os.path.join("..", "packages")):
         for file in files:
+            # parse only .SRCINFO files
             if file == ".SRCINFO":
                 fname = os.path.join(root, file)
 
@@ -250,9 +239,11 @@ def check():
                     if token.startswith("pkgver = "):
                         pkgver = token.split(" = ")[1].strip()
 
+                # add package to the shared list
                 package = {"Name": pkgname, "Version": pkgver, "URL": pkgurl}
                 pkglist.append(package)
 
+    # check if we've found something
     if len(pkglist) == 0:
         print("{}[ERROR]{} There are no R packages found in the repository".format(
             MessageColor.error, MessageColor.nc))
@@ -298,8 +289,6 @@ def check():
     else:
         for line in output_info:
             print(line)
-
-    shutil.rmtree(t)
 
 
 def validate():
