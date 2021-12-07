@@ -302,6 +302,10 @@ def check():
     shutil.rmtree(t)
 
 
+def validate():
+    pass
+
+
 def main():
     """ main routine """
 
@@ -327,10 +331,6 @@ def main():
         validate()
 
         print()
-    else:
-        print("{}[ERROR]{} Unrecognized option {}{}{}".format(
-            MessageColor.error, MessageColor.nc,
-            MessageColor.data, command, MessageColor.nc))
 
     # final print
     print("{}[OK]{} Job done".format(
