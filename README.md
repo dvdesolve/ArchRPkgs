@@ -21,6 +21,8 @@ Currently only `x86_64` architecture is supported but `i686` and ARM-specific re
 ```
 Please also note that this repository can contain some extra packages which are not R-related (such as Qt4), so please be careful and check what and from where you're installing.
 
+For more information see [this](https://wiki.archlinux.org/title/Unofficial_user_repositories#desolve) ArchWiki subsection.
+
 ## Reporting bugs, problems, requests
 To propose your ideas, report bugs etc. feel free to use issues mechanism of GitHub.
 
