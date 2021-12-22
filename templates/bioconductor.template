@@ -1,0 +1,26 @@
+_bcname=
+_bcver=
+pkgname=r-${_bcname,,}
+pkgver=${_bcver//[:-]/.}
+pkgrel=1
+pkgdesc=""
+arch=()
+url="https://bioconductor.org/packages/${_bcname}"
+license=()
+depends=(r)
+makedepends=()
+optdepends=()
+source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
+# or
+# source=("https://bioconductor.org/packages/release/data/annotation/src/contrib/${_bcname}_${_bcver}.tar.gz")
+sha256sums=()
+
+build() {
+  R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_bcname}" "${pkgdir}/usr/lib/R/library"
+}

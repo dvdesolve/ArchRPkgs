@@ -1,7 +1,7 @@
 pkgbase = r-quantreg
 	pkgdesc = Quantile Regression
 	pkgver = 5.86
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=quantreg
 	arch = i686
 	arch = x86_64
@@ -9,6 +9,7 @@ pkgbase = r-quantreg
 	license = GPL3
 	makedepends = gcc-fortran
 	depends = r>=2.6
+	depends = gcc-fortran
 	depends = r-sparsem
 	depends = r-matrixmodels
 	depends = r-conquer

@@ -1,7 +1,7 @@
 pkgbase = r-spam
 	pkgdesc = SPArse Matrix
 	pkgver = 2.7.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=spam
 	arch = i686
 	arch = x86_64
@@ -9,6 +9,7 @@ pkgbase = r-spam
 	license = BSD3
 	makedepends = gcc-fortran
 	depends = r>=3.1
+	depends = gcc-fortran
 	depends = r-dotcall64
 	optdepends = r-spam64
 	optdepends = r-fields

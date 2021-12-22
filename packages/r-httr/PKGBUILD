@@ -1,0 +1,26 @@
+# Maintainer: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: dhn <neilson+aur@sent.com>
+
+_cranname=httr
+_cranver=1.4.2
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Tools for Working with URLs and HTTP"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(MIT)
+depends=('r>=3.2' 'r-curl>=3.0.0' r-jsonlite r-mime 'r-openssl>=0.8' r-r6)
+optdepends=(r-covr r-httpuv r-jpeg r-knitr r-png r-readr r-rmarkdown r-testthat r-xml2)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('462bed6ed0d92f811d5df4d294336025f1dbff357286999d9269bfd9c20b1ef9')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

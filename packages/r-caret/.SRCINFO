@@ -1,7 +1,7 @@
 pkgbase = r-caret
 	pkgdesc = Classification and Regression Training
 	pkgver = 6.0.90
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=caret
 	arch = i686
 	arch = x86_64
@@ -39,7 +39,6 @@ pkgbase = r-caret
 	optdepends = r-randomforest
 	optdepends = r-rann
 	optdepends = r-rmarkdown
-	optdepends = r-rpart
 	optdepends = r-spls
 	optdepends = r-subselect
 	optdepends = r-superpc

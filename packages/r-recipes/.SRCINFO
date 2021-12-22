@@ -1,7 +1,7 @@
 pkgbase = r-recipes
 	pkgdesc = Preprocessing Tools to Create Design Matrices
 	pkgver = 0.1.17
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=recipes
 	arch = any
 	license = MIT
@@ -36,7 +36,6 @@ pkgbase = r-recipes
 	optdepends = r-rann
 	optdepends = r-rcpproll
 	optdepends = r-rmarkdown
-	optdepends = r-rpart
 	optdepends = r-rsample
 	optdepends = r-rspectra
 	optdepends = r-testthat

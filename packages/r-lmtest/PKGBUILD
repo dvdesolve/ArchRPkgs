@@ -4,12 +4,12 @@ _cranname=lmtest
 _cranver=0.9-39
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Testing Linear Regression Models"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=3.0.0' r-zoo)
+depends=('r>=3.0.0' gcc-fortran r-zoo)
 makedepends=(gcc-fortran)
 optdepends=(r-car r-strucchange r-sandwich r-dynlm r-aer)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
