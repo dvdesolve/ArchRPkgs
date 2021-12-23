@@ -1,7 +1,5 @@
 r-analyticflow
-r-animation
 r-bas
-r-bindr
 r-bindrcpp
 r-biobase
 r-biocgenerics
@@ -9,20 +7,13 @@ r-biocmanager
 r-biocparallel
 r-biostrings
 r-bis
-r-blogdown
-r-bookdown
-r-brew
 r-bsda
-r-catools
 r-chron
 r-classint
 r-clisymbols
 r-coda
-r-coin
 r-conquer
 r-corpus
-r-covr
-r-credentials
 r-cyclocomp
 r-dada2
 r-delayedarray
@@ -80,7 +71,6 @@ r-isoweek
 r-jpeg
 r-lambda.r
 r-latticeextra
-r-libcoin
 r-limer-git
 r-lintr
 r-linux
@@ -100,11 +90,8 @@ r-miniui
 r-minpack.lm
 r-misc3d
 r-modelr
-r-modeltools
 r-move
-r-multcomp
 r-multcompview
-r-mvtnorm
 r-nortest
 r-optparse
 r-pbdzmq
@@ -133,7 +120,6 @@ r-rex
 r-rhtslib
 r-rinside
 r-rjava
-r-rmarkdown
 r-rodbc
 r-rootsolve
 r-roxygen2
@@ -148,9 +134,7 @@ r-rversions
 r-rvest
 r-s2
 r-s4vectors
-r-sandwich
 r-selectr
-r-servr
 r-sessioninfo
 r-sf
 r-sfheaders
@@ -172,10 +156,8 @@ r-tech1-git
 r-terra
 r-testit
 r-testthat
-r-th.data
 r-tidyverse
 r-tikzdevice
-r-tinytex
 r-tkrplot
 r-units
 r-unix

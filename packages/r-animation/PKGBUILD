@@ -1,0 +1,30 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=animation
+_cranver=2.7
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="A Gallery of Animations in Statistics and Utilities to Create Animations"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL2 GPL3)
+depends=('r>=2.14.0' r-magick)
+optdepends=(r-testit
+            'imagemagick: saveGIF() support'
+            'graphicsmagick: saveGIF() support'
+            'lyx: saveGIF() support'
+            'texlive-bin: saveLatex() support'
+            'ffmpeg: saveVideo() support')
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('88418f1b04ec785963bad492f30eb48b05914e9e5d88c7eef705d949cbd7e469')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}
