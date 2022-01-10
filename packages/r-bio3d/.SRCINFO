@@ -1,0 +1,26 @@
+pkgbase = r-bio3d
+	pkgdesc = Biological Structure Analysis
+	pkgver = 2.4.2
+	pkgrel = 1
+	url = https://cran.r-project.org/package=bio3d
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	depends = r>=3.1.0
+	depends = r-rcpp
+	optdepends = r-xml
+	optdepends = r-rcurl
+	optdepends = r-ncdf4
+	optdepends = r-igraph
+	optdepends = r-bigmemory
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	optdepends = r-testthat
+	optdepends = r-httr
+	optdepends = r-msa
+	optdepends = r-biostrings
+	source = https://cran.r-project.org/src/contrib/bio3d_2.4-2.tar.gz
+	sha256sums = 91415766cda0f96557e6bc568dbce8d44254a9460f2e2d0beed0ce14ffad6ccb
+
+pkgname = r-bio3d

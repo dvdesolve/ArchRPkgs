@@ -19,7 +19,6 @@ r-dada2
 r-delayedarray
 r-deprecated-215
 r-desc
-r-desctools
 r-deseq2
 r-devel-svn
 r-devtools
@@ -32,8 +31,6 @@ r-ecb
 r-editdata
 r-egg
 r-emt
-r-exact
-r-expm
 r-extrafont
 r-extrafontdb
 r-filehash
@@ -56,7 +53,6 @@ r-getopt
 r-ggpmisc
 r-ggpp
 r-ggthemes
-r-gld
 r-googledrive
 r-googlesheets4
 r-gtools
@@ -75,7 +71,6 @@ r-limer-git
 r-lintr
 r-linux
 r-lmodel2
-r-lmom
 r-manipulatewidget
 r-markdown
 r-mathjaxr
@@ -121,13 +116,11 @@ r-rhtslib
 r-rinside
 r-rjava
 r-rodbc
-r-rootsolve
 r-roxygen2
 r-rprojroot
 r-rsamtools
 r-rsdmx
 r-rstan
-r-rstudioapi
 r-rttf2pt1
 r-rustinr-git
 r-rversions
@@ -163,7 +156,6 @@ r-units
 r-unix
 r-usethis
 r-uuid
-r-v8
 r-waldo
 r-webshot
 r-whisker
