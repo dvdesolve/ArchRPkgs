@@ -1,0 +1,15 @@
+pkgbase = r-png
+	pkgdesc = Read and write PNG images
+	pkgver = 0.1.7
+	pkgrel = 1
+	url = https://cran.r-project.org/package=png
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	depends = r>=2.9.0
+	depends = libpng
+	source = https://cran.r-project.org/src/contrib/png_0.1-7.tar.gz
+	sha256sums = e269ff968f04384fc9421d17cfc7c10cf7756b11c2d6d126e9776f5aca65553c
+
+pkgname = r-png

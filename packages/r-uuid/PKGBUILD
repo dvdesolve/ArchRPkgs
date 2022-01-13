@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: Pranav K Anupam <pranavanupam@yahoo.com>
+
+_cranname=uuid
+_cranver=1.0-3
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Tools for Generating and Handling of UUIDs"
+arch=(i686 x86_64)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(MIT)
+depends=('r>=2.9.0')
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('456e4633659f20242fd7cd585ad005a3e07265f1d1db383fca6794c8ac2c8346')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}
