@@ -14,9 +14,7 @@ r-corpus
 r-cyclocomp
 r-dada2
 r-delayedarray
-r-deprecated-215
 r-deseq2
-r-devel-svn
 r-devtools
 r-dicekriging
 r-dichromat
@@ -42,7 +40,6 @@ r-irlba
 r-islr
 r-isoweek
 r-latticeextra
-r-limer-git
 r-lintr
 r-linux
 r-lmodel2
@@ -51,9 +48,7 @@ r-matrixgenerics
 r-mco
 r-memoise
 r-metadynminer
-r-metadynminer-git
 r-metadynminer3d
-r-metadynminer3d-git
 r-minpack.lm
 r-move
 r-multcompview
@@ -75,7 +70,6 @@ r-rodbc
 r-roxygen2
 r-rsdmx
 r-rttf2pt1
-r-rustinr-git
 r-rversions
 r-s2
 r-sf
@@ -89,7 +83,6 @@ r-statmod
 r-summarizedexperiment
 r-swirl
 r-systemfonts
-r-tech1-git
 r-testit
 r-tkrplot
 r-units
