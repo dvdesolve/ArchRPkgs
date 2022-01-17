@@ -1,0 +1,26 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: Pekka Ristola <pekka [dot] a [dot] ristola [at] gmail [dot] com>
+
+_cranname=shinyjs
+_cranver=2.1.0
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Easily Improve the User Experience of Your Shiny Apps in Seconds"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(MIT)
+depends=('r>=3.1.0' 'r-digest>=0.6.8' r-jsonlite 'r-shiny>=1.0.0')
+optdepends=(r-htmltools r-knitr r-rmarkdown r-shinyace r-shinydisconnect r-testthat)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('7ec20cbf1b1fd7a32d85a56dfc0df8b5f67c828d241da400a21d893cb37ea9c5')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

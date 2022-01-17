@@ -1,0 +1,26 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: peippo <christoph+aur@christophfink.com>
+
+_cranname=terra
+_cranver=1.5-12
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Spatial Data Analysis"
+arch=(i686 x86_64)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL3)
+depends=('r>=3.5.0' r-rcpp 'gdal>=2.2.3' 'geos>=3.4.0' 'proj>=4.9.3' sqlite)
+optdepends=(r-tinytest r-ncdf4 r-sf r-deldir r-xml r-igraph)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('865cc14ee8c3239037c08170df4011eed27cf638ac1d05f0b7cd704abf97cc19')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

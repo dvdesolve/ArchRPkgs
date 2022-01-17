@@ -1,0 +1,16 @@
+pkgbase = r-futile.logger
+	pkgdesc = A Logging Utility for R
+	pkgver = 1.4.3
+	pkgrel = 1
+	url = https://cran.r-project.org/package=futile.logger
+	arch = any
+	license = LGPL3
+	depends = r>=3.0.0
+	depends = r-lambda.r>=1.1.0
+	depends = r-futile.options
+	optdepends = r-testthat
+	optdepends = r-jsonlite
+	source = https://cran.r-project.org/src/contrib/futile.logger_1.4.3.tar.gz
+	sha256sums = 5e8b32d65f77a86d17d90fd8690fc085aa0612df8018e4d6d6c1a60fa65776e4
+
+pkgname = r-futile.logger

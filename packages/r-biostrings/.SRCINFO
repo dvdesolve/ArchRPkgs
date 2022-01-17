@@ -1,0 +1,31 @@
+pkgbase = r-biostrings
+	pkgdesc = Efficient manipulation of biological strings
+	pkgver = 2.62.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/release/bioc/html/Biostrings.html
+	arch = i686
+	arch = x86_64
+	license = Artistic-2.0
+	depends = r>=4.0.0
+	depends = r-biocgenerics>=0.37.0
+	depends = r-s4vectors>=0.27.12
+	depends = r-iranges>=2.23.9
+	depends = r-xvector>=0.29.2
+	depends = r-genomeinfodb
+	depends = r-crayon
+	optdepends = r-bsgenome
+	optdepends = r-bsgenome.celegans.ucsc.ce2
+	optdepends = r-bsgenome.dmelanogaster.ucsc.dm3
+	optdepends = r-bsgenome.hsapiens.ucsc.hg18
+	optdepends = r-drosophila2probe
+	optdepends = r-hgu95av2probe
+	optdepends = r-hgu133aprobe
+	optdepends = r-genomicfeatures
+	optdepends = r-hgu95av2cdf
+	optdepends = r-affy
+	optdepends = r-affydata
+	optdepends = r-runit
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/Biostrings_2.62.0.tar.gz
+	sha256sums = b88fae10bf1bd98b658503dfb21c8ebf0f4eb2ab4fec52581ddfcd3a0ce21387
+
+pkgname = r-biostrings

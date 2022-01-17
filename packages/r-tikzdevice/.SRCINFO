@@ -1,0 +1,26 @@
+pkgbase = r-tikzdevice
+	pkgdesc = R Graphics Output in LaTeX Format
+	pkgver = 0.12.3.1
+	pkgrel = 1
+	url = https://cran.r-project.org/package=tikzDevice
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	depends = r>=2.14.0
+	depends = r-filehash>=2.3
+	depends = r-png
+	depends = libpgf>=2.00
+	optdepends = r-evaluate
+	optdepends = r-formatr
+	optdepends = r-ggplot2
+	optdepends = r-knitr
+	optdepends = r-maps
+	optdepends = r-scales
+	optdepends = r-stringr
+	optdepends = r-testthat
+	optdepends = r-withr
+	source = https://cran.r-project.org/src/contrib/tikzDevice_0.12.3.1.tar.gz
+	sha256sums = 5bed80c0fca8806f0d0c0c2930e7184119b3abd7275165530d251410b9f91e10
+
+pkgname = r-tikzdevice
