@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
-_cranname=rgdal
-_cranver=1.5-28
+_cranname=remotes
+_cranver=2.4.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
-pkgdesc="Bindings for the 'Geospatial' Data Abstraction Library"
-arch=(i686 x86_64)
+pkgrel=1
+pkgdesc="R Package Installation from Remote Repositories, Including 'GitHub'"
+arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.5.0' 'r-sp>=1.1.0' proj gdal)
-optdepends=(r-knitr r-dbi r-rsqlite r-maptools r-mapview r-rmarkdown r-curl r-rgeos)
+license=(MIT)
+depends=('r>=3.0.0' subversion git)
+optdepends=(r-brew r-callr r-curl r-covr r-git2r r-knitr r-mockery r-pkgbuild r-pingr r-rmarkdown r-rprojroot r-testthat r-webfakes r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7f54432cfa8c0db463f68e8856c3ca0a90671dc841ac5203af049eb318e261a2')
+sha256sums=('f2ef875f24a485bf4f55a8c830f87cdd5db868f9a8cdb624dc452d0bf66ba516')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

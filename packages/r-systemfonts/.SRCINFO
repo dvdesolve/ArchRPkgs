@@ -1,0 +1,20 @@
+pkgbase = r-systemfonts
+	pkgdesc = System Native Font Finding
+	pkgver = 1.0.3
+	pkgrel = 1
+	url = https://cran.r-project.org/package=systemfonts
+	arch = i686
+	arch = x86_64
+	license = MIT
+	depends = r>=3.2.0
+	depends = fontconfig
+	depends = freetype2
+	depends = r-cpp11>=0.2.1
+	optdepends = r-testthat
+	optdepends = r-covr
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	source = https://cran.r-project.org/src/contrib/systemfonts_1.0.3.tar.gz
+	sha256sums = 647c99d5ea6f90a49768ea7b10b39816af6be85168475273369fd973a20dbbba
+
+pkgname = r-systemfonts

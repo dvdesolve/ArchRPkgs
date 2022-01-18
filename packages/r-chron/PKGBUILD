@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
-_cranname=rgdal
-_cranver=1.5-28
+_cranname=chron
+_cranver=2.3-56
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
-pkgdesc="Bindings for the 'Geospatial' Data Abstraction Library"
+pkgrel=1
+pkgdesc="Chronological Objects which can Handle Dates and Times"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.5.0' 'r-sp>=1.1.0' proj gdal)
-optdepends=(r-knitr r-dbi r-rsqlite r-maptools r-mapview r-rmarkdown r-curl r-rgeos)
+license=(GPL2)
+depends=('r>=2.12.0')
+optdepends=(r-scales r-ggplot2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7f54432cfa8c0db463f68e8856c3ca0a90671dc841ac5203af049eb318e261a2')
+sha256sums=('863ecbb951a3da994761ea9062fa96d34e94e19fbc4122521ac179274dfa3f5d')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,0 +1,38 @@
+pkgbase = r-move
+	pkgdesc = Visualizing and Analyzing Animal Track Data
+	pkgver = 4.1.6
+	pkgrel = 1
+	url = https://cran.r-project.org/package=move
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	depends = r>=3.5.0
+	depends = r-geosphere>=1.4.3
+	depends = r-sp
+	depends = r-raster>=3.5.2
+	depends = r-rgdal
+	depends = r-httr
+	depends = r-memoise
+	depends = r-xml2
+	depends = r-rcpp
+	optdepends = r-adehabitathr
+	optdepends = r-adehabitatlt
+	optdepends = r-markdown
+	optdepends = r-rmarkdown
+	optdepends = r-circular
+	optdepends = r-ggmap
+	optdepends = r-mapproj
+	optdepends = r-maptools
+	optdepends = r-testthat
+	optdepends = r-knitr
+	optdepends = r-ggplot2
+	optdepends = r-leaflet
+	optdepends = r-lubridate
+	optdepends = r-ctmm
+	optdepends = r-amt
+	optdepends = r-bcpa
+	optdepends = r-embc
+	source = https://cran.r-project.org/src/contrib/move_4.1.6.tar.gz
+	sha256sums = 2925c46ef0d9bec7cefe467fad9b6d791ac1b4de90615c645e46ac59e2ab297e
+
+pkgname = r-move

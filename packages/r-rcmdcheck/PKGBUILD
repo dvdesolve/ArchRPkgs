@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
-_cranname=rgdal
-_cranver=1.5-28
+_cranname=rcmdcheck
+_cranver=1.4.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
-pkgdesc="Bindings for the 'Geospatial' Data Abstraction Library"
-arch=(i686 x86_64)
+pkgrel=1
+pkgdesc="Run 'R CMD check' from 'R' and Capture Results"
+arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.5.0' 'r-sp>=1.1.0' proj gdal)
-optdepends=(r-knitr r-dbi r-rsqlite r-maptools r-mapview r-rmarkdown r-curl r-rgeos)
+license=(MIT)
+depends=(r 'r-callr>=3.1.1.9000' 'r-cli>=3.0.0' r-curl 'r-desc>=1.2.0' r-digest r-pkgbuild r-prettyunits r-r6 r-rprojroot 'r-sessioninfo>=1.1.1' r-withr r-xopen)
+optdepends=(r-covr r-knitr r-mockery r-processx r-ps r-rmarkdown r-svglite r-testthat r-webfakes)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7f54432cfa8c0db463f68e8856c3ca0a90671dc841ac5203af049eb318e261a2')
+sha256sums=('bbd4ef7d514b8c2076196a7c4a6041d34623d55fbe73f2771758ce61fd32c9d0')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

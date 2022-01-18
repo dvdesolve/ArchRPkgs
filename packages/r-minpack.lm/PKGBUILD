@@ -1,18 +1,19 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: Grey Christoforo <first name at last name dot net>
 
-_cranname=rgdal
-_cranver=1.5-28
+_cranname=minpack.lm
+_cranver=1.2-1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
-pkgdesc="Bindings for the 'Geospatial' Data Abstraction Library"
+pkgrel=1
+pkgdesc="R Interface to the Levenberg-Marquardt Nonlinear Least-Squares Algorithm Found in MINPACK, Plus Support for Bounds"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.5.0' 'r-sp>=1.1.0' proj gdal)
-optdepends=(r-knitr r-dbi r-rsqlite r-maptools r-mapview r-rmarkdown r-curl r-rgeos)
+license=(GPL3)
+depends=(r gcc-fortran)
+makedepends=(gcc-fortran)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7f54432cfa8c0db463f68e8856c3ca0a90671dc841ac5203af049eb318e261a2')
+sha256sums=('14cb7dba3ef2b46da0479b46d46c76198e129a31f6157cd8b37f178adb15d5a3')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
