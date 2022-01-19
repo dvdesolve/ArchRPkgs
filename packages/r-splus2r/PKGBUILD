@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: Hyacinthe Cartiaux <hyacinthe.cartiaux@free.fr>
+
+_cranname=splus2R
+_cranver=1.3-3
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Supplemental S-PLUS Functionality in R"
+arch=(i686 x86_64)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL2)
+depends=('r>=2.7.2')
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('7d5c90842debaf6046d445e3fce4f9721baad0339aa7193339705ef68568bf0c')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

@@ -1,0 +1,27 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: peippo <christoph+aur@christophfink.com>
+
+_cranname=units
+_cranver=0.7-2
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Measurement Units for R Vectors"
+arch=(i686 x86_64)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL2)
+depends=('r>=3.0.2' 'r-rcpp>=0.12.10' 'udunits>=2')
+optdepends=(r-udunits2 r-nistunits r-measurements r-xml2 r-magrittr r-pillar r-dplyr r-vctrs r-knitr r-testthat r-ggforce r-rmarkdown)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('b90be023431100632b3081747af9e743e615452b4ad38810991f7b024b7040eb')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}
+

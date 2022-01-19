@@ -1,0 +1,27 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: peippo <christoph+aur@christophfink.com>
+
+_cranname=wk
+_cranver=0.6.0
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Lightweight Well-Known Geometry Parsing"
+arch=(i686 x86_64)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(MIT)
+depends=(r)
+optdepends=(r-testthat r-vctrs r-sf r-tibble r-readr)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('af2c2837056a6dcc9f64d5ace29601d6d668c95769f855ca0329648d7326eaf5')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}
+

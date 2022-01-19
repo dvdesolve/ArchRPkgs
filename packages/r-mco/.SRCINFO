@@ -1,0 +1,15 @@
+pkgbase = r-mco
+	pkgdesc = Multiple Criteria Optimization Algorithms and Related Functions
+	pkgver = 1.15.6
+	pkgrel = 1
+	url = https://cran.r-project.org/package=mco
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = r>=3.0.0
+	optdepends = r-scatterplot3d
+	optdepends = r-testthat
+	source = https://cran.r-project.org/src/contrib/mco_1.15.6.tar.gz
+	sha256sums = 17ebe279cb9c89b7cd8054ac50d3b657d2b10dadbc584b88da7e79c3a9680582
+
+pkgname = r-mco

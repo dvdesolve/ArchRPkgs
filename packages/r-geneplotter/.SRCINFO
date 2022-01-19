@@ -1,0 +1,22 @@
+pkgbase = r-geneplotter
+	pkgdesc = Graphics related functions for Bioconductor
+	pkgver = 1.72.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/geneplotter
+	arch = any
+	license = Artistic-2.0
+	depends = r>=2.10
+	depends = r-biobase
+	depends = r-biocgenerics
+	depends = r-annotate
+	depends = r-annotationdbi
+	depends = r-rcolorbrewer
+	optdepends = r-rgraphviz
+	optdepends = r-fibroeset
+	optdepends = r-hgu95av2.db
+	optdepends = r-hu6800.db
+	optdepends = r-hgu133a.db
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/geneplotter_1.72.0.tar.gz
+	sha256sums = e84297d17034922dfab02d82945d24f768438a6ada8e367af5790340d37df6ac
+
+pkgname = r-geneplotter

@@ -1,0 +1,15 @@
+pkgbase = r-rjava
+	pkgdesc = V
+	pkgver = 1.0.6
+	pkgrel = 1
+	url = https://cran.r-project.org/package=rJava
+	arch = i686
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = make
+	depends = r
+	depends = java-environment
+	source = https://cran.r-project.org/src/contrib/rJava_1.0-6.tar.gz
+	sha256sums = e290d0493317a5d6c452793e92baa914e37ef03faef19b2e436329b4ec8658c6
+
+pkgname = r-rjava

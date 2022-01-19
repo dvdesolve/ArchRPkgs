@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=RSQLite
+_cranver=2.2.9
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="SQLite Interface for R"
+arch=(i686 x86_64)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(LGPL2.1 LGPL3)
+depends=('r>=3.1.0' r-bit64 'r-blob>=1.2.0' 'r-dbi>=1.1.0' r-memoise r-pkgconfig 'r-rcpp>=1.0.7' 'r-plogr>=0.2.0')
+optdepends=(r-dbitest r-gert r-gh r-knitr r-rmarkdown r-hms r-rvest r-testthat r-xml2)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('4423f1fea179ecd1c09b0b52bfb684983a27de82d5807590b5fc723697d5bb1c')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

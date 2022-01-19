@@ -1,0 +1,25 @@
+pkgbase = r-fredr
+	pkgdesc = An R Client for the 'FRED' API
+	pkgver = 2.1.0
+	pkgrel = 1
+	url = https://cran.r-project.org/package=fredr
+	arch = any
+	license = MIT
+	depends = r>=3.2.2
+	depends = r-httr
+	depends = r-jsonlite
+	depends = r-rlang
+	depends = r-tibble
+	optdepends = r-covr
+	optdepends = r-dplyr
+	optdepends = r-ggplot2
+	optdepends = r-knitr
+	optdepends = r-purrr
+	optdepends = r-rmarkdown
+	optdepends = r-testthat
+	optdepends = r-xts
+	optdepends = r-zoo
+	source = https://cran.r-project.org/src/contrib/fredr_2.1.0.tar.gz
+	sha256sums = 574654038eb353353a8c88d88f2a48ea7b588625a512c4201a37b8dc00c4e300
+
+pkgname = r-fredr

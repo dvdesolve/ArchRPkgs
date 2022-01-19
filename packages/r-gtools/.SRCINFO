@@ -1,0 +1,19 @@
+pkgbase = r-gtools
+	pkgdesc = Various R Programming Tools
+	pkgver = 3.9.2
+	pkgrel = 1
+	url = https://cran.r-project.org/package=gtools
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = r
+	optdepends = r-car
+	optdepends = r-gplots
+	optdepends = r-knitr
+	optdepends = r-rstudioapi
+	optdepends = r-sgp
+	optdepends = r-taxize
+	source = https://cran.r-project.org/src/contrib/gtools_3.9.2.tar.gz
+	sha256sums = 03b1898bf581f6d12fa90e23ff700cfa7c834ac10c6654bdac42d7ec943fa953
+
+pkgname = r-gtools

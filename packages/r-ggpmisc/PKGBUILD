@@ -1,0 +1,27 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: Hyacinthe Cartiaux <hyacinthe.cartiaux@free.fr>
+
+_cranname=ggpmisc
+_cranver=0.4.5
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Miscellaneous Extensions to 'ggplot2'"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL2 GPL3)
+depends=('r>=3.6.0' 'r-ggpp>=0.4.2' 'r-ggplot2>=3.3.3' 'r-scales>=1.1.1' 'r-rlang>=0.4.11' 'r-generics>=0.1.0' 'r-polynom>=1.4.0' 'r-quantreg>=5.85' 'r-lmodel2>=1.7.3' 'r-splus2r>=1.3.3' 'r-tibble>=3.1.5' 'r-plyr>=1.8.6' 'r-dplyr>=1.0.6' 'r-lubridate>=1.7.10')
+optdepends=(r-knitr r-rmarkdown r-ggrepel r-broom r-broom.mixed r-gginnards)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('2831f01d68ea57955fd4cd0ee3f675f29eb84bbad30a8f292fb2d944e11fde0c')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}
+

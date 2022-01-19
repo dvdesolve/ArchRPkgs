@@ -1,0 +1,27 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: dhn <neilson+aur@sent.com>
+
+_cranname=gtools
+_cranver=3.9.2
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Various R Programming Tools"
+arch=(i686 x86_64)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL2)
+depends=(r)
+optdepends=(r-car r-gplots r-knitr r-rstudioapi r-sgp r-taxize)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('03b1898bf581f6d12fa90e23ff700cfa7c834ac10c6654bdac42d7ec943fa953')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}
+

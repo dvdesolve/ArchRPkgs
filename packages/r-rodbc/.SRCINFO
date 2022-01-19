@@ -1,0 +1,15 @@
+pkgbase = r-rodbc
+	pkgdesc = ODBC Database Access
+	pkgver = 1.3.19
+	pkgrel = 1
+	url = https://cran.r-project.org/package=RODBC
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	depends = r>=4.0.0
+	depends = unixodbc
+	source = https://cran.r-project.org/src/contrib/RODBC_1.3-19.tar.gz
+	sha256sums = 3afcbd6877cd8b7c8df4a94bacd041a51e5ac607810acb88efd380b45d2d4efe
+
+pkgname = r-rodbc

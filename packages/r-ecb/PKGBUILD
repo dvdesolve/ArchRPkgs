@@ -1,0 +1,27 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: dhn <neilson+aur@sent.com>
+
+_cranname=ecb
+_cranver=0.4.0
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Programmatic Access to the European Central Bank's Statistical Data Warehouse"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(CC0)
+depends=(r r-curl r-rsdmx r-xml2 r-httr)
+optdepends=(r-knitr r-rmarkdown r-dplyr r-lubridate r-ggplot2 r-testthat r-zoo)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('6cd2963901572c200f9f09fc30e572c86fd20292acddff7bed9dd3d86168c142')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}
+

@@ -1,0 +1,27 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: peippo <christoph+aur@christophfink.com>
+
+_cranname=sfheaders
+_cranver=0.4.0
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Converts Between R Objects and Simple Feature Objects"
+arch=(i686 x86_64)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(MIT)
+depends=(r 'r-geometries>=0.2.0' r-rcpp)
+optdepends=(r-covr r-knitr r-testthat)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('86bcd61018a0491fc8a1e7fb0422c918296287b82be299a79ccee8fcb515e045')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}
+

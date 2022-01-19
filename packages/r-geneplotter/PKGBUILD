@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_bcname=geneplotter
+_bcver=1.72.0
+pkgname=r-${_bcname,,}
+pkgver=${_bcver//[:-]/.}
+pkgrel=1
+pkgdesc="Graphics related functions for Bioconductor"
+arch=(any)
+url="https://bioconductor.org/packages/${_bcname}"
+license=(Artistic-2.0)
+depends=('r>=2.10' r-biobase r-biocgenerics r-annotate r-annotationdbi r-rcolorbrewer)
+optdepends=(r-rgraphviz r-fibroeset r-hgu95av2.db r-hu6800.db r-hgu133a.db)
+source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
+sha256sums=('e84297d17034922dfab02d82945d24f768438a6ada8e367af5790340d37df6ac')
+
+build() {
+  R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_bcname}" "${pkgdir}/usr/lib/R/library"
+}

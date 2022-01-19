@@ -1,0 +1,27 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+# Contributor: Filipe Laíns (FFY00) <lains@archlinux.org>
+
+_cranname=swirl
+_cranver=2.4.5
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Learn R, in R"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(MIT)
+depends=('r>=3.1.0' r-stringr 'r-testthat>=1.0.2' 'r-httr>=1.1.0' r-yaml r-rcurl r-digest)
+optdepends=(r-stringi)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('3c7de1556b4f15734e2cb0a783d78b80165dd90cb97da23e176b3a6cb3b01e33')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}
+

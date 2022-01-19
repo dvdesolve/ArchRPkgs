@@ -1,0 +1,43 @@
+pkgbase = r-deseq2
+	pkgdesc = Differential gene expression analysis based on the negative binomial distribution
+	pkgver = 1.34.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/DESeq2
+	arch = i686
+	arch = x86_64
+	license = LGPL3
+	depends = r
+	depends = r-s4vectors>=0.23.18
+	depends = r-iranges
+	depends = r-genomicranges
+	depends = r-summarizedexperiment>=1.1.6
+	depends = r-biocgenerics>=0.7.5
+	depends = r-biobase
+	depends = r-biocparallel
+	depends = r-genefilter
+	depends = r-locfit
+	depends = r-geneplotter
+	depends = r-ggplot2
+	depends = r-rcpp>=0.11.0
+	depends = r-rcpparmadillo
+	optdepends = r-testthat
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	optdepends = r-vsn
+	optdepends = r-pheatmap
+	optdepends = r-rcolorbrewer
+	optdepends = r-apeglm
+	optdepends = r-shr
+	optdepends = r-tximport
+	optdepends = r-tximeta
+	optdepends = r-tximportdata
+	optdepends = r-readr
+	optdepends = r-pbapply
+	optdepends = r-airway
+	optdepends = r-pasilla
+	optdepends = r-glmgampoi
+	optdepends = r-biocmanager
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/DESeq2_1.34.0.tar.gz
+	sha256sums = 6989e5eaacc3d5546c7e9c3189b2836827d11cf0f0154e18cd35ed9a7f121372
+
+pkgname = r-deseq2
