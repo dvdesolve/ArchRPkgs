@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_bcname=BiocFileCache
+_bcver=2.2.0
+pkgname=r-${_bcname,,}
+pkgver=${_bcver//[:-]/.}
+pkgrel=1
+pkgdesc="Manage Files Across Sessions"
+arch=(any)
+url="https://bioconductor.org/packages/${_bcname}"
+license=(Artistic2.0)
+depends=('r>=3.4.0' 'r-dbplyr>=1.0.0' r-dplyr r-rsqlite r-dbi r-rappdirs r-filelock r-curl r-httr)
+optdepends=(r-testthat r-knitr r-biocstyle r-rmarkdown r-rtracklayer)
+source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
+sha256sums=('81e1807f11226e3fb8a14e0080aaec931fa0aa1642ec000983e488fd2af60a87')
+
+build() {
+  R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_bcname}" "${pkgdir}/usr/lib/R/library"
+}

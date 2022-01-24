@@ -4,7 +4,7 @@ pkgbase = r-geneplotter
 	pkgrel = 1
 	url = https://bioconductor.org/packages/geneplotter
 	arch = any
-	license = Artistic-2.0
+	license = Artistic2.0
 	depends = r>=2.10
 	depends = r-biobase
 	depends = r-biocgenerics

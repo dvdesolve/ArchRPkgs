@@ -1,0 +1,33 @@
+pkgbase = r-organismdbi
+	pkgdesc = Software to enable the smooth interfacing of different database packages
+	pkgver = 1.36.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/OrganismDbi
+	arch = any
+	license = Artistic2.0
+	depends = r>=2.14.0
+	depends = r-biocgenerics>=0.15.10
+	depends = r-annotationdbi>=1.33.15
+	depends = r-genomicfeatures>=1.39.4
+	depends = r-biobase
+	depends = r-biocmanager
+	depends = r-genomicranges>=1.31.13
+	depends = r-graph
+	depends = r-iranges
+	depends = r-rbgl
+	depends = r-dbi
+	depends = r-s4vectors>=0.9.25
+	optdepends = r-homo.sapiens
+	optdepends = r-rattus.norvegicus
+	optdepends = r-bsgenome.hsapiens.ucsc.hg19
+	optdepends = r-annotationhub
+	optdepends = r-fdb.ucsc.trnas
+	optdepends = r-mirbase.db
+	optdepends = r-rtracklayer
+	optdepends = r-biomart
+	optdepends = r-runit
+	optdepends = r-rmariadb
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/OrganismDbi_1.36.0.tar.gz
+	sha256sums = 0349e79ca54df218c98dbd44d5e6666a1c0b4db634fa036e1f3a5988a3e8e67e
+
+pkgname = r-organismdbi

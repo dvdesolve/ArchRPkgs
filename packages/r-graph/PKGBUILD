@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_bcname=graph
+_bcver=1.72.0
+pkgname=r-${_bcname,,}
+pkgver=${_bcver//[:-]/.}
+pkgrel=1
+pkgdesc="graph: A package to handle graph data structures"
+arch=(i686 x86_64)
+url="https://bioconductor.org/packages/${_bcname}"
+license=(Artistic2.0)
+depends=('r>=2.10' 'r-biocgenerics>=0.13.11')
+optdepends=(r-sparsem r-xml r-rbgl r-runit)
+source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
+sha256sums=('000ab6023bdb49d254fccb12b0486a8324a9bec2b6a7c4cdb3b5d788c7a76174')
+
+build() {
+  R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_bcname}" "${pkgdir}/usr/lib/R/library"
+}

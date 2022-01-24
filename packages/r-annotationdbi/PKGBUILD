@@ -8,7 +8,7 @@ pkgrel=1
 pkgdesc="Manipulation of SQLite-based annotations in Bioconductor"
 arch=(any)
 url="https://bioconductor.org/packages/${_bcname}"
-license=(Artistic-2.0)
+license=(Artistic2.0)
 depends=('r>=2.7.0' 'r-biocgenerics>=0.29.2' 'r-biobase>=1.17.0' r-iranges r-dbi r-rsqlite 'r-s4vectors>=0.9.25' r-keggrest)
 optdepends=(r-hgu95av2.db r-go.db r-org.sc.sgd.db r-org.at.tair.db r-runit r-txdb.hsapiens.ucsc.hg19.knowngene r-org.hs.eg.db r-reactome.db r-annotationforge r-graph r-ensdb.hsapiens.v75 r-biocstyle r-knitr)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")

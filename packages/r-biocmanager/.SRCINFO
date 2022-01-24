@@ -4,7 +4,7 @@ pkgbase = r-biocmanager
 	pkgrel = 1
 	url = https://cran.r-project.org/package=BiocManager
 	arch = any
-	license = Artistic-2.0
+	license = Artistic2.0
 	depends = r
 	optdepends = r-biocversion
 	optdepends = r-remotes

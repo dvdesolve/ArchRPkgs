@@ -5,7 +5,7 @@ pkgbase = r-matrixstats
 	url = https://cran.r-project.org/package=matrixStats
 	arch = i686
 	arch = x86_64
-	license = Artistic-2.0
+	license = Artistic2.0
 	depends = r>=2.12.0
 	optdepends = r-base64enc
 	optdepends = r-ggplot2

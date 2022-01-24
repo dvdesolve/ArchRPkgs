@@ -9,7 +9,7 @@ pkgrel=1
 pkgdesc="Biobase: Base functions for Bioconductor"
 arch=(i686 x86_64)
 url="https://bioconductor.org/packages/release/bioc/html/${_bcname}.html"
-license=(Artistic-2.0)
+license=(Artistic2.0)
 depends=('r>=2.10' 'r-biocgenerics>=0.27.1')
 optdepends=(r-tkwidgets r-all r-runit r-golubesets)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")

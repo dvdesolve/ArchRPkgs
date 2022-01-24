@@ -8,7 +8,7 @@ pkgrel=1
 pkgdesc="Client-side REST access to the Kyoto Encyclopedia of Genes and Genomes (KEGG)"
 arch=(any)
 url="https://bioconductor.org/packages/${_bcname}"
-license=(Artistic-2.0)
+license=(Artistic2.0)
 depends=('r>=3.5.0' r-httr r-png r-biostrings)
 optdepends=(r-runit r-biocgenerics r-knitr r-markdown)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")

@@ -8,7 +8,7 @@ pkgrel=1
 pkgdesc="S4 Generic Summary Statistic Functions that Operate on Matrix-Like Objects"
 arch=(any)
 url="https://bioconductor.org/packages/release/bioc/html/${_bcname}.html"
-license=(Artistic-2.0)
+license=(Artistic2.0)
 depends=(r 'r-matrixstats>=0.60.1')
 optdepends=(r-sparsematrixstats r-delayedmatrixstats r-summarizedexperiment r-testthat)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")

@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_bcname=RBGL
+_bcver=1.70.0
+pkgname=r-${_bcname,,}
+pkgver=${_bcver//[:-]/.}
+pkgrel=1
+pkgdesc="An interface to the BOOST graph library"
+arch=(i686 x86_64)
+url="https://bioconductor.org/packages/${_bcname}"
+license=(Artistic2.0)
+depends=(r r-graph r-bh)
+optdepends=(r-rgraphviz r-xml r-runit r-biocgenerics)
+source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
+sha256sums=('60760abe0d168d02e4f7ef57b6197ab3f48c50daf42425c8b1a4c7dd380d574c')
+
+build() {
+  R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_bcname}" "${pkgdir}/usr/lib/R/library"
+}

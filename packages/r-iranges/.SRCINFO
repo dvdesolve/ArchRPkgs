@@ -5,7 +5,7 @@ pkgbase = r-iranges
 	url = https://bioconductor.org/packages/release/bioc/html/IRanges.html
 	arch = i686
 	arch = x86_64
-	license = Artistic-2.0
+	license = Artistic2.0
 	depends = r>=4.0.0
 	depends = r-biocgenerics>=0.39.2
 	depends = r-s4vectors>=0.29.19

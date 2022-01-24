@@ -1,0 +1,29 @@
+pkgbase = r-igraph
+	pkgdesc = Network Analysis and Visualization
+	pkgver = 1.2.11
+	pkgrel = 1
+	url = https://cran.r-project.org/package=igraph
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	makedepends = gcc-fortran
+	depends = r
+	depends = r-magrittr
+	depends = r-pkgconfig>=2.0.0
+	depends = gcc-fortran
+	optdepends = r-ape
+	optdepends = r-graph
+	optdepends = r-igraphdata
+	optdepends = r-rgl
+	optdepends = r-scales
+	optdepends = r-testthat
+	optdepends = r-withr
+	optdepends = r-digest
+	optdepends = gmp
+	optdepends = libxml2
+	optdepends = glpk
+	source = https://cran.r-project.org/src/contrib/igraph_1.2.11.tar.gz
+	sha256sums = 1c8b715eb61e6e7d9082858673929f8e84dc832c0a2a7aba7811511bbd2000de
+
+pkgname = r-igraph

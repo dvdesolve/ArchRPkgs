@@ -4,7 +4,7 @@ pkgbase = r-annotationdbi
 	pkgrel = 1
 	url = https://bioconductor.org/packages/AnnotationDbi
 	arch = any
-	license = Artistic-2.0
+	license = Artistic2.0
 	depends = r>=2.7.0
 	depends = r-biocgenerics>=0.29.2
 	depends = r-biobase>=1.17.0

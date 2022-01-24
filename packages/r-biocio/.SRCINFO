@@ -1,0 +1,18 @@
+pkgbase = r-biocio
+	pkgdesc = Standard Input and Output for Bioconductor Packages
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/BiocIO
+	arch = any
+	license = Artistic2.0
+	depends = r>=4.0
+	depends = r-biocgenerics
+	depends = r-s4vectors
+	optdepends = r-testthat
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	optdepends = r-biocstyle
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/BiocIO_1.4.0.tar.gz
+	sha256sums = d9e5ced69af81d5f53c288bd7347327802681c10e7932e3dc7472e1d4cdae6e1
+
+pkgname = r-biocio

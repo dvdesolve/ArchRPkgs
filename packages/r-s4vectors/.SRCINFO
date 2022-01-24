@@ -5,7 +5,7 @@ pkgbase = r-s4vectors
 	url = https://bioconductor.org/packages/S4Vectors
 	arch = i686
 	arch = x86_64
-	license = Artistic-2.0
+	license = Artistic2.0
 	depends = r>=4.0.0
 	depends = r-biocgenerics>=0.37.0
 	optdepends = r-iranges

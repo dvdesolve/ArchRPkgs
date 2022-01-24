@@ -9,7 +9,7 @@ pkgrel=1
 pkgdesc="Foundation of vector-like and list-like containers in Bioconductor"
 arch=(i686 x86_64)
 url="https://bioconductor.org/packages/${_bcname}"
-license=(Artistic-2.0)
+license=(Artistic2.0)
 depends=('r>=4.0.0' 'r-biocgenerics>=0.37.0')
 optdepends=(r-iranges r-genomicranges r-summarizedexperiment r-delayedarray r-shortread r-data.table r-runit r-biocstyle)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")

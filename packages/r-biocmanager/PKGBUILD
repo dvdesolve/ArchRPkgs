@@ -9,7 +9,7 @@ pkgrel=1
 pkgdesc="Access the Bioconductor Project Package Repository"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(Artistic-2.0)
+license=(Artistic2.0)
 depends=(r)
 optdepends=(r-biocversion r-remotes r-rmarkdown r-testthat r-withr r-curl r-knitr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
