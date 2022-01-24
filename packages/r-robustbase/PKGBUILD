@@ -1,19 +1,19 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: frichtlm <frichtlm@gmail.com>
 
-_cranname=glue
-_cranver=1.6.1
+_cranname=robustbase
+_cranver=0.93-9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Interpreted String Literals"
+pkgdesc="Basic Robust Statistics"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(MIT)
-depends=('r>=3.4')
-optdepends=(r-covr r-crayon r-dbi r-dplyr r-forcats r-ggplot2 r-knitr r-magrittr r-microbenchmark r-r.utils r-rmarkdown r-rprintf r-rsqlite r-stringr r-testthat r-vctrs r-waldo r-withr)
+license=(GPL2 GPL3)
+depends=('r>=3.5.0' r-deoptimr gcc-fortran)
+makedepends=(gcc-fortran)
+optdepends=(r-robust r-fot.models r-mpv r-xtable r-ggplot2 r-ggally r-rcolorbrewer r-reshape2 r-sfsmisc r-catdata r-doparallel r-foreach r-skewt)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('318c2f9544f1204216009f512793c44d6bbe178ff2012f56fa5ffb5e1da978db')
+sha256sums=('d75fb5075463fec61d063bced7003936e9198492328b6fae15f67e8415713c45')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

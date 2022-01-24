@@ -1,19 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: frichtlm <frichtlm@gmail.com>
 
-_cranname=glue
-_cranver=1.6.1
+_cranname=bigmemory
+_cranver=4.5.36
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Interpreted String Literals"
+pkgdesc="Manage Massive Matrices with Shared Memory and Memory-Mapped Files"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(MIT)
-depends=('r>=3.4')
-optdepends=(r-covr r-crayon r-dbi r-dplyr r-forcats r-ggplot2 r-knitr r-magrittr r-microbenchmark r-r.utils r-rmarkdown r-rprintf r-rsqlite r-stringr r-testthat r-vctrs r-waldo r-withr)
+license=(LGPL3 Apache2.0)
+depends=(r r-rcpp r-bigmemory.sri r-bh)
+optdepends=(r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('318c2f9544f1204216009f512793c44d6bbe178ff2012f56fa5ffb5e1da978db')
+sha256sums=('18c67fbe6344b2f8223456c4f19ceebcf6c1166255eab81311001fd67a45ef0e')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

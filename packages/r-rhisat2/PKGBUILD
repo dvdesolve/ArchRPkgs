@@ -1,0 +1,27 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_bcname=Rhisat2
+_bcver=1.10.0
+pkgname=r-${_bcname,,}
+pkgver=${_bcver//[:-]/.}
+pkgrel=1
+pkgdesc="R Wrapper for HISAT2 Aligner"
+arch=(i686 x86_64)
+url="https://bioconductor.org/packages/${_bcname}"
+license=(GPL3)
+depends=('r>=3.6' r-genomicfeatures r-sgseq r-genomicranges)
+makedepends=(make)
+optdepends=(r-testthat r-knitr r-rmarkdown r-biocstyle)
+source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
+sha256sums=('1e6c4e8b4cf913bb18f587d916bda734d67f887dd1dc35af14f575b993e65924')
+options=(!makeflags)
+
+build() {
+  R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_bcname}" "${pkgdir}/usr/lib/R/library"
+}

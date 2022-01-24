@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_bcname=InteractionSet
+_bcver=1.22.0
+pkgname=r-${_bcname,,}
+pkgver=${_bcver//[:-]/.}
+pkgrel=1
+pkgdesc="Base Classes for Storing Genomic Interaction Data"
+arch=(i686 x86_64)
+url="https://bioconductor.org/packages/${_bcname}"
+license=(GPL3)
+depends=(r-genomicranges r-summarizedexperiment r-rcpp r-biocgenerics 'r-s4vectors>=0.27.12' r-iranges r-genomeinfodb)
+optdepends=(r-testthat r-knitr r-rmarkdown r-biocstyle)
+source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
+sha256sums=('5caf717b2927f1ccd4483d4ef21b8994b19ffadf986664a2b2ea8fe3d7ada2a6')
+
+build() {
+  R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_bcname}" "${pkgdir}/usr/lib/R/library"
+}

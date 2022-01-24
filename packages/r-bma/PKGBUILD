@@ -1,19 +1,17 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: frichtlm <frichtlm@gmail.com>
 
-_cranname=glue
-_cranver=1.6.1
+_cranname=BMA
+_cranver=3.18.15
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Interpreted String Literals"
+pkgdesc="Bayesian Model Averaging"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(MIT)
-depends=('r>=3.4')
-optdepends=(r-covr r-crayon r-dbi r-dplyr r-forcats r-ggplot2 r-knitr r-magrittr r-microbenchmark r-r.utils r-rmarkdown r-rprintf r-rsqlite r-stringr r-testthat r-vctrs r-waldo r-withr)
+license=(GPL2 GPL3)
+depends=(r r-leaps r-robustbase r-inline r-rrcov)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('318c2f9544f1204216009f512793c44d6bbe178ff2012f56fa5ffb5e1da978db')
+sha256sums=('4be0d52f433503631e9574944067f613bafba129ebe27396bcfccb3b95992b1a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

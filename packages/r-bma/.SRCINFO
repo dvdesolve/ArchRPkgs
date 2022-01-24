@@ -1,0 +1,18 @@
+pkgbase = r-bma
+	pkgdesc = Bayesian Model Averaging
+	pkgver = 3.18.15
+	pkgrel = 1
+	url = https://cran.r-project.org/package=BMA
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	depends = r
+	depends = r-leaps
+	depends = r-robustbase
+	depends = r-inline
+	depends = r-rrcov
+	source = https://cran.r-project.org/src/contrib/BMA_3.18.15.tar.gz
+	sha256sums = 4be0d52f433503631e9574944067f613bafba129ebe27396bcfccb3b95992b1a
+
+pkgname = r-bma

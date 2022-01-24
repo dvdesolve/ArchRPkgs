@@ -1,0 +1,31 @@
+pkgbase = r-sgseq
+	pkgdesc = Splice event prediction and quantification from RNA-seq data
+	pkgver = 1.28.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/SGSeq
+	arch = any
+	license = Artistic2.0
+	depends = r>=4.0
+	depends = r-iranges>=2.13.15
+	depends = r-genomicranges>=1.31.10
+	depends = r-rsamtools>=1.31.2
+	depends = r-summarizedexperiment
+	depends = r-annotationdbi
+	depends = r-biocgenerics>=0.31.5
+	depends = r-biostrings>=2.47.6
+	depends = r-genomicalignments>=1.15.7
+	depends = r-genomicfeatures>=1.31.5
+	depends = r-genomeinfodb
+	depends = r-runit
+	depends = r-s4vectors>=0.23.19
+	depends = r-igraph
+	depends = r-rtracklayer>=1.39.7
+	optdepends = r-biocstyle
+	optdepends = r-bsgenome.hsapiens.ucsc.hg19
+	optdepends = r-txdb.hsapiens.ucsc.hg19.knowngene
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/SGSeq_1.28.0.tar.gz
+	sha256sums = 4acea2f4c98dd6e1ee2b8ffaa2b3f95e71a88dd0511cd29a40f308bdb5c98096
+
+pkgname = r-sgseq

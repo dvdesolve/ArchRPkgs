@@ -1,19 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: frichtlm <frichtlm@gmail.com>
 
-_cranname=glue
-_cranver=1.6.1
+_cranname=apcluster
+_cranver=1.4.9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Interpreted String Literals"
+pkgdesc="Affinity Propagation Clustering"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(MIT)
-depends=('r>=3.4')
-optdepends=(r-covr r-crayon r-dbi r-dplyr r-forcats r-ggplot2 r-knitr r-magrittr r-microbenchmark r-r.utils r-rmarkdown r-rprintf r-rsqlite r-stringr r-testthat r-vctrs r-waldo r-withr)
+license=(GPL2 GPL3)
+depends=('r>=3.3.0' 'r-rcpp>=0.11.1')
+optdepends=(r-knitr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('318c2f9544f1204216009f512793c44d6bbe178ff2012f56fa5ffb5e1da978db')
+sha256sums=('3aac75e3e640eb89c1337d6f2e72a85d226b9c9483e43e0c76f9d424e758cb72')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

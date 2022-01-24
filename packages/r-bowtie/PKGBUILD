@@ -1,0 +1,26 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_bcname=Rbowtie
+_bcver=1.34.0
+pkgname=r-${_bcname,,}
+pkgver=${_bcver//[:-]/.}
+pkgrel=1
+pkgdesc="R bowtie wrapper"
+arch=(i686 x86_64)
+url="https://bioconductor.org/packages/${_bcname}"
+license=(Artistic2.0)
+depends=(r)
+makedepends=(make)
+optdepends=(r-testthat r-biocstyle r-knitr r-rmarkdown)
+source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
+sha256sums=('79c624600a2df28c7ea3c8efbe0eac6b379a339d410190acd98729d37dae2d2b')
+
+build() {
+  R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_bcname}" "${pkgdir}/usr/lib/R/library"
+}

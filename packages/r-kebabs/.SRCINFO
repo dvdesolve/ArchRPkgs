@@ -1,0 +1,29 @@
+pkgbase = r-kebabs
+	pkgdesc = Kernel-Based Analysis Of Biological Sequences
+	pkgver = 1.28.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/kebabs
+	arch = i686
+	arch = x86_64
+	license = GPL2.1
+	makedepends = patch
+	depends = r>=3.2.0
+	depends = r-biostrings>=2.35.5
+	depends = r-kernlab
+	depends = r-rcpp>=0.11.2
+	depends = r-xvector>=0.7.3
+	depends = r-s4vectors>=0.27.3
+	depends = r-e1071
+	depends = r-liblinear
+	depends = r-apcluster
+	depends = r-iranges
+	optdepends = r-sparsem
+	optdepends = r-biobase
+	optdepends = r-biocgenerics
+	optdepends = r-knitr
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/kebabs_1.28.0.tar.gz
+	source = fix_strictrhdrs.patch
+	sha256sums = 98305512fffa397b38d7d412fb7de59b5320b9290d03308f06df25aa576ea410
+	sha256sums = ee468bac3f162ee1d3a23ad59fb8ea5a050e03eb9a96d35950e16fbadc1b95ee
+
+pkgname = r-kebabs
