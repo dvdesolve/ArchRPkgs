@@ -25,6 +25,3 @@ For more information see [this](https://wiki.archlinux.org/title/Unofficial_user
 
 ## Reporting bugs, problems, requests
 To propose your ideas, report bugs etc. feel free to use issues mechanism of GitHub.
-
-## TODO
-Not of all AUR R packages have been migrated here so far. You can consult `aur_todo.txt` and help with porting them here, if you want.
