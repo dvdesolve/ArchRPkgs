@@ -86,8 +86,8 @@ SUPPORTED_REPOS = [
     {
         "name": "CRAN",
         "url": "cran.r-project.org",
-        "table_regex": r"<table summary=\"Package(.*?) summary\">(.*?)</table>",
-        "table_match_index": 2,
+        "table_regex": r"<table>(.*?)</table>",
+        "table_match_index": 1,
         "version_regex": r"<tr>\n<td>Version:</td>\n<td>(.*?)</td>",
         "version_match_index": 1
     },
