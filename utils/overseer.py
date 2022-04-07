@@ -182,7 +182,7 @@ def check_updates(package):
     upstream = [int(x) for x in package["UpstreamVersion"].split(".")]
 
     if our < upstream:
-        return "{}[INFO]{} Package {}{}{} is outdated: {}{}{} (repository) vs {}{}{} ({})".format(
+        return "{}[INFO]{} Package {}{}{} is outdated: {}{}{} vs {}{}{} ({})".format(
             MessageColor.info, MessageColor.nc,
             MessageColor.data, package["Name"], MessageColor.nc,
             MessageColor.old, package["Version"], MessageColor.nc,
@@ -245,7 +245,7 @@ def check():
 
     # check if we've found something
     if len(pkglist) == 0:
-        print("{}[ERROR]{} There are no R packages found in the repository".format(
+        print("{}[ERROR]{} There are no R packages found in the local repository".format(
             MessageColor.error, MessageColor.nc))
 
         return
