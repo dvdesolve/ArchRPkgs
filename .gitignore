@@ -7,3 +7,8 @@
 
 # staging packages
 staging/
+
+# build output
+*namcap.log
+*build.log
+*package.log

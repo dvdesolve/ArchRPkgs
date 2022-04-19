@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=biomaRt
-_bcver=2.50.2
+_bcver=2.50.3
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic2.0)
 depends=(r r-xml r-annotationdbi r-progress r-stringr r-httr r-digest r-biocfilecache r-rappdirs r-xml2)
 optdepends=(r-biocstyle r-knitr r-rmarkdown r-testthat r-mockery)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('a88b5358da129baf728c57cd260e0ae991007e3acaef3b74503cd3dd66362419')
+sha256sums=('a1b7ce46db4074604ff13a9a956f2da92515fa1469a6dfcb921bc7225d01bb06')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

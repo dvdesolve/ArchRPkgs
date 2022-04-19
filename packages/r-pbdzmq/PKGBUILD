@@ -2,7 +2,7 @@
 # Contributor: portaloffreedom
 
 _cranname=pbdZMQ
-_cranver=0.3-6
+_cranver=0.3-7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
 depends=('r>=3.5.0' 'zeromq>=4.0.4')
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('9944c8c44221aed1dbd7763ad9ec52c0ad2611d37bee25971ca16f02e8e8c37b')
+sha256sums=('df2d2be14b2f57a64d76cdda4c01fd1c3d9aa12221c63524c01c71849df11808')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
