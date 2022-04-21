@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=DT
-_cranver=0.20
+_cranver=0.22
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL3)
 depends=(r 'r-htmltools>=0.3.6' 'r-htmlwidgets>=1.3' 'r-jsonlite>=0.9.16' r-magrittr r-crosstalk r-jquerylib r-promises)
 optdepends=(r-knitr r-rmarkdown r-shiny r-bslib r-testit)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('c66d7f49ec101fdbb91c6d26c06fb1373f9ebdefe29fe99f2ae1a641220aba9f')
+sha256sums=('3f181c4ef8dd225864c8859751cd369a21d37b83bd33a35922723f0f0c045099')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

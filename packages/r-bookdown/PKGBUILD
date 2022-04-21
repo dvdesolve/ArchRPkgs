@@ -2,7 +2,7 @@
 # Contributor: haha662 <haha662 at outlook dot com>
 
 _cranname=bookdown
-_cranver=0.24
+_cranver=0.26
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Authoring Books and Technical Documents with R Markdown"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=(r 'r-htmltools>=0.3.6' 'r-knitr>=1.31' 'r-rmarkdown>=2.9' r-jquerylib 'r-xfun>=0.22' 'r-tinytex>=0.12' 'r-yaml>=2.1.19' 'pandoc>=1.17.2')
-optdepends=(r-bslib r-downlit r-htmlwidgets r-jsonlite r-rstudioapi r-miniui r-rsconnect r-servr r-shiny r-tibble r-testit r-tufte r-xml2 r-webshgot r-testthat r-withr)
+depends=(r 'r-htmltools>=0.3.6' 'r-knitr>=1.31' 'r-rmarkdown>=2.13' r-jquerylib 'r-xfun>=0.29' 'r-tinytex>=0.12' 'r-yaml>=2.1.19' 'pandoc>=1.17.2')
+optdepends=(r-bslib r-downlit r-htmlwidgets r-jsonlite r-rstudioapi r-miniui r-rsconnect r-servr r-shiny r-tibble r-testit r-tufte r-xml2 r-webshot r-testthat r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8bead2a20542d05f643fe77a949689a17b0ae9ff23efbb918ddab47597db1be3')
+sha256sums=('c6207288cb72ea7c555cbad449c61278e94b742cac1f610879fb3f2d60b2b185')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
