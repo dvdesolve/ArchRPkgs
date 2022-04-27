@@ -1,6 +1,6 @@
 pkgbase = r-maptools
 	pkgdesc = Tools for Handling Spatial Objects
-	pkgver = 1.1.2
+	pkgver = 1.1.4
 	pkgrel = 1
 	url = https://cran.r-project.org/package=maptools
 	arch = i686
@@ -9,17 +9,18 @@ pkgbase = r-maptools
 	license = GPL3
 	depends = r>=2.10
 	depends = r-sp>=1.0.11
-	optdepends = r-geos
+	optdepends = r-rgeos
 	optdepends = r-spatstat.geom
 	optdepends = r-pbsmapping
 	optdepends = r-maps
 	optdepends = r-rcolorbrewer
 	optdepends = r-raster
 	optdepends = r-polyclip
+	optdepends = r-plotrix
 	optdepends = r-spatstat.linnet
 	optdepends = r-spatstat.utils
 	optdepends = r-spatstat
-	source = https://cran.r-project.org/src/contrib/maptools_1.1-2.tar.gz
-	sha256sums = 3995c96e8472cd6717fe3cbd3506358ff460b6c2cf92dbe4b00f75f507514439
+	source = https://cran.r-project.org/src/contrib/maptools_1.1-4.tar.gz
+	sha256sums = f3ee25f9787d97c8373dac3651c6a198c932948eb3a6006b8618c91c6344fdc9
 
 pkgname = r-maptools

@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=locfit
-_cranver=1.5-9.4
+_cranver=1.5-9.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Local Regression, Likelihood and Density Estimation"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=3.5.0')
+depends=('r>=4.1.0')
 optdepends=(r-interp r-gam)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('d9d3665c5f3d49f698fb4675daf40a0550601e86db3dc00f296413ceb1099ced')
+sha256sums=('fd9f2bad9d8beec8be4843dc80e38ebe0f388835a7003490f67e57eeb9e6de23')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
@@ -23,4 +23,3 @@ package() {
 
   cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
 }
-

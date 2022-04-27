@@ -1,6 +1,6 @@
 pkgbase = r-pracma
 	pkgdesc = Practical Numerical Math Functions
-	pkgver = 2.3.6
+	pkgver = 2.3.8
 	pkgrel = 1
 	url = https://cran.r-project.org/package=pracma
 	arch = any
@@ -8,7 +8,7 @@ pkgbase = r-pracma
 	depends = r>=3.1.0
 	optdepends = r-nlcoptim
 	optdepends = r-quadprog
-	source = https://cran.r-project.org/src/contrib/pracma_2.3.6.tar.gz
-	sha256sums = 17ac83fd48c9155e00dc3f0433f95723505dc73d046860afd9001866d699b8de
+	source = https://cran.r-project.org/src/contrib/pracma_2.3.8.tar.gz
+	sha256sums = 2302d454406e72711714732658d0c59c9d5a1ead698f22ee23f38cba63d42764
 
 pkgname = r-pracma

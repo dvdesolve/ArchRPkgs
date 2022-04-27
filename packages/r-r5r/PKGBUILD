@@ -2,7 +2,7 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=r5r
-_cranver=0.6.0
+_cranver=0.7.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,9 +11,9 @@ arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=3.6' r-checkmate r-curl r-data.table r-httr r-raster 'r-rjava>=0.9-10' 'r-sf>=0.9-3' r-sfheaders 'java-environment>=11.0')
-optdepends=(r-akima r0covr r-dplyr r-ggplot2 r-knitr r-mapview r-rmarkdown r-rgdal r-testthat)
+optdepends=(r-akima r-covr r-dplyr r-ggplot2 r-knitr r-mapview r-rmarkdown r-rgdal r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('9f30fa4861f1fc4e0437d5c93f0161929de42ca65d6ee7f24f2c6f42ead9f373')
+sha256sums=('44bdd5ee05f5b6df1a11d9206d25c841ddafa0e5f9fe614945d71a105758ad24')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
@@ -24,4 +24,3 @@ package() {
 
   cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
 }
-

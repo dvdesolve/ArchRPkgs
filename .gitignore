@@ -12,3 +12,4 @@ staging/
 *namcap.log
 *build.log
 *package.log
+*prepare.log

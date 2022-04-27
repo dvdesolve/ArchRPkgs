@@ -1,6 +1,6 @@
 pkgbase = r-glue
 	pkgdesc = Interpreted String Literals
-	pkgver = 1.6.1
+	pkgver = 1.6.2
 	pkgrel = 1
 	url = https://cran.r-project.org/package=glue
 	arch = i686
@@ -25,7 +25,7 @@ pkgbase = r-glue
 	optdepends = r-vctrs
 	optdepends = r-waldo
 	optdepends = r-withr
-	source = https://cran.r-project.org/src/contrib/glue_1.6.1.tar.gz
-	sha256sums = 318c2f9544f1204216009f512793c44d6bbe178ff2012f56fa5ffb5e1da978db
+	source = https://cran.r-project.org/src/contrib/glue_1.6.2.tar.gz
+	sha256sums = 9da518f12be584c90e75fe8e07f711ee3f6fc0d03d817f72c25dc0f66499fdbf
 
 pkgname = r-glue
