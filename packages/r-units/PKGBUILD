@@ -2,7 +2,7 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=units
-_cranver=0.7-2
+_cranver=0.8-0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,9 +11,9 @@ arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
 depends=('r>=3.0.2' 'r-rcpp>=0.12.10' 'udunits>=2')
-optdepends=(r-udunits2 r-nistunits r-measurements r-xml2 r-magrittr r-pillar r-dplyr r-vctrs r-knitr r-testthat r-ggforce r-rmarkdown)
+optdepends=(r-nistunits r-measurements r-xml2 r-magrittr r-pillar r-dplyr r-vctrs r-ggplot2 r-testthat r-vdiffr r-knitr r-rmarkdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b90be023431100632b3081747af9e743e615452b4ad38810991f7b024b7040eb')
+sha256sums=('9c46fe138e8c1c3d3a51268776412f02d09673656516148cccb71b1071beb21a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
@@ -24,4 +24,3 @@ package() {
 
   cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
 }
-

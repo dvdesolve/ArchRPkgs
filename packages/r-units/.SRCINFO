@@ -1,6 +1,6 @@
 pkgbase = r-units
 	pkgdesc = Measurement Units for R Vectors
-	pkgver = 0.7.2
+	pkgver = 0.8.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=units
 	arch = i686
@@ -9,7 +9,6 @@ pkgbase = r-units
 	depends = r>=3.0.2
 	depends = r-rcpp>=0.12.10
 	depends = udunits>=2
-	optdepends = r-udunits2
 	optdepends = r-nistunits
 	optdepends = r-measurements
 	optdepends = r-xml2
@@ -17,11 +16,12 @@ pkgbase = r-units
 	optdepends = r-pillar
 	optdepends = r-dplyr
 	optdepends = r-vctrs
-	optdepends = r-knitr
+	optdepends = r-ggplot2
 	optdepends = r-testthat
-	optdepends = r-ggforce
+	optdepends = r-vdiffr
+	optdepends = r-knitr
 	optdepends = r-rmarkdown
-	source = https://cran.r-project.org/src/contrib/units_0.7-2.tar.gz
-	sha256sums = b90be023431100632b3081747af9e743e615452b4ad38810991f7b024b7040eb
+	source = https://cran.r-project.org/src/contrib/units_0.8-0.tar.gz
+	sha256sums = 9c46fe138e8c1c3d3a51268776412f02d09673656516148cccb71b1071beb21a
 
 pkgname = r-units

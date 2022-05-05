@@ -1,6 +1,6 @@
 pkgbase = r-sf
 	pkgdesc = Simple Features for R
-	pkgver = 1.0.5
+	pkgver = 1.0.7
 	pkgrel = 1
 	url = https://cran.r-project.org/package=sf
 	arch = i686
@@ -13,10 +13,10 @@ pkgbase = r-sf
 	depends = r-magrittr
 	depends = r-rcpp>=0.12.18
 	depends = r-s2>=1.0.7
-	depends = r-units>=0.6.0
-	depends = gdal>=2.0.1
-	depends = geos>=3.4.0
-	depends = proj>=4.8.0
+	depends = r-units>=0.7.0
+	depends = gdal
+	depends = geos
+	depends = proj
 	depends = sqlite
 	optdepends = r-blob
 	optdepends = r-covr
@@ -31,8 +31,6 @@ pkgbase = r-sf
 	optdepends = r-pillar
 	optdepends = r-pool
 	optdepends = r-raster
-	optdepends = r-rgdal
-	optdepends = r-rgeos
 	optdepends = r-rlang
 	optdepends = r-rmarkdown
 	optdepends = r-rpostgres
@@ -41,7 +39,7 @@ pkgbase = r-sf
 	optdepends = r-sp
 	optdepends = r-spatstat
 	optdepends = r-spatstat.geom
-	optdepends = r-spatstat.core
+	optdepends = r-spatstat.random
 	optdepends = r-spatstat.linnet
 	optdepends = r-spatstat.utils
 	optdepends = r-stars
@@ -53,7 +51,7 @@ pkgbase = r-sf
 	optdepends = r-tmap
 	optdepends = r-vctrs
 	optdepends = r-wk
-	source = https://cran.r-project.org/src/contrib/sf_1.0-5.tar.gz
-	sha256sums = 290c28fa5ea777d555e70962c59079c134f02f7bdf60259a72eea79a064a1ac4
+	source = https://cran.r-project.org/src/contrib/sf_1.0-7.tar.gz
+	sha256sums = d0731fab9438d73a55af7232f0474b36f4b2a4e6d66adaa141632f4a60265453
 
 pkgname = r-sf

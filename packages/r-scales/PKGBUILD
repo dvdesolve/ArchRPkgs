@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=scales
-_cranver=1.1.1
+_cranver=1.2.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Scale Functions for Visualization"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.2' 'r-farver>=2.0.3' r-labeling r-lifecycle 'r-munsell>=0.5' r-r6 r-rcolorbrewer r-viridislite)
-optdepends=(r-bit64 r-covr r-dichromat r-ggplot2 r-hms r-testthat)
+depends=('r>=3.2' 'r-farver>=2.0.3' r-labeling r-lifecycle 'r-munsell>=0.5' r-r6 r-rcolorbrewer 'r-rlang>=1.0.0' r-viridislite)
+optdepends=(r-bit64 r-covr r-dichromat r-ggplot2 r-hms r-stringi r-testthat r-waldo)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('40b2b66522f1f314a20fd09426011b0cdc9d16b23ee2e765fe1930292dd03705')
+sha256sums=('185d50240e6b3e84d36ec7fbca6aef7a85db7c8c1b0dde51d4af28d363ce02df')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
