@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=MACPET
-_bcver=1.14.0
+_bcver=1.15.1
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -14,7 +14,7 @@ makedepends=(patch)
 optdepends=(r-ggplot2 r-igraph r-rmarkdown r-reshape2 r-biocstyle)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz"
         "fix_dbleps.patch")
-sha256sums=('4b72a9178233e22efc49366e28024312ba01165908b59dc1e440033d262efd20'
+sha256sums=('54ff827da7f169b43368d31b6417697ff36a20e464f5fb201de988d7dd88821c'
             '2b22a1d373b9685991d80ea9177e3f085f50c229b995f4ee1be97510fd65632f')
 
 prepare() {

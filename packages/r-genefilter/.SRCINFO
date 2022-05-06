@@ -1,6 +1,6 @@
 pkgbase = r-genefilter
 	pkgdesc = genefilter: methods for filtering genes from high-throughput experiments
-	pkgver = 1.76.0
+	pkgver = 1.78.0
 	pkgrel = 1
 	url = https://bioconductor.org/packages/genefilter
 	arch = i686
@@ -20,7 +20,7 @@ pkgbase = r-genefilter
 	optdepends = r-rcolorbrewer
 	optdepends = r-biocstyle
 	optdepends = r-knitr
-	source = https://bioconductor.org/packages/release/bioc/src/contrib/genefilter_1.76.0.tar.gz
-	sha256sums = c21b3c778a61c4fd85c4c157755fcf9ba636abac6658ad2809e4b594ea186a15
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/genefilter_1.78.0.tar.gz
+	sha256sums = 58913b670b29109a7226320e1f99d795931991db1939ea3fa25143492d55e3d2
 
 pkgname = r-genefilter

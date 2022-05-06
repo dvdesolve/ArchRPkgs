@@ -1,12 +1,12 @@
 pkgbase = r-rtracklayer
 	pkgdesc = R interface to genome annotation files and the UCSC genome browser
-	pkgver = 1.54.0
+	pkgver = 1.56.0
 	pkgrel = 1
 	url = https://bioconductor.org/packages/rtracklayer
 	arch = i686
 	arch = x86_64
 	license = Artistic2.0
-	depends = r>=3.3
+	depends = r>=3.5.0
 	depends = r-genomicranges>=1.37.2
 	depends = r-xml>=1.98.0
 	depends = r-biocgenerics>=0.35.3
@@ -32,7 +32,7 @@ pkgbase = r-rtracklayer
 	optdepends = r-bsgenome.hsapiens.ucsc.hg19
 	optdepends = r-txdb.hsapiens.ucsc.hg19.knowngene
 	optdepends = r-runit
-	source = https://bioconductor.org/packages/release/bioc/src/contrib/rtracklayer_1.54.0.tar.gz
-	sha256sums = 0c5e46ca04c2956c0d9d5ba4a946f8c121370751dec47b59ac0d0b95e14c7085
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/rtracklayer_1.56.0.tar.gz
+	sha256sums = cd215e2e7c0c5ab27c037869289598a25b300537d7ee8181dc6ce6dcc3543ab5
 
 pkgname = r-rtracklayer

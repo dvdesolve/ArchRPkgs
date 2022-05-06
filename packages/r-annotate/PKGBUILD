@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=annotate
-_bcver=1.72.0
+_bcver=1.74.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic2.0)
 depends=('r>=2.10' 'r-annotationdbi>=1.27.5' r-xml r-biobase r-dbi r-xtable 'r-biocgenerics>=0.13.8' r-httr)
 optdepends=(r-hgu95av2.db r-genefilter r-biostrings r-iranges r-rae230a.db r-rae230aprobe r-tkwidgets r-go.db r-org.hs.eg.db r-org.mm.eg.db r-humanchrloc r-rgraphviz r-runit)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('04399dfc9bd250a306667b66d897bf7a18627f7b1992b7c5c10380331b2cf85c')
+sha256sums=('4fc0553435855aa7dbf352a26b86e39936d4510ae03816f708e7091e6f6bdb74')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

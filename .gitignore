@@ -10,6 +10,6 @@ staging/
 
 # build output
 *namcap.log
+*prepare.log
 *build.log
 *package.log
-*prepare.log

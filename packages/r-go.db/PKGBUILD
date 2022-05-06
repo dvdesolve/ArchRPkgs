@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=GO.db
-_bcver=3.14.0
+_bcver=3.15.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="A set of annotation maps describing the entire Gene Ontology"
 arch=(any)
 url="https://bioconductor.org/packages/${_bcname}"
 license=(Artistic2.0)
-depends=('r>=2.7.0' 'r-annotationdbi>=1.55.1')
+depends=('r>=2.7.0' 'r-annotationdbi>=1.57.1')
 optdepends=(r-dbi)
 source=("https://bioconductor.org/packages/release/data/annotation/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('45d0a681a662667d45b2472d160b72f7058ad0a28dd0ca24742e11ddfd87d8e7')
+sha256sums=('bac91d73c57f206fa5bc4a501a2aaf61b365cf411181ce44353370cdbc132d99')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

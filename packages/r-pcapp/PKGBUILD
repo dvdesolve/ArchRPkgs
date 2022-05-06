@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=pcaPP
-_cranver=1.9-74
+_cranver=2.0-1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL3)
 depends=(r r-mvtnorm)
 optdepends=(r-robustbase)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('50837b434d67e4b5fcec34c689a9e30c7a9fb94c561b39f24e68a1456ff999b6')
+sha256sums=('9690e2f263162452d5a14bd8c52264cb70b317d30907411af4e5b6df4086121a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

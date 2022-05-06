@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=GenomicFeatures
-_bcver=1.47.14
+_bcver=1.48.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic-2.0)
 depends=('r>=3.5.0' 'r-biocgenerics>=0.1.0' 'r-s4vectors>=0.17.29' 'r-iranges>=2.13.23' 'r-genomeinfodb>=1.25.7' 'r-genomicranges>=1.31.17' 'r-annotationdbi>=1.41.4' r-dbi 'r-rsqlite>=2.0' r-rcurl 'r-xvector>=0.19.7' 'r-biostrings>=2.47.6' r-biocio 'r-rtracklayer>=1.51.5' 'r-biomart>=2.17.1' 'r-biobase>=2.15.1')
 optdepends=(r-rmariadb r-org.mm.eg.db r-org.hs.eg.db r-bsgenome r-bsgenome.hsapiens.ucsc.hg19 r-bsgenome.celegans.ucsc.ce11 r-bsgenome.dmelanogaster.ucsc.dm3 r-mirbase.db r-fdb.ucsc.trnas r-txdb.hsapiens.ucsc.hg19.knowngene r-txdb.celegans.ucsc.ce11.ensgene r-txdb.dmelanogaster.ucsc.dm3.ensgene r-txdb.mmusculus.ucsc.mm10.knowngene r-txdb.hsapiens.ucsc.hg19.lincrnastranscripts r-txdb.hsapiens.ucsc.hg38.knowngene r-snplocs.hsapiens.dbsnp144.grch38 r-rsamtools r-pasillabamsubset r-genomicalignments r-ensembldb r-runit r-biocstyle r-knitr)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('f7e3ce64237f07b61377a688da215197512007f7c6a8a00d704ea8a8ff435256')
+sha256sums=('b86587355c00661257bf89e3c05a4a0da1e372c82f7b6f4263f01c44cdee4586')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

@@ -1,6 +1,6 @@
 pkgbase = r-httr
 	pkgdesc = Tools for Working with URLs and HTTP
-	pkgver = 1.4.2
+	pkgver = 1.4.3
 	pkgrel = 1
 	url = https://cran.r-project.org/package=httr
 	arch = any
@@ -20,7 +20,7 @@ pkgbase = r-httr
 	optdepends = r-rmarkdown
 	optdepends = r-testthat
 	optdepends = r-xml2
-	source = https://cran.r-project.org/src/contrib/httr_1.4.2.tar.gz
-	sha256sums = 462bed6ed0d92f811d5df4d294336025f1dbff357286999d9269bfd9c20b1ef9
+	source = https://cran.r-project.org/src/contrib/httr_1.4.3.tar.gz
+	sha256sums = 9a8613fa96173ac910c021391af1ced4d0609169049c802cf7cdfe1c40897c6a
 
 pkgname = r-httr

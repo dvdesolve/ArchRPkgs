@@ -1,0 +1,35 @@
+pkgbase = r-spacetime
+	pkgdesc = Classes and Methods for Spatio-Temporal Data
+	pkgver = 1.2.6
+	pkgrel = 1
+	url = https://cran.r-project.org/package=spacetime
+	arch = any
+	license = GPL2
+	license = GPL3
+	depends = r>=3.0.0
+	depends = r-sp>=1.1.0
+	depends = r-zoo>=1.7.9
+	depends = r-xts>=0.8.8
+	depends = r-intervals
+	optdepends = r-adehabitatlt
+	optdepends = r-cshapes
+	optdepends = r-gstat
+	optdepends = r-maps
+	optdepends = r-mapdata
+	optdepends = r-maptools
+	optdepends = r-plm
+	optdepends = r-raster
+	optdepends = r-rcolorbrewer
+	optdepends = r-rgdal
+	optdepends = r-rgeos
+	optdepends = r-rmarkdown
+	optdepends = r-rpostgresql
+	optdepends = r-knitr
+	optdepends = r-googlevis
+	optdepends = r-isocodes
+	optdepends = r-markdown
+	optdepends = r-sf
+	source = https://cran.r-project.org/src/contrib/spacetime_1.2-6.tar.gz
+	sha256sums = 8fd46606ed9589ffce19368d40004890f96e8fe77f13b546e6a2f8b9ced0dd81
+
+pkgname = r-spacetime

@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=TxDb.Hsapiens.UCSC.hg38.knownGene
-_bcver=3.14.0
+_bcver=3.15.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -9,9 +9,9 @@ pkgdesc="Annotation package for TxDb object(s)"
 arch=(any)
 url="https://bioconductor.org/packages/${_bcname}"
 license=(Artistic2.0)
-depends=(r 'r-genomicfeatures>=1.45.2' r-annotationdbi)
+depends=(r 'r-genomicfeatures>=1.47.13' r-annotationdbi)
 source=("https://bioconductor.org/packages/release/data/annotation/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('ccbcab4f4be41fda207ca5ee6505ba5320a97e103ef5d02eda962ac8783e7faa')
+sha256sums=('e92069ef6ccf6ec5ab6395d195c9f83b11ef944012b0be06f1f6f13227c42ef9')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

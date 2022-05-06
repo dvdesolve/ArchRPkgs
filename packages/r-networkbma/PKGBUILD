@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=networkBMA
-_bcver=2.34.0
+_bcver=2.35.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ depends=('r>=2.15.0' r-bma 'r-rcpp>=0.10.3' 'r-rcpparmadillo>=0.3.810.2' 'r-rcpp
 makedepends=(patch)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz"
         "fix_boostinc.patch")
-sha256sums=('0fdd36382a7775a4e6dfbe2b511f0c853471303a0d062a0c62240928dc8a2703'
+sha256sums=('a29156b5bcc82d61f512436a96d29d6518a7042a684c3cd335795d754e5a4075'
             'fe3b4f88661542b0053dc01af9755514e1f889166a68dd1735df29d7e459cfbf')
 
 prepare() {

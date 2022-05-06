@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=graph
-_bcver=1.72.0
+_bcver=1.74.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic2.0)
 depends=('r>=2.10' 'r-biocgenerics>=0.13.11')
 optdepends=(r-sparsem r-xml r-rbgl r-runit)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('000ab6023bdb49d254fccb12b0486a8324a9bec2b6a7c4cdb3b5d788c7a76174')
+sha256sums=('e4d1389e5f148fa6ff55299b29f096bd9cfd5d772691a0298b53a027b9cc10ad')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

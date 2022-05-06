@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=BMA
-_cranver=3.18.15
+_cranver=3.18.17
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,7 +11,7 @@ url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
 depends=(r r-leaps r-robustbase r-inline r-rrcov)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('4be0d52f433503631e9574944067f613bafba129ebe27396bcfccb3b95992b1a')
+sha256sums=('6d8c514fa179f8a48c2105b551a8a08e28ea4375d06150a4b8ab4ccda577daf5')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -2,7 +2,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=dichromat
-_cranver=2.0-0
+_cranver=2.0-0.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
 depends=('r>=2.10')
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('31151eaf36f70bdc1172da5ff5088ee51cc0a3db4ead59c7c38c25316d580dd1')
+sha256sums=('a10578e9ad8a581bd8fe0d8a8370051f3cdcf12c7d282f3af2a18dacda566081')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

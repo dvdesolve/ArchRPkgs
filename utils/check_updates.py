@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
-""" Management utility to check and validate R packages for Arch Linux """
+""" Management utility to check updates for R packages """
 
 ## import necessary modules
-import argparse
 import multiprocessing
 import os
 import re
@@ -102,7 +101,7 @@ SUPPORTED_REPOS = [
     }
 ]
 
-SCRIPT_VERSION = "0.1.0"
+SCRIPT_VERSION = "0.2.0"
 
 
 ## helper functions
@@ -291,37 +290,19 @@ def check():
             print(line)
 
 
-def validate():
-    pass
-
-
 def main():
     """ main routine """
 
-    # get command line options
-    parser = argparse.ArgumentParser(description="Easy management of R packages for Arch Linux")
-    parser.add_argument("command", choices=["check", "validate"], help="operation to execute")
-    parser.add_argument("--version", action="version", version="%(prog)s " + SCRIPT_VERSION)
-    cmdline_args = vars(parser.parse_args())
+    # check for updates
+    print("{}[INFO]{} Will check R packages for updates".format(
+        MessageColor.info, MessageColor.nc))
 
-    command = cmdline_args["command"]
+    check()
 
-    if command == "check":
-        print("{}[INFO]{} Will check R packages for updates".format(
-            MessageColor.info, MessageColor.nc))
-
-        check()
-
-        print()
-    elif command == "validate":
-        print("{}[INFO]{} Will validate R packages for errors".format(
-            MessageColor.info, MessageColor.nc))
-
-        validate()
-
-        print()
+    print()
 
     # final print
+    # TODO may be add some summary stats like number of outdated/broken/etc packages?
     print("{}[OK]{} Job done".format(
         MessageColor.ok, MessageColor.nc))
 

@@ -1,6 +1,6 @@
 pkgbase = r-biocmanager
 	pkgdesc = Access the Bioconductor Project Package Repository
-	pkgver = 1.30.16
+	pkgver = 1.30.17
 	pkgrel = 1
 	url = https://cran.r-project.org/package=BiocManager
 	arch = any
@@ -13,7 +13,7 @@ pkgbase = r-biocmanager
 	optdepends = r-withr
 	optdepends = r-curl
 	optdepends = r-knitr
-	source = https://cran.r-project.org/src/contrib/BiocManager_1.30.16.tar.gz
-	sha256sums = 75a754a55192ef6aa6ac9b054fd5381ff03fe6bb8b2e033eb8143da930ef3855
+	source = https://cran.r-project.org/src/contrib/BiocManager_1.30.17.tar.gz
+	sha256sums = 25638d92687d303d762088797e061915694a887fce3acee22094675d5455acea
 
 pkgname = r-biocmanager

@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=biomaRt
-_bcver=2.50.3
+_bcver=2.52.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Interface to BioMart databases (i.e. Ensembl)"
 arch=(any)
 url="https://bioconductor.org/packages/${_bcname}"
 license=(Artistic2.0)
-depends=(r r-xml r-annotationdbi r-progress r-stringr r-httr r-digest r-biocfilecache r-rappdirs r-xml2)
+depends=(r 'r-xml>=3.99.0.7' r-annotationdbi r-progress r-stringr r-httr r-digest r-biocfilecache r-rappdirs r-xml2)
 optdepends=(r-biocstyle r-knitr r-rmarkdown r-testthat r-mockery)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('a1b7ce46db4074604ff13a9a956f2da92515fa1469a6dfcb921bc7225d01bb06')
+sha256sums=('af23f7f9fe0fe9f7a38ea56d49671d62076ec7f8b1039054428cdeecad9ac37a')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

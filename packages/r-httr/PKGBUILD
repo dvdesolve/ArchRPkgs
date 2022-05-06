@@ -2,7 +2,7 @@
 # Contributor: dhn <neilson+aur@sent.com>
 
 _cranname=httr
-_cranver=1.4.2
+_cranver=1.4.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(MIT)
 depends=('r>=3.2' 'r-curl>=3.0.0' r-jsonlite r-mime 'r-openssl>=0.8' r-r6)
 optdepends=(r-covr r-httpuv r-jpeg r-knitr r-png r-readr r-rmarkdown r-testthat r-xml2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('462bed6ed0d92f811d5df4d294336025f1dbff357286999d9269bfd9c20b1ef9')
+sha256sums=('9a8613fa96173ac910c021391af1ced4d0609169049c802cf7cdfe1c40897c6a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

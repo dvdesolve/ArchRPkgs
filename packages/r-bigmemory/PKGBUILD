@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=bigmemory
-_cranver=4.5.36
+_cranver=4.6.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Manage Massive Matrices with Shared Memory and Memory-Mapped Files"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(LGPL3 Apache2.0)
-depends=(r r-rcpp r-bigmemory.sri r-bh)
-optdepends=(r-testthat)
+depends=('r>=3.2.0' r-bigmemory.sri r-rcpp 'r-uuid>=1.0.2' r-bh)
+optdepends=(r-testthat r-remotes)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('18c67fbe6344b2f8223456c4f19ceebcf6c1166255eab81311001fd67a45ef0e')
+sha256sums=('b56e157c87ed6c4fc69d4cb9c697ae9a2001726e776e41aa7c48b35327b65141')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
