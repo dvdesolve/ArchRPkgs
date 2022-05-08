@@ -1,0 +1,26 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_bcname=Rhdf5lib
+_bcver=1.18.0
+pkgname=r-${_bcname,,}
+pkgver=${_bcver//[:-]/.}
+pkgrel=1
+pkgdesc="hdf5 library as an R package"
+arch=(i686 x86_64)
+url="https://bioconductor.org/packages/${_bcname}"
+license=(Artistic-2.0)
+depends=('r>=4.0.0')
+makedepends=(make)
+optdepends=(r-biocstyle r-knitr r-rmarkdown r-tinytest r-mockery)
+source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
+sha256sums=('d253cfc669a2f67db4f0f817e57480178cfe088e380ab8e9cb53052e3bbd8960')
+
+build() {
+  R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_bcname}" "${pkgdir}/usr/lib/R/library"
+}
