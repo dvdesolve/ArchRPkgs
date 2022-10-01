@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=pkgdown
+_cranver=2.0.6
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Make Static HTML Documentation for a Package"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(MIT)
+depends=('r>=3.1.0' 'r-bslib>=0.3.1' 'r-callr>=2.0.2' r-cli r-desc r-digest 'r-downlit>=0.4.0' 'r-fs>=1.4.0' 'r-httr>=1.4.2' r-jsonlite r-magrittr r-memoise r-purrr r-ragg 'r-rlang>=1.0.0' 'r-rmarkdown>=1.1.9007' r-tibble r-whisker 'r-withr>=2.4.3' 'r-xml2>=1.3.1' r-yaml)
+optdepends=(r-covr r-diffviewer r-evaluate r-htmltools r-htmlwodgets r-knitr r-lifecycle r-openssl r-pkgload r-rsconnect r-rstudioapi r-rticles r-sass r-testthat)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('d29a65c8a5b189fd89842e769f58f8c2369a55406269eabfb66d41d0fe1c7f69')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

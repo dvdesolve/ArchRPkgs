@@ -1,6 +1,6 @@
 pkgbase = r-desc
 	pkgdesc = Manipulate DESCRIPTION Files
-	pkgver = 1.4.1
+	pkgver = 1.4.2
 	pkgrel = 1
 	url = https://cran.r-project.org/package=desc
 	arch = any
@@ -8,7 +8,6 @@ pkgbase = r-desc
 	depends = r>=3.4
 	depends = r-cli
 	depends = r-r6
-	depends = r-crayon
 	depends = r-rprojroot
 	optdepends = r-callr
 	optdepends = r-covr
@@ -17,7 +16,7 @@ pkgbase = r-desc
 	optdepends = r-testthat
 	optdepends = r-whoami
 	optdepends = r-withr
-	source = https://cran.r-project.org/src/contrib/desc_1.4.1.tar.gz
-	sha256sums = 8f9ebb51eccf925b2e76bc65ecf495e8f3882b8c0053023f396622f0402d6f54
+	source = https://cran.r-project.org/src/contrib/desc_1.4.2.tar.gz
+	sha256sums = 758acf14be478c09ba7e84ade3a7ce512becf35d44e5e6a997b932065f2a227c
 
 pkgname = r-desc

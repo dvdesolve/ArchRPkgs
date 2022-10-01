@@ -2,7 +2,7 @@
 # Contributor: frichtlm <frichtlm@gmail.com>
 
 _cranname=forcats
-_cranver=0.5.1
+_cranver=0.5.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Tools for Working with Categorical Variables (Factors)"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.2' r-ellipsis r-magrittr r-rlang r-tibble)
+depends=('r>=3.4' r-cli r-ellipsis r-glue r-lifecycle r-magrittr r-rlang r-tibble r-withr)
 optdepends=(r-covr r-dplyr r-ggplot2 r-knitr r-readr r-rmarkdown r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('c4fb96e874e2bedaa8a1aa32ea22abdee7906d93b5c5c7b42c0894c0c5b6a289')
+sha256sums=('14a60a43183f82da0fbf42633cee446d21dcbb98a8c37361b5c8061a4da86141')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

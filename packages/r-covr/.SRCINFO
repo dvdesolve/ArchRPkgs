@@ -1,6 +1,6 @@
 pkgbase = r-covr
 	pkgdesc = Test Coverage for Packages
-	pkgver = 3.5.1
+	pkgver = 3.6.1
 	pkgrel = 1
 	url = https://cran.r-project.org/package=covr
 	arch = i686
@@ -26,7 +26,7 @@ pkgbase = r-covr
 	optdepends = r-xml2
 	optdepends = r-memoise
 	optdepends = r-mockery
-	source = https://cran.r-project.org/src/contrib/covr_3.5.1.tar.gz
-	sha256sums = a54cfc3623ea56084158ac5d7fe33f216f45191f6dcddab9c9ed4ec1d9d8ac6c
+	source = https://cran.r-project.org/src/contrib/covr_3.6.1.tar.gz
+	sha256sums = ffbe15438c1a4f274c14cacfb944480e284f1ab60808d5e840c015cc57c51157
 
 pkgname = r-covr

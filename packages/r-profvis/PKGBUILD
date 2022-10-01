@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=profvis
+_cranver=0.3.7
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Interactive Visualizations for Profiling R Code"
+arch=(i686 x86_64)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL3)
+depends=('r>=3.0' 'r-htmlwidgets>=0.3.2' r-stringr)
+optdepends=(r-knitr r-ggplot2 r-rmarkdown r-testthat r-devtools r-shiny r-htmltools)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('43974863cb793f81dbea4b94096343c321f7739c9038980405c9b16b04a906b9')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

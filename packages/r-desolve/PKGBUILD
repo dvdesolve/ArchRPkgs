@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=deSolve
-_cranver=1.32
+_cranver=1.33
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,11 +10,11 @@ pkgdesc="Solvers for Initial Value Problems of Differential Equations ('ODE', 'D
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=4.0.0' gcc-fortran)
+depends=('r>=3.3.0' gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-scatterplot3d r-fme)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('74670f16eaafddd044a3ac1813acd5d164aed3f862b87aa1ac275b600e27d9ad')
+sha256sums=('71de979e05ce7e472308ac5218e97efe976051364ba579b10940dc1fe4c8b684')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

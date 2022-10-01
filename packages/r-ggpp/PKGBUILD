@@ -2,7 +2,7 @@
 # Contributor: Hyacinthe Cartiaux <hyacinthe.cartiaux@free.fr>
 
 _cranname=ggpp
-_cranver=0.4.4
+_cranver=0.4.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL2 GPL3)
 depends=('r>=3.6.0' 'r-ggplot2>=3.3.2' 'r-rlang>=0.4.7' 'r-magrittr>=1.5' 'r-glue>=1.4.2' 'r-gridextra>=2.3' 'r-scales>=1.1.1' 'r-tibble>=3.0.3' 'r-dplyr>=1.0.2' 'r-xts>=0.12.0' 'r-zoo>=1.8.8' 'r-polynom>=1.4.0' 'r-lubridate>=1.7.9' 'r-stringr>=1.4.0')
 optdepends=(r-knitr r-rmarkdown r-gginnards r-ggrepel r-magick)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('616eba2c452fc5063ac0e5181cc71d61e28a9070eca420207abe6c25fb678a71')
+sha256sums=('e98a9eb121de49c72fa58e5a093f72cadbab0b0be15b80d791ba7ff1dde6360a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
