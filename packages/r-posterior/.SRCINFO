@@ -1,0 +1,30 @@
+pkgbase = r-posterior
+	pkgdesc = Tools for Working with Posterior Distributions
+	pkgver = 1.3.1
+	pkgrel = 1
+	url = https://cran.r-project.org/package=posterior
+	arch = any
+	license = BSD3
+	depends = r>=3.2.0
+	depends = r-abind
+	depends = r-checkmate
+	depends = r-rlang>=0.4.7
+	depends = r-tibble>=3.0.0
+	depends = r-vctrs
+	depends = r-tensora
+	depends = r-pillar
+	depends = r-distributional
+	depends = r-matrixstats
+	optdepends = r-testthat
+	optdepends = r-caret
+	optdepends = r-gbm
+	optdepends = r-randomforest
+	optdepends = r-e1071
+	optdepends = r-dplyr
+	optdepends = r-tidyr
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	source = https://cran.r-project.org/src/contrib/posterior_1.3.1.tar.gz
+	sha256sums = 7000780290a24be86dbc406dd4338aec622d8dee1e471b68b55abb4872934d7a
+
+pkgname = r-posterior

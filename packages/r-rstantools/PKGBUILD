@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=rstantools
+_cranver=2.2.0
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Tools for Developing R Packages Interfacing with 'Stan'"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL3)
+depends=(r r-desc 'r-rcpp>=0.12.16' 'r-rcppparallel>=5.0.1' pandoc)
+optdepends=(r-rstan r-usethis r-testthat r-knitr r-pkgbuild r-pkgload r-roxygen2 r-rmarkdown r-rstudioapi)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('cb810baeb90c67668361b666c6862df9917aff6aaec63d2c3a485f28407c4eb7')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

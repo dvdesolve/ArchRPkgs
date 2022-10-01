@@ -1,0 +1,26 @@
+pkgbase = r-distributional
+	pkgdesc = Vectorised Probability Distributions
+	pkgver = 0.3.1
+	pkgrel = 1
+	url = https://cran.r-project.org/package=distributional
+	arch = any
+	license = GPL3
+	depends = r
+	depends = r-vctrs>=0.3.0
+	depends = r-rlang>=0.4.5
+	depends = r-generics
+	depends = r-numderiv
+	depends = r-ggplot2
+	depends = r-scales
+	depends = r-farver
+	depends = r-digest
+	depends = r-lifecycle
+	optdepends = r-testthat
+	optdepends = r-covr
+	optdepends = r-mvtnorm
+	optdepends = r-actuar
+	optdepends = r-ggdist
+	source = https://cran.r-project.org/src/contrib/distributional_0.3.1.tar.gz
+	sha256sums = 727e56cbcf0c8a8adacca8030214ddbd14f68ee28d0aad716467bd68b027235f
+
+pkgname = r-distributional
