@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=igraph
-_cranver=1.3.1
+_cranver=1.3.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,11 +9,11 @@ pkgdesc="Network Analysis and Visualization"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=(r r-magrittr 'r-pkgconfig>=2.0.0' gcc-fortran)
+depends=(r r-magrittr 'r-pkgconfig>=2.0.0' r-rlang gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-ape r-graph r-igraphdata r-rgl r-scales r-testthat r-withr r-digest gmp libxml2 glpk)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('505a2ba7c417ceaf869240cc1c9a5f3fbd75f8d9dfcfe048df1326c6ec41144e')
+sha256sums=('9e615d67b6b5b57dfa54ec2bbc8c29da8f7c3fe82af1e35ab27273b1035b9bd4')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

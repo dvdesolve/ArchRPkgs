@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=hardhat
-_cranver=0.2.0
+_cranver=1.2.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Construct Modeling Packages"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=2.10' r-glue 'r-rlang>=0.4.2' r-tibble 'r-vctrs>=0.3.0')
+depends=('r>=3.4.0' 'r-glue>=1.6.2' 'r-rlang>=1.0.3' 'r-tibble>=3.1.7' 'r-vctrs>=0.4.1')
 optdepends=(r-covr r-crayon r-devtools r-knitr r-modeldata r-recipes r-rmarkdown r-roxygen2 r-testthat r-usethis)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('9497ca0fe6206c54d1da79f248d44c5faffc7d375b630091ef45dfca46c29628')
+sha256sums=('f9320eccb1b5f624a46fa074e3ccc202c383b77098ecd08b193aeb47daedad78')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

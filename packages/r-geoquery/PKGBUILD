@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=GEOquery
-_bcver=2.64.0
+_bcver=2.64.2
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL2)
 depends=(r r-biobase 'r-readr>=1.3.1' r-xml2 r-dplyr r-data.table r-tidyr r-magrittr r-limma r-curl r-r.utils)
 optdepends=(r-knitr r-rmarkdown r-biocgenerics r-testthat r-covr r-markdown)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('3f1a750ac1a7262ad6ac1d4ca69197e4fd64d53e9408f7b2e0be982fee994158')
+sha256sums=('3dc51776c33d45371f8913d2593ea0babbbebd1aed018e220e037d0505de73b3')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

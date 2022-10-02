@@ -1,20 +1,19 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: Kibouo <csonka.mihaly@hotmail.com>
-# Contributor: Alex Branham <branham@utexas.edu>
 
-_cranname=htmltools
-_cranver=0.5.3
+_cranname=deldir
+_cranver=1.0-6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Tools for HTML"
+pkgdesc="Delaunay Triangulation and Dirichlet (Voronoi) Tessellation"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=2.14.1' r-digest r-base64enc 'r-rlang>=0.4.10' 'r-fastmap>=1.1.0')
-optdepends=(r-markdown r-testthat r-withr r-cairo r-ragg r-shiny)
+depends=('r>=3.5.0' gcc-fortran)
+makedepends=(gcc-fortran)
+optdepends=(r-polyclip)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('2c451b369ea8918358e2b280f548816664fe0143222c609e6bfb1f9cd2f7324f')
+sha256sums=('6df6d8325c607e0b7d63cbc53c29e774eff95ad4acf9c7ec8f70693b0505f8c5')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
@@ -25,4 +24,3 @@ package() {
 
   cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
 }
-
