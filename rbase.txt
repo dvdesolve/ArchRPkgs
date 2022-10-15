@@ -26,4 +26,5 @@ stats4
 survival
 tcltk
 tools
+translations
 utils

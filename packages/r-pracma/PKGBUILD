@@ -2,7 +2,7 @@
 # Contributor: Thomas Ivesdal-Tronstad <thotro at lyse dot net>
 
 _cranname=pracma
-_cranver=2.3.8
+_cranver=2.4.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL3)
 depends=('r>=3.1.0')
 optdepends=(r-nlcoptim r-quadprog)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('2302d454406e72711714732658d0c59c9d5a1ead698f22ee23f38cba63d42764')
+sha256sums=('1d50337fdfd9a8d704a64f01dae5d52b9a2bd6d872fdaa4a6685b8d3bde89c16')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

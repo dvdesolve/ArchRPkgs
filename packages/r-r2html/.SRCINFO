@@ -1,13 +1,13 @@
 pkgbase = r-r2html
 	pkgdesc = HTML Exportation for R Objects
-	pkgver = 2.3.2
+	pkgver = 2.3.3
 	pkgrel = 1
 	url = https://cran.r-project.org/package=R2HTML
 	arch = any
 	license = GPL2
 	license = GPL3
 	depends = r>=2.0
-	source = https://cran.r-project.org/src/contrib/R2HTML_2.3.2.tar.gz
-	sha256sums = 69c6fd9942de00747fcd6ba317a4e8bdbd37403b130fc3a7c8494b058fb77d02
+	source = https://cran.r-project.org/src/contrib/R2HTML_2.3.3.tar.gz
+	sha256sums = 4a7e181a1c444f83ccac7eb8b19962de08dd649ae5b9868813d008196e4e0f8b
 
 pkgname = r-r2html

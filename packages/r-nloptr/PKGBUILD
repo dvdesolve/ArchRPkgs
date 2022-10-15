@@ -2,7 +2,7 @@
 # Contributor: Taekyung Kim <Taekyung.Kim.Maths@gmail.com>
 
 _cranname=nloptr
-_cranver=2.0.1
+_cranver=2.0.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(LGPL3)
 depends=(r r-testthat 'nlopt>=2.7.0')
 optdepends=(r-knitr r-rmarkdown r-xml2 r-testthat r-covr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('3984f075f77de5afbe58404909d2574d2af7c08825596849bc08dff303612a19')
+sha256sums=('7b26ac1246fd1bd890817b0c3a145456c11aec98458b8518de863650b99616d7')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
