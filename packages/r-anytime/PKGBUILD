@@ -1,19 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: Grey Christoforo <first name at last name dot net>
 
-_cranname=stringr
-_cranver=1.4.1
+_cranname=anytime
+_cranver=0.3.9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Simple, Consistent Wrappers for Common String Operations"
-arch=(any)
+pkgdesc="Anything to 'POSIXct' or 'Date' Converter"
+arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2)
-depends=('r>=3.1' 'r-glue>=1.2.0' r-magrittr 'r-stringi>=1.1.7')
-optdepends=(r-covr r-htmltools r-htmlwidgets r-knitr r-rmarkdown r-testthat)
+license=(GPL2 GPL3)
+depends=('r>=3.2.0' 'r-rcpp>=0.12.9' r-bh)
+optdepends=(r-tinytest r-gettz)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('ec0d8e90caa3e107f18c188ed313dea8bfd12a738011b0be09ef5362360ddcb1')
+sha256sums=('1096c15249ac70997a8a41c37eeb2a6d38530621abeae05d3dcd96a8acc7574a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

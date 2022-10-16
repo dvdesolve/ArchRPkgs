@@ -1,6 +1,6 @@
 pkgbase = r-stringr
 	pkgdesc = Simple, Consistent Wrappers for Common String Operations
-	pkgver = 1.4.0
+	pkgver = 1.4.1
 	pkgrel = 1
 	url = https://cran.r-project.org/package=stringr
 	arch = any
@@ -15,7 +15,7 @@ pkgbase = r-stringr
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
 	optdepends = r-testthat
-	source = https://cran.r-project.org/src/contrib/stringr_1.4.0.tar.gz
-	sha256sums = 87604d2d3a9ad8fd68444ce0865b59e2ffbdb548a38d6634796bbd83eeb931dd
+	source = https://cran.r-project.org/src/contrib/stringr_1.4.1.tar.gz
+	sha256sums = ec0d8e90caa3e107f18c188ed313dea8bfd12a738011b0be09ef5362360ddcb1
 
 pkgname = r-stringr

@@ -2,7 +2,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=recipes
-_cranver=0.2.0
+_cranver=1.0.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=2
@@ -10,10 +10,10 @@ pkgdesc="Preprocessing Tools to Create Design Matrices"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.1' r-dplyr r-ellipsis 'r-generics>=0.1.0.9000' r-glue r-gower 'r-hardhat>=0.1.6.9001' 'r-ipred>=0.9.12' r-lifecycle r-lubridate r-magrittr 'r-purrr>=0.2.3' 'r-rlang>=0.4.0' r-tibble 'r-tidyr>=1.0.0' 'r-tidyselect>=1.1.0' r-timedate r-vctrs r-withr)
-optdepends=(r-covr r-ddalpha r-dials r-ggplot2 r-igraph r-kernlab r-knitr r-modeldata r-parsnip r-rann r-rcpproll r-rmarkdown r-rsample r-rspectra r-testthat r-workflows r-xml2)
+depends=('r>=3.4' r-dplyr r-cli r-ellipsis 'r-generics>=0.1.2' r-glue r-gower 'r-hardhat>=1.2.0' 'r-ipred>=0.9.12' 'r-lifecycle>=1.0.3' 'r-lubridate>=1.8.0' r-magrittr 'r-purrr>=0.2.3' 'r-rlang>=1.0.3' r-tibble 'r-tidyr>=1.0.0' 'r-tidyselect>=1.2.0' r-timedate r-vctrs r-withr)
+optdepends=(r-covr r-ddalpha r-dials r-ggplot2 r-igraph r-kernlab r-knitr r-modeldata r-parsnip r-rann r-rcpproll r-rmarkdown r-rsample r-rspectra r-splines2 r-testthat r-workflows r-xml2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('3d0073e3eb98ac089a94bf8430f3c50915ff1f495d8e967c37baa6a0f6cea0a4')
+sha256sums=('1a7b5a9a2946fa34599935b6d93101ec559d8a901d49cc691972c75df8d5670e')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

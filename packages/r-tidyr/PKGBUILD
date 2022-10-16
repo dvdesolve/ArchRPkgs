@@ -2,7 +2,7 @@
 # Contributor: frichtlm <frichtlm@gmail.com>
 
 _cranname=tidyr
-_cranver=1.2.0
+_cranver=1.2.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(MIT)
 depends=('r>=3.1' 'r-dplyr>=1.0.0' 'r-ellipsis>=0.1.0' r-glue r-lifecycle r-magrittr r-purrr r-rlang 'r-tibble>=2.1.1' 'r-tidyselect>=1.1.0' 'r-vctrs>=0.3.7' 'r-cpp11>=0.4.0')
 optdepends=(r-covr r-data.table r-jsonlite r-knitr r-readr r-repurrrsive r-rmarkdown r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8cd01da9e97827521d01ea50b9225f2705c46b7538bbf74bec6249a04c1213a8')
+sha256sums=('6971766d3663dc75c2328ab257816f4e42d9fdc05c2d87d171b8b9b5ecce61af')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
