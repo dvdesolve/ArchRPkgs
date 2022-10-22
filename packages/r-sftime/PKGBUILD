@@ -1,19 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: Danilo J. S. Bellini <danilo dot bellini at gmail dot com>
 
-_cranname=maptools
-_cranver=1.1-5
+_cranname=sftime
+_cranver=0.2-0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Tools for Handling Spatial Objects"
-arch=(i686 x86_64)
+pkgdesc="Classes and Methods for Simple Feature Objects that Have a Time Column"
+arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=2.10' 'r-sp>=1.0.11')
-optdepends=(r-rgeos r-spatstat.geom r-pbsmapping r-maps r-rcolorbrewer r-raster r-polyclip r-plotrix r-spatstat.linnet r-spatstat.utils r-spatstat)
+license=(Apache1.1 Apache2.0)
+depends=(r 'r-sf>=1.0.7')
+optdepends=(r-knitr r-spacetime r-rmarkdown r-dplyr r-trajectories r-stars r-ncmeta r-tidyr r-ggplot2 r-magrittr r-sp r-rlang)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('3cd9bd95d3a1cb4aae3a350e0582319dacc25f070af6995061b85e68042f25dc')
+sha256sums=('d82a1d750fb0fe7fe9962e520f00f8f969fe075a9bb53592180b4ff41430b1fa')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

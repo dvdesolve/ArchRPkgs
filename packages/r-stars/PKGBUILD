@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=stars
+_cranver=0.5-6
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Spatiotemporal Arrays, Raster and Vector Data Cubes"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(Apache1.1 Apache2.0)
+depends=('r>=3.3.0' r-abind 'r-sf>=1.0.8' 'r-classint>=0.4.1' r-lwgeom r-rlang r-units)
+optdepends=(r-pcict r-rnetcdf r-clue r-covr r-cubelyr r-digest r-dplyr r-exactextractr r-fnn r-future.apply r-ggforce r-ggplot2 r-ggthemes r-gstat r-httr r-jsonlite r-knitr r-maps r-mapdata r-ncdfgeom r-ncmeta r-pbapply r-plm r-randomforest r-raster r-rgdal r-rmarkdown r-sp r-spacetime r-spatstat r-spatstat.geom r-terra r-testthat r-tidyr r-virirdis r-xts r-zoo)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('e0413c95423635f7f7b2520813382e911257da8ace9b743da9fe3eab568a9461')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

@@ -1,6 +1,6 @@
 pkgbase = r-purrr
 	pkgdesc = Functional Programming Tools
-	pkgver = 0.3.4
+	pkgver = 0.3.5
 	pkgrel = 1
 	url = https://cran.r-project.org/package=purrr
 	arch = i686
@@ -12,12 +12,14 @@ pkgbase = r-purrr
 	optdepends = r-covr
 	optdepends = r-crayon
 	optdepends = r-dplyr
+	optdepends = r-httr
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
 	optdepends = r-testthat
 	optdepends = r-tibble
 	optdepends = r-tidyselect
-	source = https://cran.r-project.org/src/contrib/purrr_0.3.4.tar.gz
-	sha256sums = 23ebc93bc9aed9e7575e8eb9683ff4acc0270ef7d6436cc2ef4236a9734840b2
+	optdepends = r-vctrs
+	source = https://cran.r-project.org/src/contrib/purrr_0.3.5.tar.gz
+	sha256sums = a2386cd7e78a043cb9c14703023fff15ab1c879bf648816879d2c0c4a554fcef
 
 pkgname = r-purrr

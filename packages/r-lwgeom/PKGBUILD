@@ -1,19 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: Danilo J. S. Bellini <danilo dot bellini at gmail dot com>
 
-_cranname=maptools
-_cranver=1.1-5
+_cranname=lwgeom
+_cranver=0.2-9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Tools for Handling Spatial Objects"
+pkgdesc="Bindings to Selected 'liblwgeom' Functions for Simple Features"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=2.10' 'r-sp>=1.0.11')
-optdepends=(r-rgeos r-spatstat.geom r-pbsmapping r-maps r-rcolorbrewer r-raster r-polyclip r-plotrix r-spatstat.linnet r-spatstat.utils r-spatstat)
+license=(GPL2)
+depends=('r>=3.3.0' r-rcpp r-units 'r-sf>=0.9.3' 'geos>=3.5.0' 'proj>=4.8.0' sqlite)
+optdepends=(r-covr r-sp r-geosphere r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('3cd9bd95d3a1cb4aae3a350e0582319dacc25f070af6995061b85e68042f25dc')
+sha256sums=('69b2a2efdafb0b32c801932eee7cd2c4b8402cede6487f4dfea4e14873091aa8')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

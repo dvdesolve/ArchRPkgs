@@ -3,7 +3,7 @@
 # Contributor: Alex Branham <alex.branham@gmail.com>
 
 _cranname=commonmark
-_cranver=1.8.0
+_cranver=1.8.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -14,7 +14,7 @@ license=(BSD2)
 depends=(r)
 optdepends=(r-curl r-testthat r-xml2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7d07e72937b1cf158e69f183722bf79dbb91b8967a9dd29f4fa145500c2be668')
+sha256sums=('96adcb093de3d2e48811af402da70e7222a313b97f1e979e0cbe84dd59bd5cbe')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,6 +1,6 @@
 pkgbase = r-metr
 	pkgdesc = Tools for Easier Analysis of Meteorological Fields
-	pkgver = 0.12.0
+	pkgver = 0.13.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=metR
 	arch = any
@@ -20,7 +20,6 @@ pkgbase = r-metr
 	depends = r-sp
 	depends = r-stringr
 	depends = r-purrr
-	depends = r-rcurl
 	depends = r-isoband
 	depends = r-lubridate
 	optdepends = r-maps
@@ -34,7 +33,6 @@ pkgbase = r-metr
 	optdepends = r-rmarkdown
 	optdepends = r-testthat
 	optdepends = r-viridis
-	optdepends = r-udunits2
 	optdepends = r-pcict
 	optdepends = r-gridextra
 	optdepends = r-vdiffr
@@ -43,7 +41,8 @@ pkgbase = r-metr
 	optdepends = r-raster
 	optdepends = r-rgdal
 	optdepends = r-here
-	source = https://cran.r-project.org/src/contrib/metR_0.12.0.tar.gz
-	sha256sums = 9ab084720283c51d6789eb0aeeb6661607d09ad5ebe6ccf75ba5bbf9fb2fe47f
+	optdepends = r-gsignal
+	source = https://cran.r-project.org/src/contrib/metR_0.13.0.tar.gz
+	sha256sums = 812311e0239f2e8aab8976ca2aa69176386c065a8cf82eac92d53efac488ce31
 
 pkgname = r-metr

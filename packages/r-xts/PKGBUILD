@@ -3,7 +3,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=xts
-_cranver=0.12.1
+_cranver=0.12.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,9 +12,9 @@ arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
 depends=(r 'r-zoo>=1.7.12')
-optdepends=(r-timeseries r-timedate r-tseries r-chron r-fts r-tis r-runit)
+optdepends=(r-timeseries r-timedate r-tseries r-chron r-tis r-runit)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('d680584af946fc30be0b2046e838cff7b3a65e00df1eadba325ca5e96f3dca2c')
+sha256sums=('9c287ceaeb758ff4c9596be6a688db5683d50b45e7610e6d068891ca10dca743')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

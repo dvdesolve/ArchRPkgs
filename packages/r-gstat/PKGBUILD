@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=gstat
-_cranver=2.0-9
+_cranver=2.1-0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Spatial and Spatio-Temporal Geostatistical Modelling, Prediction and Si
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=2.10' 'r-sp>=0.9.72' r-zoo 'r-spacetime>=1.0.0' r-fnn)
-optdepends=(r-fields r-maps r-mapdata r-maptools r-rgdal r-rgeos r-sf r-stars r-xts r-raster r-future r-future.apply)
+depends=('r>=2.10' 'r-sp>=0.9.72' r-zoo 'r-sf>=0.7.2' r-sftime 'r-spacetime>=1.2.8' r-stars r-fnn)
+optdepends=(r-fields r-maps r-mapdata r-maptools r-rgdal r-rgeos r-xts r-raster r-future r-future.apply)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('122c032c2e15388496853597ebcb5664e76cda96b164e9917ee66d1c24fba4a6')
+sha256sums=('57a6eb46fa601f159ace1e56ebe8928d210a62d85552a4eb5a5ca4ada48f2d6f')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
