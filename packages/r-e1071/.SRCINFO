@@ -1,7 +1,7 @@
 pkgbase = r-e1071
 	pkgdesc = Misc Functions of the Department of Statistics, Probability Theory Group (Formerly: E1071), TU Wien
-	pkgver = 1.7.11
-	pkgrel = 2
+	pkgver = 1.7.12
+	pkgrel = 1
 	url = https://cran.r-project.org/package=e1071
 	arch = i686
 	arch = x86_64
@@ -14,7 +14,7 @@ pkgbase = r-e1071
 	optdepends = r-sparsem
 	optdepends = r-xtable
 	optdepends = r-slam
-	source = https://cran.r-project.org/src/contrib/e1071_1.7-11.tar.gz
-	sha256sums = 48c18e10e7cabc742d37b563672e2eddb6061f2378b69e5563be79ab9948d92f
+	source = https://cran.r-project.org/src/contrib/e1071_1.7-12.tar.gz
+	sha256sums = 91e052d0a521db74a66df90adb28db601f2a2cca38b03dcad030ac2fdc5c5dcf
 
 pkgname = r-e1071

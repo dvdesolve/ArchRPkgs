@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=gld
-_cranver=2.6.5
+_cranver=2.6.6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,7 +11,7 @@ url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
 depends=(r r-e1071 r-lmom)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8294f7c033147aa9b559b152ec9d46d380234527d1ab03adbe46b80d5da68ee9')
+sha256sums=('ea23e9781207b5d47ed04e4d5758d9652cab5d1eedcf9fbc9c2ee4d3babffdc4')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
