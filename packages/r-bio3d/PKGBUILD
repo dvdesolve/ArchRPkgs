@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=bio3d
-_cranver=2.4-3
+_cranver=2.4-4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL2 GPL3)
 depends=('r>=3.1.0' r-rcpp)
 optdepends=(r-xml r-rcurl r-ncdf4 r-igraph r-bigmemory r-knitr r-rmarkdown r-testthat r-httr r-msa r-biostrings)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('c6031f0d9033260a938171d0fa70720962e352935eb7bd2ddb9b92b93abe6a74')
+sha256sums=('5654eac10d33e4235ef89292e3b99006d8812b6bfaaa3d6fb540312160fd9de9')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
