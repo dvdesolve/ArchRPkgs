@@ -1,8 +1,9 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 # Contributor: Charles Vejnar
+# Contributor: Kashyap Chhatbar kashyap.cc [at] gmail [dot] com
 
 _bcname=DESeq2
-_bcver=1.36.0
+_bcver=1.38.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -13,7 +14,7 @@ license=(LGPL3)
 depends=(r 'r-s4vectors>=0.23.18' r-iranges r-genomicranges 'r-summarizedexperiment>=1.1.6' 'r-biocgenerics>=0.7.5' r-biobase r-biocparallel r-genefilter r-locfit r-geneplotter r-ggplot2 'r-rcpp>=0.11.0' r-rcpparmadillo)
 optdepends=(r-testthat r-knitr r-rmarkdown r-vsn r-pheatmap r-rcolorbrewer r-apeglm r-shr r-tximport r-tximeta r-tximportdata r-readr r-pbapply r-airway r-pasilla r-glmgampoi r-biocmanager)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('2737cdbb39d393262af22c37aa7e8db72375ff04fb6aeeb849cf098b2558bb1a')
+sha256sums=('a9dd30633dc30c37017f24aa7ce95117b262e859e07c51a237150bce0a4629d8')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
