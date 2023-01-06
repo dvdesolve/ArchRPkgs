@@ -1,13 +1,14 @@
 pkgbase = r-recipes
 	pkgdesc = Preprocessing Tools to Create Design Matrices
-	pkgver = 1.0.2
-	pkgrel = 2
+	pkgver = 1.0.3
+	pkgrel = 1
 	url = https://cran.r-project.org/package=recipes
 	arch = any
 	license = MIT
 	depends = r>=3.4
 	depends = r-dplyr
 	depends = r-cli
+	depends = r-clock>=0.6.1
 	depends = r-ellipsis
 	depends = r-generics>=0.1.2
 	depends = r-glue
@@ -23,7 +24,7 @@ pkgbase = r-recipes
 	depends = r-tidyr>=1.0.0
 	depends = r-tidyselect>=1.2.0
 	depends = r-timedate
-	depends = r-vctrs
+	depends = r-vctrs>=0.5.0
 	depends = r-withr
 	optdepends = r-covr
 	optdepends = r-ddalpha
@@ -43,7 +44,7 @@ pkgbase = r-recipes
 	optdepends = r-testthat
 	optdepends = r-workflows
 	optdepends = r-xml2
-	source = https://cran.r-project.org/src/contrib/recipes_1.0.2.tar.gz
-	sha256sums = 1a7b5a9a2946fa34599935b6d93101ec559d8a901d49cc691972c75df8d5670e
+	source = https://cran.r-project.org/src/contrib/recipes_1.0.3.tar.gz
+	sha256sums = 0ffeab49b815e937ba581631641de1ed28df4332757ed3ff2cacb6226590275e
 
 pkgname = r-recipes

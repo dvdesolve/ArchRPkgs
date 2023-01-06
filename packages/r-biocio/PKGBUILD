@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=BiocIO
-_bcver=1.6.0
+_bcver=1.8.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic2.0)
 depends=('r>=4.0' r-biocgenerics r-s4vectors)
 optdepends=(r-testthat r-knitr r-rmarkdown r-biocstyle)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('b7f901ca3e6fa06171f839c088c8769a462533a3cf5b83eb7dabe64fb811489a')
+sha256sums=('2e41284256ef5dac4deb27ee41f973092e091c387a77cf3e3d588c39aceea495')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

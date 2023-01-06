@@ -1,9 +1,6 @@
 r-fields pkgrel=2
-r-ggplot2 pkgrel=2
 r-lmtest pkgrel=2
 r-quantreg pkgrel=2
-r-recipes pkgrel=2
-r-rgdal pkgrel=2
 r-spam pkgrel=2
 r-sparsem pkgrel=2
 r-stringi pkgrel=3

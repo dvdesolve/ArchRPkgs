@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=BiocFileCache
-_bcver=2.4.0
+_bcver=2.6.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic2.0)
 depends=('r>=3.4.0' 'r-dbplyr>=1.0.0' r-dplyr r-rsqlite r-dbi r-rappdirs r-filelock r-curl r-httr)
 optdepends=(r-testthat r-knitr r-biocstyle r-rmarkdown r-rtracklayer)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('5cefe2e72648c0003ac74937b390ebda7258b09eed575b84de1cb5dc23adabad')
+sha256sums=('8f7a2e12e1a8a538a11c7f63cf8eeebfef327f2a9993d8ee7a08325367dd796a')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

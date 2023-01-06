@@ -2,18 +2,18 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=recipes
-_cranver=1.0.2
+_cranver=1.0.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Preprocessing Tools to Create Design Matrices"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.4' r-dplyr r-cli r-ellipsis 'r-generics>=0.1.2' r-glue r-gower 'r-hardhat>=1.2.0' 'r-ipred>=0.9.12' 'r-lifecycle>=1.0.3' 'r-lubridate>=1.8.0' r-magrittr 'r-purrr>=0.2.3' 'r-rlang>=1.0.3' r-tibble 'r-tidyr>=1.0.0' 'r-tidyselect>=1.2.0' r-timedate r-vctrs r-withr)
+depends=('r>=3.4' r-dplyr r-cli 'r-clock>=0.6.1' r-ellipsis 'r-generics>=0.1.2' r-glue r-gower 'r-hardhat>=1.2.0' 'r-ipred>=0.9.12' 'r-lifecycle>=1.0.3' 'r-lubridate>=1.8.0' r-magrittr 'r-purrr>=0.2.3' 'r-rlang>=1.0.3' r-tibble 'r-tidyr>=1.0.0' 'r-tidyselect>=1.2.0' r-timedate 'r-vctrs>=0.5.0' r-withr)
 optdepends=(r-covr r-ddalpha r-dials r-ggplot2 r-igraph r-kernlab r-knitr r-modeldata r-parsnip r-rann r-rcpproll r-rmarkdown r-rsample r-rspectra r-splines2 r-testthat r-workflows r-xml2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('1a7b5a9a2946fa34599935b6d93101ec559d8a901d49cc691972c75df8d5670e')
+sha256sums=('0ffeab49b815e937ba581631641de1ed28df4332757ed3ff2cacb6226590275e')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

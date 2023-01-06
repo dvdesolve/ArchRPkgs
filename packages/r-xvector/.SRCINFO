@@ -1,6 +1,6 @@
 pkgbase = r-xvector
 	pkgdesc = Foundation of external vector representation and manipulation in Bioconductor
-	pkgver = 0.36.0
+	pkgver = 0.38.0
 	pkgrel = 1
 	url = https://bioconductor.org/packages/release/bioc/html/XVector.html
 	arch = i686
@@ -14,7 +14,7 @@ pkgbase = r-xvector
 	optdepends = r-biostrings
 	optdepends = r-drosophila2probe
 	optdepends = r-runit
-	source = https://bioconductor.org/packages/release/bioc/src/contrib/XVector_0.36.0.tar.gz
-	sha256sums = 136e5bc29f3d64634eff01794cb7824171df2300721c3ac24ceba5233c5e7ab8
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/XVector_0.38.0.tar.gz
+	sha256sums = e9ba0ec3f4124c6f0ce13c4d562e7e4419f8aa5db4283092574a63a207f4ed79
 
 pkgname = r-xvector

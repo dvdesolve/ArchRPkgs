@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=AnnotationDbi
-_bcver=1.58.0
+_bcver=1.60.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic2.0)
 depends=('r>=2.7.0' 'r-biocgenerics>=0.29.2' 'r-biobase>=1.17.0' r-iranges r-dbi r-rsqlite 'r-s4vectors>=0.9.25' r-keggrest)
 optdepends=(r-hgu95av2.db r-go.db r-org.sc.sgd.db r-org.at.tair.db r-runit r-txdb.hsapiens.ucsc.hg19.knowngene r-org.hs.eg.db r-reactome.db r-annotationforge r-graph r-ensdb.hsapiens.v75 r-biocstyle r-knitr)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('96bf9c24b8401361c2c9d4efbf6f93a790becaba449edc06e5322116e9f19c95')
+sha256sums=('1767187f599341a51d375dfdfffad372b4b76cf1cfb1b45ed5f5f1faa3043beb')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

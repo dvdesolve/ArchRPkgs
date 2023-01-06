@@ -1,0 +1,24 @@
+pkgbase = r-clock
+	pkgdesc = Date-Time Types and Tools
+	pkgver = 0.6.1
+	pkgrel = 1
+	url = https://cran.r-project.org/package=clock
+	arch = i686
+	arch = x86_64
+	license = MIT
+	depends = r>=3.4
+	depends = r-rlang>=1.0.4
+	depends = r-tzdb>=0.3.0
+	depends = r-vctrs>=0.4.1
+	depends = r-cpp11>=0.4.2
+	optdepends = r-covr
+	optdepends = r-knitr
+	optdepends = r-magrittr
+	optdepends = r-pillar
+	optdepends = r-rmarkdown
+	optdepends = r-testthat
+	optdepends = r-withr
+	source = https://cran.r-project.org/src/contrib/clock_0.6.1.tar.gz
+	sha256sums = f80c385fd8229538968ffb71d7de53ddc82bfcec6641f8e76f299546c43c1702
+
+pkgname = r-clock
