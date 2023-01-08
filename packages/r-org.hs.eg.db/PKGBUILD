@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=org.Hs.eg.db
-_bcver=3.15.0
+_bcver=3.16.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Genome wide annotation for Human"
 arch=(any)
 url="https://bioconductor.org/packages/${_bcname}"
 license=(Artistic2.0)
-depends=('r>=2.7.0' 'r-annotationdbi>=1.57.1')
+depends=('r>=2.7.0' 'r-annotationdbi>=1.59.1')
 optdepends=(r-dbi r-annotate r-runit)
 source=("https://bioconductor.org/packages/release/data/annotation/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('1dc9bb6019e0f0a222b9ec84a1c5870cdbca480f45d9ad08e35f77278baa3c5f')
+sha256sums=('2d2e6fdefa0dbb61c86d4736e5a0d430745ae733e310f240b97b2cb3703a2c0a')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

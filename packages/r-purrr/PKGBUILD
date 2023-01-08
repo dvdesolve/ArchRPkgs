@@ -2,7 +2,7 @@
 # Contributor: frichtlm <frichtlm@gmail.com>
 
 _cranname=purrr
-_cranver=0.3.5
+_cranver=1.0.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Functional Programming Tools"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=3.2' 'r-magrittr>=1.5' 'r-rlang>=0.3.1')
-optdepends=(r-covr r-crayon r-dplyr r-httr r-knitr r-rmarkdown r-testthat r-tibble r-tidyselect r-vctrs)
+depends=('r>=3.2.3' 'r-cli>=3.4.0' 'r-lifecycle>=1.0.3' 'r-magrittr>=1.5.0' 'r-rlang>=0.4.10' 'r-vctrs>=0.5.0')
+optdepends=(r-covr r-dplyr r-httr r-knitr r-lubridate r-rmarkdown r-testthat r-tibble r-tidyselect)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('a2386cd7e78a043cb9c14703023fff15ab1c879bf648816879d2c0c4a554fcef')
+sha256sums=('7f0644cb3edc539238ed879950a32a89fce659c3fde0345b1e4417d0a9a7a6c2')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

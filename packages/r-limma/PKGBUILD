@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=limma
-_bcver=3.52.4
+_bcver=3.54.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL2)
 depends=('r>=3.6.0')
 optdepends=(r-affy r-annotationdbi r-biasedurn r-biobase r-ellipse r-go.db r-gplots r-illuminaio r-locfit r-org.hs.eg.db r-statmod r-vsn)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('b09ccf301dc4c4a83b712f3207dd651b420b2b32e7bfaec3f89909953d1ebe93')
+sha256sums=('aae6bb0af0bd80677a01c48c96b99fc1a58c4a670a21fec87e135038972dc7cb')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

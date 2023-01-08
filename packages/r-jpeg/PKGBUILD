@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=jpeg
-_cranver=0.1-9
+_cranver=0.1-10
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
 depends=('r>=2.9.0' libjpeg)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('01a175442ec209b838a56a66a3908193aca6f040d537da7838d9368e46913072')
+sha256sums=('c8d9f609c3088f91ec4853d6cc0e66511038a465811dea79ca6a0c09519178ca')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

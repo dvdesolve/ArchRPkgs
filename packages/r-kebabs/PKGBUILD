@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=kebabs
-_bcver=1.30.0
+_bcver=1.32.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL2.1)
 depends=('r>=3.3.0' 'r-biostrings>=2.35.5' r-kernlab 'r-rcpp>=0.11.2' 'r-xvector>=0.7.3' 'r-s4vectors>=0.27.3' r-e1071 r-liblinear r-apcluster r-iranges r-biostrings)
 optdepends=(r-sparsem r-biobase r-biocgenerics r-knitr)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('c0191c14c0d820c5577043c484794465788f789f9b84114f40e255b6876b3712')
+sha256sums=('bfd331540467927d0c3a32150be3c622507b5e68548a7ca85348844956353e33')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

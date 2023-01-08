@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=InteractionSet
-_bcver=1.24.0
+_bcver=1.26.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL3)
 depends=(r-genomicranges r-summarizedexperiment r-rcpp r-biocgenerics 'r-s4vectors>=0.27.12' r-iranges r-genomeinfodb)
 optdepends=(r-testthat r-knitr r-rmarkdown r-biocstyle)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('a56a76d729d30824b533e01692f0badfce6abe708b568870d4a86e5944af5162')
+sha256sums=('1c584faed3cdf5852b136c935d8e9c6babf85d9d3df9868457443ce1003acb91')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

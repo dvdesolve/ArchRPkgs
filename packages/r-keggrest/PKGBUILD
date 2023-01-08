@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=KEGGREST
-_bcver=1.36.3
+_bcver=1.38.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic2.0)
 depends=('r>=3.5.0' r-httr r-png r-biostrings)
 optdepends=(r-runit r-biocgenerics r-knitr r-markdown)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('d1de123e8e98a7a3f8f22da047963cb43e0f84382b8c040e1e62d47fcd1feb53')
+sha256sums=('ec9fe4b9e11858ba1236c22c9058ea3b3e6967168c847b01003b15d1afb94318')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

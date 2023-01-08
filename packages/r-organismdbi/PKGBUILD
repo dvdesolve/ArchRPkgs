@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=OrganismDbi
-_bcver=1.38.1
+_bcver=1.40.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic2.0)
 depends=('r>=2.14.0' 'r-biocgenerics>=0.15.10' 'r-annotationdbi>=1.33.15' 'r-genomicfeatures>=1.39.4' r-biobase r-biocmanager 'r-genomicranges>=1.31.13' r-graph r-iranges r-rbgl r-dbi 'r-s4vectors>=0.9.25')
 optdepends=(r-homo.sapiens r-rattus.norvegicus r-bsgenome.hsapiens.ucsc.hg19 r-annotationhub r-fdb.ucsc.trnas r-mirbase.db r-rtracklayer r-biomart r-runit r-rmariadb)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('2998649c56b5f7309dc3853ee9b1b1da05b8393eaea6f1f50d8241d291ecb657')
+sha256sums=('7cfa7055f5b4625e764ee918e8af46409a7b7f54ad53d3fa4e2268bc38ee8186')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"
