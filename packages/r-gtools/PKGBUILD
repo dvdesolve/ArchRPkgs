@@ -2,7 +2,7 @@
 # Contributor: dhn <neilson+aur@sent.com>
 
 _cranname=gtools
-_cranver=3.9.3
+_cranver=3.9.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL2)
 depends=(r)
 optdepends=(r-car r-gplots r-knitr r-rstudioapi r-sgp r-taxize)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7afb53277b382d5752f4597ae433f3c0addf5e8eb24d01a9562faf2a01e33133')
+sha256sums=('59cf8b194fe98b1cc05dbb4d686810a1068f59d8b402b731548a898ece85f111')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

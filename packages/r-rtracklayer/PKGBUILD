@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=rtracklayer
-_bcver=1.56.1
+_bcver=1.58.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(Artistic2.0)
 depends=('r>=3.5.0' 'r-genomicranges>=1.37.2' 'r-xml>=1.98.0' 'r-biocgenerics>=0.35.3' 'r-s4vectors>=0.23.18' 'r-iranges>=2.13.13' 'r-xvector>=0.19.7' 'r-genomeinfodb>=1.15.2' 'r-biostrings>=2.47.6' r-zlibbioc 'r-rcurl>=1.4.2' 'r-rsamtools>=1.31.2' 'r-genomicalignments>=1.15.6' r-biocio 'r-restfulr>=0.0.13')
 optdepends=(r-bsgenome r-humanstemcell r-microrna r-genefilter r-limma r-org.hs.eg.db r-hgu133plus2.db r-genomicfeatures r-bsgenome.hsapiens.ucsc.hg19 r-txdb.hsapiens.ucsc.hg19.knowngene r-runit)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('9acadac5fface3639c779d9116cfaf20708fe200163b1c0e92af8e228c4e1e83')
+sha256sums=('b3d2dddd3924ab739324aad65c149949d73d879eeb9e2fe39a6ecd5a9d03b9e3')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

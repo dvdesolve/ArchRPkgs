@@ -1,6 +1,6 @@
 pkgbase = r-ecb
 	pkgdesc = Programmatic Access to the European Central Bank's Statistical Data Warehouse
-	pkgver = 0.4.0
+	pkgver = 0.4.1
 	pkgrel = 1
 	url = https://cran.r-project.org/package=ecb
 	arch = any
@@ -17,7 +17,7 @@ pkgbase = r-ecb
 	optdepends = r-ggplot2
 	optdepends = r-testthat
 	optdepends = r-zoo
-	source = https://cran.r-project.org/src/contrib/ecb_0.4.0.tar.gz
-	sha256sums = 6cd2963901572c200f9f09fc30e572c86fd20292acddff7bed9dd3d86168c142
+	source = https://cran.r-project.org/src/contrib/ecb_0.4.1.tar.gz
+	sha256sums = b27c2a213d2110cb780f17eee7a7b981080d94d503abbff73b6cdf7548d443e3
 
 pkgname = r-ecb

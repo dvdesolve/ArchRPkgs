@@ -2,7 +2,7 @@
 # Contributor: Charles Vejnar
 
 _bcname=DESeq2
-_bcver=1.36.0
+_bcver=1.38.2
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Differential gene expression analysis based on the negative binomial di
 arch=(i686 x86_64)
 url="https://bioconductor.org/packages/${_bcname}"
 license=(LGPL3)
-depends=(r 'r-s4vectors>=0.23.18' r-iranges r-genomicranges 'r-summarizedexperiment>=1.1.6' 'r-biocgenerics>=0.7.5' r-biobase r-biocparallel r-genefilter r-locfit r-geneplotter r-ggplot2 'r-rcpp>=0.11.0' r-rcpparmadillo)
-optdepends=(r-testthat r-knitr r-rmarkdown r-vsn r-pheatmap r-rcolorbrewer r-apeglm r-shr r-tximport r-tximeta r-tximportdata r-readr r-pbapply r-airway r-pasilla r-glmgampoi r-biocmanager)
+depends=(r 'r-s4vectors>=0.23.18' r-iranges r-genomicranges 'r-summarizedexperiment>=1.1.6' 'r-biocgenerics>=0.7.5' r-biobase r-biocparallel r-locfit r-geneplotter r-ggplot2 'r-rcpp>=0.11.0' r-rcpparmadillo)
+optdepends=(r-testthat r-knitr r-rmarkdown r-vsn r-pheatmap r-rcolorbrewer r-apeglm r-ashr r-tximport r-tximeta r-tximportdata r-readr r-pbapply r-airway r-pasilla r-glmgampoi r-biocmanager)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('2737cdbb39d393262af22c37aa7e8db72375ff04fb6aeeb849cf098b2558bb1a')
+sha256sums=('640d38503045536b6bcbf8d19a28b1b53fffe199f2f6b5e6a9050e43d9f601d5')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

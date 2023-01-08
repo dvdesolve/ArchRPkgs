@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _bcname=DelayedArray
-_bcver=0.22.0
+_bcver=0.24.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="A unified framework for working transparently with on-disk and in-memor
 arch=(i686 x86_64)
 url="https://bioconductor.org/packages/release/bioc/html/${_bcname}.html"
 license=(Artistic2.0)
-depends=('r>=4.0.0' 'r-biocgenerics>=0.37.0' 'r-matrixgenerics>=1.1.3' 'r-s4vectors>=0.27.2' 'r-iranges>=2.17.3')
+depends=('r>=4.0.0' 'r-biocgenerics>=0.43.4' 'r-matrixgenerics>=1.1.3' 'r-s4vectors>=0.27.2' 'r-iranges>=2.17.3')
 optdepends=(r-biocparallel r-hdf5array r-genefilter r-summarizedexperiment r-airway r-lobstr r-delayedmatrixstats r-knitr r-rmarkdown r-biocstyle r-runit)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('1ee707dc606f257020c2654b21305045f4da9dc2943e6246a0bd25f5f1302d86')
+sha256sums=('d764b4f487b49ca04150ea7d8f5f180683cd80575d67a162e4a99cd52bd8815a')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

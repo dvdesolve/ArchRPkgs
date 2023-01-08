@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=future.apply
-_cranver=1.9.1
+_cranver=1.10.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Apply Function to Elements in Parallel using Futures"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=3.2.0' 'r-future>=1.27.0' 'r-globals>=0.16.1')
+depends=('r>=3.2.0' 'r-future>=1.28.0' 'r-globals>=0.16.1')
 optdepends=(r-listenv r-r.rsp r-markdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('4f22ccd5caa62077581c6adc4d35543451e547220270aed3f1abcbaa6a202133')
+sha256sums=('dee92dd84812fe8c55064c0f0e6d806c0c29848b5a5fc4a7725d6a4b623e94aa')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
