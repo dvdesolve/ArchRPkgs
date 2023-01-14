@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=PKNCA
+_cranver=0.10.1
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Perform Pharmacokinetic Non-Compartmental Analysis"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(AGPL3)
+depends=(r r-checkmate 'r-dplyr>=0.5.0' r-digest r-purrr r-rlang r-tidyr r-tibble)
+optdepends=(r-covr r-cowplot r-ggplot2 r-knitr r-labeling r-pander r-pmxtools r-rmarkdown r-spelling r-testthat r-tidyverse r-units r-withr)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('298353cb72412eac715e3145695d19ad728a372c34c8bcace12c17629a1f4ec1')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

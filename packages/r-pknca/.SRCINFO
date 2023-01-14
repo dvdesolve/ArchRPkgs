@@ -1,0 +1,32 @@
+pkgbase = r-pknca
+	pkgdesc = Perform Pharmacokinetic Non-Compartmental Analysis
+	pkgver = 0.10.1
+	pkgrel = 1
+	url = https://cran.r-project.org/package=PKNCA
+	arch = any
+	license = AGPL3
+	depends = r
+	depends = r-checkmate
+	depends = r-dplyr>=0.5.0
+	depends = r-digest
+	depends = r-purrr
+	depends = r-rlang
+	depends = r-tidyr
+	depends = r-tibble
+	optdepends = r-covr
+	optdepends = r-cowplot
+	optdepends = r-ggplot2
+	optdepends = r-knitr
+	optdepends = r-labeling
+	optdepends = r-pander
+	optdepends = r-pmxtools
+	optdepends = r-rmarkdown
+	optdepends = r-spelling
+	optdepends = r-testthat
+	optdepends = r-tidyverse
+	optdepends = r-units
+	optdepends = r-withr
+	source = https://cran.r-project.org/src/contrib/PKNCA_0.10.1.tar.gz
+	sha256sums = 298353cb72412eac715e3145695d19ad728a372c34c8bcace12c17629a1f4ec1
+
+pkgname = r-pknca

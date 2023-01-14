@@ -1,0 +1,21 @@
+pkgbase = r-qpnca
+	pkgdesc = Noncompartmental Pharmacokinetic Analysis by qPharmetra
+	pkgver = 1.1.6
+	pkgrel = 1
+	url = https://cran.r-project.org/package=qpNCA
+	arch = any
+	license = GPL3
+	depends = r>=3.3.0
+	depends = r-dplyr>=0.7.0
+	depends = r-tidyr>=0.8.2
+	depends = r-magrittr
+	depends = r-ggplot2
+	depends = r-knitr
+	optdepends = r-rmarkdown
+	optdepends = r-markdown
+	optdepends = r-covr
+	optdepends = r-testthat
+	source = https://cran.r-project.org/src/contrib/qpNCA_1.1.6.tar.gz
+	sha256sums = 62800e55aa9b7a8a4c6e06beb4496f38c8de9784f43af8ddf5882791984f9bd6
+
+pkgname = r-qpnca

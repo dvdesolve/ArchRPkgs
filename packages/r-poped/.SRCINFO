@@ -1,0 +1,33 @@
+pkgbase = r-poped
+	pkgdesc = Population (and Individual) Optimal Experimental Design
+	pkgver = 0.6.0
+	pkgrel = 1
+	url = https://cran.r-project.org/package=PopED
+	arch = any
+	license = LGPL3
+	depends = r>=2.14
+	depends = r-ggplot2
+	depends = r-mvtnorm
+	depends = r-dplyr>=0.7.0
+	depends = r-magrittr
+	depends = r-purrr
+	depends = r-stringr
+	depends = r-tibble
+	depends = r-gtools
+	optdepends = r-testthat
+	optdepends = r-hmisc
+	optdepends = r-ga
+	optdepends = r-desolve
+	optdepends = r-rcpp
+	optdepends = r-shiny
+	optdepends = r-rhandsontable
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	optdepends = r-gridextra
+	optdepends = r-covr
+	optdepends = r-devtools
+	optdepends = r-mrgsolve
+	source = https://cran.r-project.org/src/contrib/PopED_0.6.0.tar.gz
+	sha256sums = 407dbb1802f4f345f53c5e8c86d29b61e96beffb127df2a2d41171a34fc81469
+
+pkgname = r-poped

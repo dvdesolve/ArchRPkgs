@@ -1,0 +1,24 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=maptree
+_cranver=1.4-8
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Mapping, Pruning, and Graphing Tree Models"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(custom)
+depends=('r>=2.14')
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('55cf12af55540e7d53c8a7ae4bf87e192f5dec4161b3cdf2146689e8c8b465f4')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

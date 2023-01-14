@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=qpNCA
+_cranver=1.1.6
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Noncompartmental Pharmacokinetic Analysis by qPharmetra"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL3)
+depends=('r>=3.3.0' 'r-dplyr>=0.7.0' 'r-tidyr>=0.8.2' r-magrittr r-ggplot2 r-knitr)
+optdepends=(r-rmarkdown r-markdown r-covr r-testthat)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('62800e55aa9b7a8a4c6e06beb4496f38c8de9784f43af8ddf5882791984f9bd6')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

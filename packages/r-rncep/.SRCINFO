@@ -1,0 +1,21 @@
+pkgbase = r-rncep
+	pkgdesc = Obtain, Organize, and Visualize NCEP Weather Data
+	pkgver = 1.0.10
+	pkgrel = 1
+	url = https://cran.r-project.org/package=RNCEP
+	arch = any
+	license = GPL2
+	license = GPL3
+	depends = r>=2.10
+	depends = r-maps
+	depends = r-rcolorbrewer
+	depends = r-abind
+	depends = r-fields
+	depends = r-tgp
+	depends = r-sp
+	depends = tcl
+	depends = tk
+	source = https://cran.r-project.org/src/contrib/RNCEP_1.0.10.tar.gz
+	sha256sums = 91d566e2fe411fd22fa5779034f8244cfadf776d57248e21865caa73d93d4aa6
+
+pkgname = r-rncep
