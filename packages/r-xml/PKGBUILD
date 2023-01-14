@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=XML
-_cranver=3.99-0.12
+_cranver=3.99-0.13
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(BSD3)
 depends=('r>=4.0.0' libxml2)
 optdepends=(r-bitops r-rcurl)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('cb209425c886bf405dc03fda8854e819bd9b2d4e4b031c71c5120b7302a36d14')
+sha256sums=('85c568a6e2f0c43a8026d10861ddd8984907b03665ed88fca1a3776c25e8f73a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

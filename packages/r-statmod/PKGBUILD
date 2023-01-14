@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=statmod
-_cranver=1.4.37
+_cranver=1.5.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ depends=('r>=3.0.0' gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-tweedie)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('90d2c8a79e0cb291f2685686436bcf4c5b9abd2efb84759a8553d1b1adb76913')
+sha256sums=('d61c3ef9b09d55b42e038f8d767fa483ebbdec2a9c7172b1b0ccda0ae0016ec9')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

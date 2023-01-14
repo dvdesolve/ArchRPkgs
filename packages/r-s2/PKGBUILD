@@ -2,7 +2,7 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=s2
-_cranver=1.1.0
+_cranver=1.1.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(Apache2.0)
 depends=('r>=3.0.0' r-rcpp 'r-wk>=0.6.0' 'openssl>=1.0.1')
 optdepends=(r-testthat r-vctrs)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('e3aae968538fe80db5b3325474dd9d8ff7f0452b6c606d049a3cac72732ac416')
+sha256sums=('8fb237531c6f4aa5b78fbe36d4fd15bfe852c1308fed58b04b3dae2bb73c0b57')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

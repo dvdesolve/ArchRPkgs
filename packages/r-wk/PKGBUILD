@@ -2,7 +2,7 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=wk
-_cranver=0.7.0
+_cranver=0.7.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(MIT)
 depends=('r>=2.10')
 optdepends=(r-testthat r-vctrs r-sf r-tibble r-readr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('e24327d38f2ff2d502c67c60eba3b4e44079a64ed8b805df64f231dc4712a2de')
+sha256sums=('e5a5772c982da9c43593cecab9b4f2edbab7b290bb6efc1409eabda4c4dbd384')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

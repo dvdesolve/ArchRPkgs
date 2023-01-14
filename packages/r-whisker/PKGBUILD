@@ -4,7 +4,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=whisker
-_cranver=0.4
+_cranver=0.4.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -15,7 +15,7 @@ license=(GPL3)
 depends=(r)
 optdepends=(r-markdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7a86595be4f1029ec5d7152472d11b16175737e2777134e296ae97341bf8fba8')
+sha256sums=('bf5151494508032f68ac41e211bda80da9087c65c7068ffdd12f16669bf1f2bc')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

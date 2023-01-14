@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _bcname=Rhtslib
-_bcver=1.28.0
+_bcver=2.0.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -14,7 +14,7 @@ depends=(r r-zlibbioc bzip2 xz curl)
 makedepends=(make)
 optdepends=(r-knitr r-rmarkdown r-biocstyle)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('4e48c8643e5d3429238ee76faa4c68ed8a7028e7f594c109ee75f5e994d17c1e')
+sha256sums=('5098bf9f4e8bbbe7eea3d63480c5c970af87b68998d625a2ec0f12b2393727e6')
 options=(staticlibs)
 
 build() {

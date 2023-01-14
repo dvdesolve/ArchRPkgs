@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=rgl
-_cranver=0.110.2
+_cranver=0.111.6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="3D Visualization Using OpenGL"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=3.3.0' r-htmlwidgets r-htmltools 'r-knitr>=1.33' 'r-jsonlite>=0.9.20' r-magrittr r-r6 r-base64enc r-mime mesa glu 'pandoc>=1.14')
+depends=('r>=3.3.0' 'r-htmlwidgets>=1.6.0' r-htmltools 'r-knitr>=1.33' 'r-jsonlite>=0.9.20' r-magrittr r-r6 r-base64enc r-mime mesa glu 'pandoc>=1.14')
 optdepends=(r-rmarkdown r-deldir r-orientlib r-misc3d r-magick r-plotrix r-tripack r-interp r-alphashape3d r-js r-webshot2 r-downlit r-pkgdown r-extrafont r-shiny r-manipulatewidget r-testthat r-markdown r-crosstalk r-v8 r-chromote zlib libpng freetype2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('da1118c1990ae161a5787960fb22009601d2ee7d39ca9c97c31c70589bce346d')
+sha256sums=('cdfafe5fa6e490e69798d5c24a10931e150d1f747c881412ab7602ba2c5bd6c0')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

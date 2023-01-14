@@ -1,6 +1,6 @@
 pkgbase = r-rgl
 	pkgdesc = 3D Visualization Using OpenGL
-	pkgver = 0.110.2
+	pkgver = 0.111.6
 	pkgrel = 1
 	url = https://cran.r-project.org/package=rgl
 	arch = i686
@@ -8,7 +8,7 @@ pkgbase = r-rgl
 	license = GPL2
 	license = GPL3
 	depends = r>=3.3.0
-	depends = r-htmlwidgets
+	depends = r-htmlwidgets>=1.6.0
 	depends = r-htmltools
 	depends = r-knitr>=1.33
 	depends = r-jsonlite>=0.9.20
@@ -43,7 +43,7 @@ pkgbase = r-rgl
 	optdepends = zlib
 	optdepends = libpng
 	optdepends = freetype2
-	source = https://cran.r-project.org/src/contrib/rgl_0.110.2.tar.gz
-	sha256sums = da1118c1990ae161a5787960fb22009601d2ee7d39ca9c97c31c70589bce346d
+	source = https://cran.r-project.org/src/contrib/rgl_0.111.6.tar.gz
+	sha256sums = cdfafe5fa6e490e69798d5c24a10931e150d1f747c881412ab7602ba2c5bd6c0
 
 pkgname = r-rgl

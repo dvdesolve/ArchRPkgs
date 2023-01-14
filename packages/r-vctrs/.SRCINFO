@@ -1,6 +1,6 @@
 pkgbase = r-vctrs
 	pkgdesc = Vector Helpers
-	pkgver = 0.5.0
+	pkgver = 0.5.1
 	pkgrel = 1
 	url = https://cran.r-project.org/package=vctrs
 	arch = i686
@@ -26,7 +26,7 @@ pkgbase = r-vctrs
 	optdepends = r-xml2
 	optdepends = r-waldo
 	optdepends = r-zeallot
-	source = https://cran.r-project.org/src/contrib/vctrs_0.5.0.tar.gz
-	sha256sums = 7c372e13c39ddace9c9bb9f33238de6dd2cd0f37dcc7054ba6435d271e5df686
+	source = https://cran.r-project.org/src/contrib/vctrs_0.5.1.tar.gz
+	sha256sums = 497982f717f21e7612b84940e95c282e2a96b942e6d47108f92cd92b7341db07
 
 pkgname = r-vctrs

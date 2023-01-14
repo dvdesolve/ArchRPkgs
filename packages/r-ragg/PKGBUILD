@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=ragg
-_cranver=1.2.4
+_cranver=1.2.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(MIT)
 depends=(r 'r-systemfonts>=1.0.3' 'r-textshaping>=0.3.0')
 optdepends=(r-covr r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('c547e5636a2eefaa0021a0d50fad1e813c2ce976ec0c9c3f796d38a110680dcd')
+sha256sums=('936f4d75e0e01cdeefb9f57d121cdd7812d0de5a9e1a3a8315f92ce1c84da8f9')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

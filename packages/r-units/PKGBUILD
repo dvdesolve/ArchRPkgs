@@ -2,7 +2,7 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=units
-_cranver=0.8-0
+_cranver=0.8-1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL2)
 depends=('r>=3.0.2' 'r-rcpp>=0.12.10' 'udunits>=2')
 optdepends=(r-nistunits r-measurements r-xml2 r-magrittr r-pillar r-dplyr r-vctrs r-ggplot2 r-testthat r-vdiffr r-knitr r-rmarkdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('9c46fe138e8c1c3d3a51268776412f02d09673656516148cccb71b1071beb21a')
+sha256sums=('d3e1ba246b4c97205bc3da3cf45d6b5bd5c196b8d421b84b4e94b2090985cd9a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

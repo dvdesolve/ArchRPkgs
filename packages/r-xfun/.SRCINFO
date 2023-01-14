@@ -1,6 +1,6 @@
 pkgbase = r-xfun
 	pkgdesc = Supporting Functions for Packages Maintained by "Yihui Xie"
-	pkgver = 0.34
+	pkgver = 0.36
 	pkgrel = 1
 	url = https://cran.r-project.org/package=xfun
 	arch = i686
@@ -22,7 +22,7 @@ pkgbase = r-xfun
 	optdepends = r-jsonlite
 	optdepends = r-magick
 	optdepends = r-rmarkdown
-	source = https://cran.r-project.org/src/contrib/xfun_0.34.tar.gz
-	sha256sums = 50e76c1febb988c044e44fb78e1abc1ba681173c9ff3c336f4c0ad71e6a2853d
+	source = https://cran.r-project.org/src/contrib/xfun_0.36.tar.gz
+	sha256sums = a8170de571d044eee8c852180b847b1984f8e868a9d5edd1c5e2e663171869ee
 
 pkgname = r-xfun

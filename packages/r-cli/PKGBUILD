@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=cli
-_cranver=3.5.0
+_cranver=3.6.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(MIT)
 depends=('r>=3.4')
 optdepends=(r-callr r-covr r-crayon r-digest r-glue r-htmltools r-htmlwidgets r-knitr r-mockery r-processx r-ps r-rlang r-rmarkdown r-rprojroot r-rstudioapi r-testthat r-tibble r-whoami r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8ccb6cd7c714119acf96710e0005fea7789051f8a5142df6c8171e0706fe6fdc')
+sha256sums=('b6078131803043d53d4e670aa3a0506f614e0b40fda8e0102afd48a6188ab896')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

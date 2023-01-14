@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=Rhisat2
-_bcver=1.12.0
+_bcver=1.14.0
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -9,11 +9,11 @@ pkgdesc="R Wrapper for HISAT2 Aligner"
 arch=(i686 x86_64)
 url="https://bioconductor.org/packages/${_bcname}"
 license=(GPL3)
-depends=('r>=3.6' r-genomicfeatures r-sgseq r-genomicranges)
+depends=('r>=4.2' r-genomicfeatures r-sgseq r-genomicranges)
 makedepends=(make)
 optdepends=(r-testthat r-knitr r-rmarkdown r-biocstyle)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('67db7bbed7ec845a826b6f3e99374a0bba4b864a26b4eaa7fff3101a488eea43')
+sha256sums=('3b5e13ee2fee2d290f110379cb4cee9dc517271968f7c2308ba5d0d7944baca5')
 options=(!makeflags)
 
 build() {

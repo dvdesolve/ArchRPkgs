@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=stringr
-_cranver=1.4.1
+_cranver=1.5.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Simple, Consistent Wrappers for Common String Operations"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.1' 'r-glue>=1.2.0' r-magrittr 'r-stringi>=1.1.7')
+depends=('r>=3.3' r-cli 'r-glue>=1.6.1' r-magrittr 'r-rlang>=1.0.0' 'r-stringi>=1.5.3' r-vctrs)
 optdepends=(r-covr r-htmltools r-htmlwidgets r-knitr r-rmarkdown r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('ec0d8e90caa3e107f18c188ed313dea8bfd12a738011b0be09ef5362360ddcb1')
+sha256sums=('52b159d7700a139111b4caf939e7c9c6ab3e01185181400d70a74c552826633a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
