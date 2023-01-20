@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _bcname=genefilter
-_bcver=1.80.2
+_bcver=1.80.3
 pkgname=r-${_bcname,,}
 pkgver=${_bcver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ depends=(r r-biocgenerics r-annotationdbi r-annotate r-biobase gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-hgu95av2.db r-tkwidgets r-all r-roc r-rcolorbrewer r-biocstyle r-knitr)
 source=("https://bioconductor.org/packages/release/bioc/src/contrib/${_bcname}_${_bcver}.tar.gz")
-sha256sums=('988d630d607713491ecda184597dfab9e0dbb57c770049c2ae71e68a21f84538')
+sha256sums=('09995bc8d29311f1083c3f27abbff2e055778666dd9d1941031563d73141f710')
 
 build() {
   R CMD INSTALL ${_bcname}_${_bcver}.tar.gz -l "${srcdir}"

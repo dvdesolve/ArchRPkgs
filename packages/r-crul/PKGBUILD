@@ -1,19 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: Taekyung Kim <Taekyung.Kim.Maths@gmail.com>
 
-_cranname=pbkrtest
-_cranver=0.5.2
+_cranname=crul
+_cranver=1.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Parametric Bootstrap and Kenward Roger Based Methods for Mixed Model Comparison"
+pkgdesc="HTTP Client"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=4.1.0' 'r-lme4>=1.1.31' r-broom r-dplyr r-numderiv)
-optdepends=(r-knitr)
+license=(MIT)
+depends=(r 'r-curl>=3.3' 'r-r6>=2.2.0' 'r-urltools>=1.6.0' 'r-httpcode>=0.2.0' r-jsonlite r-mime)
+optdepends=(r-testthat r-roxygen2 r-fauxpas r-webmockr r-knitr r-rmarkdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8e79adf035a0fcf3c82145ad55847497379e009f7be880ba3007ebeb2e69b6e3')
+sha256sums=('8058617d8b3724acb5b89d0e6e63f381df5c56565128b250a65eceb2b8081e2d')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

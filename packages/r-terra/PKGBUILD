@@ -2,7 +2,7 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=terra
-_cranver=1.6-47
+_cranver=1.6-53
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL3)
 depends=('r>=3.5.0' r-rcpp 'gdal>=2.2.3' 'geos>=3.4.0' 'proj>=4.9.3' sqlite)
 optdepends=(r-tinytest r-ncdf4 r-sf r-deldir r-xml r-leaflet)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b05e7e55674675c5d179fd2f973c4c09f06e8b85de4f811f7b9cd89973cfc68e')
+sha256sums=('8340c38108864a2092411b23595ccf52aefef475702460e3af35bd8cb5f07dae')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

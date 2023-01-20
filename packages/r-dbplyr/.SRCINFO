@@ -1,6 +1,6 @@
 pkgbase = r-dbplyr
 	pkgdesc = A 'dplyr' Back End for Databases
-	pkgver = 2.2.1
+	pkgver = 2.3.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=dbplyr
 	arch = any
@@ -8,19 +8,19 @@ pkgbase = r-dbplyr
 	depends = r>=3.1
 	depends = r-assertthat>=0.2.0
 	depends = r-blob>=1.2.0
-	depends = r-cli>=3.3.0
+	depends = r-cli>=3.4.1
 	depends = r-dbi>=1.0.0
-	depends = r-dplyr>=1.0.9
+	depends = r-dplyr>=1.0.10
 	depends = r-glue>=1.2.0
-	depends = r-lifecycle>=1.0.0
+	depends = r-lifecycle>=1.0.3
 	depends = r-magrittr
 	depends = r-pillar>=1.5.0
-	depends = r-purrr>=0.2.5
+	depends = r-purrr>=1.0.1
 	depends = r-r6>=2.2.2
-	depends = r-rlang>=1.0.0
+	depends = r-rlang>=1.0.6
 	depends = r-tibble>=1.4.2
-	depends = r-tidyselect>=0.2.4
-	depends = r-vctrs>=0.4.1
+	depends = r-tidyselect>=1.2.0
+	depends = r-vctrs>=0.5.0
 	depends = r-withr
 	optdepends = r-bit64
 	optdepends = r-covr
@@ -35,7 +35,7 @@ pkgbase = r-dbplyr
 	optdepends = r-rsqlite
 	optdepends = r-testthat
 	optdepends = r-tidyr
-	source = https://cran.r-project.org/src/contrib/dbplyr_2.2.1.tar.gz
-	sha256sums = a6f3f644c068fe1a3b3e99a3a10de55a150d43ef20b5130e6724d142afcb0df7
+	source = https://cran.r-project.org/src/contrib/dbplyr_2.3.0.tar.gz
+	sha256sums = 070d456e7f2926b4b787b79008c7e00452c94ead9dbaf2631d29be4b68151fff
 
 pkgname = r-dbplyr

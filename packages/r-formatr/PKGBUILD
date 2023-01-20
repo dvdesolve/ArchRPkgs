@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=formatR
-_cranver=1.13
+_cranver=1.14
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL2 GPL3)
 depends=('r>=3.2.3')
 optdepends=(r-rstudioapi r-shiny r-testit r-rmarkdown r-knitr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b207dc33bf2de3877fe3d8e5cf88bb266360e5febc339342135ae40cd7e6e527')
+sha256sums=('4ebaab2c3f8527871655246b62abd060bc75dae1cec7f962ca4752b8080f474c')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

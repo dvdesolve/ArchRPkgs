@@ -3,7 +3,7 @@
 # Contributor: Alex Branham <alex.branham@gmail.com>
 
 _cranname=rstan
-_cranver=2.21.7
+_cranver=2.21.8
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -15,7 +15,7 @@ depends=('r>=3.4.0' 'r-stanheaders>=2.21.0' 'r-ggplot2>=3.0.0' r-inline 'r-gride
 makedepends=(make)
 optdepends=(r-runit r-shinystan r-bayesplot r-rmarkdown r-rstantools r-rstudioapi r-knitr r-v8)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('4495221310d390925b665c32e05ffabd3ae8857225bda65131a7ed2be41d6d45')
+sha256sums=('b2d4edc315419037970c9fa2e8740b934966d88d40548152811f3d4a28475075')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
