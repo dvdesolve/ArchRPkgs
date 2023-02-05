@@ -1,7 +1,7 @@
 pkgbase = r-rmarkdown
 	pkgdesc = Dynamic Documents for R
 	pkgver = 2.20
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=rmarkdown
 	arch = any
 	license = GPL3
@@ -16,7 +16,7 @@ pkgbase = r-rmarkdown
 	depends = r-tinytex>=0.31
 	depends = r-xfun>=0.36
 	depends = r-yaml>=2.1.19
-	depends = pandoc>=1.14
+	depends = pandoc
 	optdepends = r-digest
 	optdepends = r-dygraphs
 	optdepends = r-fs

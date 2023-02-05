@@ -1,7 +1,7 @@
 pkgbase = r-bookdown
 	pkgdesc = Authoring Books and Technical Documents with R Markdown
 	pkgver = 0.32
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=bookdown
 	arch = any
 	license = GPL3
@@ -13,7 +13,7 @@ pkgbase = r-bookdown
 	depends = r-xfun>=0.29
 	depends = r-tinytex>=0.12
 	depends = r-yaml>=2.1.19
-	depends = pandoc>=1.17.2
+	depends = pandoc
 	optdepends = r-bslib
 	optdepends = r-downlit
 	optdepends = r-htmlwidgets

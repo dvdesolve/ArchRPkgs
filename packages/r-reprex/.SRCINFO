@@ -1,7 +1,7 @@
 pkgbase = r-reprex
 	pkgdesc = Prepare Reproducible Example Code via the Clipboard
 	pkgver = 2.0.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=reprex
 	arch = any
 	license = MIT
@@ -17,7 +17,7 @@ pkgbase = r-reprex
 	depends = r-rmarkdown
 	depends = r-rstudioapi
 	depends = r-withr>=2.3.0
-	depends = pandoc>=2.0
+	depends = pandoc
 	optdepends = r-covr
 	optdepends = r-fortunes
 	optdepends = r-miniui

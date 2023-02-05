@@ -1,5 +1,10 @@
+r-bookdown pkgrel=2
 r-fields pkgrel=2
 r-lmtest pkgrel=2
+r-loo pkgrel=2
 r-quantreg pkgrel=2
+r-reprex pkgrel=2
+r-rgl pkgrel=2
+r-rmarkdown pkgrel=2
 r-spam pkgrel=2
 r-sparsem pkgrel=2

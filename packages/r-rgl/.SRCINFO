@@ -1,7 +1,7 @@
 pkgbase = r-rgl
 	pkgdesc = 3D Visualization Using OpenGL
 	pkgver = 1.0.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=rgl
 	arch = i686
 	arch = x86_64
@@ -18,7 +18,7 @@ pkgbase = r-rgl
 	depends = r-mime
 	depends = mesa
 	depends = glu
-	depends = pandoc>=1.14
+	depends = pandoc
 	optdepends = r-rmarkdown
 	optdepends = r-deldir
 	optdepends = r-orientlib
