@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=bspm
-_cranver=0.4.1
+_cranver=0.5.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(MIT)
 depends=(r systemd dbus-python python-gobject pyalpm)
 optdepends=(r-tinytest)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('d57c9f3ce0b94989838b7539f6e7ebb333294842dc1f9a8dae3649488356a688')
+sha256sums=('9dbe36a4f75b015158b5099af63492913e3002c1a90c1e9604ec95e90fddeb6a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

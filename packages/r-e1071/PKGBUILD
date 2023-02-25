@@ -3,7 +3,7 @@
 # Contributor: Alex Branham <alex.branham@gmail.com>
 
 _cranname=e1071
-_cranver=1.7-12
+_cranver=1.7-13
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -14,7 +14,7 @@ license=(GPL2 GPL3)
 depends=(r r-proxy)
 optdepends=(r-mlbench r-randomforest r-sparsem r-xtable r-slam)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('91e052d0a521db74a66df90adb28db601f2a2cca38b03dcad030ac2fdc5c5dcf')
+sha256sums=('da94e191af6e69aa0f9e3250d4b823674cc869339d914f761ebf2824177b6b2f')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

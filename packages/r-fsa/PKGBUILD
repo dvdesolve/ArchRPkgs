@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=FSA
-_cranver=0.9.3
+_cranver=0.9.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL2 GPL3)
 depends=('r>=3.5.0' r-car r-dunn.test r-lmtest r-plotrix r-withr)
 optdepends=(r-desctools r-dplyr r-fishmethods r-fsadata r-knitr r-marked r-nlstools r-pkgdown r-plyr r-psych r-rcapture r-rmarkdown r-testthat r-tibble r-covr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('3c102c2bab42ae3ffbf1180eaca4d48814f11fd0af3f684ef2f68593430a5d81')
+sha256sums=('b0e47126ab2f816fdbc76d476216a2b25f9169fcf223fce35f1ab36566bcc354')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,6 +1,6 @@
 pkgbase = r-bspm
 	pkgdesc = Bridge to System Package Manager
-	pkgver = 0.4.1
+	pkgver = 0.5.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=bspm
 	arch = any
@@ -11,7 +11,7 @@ pkgbase = r-bspm
 	depends = python-gobject
 	depends = pyalpm
 	optdepends = r-tinytest
-	source = https://cran.r-project.org/src/contrib/bspm_0.4.1.tar.gz
-	sha256sums = d57c9f3ce0b94989838b7539f6e7ebb333294842dc1f9a8dae3649488356a688
+	source = https://cran.r-project.org/src/contrib/bspm_0.5.0.tar.gz
+	sha256sums = 9dbe36a4f75b015158b5099af63492913e3002c1a90c1e9604ec95e90fddeb6a
 
 pkgname = r-bspm

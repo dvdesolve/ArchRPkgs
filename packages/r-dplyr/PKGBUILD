@@ -2,7 +2,7 @@
 # Contributor: frichtlm <frichtlm@gmail.com>
 
 _cranname=dplyr
-_cranver=1.0.10
+_cranver=1.1.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="A Grammar of Data Manipulation"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.4.0' r-generics 'r-glue>=1.3.2' 'r-lifecycle>=1.0.1' 'r-magrittr>=1.5' r-r6 'r-rlang>=1.0.2' 'r-tibble>=2.1.3' 'r-tidyselect>=1.1.1' 'r-vctrs>=0.4.1' 'r-pillar>=1.5.1')
-optdepends=(r-bench r-broom r-callr r-covr r-dbi r-dbplyr r-ggplot2 r-knitr r-lahman r-lobstr r-microbenchmark r-nycflights13 r-purrr r-rmarkdown r-rmysql r-rpostgresql r-rsqlite r-testthat r-tidyr r-withr)
+depends=('r>=3.4.0' 'r-cli>=3.4.0' r-generics 'r-glue>=1.3.2' 'r-lifecycle>=1.0.3' 'r-magrittr>=1.5' 'r-pillar>=1.5.1' r-r6 'r-rlang>=1.0.6' 'r-tibble>=2.1.3' 'r-tidyselect>=1.2.0' 'r-vctrs>=0.5.2')
+optdepends=(r-bench r-broom r-callr r-covr r-dbi r-dbplyr r-ggplot2 r-knitr r-lahman r-lobstr r-microbenchmark r-nycflights13 r-purrr r-rmarkdown r-rmysql r-rpostgresql r-rsqlite r-stringi r-testthat r-tidyr r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('3ab639f627b4e439052df18f193f0ccab223225a4ae2ff8c18aba4f9807e0f2b')
+sha256sums=('8cb0535e49dd40b3054046735738f1e48507ac9a56b015d16ebcb54593b84ed7')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

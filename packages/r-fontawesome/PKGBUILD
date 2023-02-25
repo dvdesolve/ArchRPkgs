@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=fontawesome
-_cranver=0.4.0
+_cranver=0.5.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Easily Work with 'Font Awesome' Icons"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.3.0' 'r-rlang>=0.4.10' 'r-htmltools>=0.5.1.1')
+depends=('r>=3.3.0' 'r-rlang>=1.0.6' 'r-htmltools>=0.5.1.1')
 optdepends=(r-covr r-dplyr r-knitr r-testthat r-rsvg)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('760a0bc5b50ddbce1160b123f3b3d76342167519d75641dc2c5b952fa8d4242f')
+sha256sums=('4117b417a33e82d626881d7059eb54e7534cba202e75dae7e27021cb3796e90b')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

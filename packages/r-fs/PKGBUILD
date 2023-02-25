@@ -2,7 +2,7 @@
 # Contributor: Alex Branham <alex.branham@gmail.com>
 
 _cranname=fs
-_cranver=1.5.2
+_cranver=1.6.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,11 +10,11 @@ pkgdesc="Cross-Platform File System Operations Based on 'libuv'"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.1')
+depends=('r>=3.4')
 makedepends=(make)
-optdepends=(r-testthat r-covr r-pillar r-tibble r-crayon r-rmarkdown r-knitr r-withr r-spelling r-vctrs)
+optdepends=(r-covr r-crayon r-knitr r-pillar r-rmarkdown r-spelling r-testthat r-tibble r-vctrs r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('35cad1781d6d17c1feb56adc4607079c6844b63794d0ce1e74bb18dbc11e1987')
+sha256sums=('faf1e421a2c270c60c0a30c74e1a48faad45b339163716102d77d64d23d76732')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
