@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=RcppParallel
-_cranver=5.1.6
+_cranver=5.1.7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -14,7 +14,7 @@ depends=('r>=3.0.2' tbb)
 makedepends=(make)
 optdepends=(r-rcpp r-runit r-knitr r-rmarkdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('ac560d868e9757a93ddbf176dfd851fc753f67919476f88e248fe94cba4f0f15')
+sha256sums=('f9c30eb9ce1abffc590825d513d6d28dcbe970e36032dd7521febf04e905b29c')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

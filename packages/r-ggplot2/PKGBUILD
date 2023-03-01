@@ -3,7 +3,7 @@
 # Contributor: wagnerflo <florian@wagner-flo.net>
 
 _cranname=ggplot2
-_cranver=3.4.0
+_cranver=3.4.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -14,7 +14,7 @@ license=(MIT)
 depends=('r>=3.3' r-cli r-glue 'r-gtable>=0.1.1' r-isoband 'r-lifecycle>=1.0.1' 'r-rlang>=1.0.0' 'r-scales>=1.2.0' r-tibble 'r-vctrs>=0.5.0' 'r-withr>=2.5.0')
 optdepends=(r-covr r-dplyr r-ggplot2movies r-hexbin r-hmisc r-knitr r-mapproj r-maps r-maptools r-multcomp r-munsell r-profvis r-quantreg r-ragg r-rcolorbrewer r-rgeos r-rmarkdown r-sf r-svglite r-testthat r-vdiffr r-xml2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('a82f9e52f974389439765f71a8206ec26e3be30a8864d2c784d5ea8abcb0473e')
+sha256sums=('041bc333f90d6026702c8bd5140a1c8ddd270b15742badf8ca5c53f0e02c6d84')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

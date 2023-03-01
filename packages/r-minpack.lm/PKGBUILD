@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=minpack.lm
-_cranver=1.2-2
+_cranver=1.2-3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL3)
 depends=(r gcc-fortran)
 makedepends=(gcc-fortran)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('c70956122528575433c57a5669e26f4f9b1e160b004f135a38658c2c2634df87')
+sha256sums=('bfa702679f023b2c9a54b23172deb6e26cfa27addce4d2d6bd5e7d89e14feef0')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

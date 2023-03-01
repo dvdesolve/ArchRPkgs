@@ -1,6 +1,6 @@
 pkgbase = r-genomicfeatures
 	pkgdesc = Conveniently import and query gene models
-	pkgver = 1.50.3
+	pkgver = 1.50.4
 	pkgrel = 1
 	url = https://bioconductor.org/packages/GenomicFeatures
 	arch = any
@@ -9,7 +9,7 @@ pkgbase = r-genomicfeatures
 	depends = r-biocgenerics>=0.1.0
 	depends = r-s4vectors>=0.17.29
 	depends = r-iranges>=2.13.23
-	depends = r-genomeinfodb>=1.34.1
+	depends = r-genomeinfodb>=1.34.7
 	depends = r-genomicranges>=1.31.17
 	depends = r-annotationdbi>=1.41.4
 	depends = r-dbi
@@ -46,7 +46,7 @@ pkgbase = r-genomicfeatures
 	optdepends = r-biocstyle
 	optdepends = r-knitr
 	optdepends = r-markdown
-	source = https://bioconductor.org/packages/release/bioc/src/contrib/GenomicFeatures_1.50.3.tar.gz
-	sha256sums = 9f3b5dfa7f36c9c60e115a4f15ef8e4b6b85c879e211348b645a79f52c3df692
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/GenomicFeatures_1.50.4.tar.gz
+	sha256sums = d63cfa59fac2c379b2745263c408b6fe6c9785cb32eb67cbbc450868c72059e3
 
 pkgname = r-genomicfeatures

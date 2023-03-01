@@ -2,7 +2,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=lava
-_cranver=1.7.1
+_cranver=1.7.2.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL3)
 depends=('r>=3.0' r-future.apply r-numderiv r-progressr r-squarem)
 optdepends=(r-data.table r-ellipse r-fields r-geepack r-graph r-knitr r-bookdown r-rmarkdown r-igraph r-lavasearch2 r-lme4 r-mets r-optimx r-polycor r-quantreg r-rgl r-r.rsp r-targeted r-testthat r-visnetwork r-zoo)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7a9dcc5d25957e8eacbb24246968611e816cd249306e6541883dad0bb855f764')
+sha256sums=('d42b1f5c7e4e76718e4f014c44608295f82b5de0eb25ce8e9b35c40c7839ef2e')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

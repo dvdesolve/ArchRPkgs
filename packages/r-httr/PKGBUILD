@@ -2,7 +2,7 @@
 # Contributor: dhn <neilson+aur@sent.com>
 
 _cranname=httr
-_cranver=1.4.4
+_cranver=1.4.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Tools for Working with URLs and HTTP"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.2' 'r-curl>=3.0.0' r-jsonlite r-mime 'r-openssl>=0.8' r-r6)
+depends=('r>=3.5' 'r-curl>=3.0.0' r-jsonlite r-mime 'r-openssl>=0.8' r-r6)
 optdepends=(r-covr r-httpuv r-jpeg r-knitr r-png r-readr r-rmarkdown r-testthat r-xml2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('41d82523f3ee260d409a7b5ae4136190cbc5aecbc270b40ed7064f83e7f5435d')
+sha256sums=('f93bac7f882b0df099abca47dd5aae3686fb3cd2d3e9926fcd639bcddff76f6c')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,19 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
-# Contributor: dhn <neilson+aur@sent.com>
 
-_cranname=rsdmx
-_cranver=0.6-2
+_cranname=httr2
+_cranver=0.2.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Tools for Reading SDMX Data and Metadata"
+pkgdesc="Perform HTTP Requests and Process the Responses"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=2.15' r-r6 'r-xml>=3.98.1.3' r-httr r-plyr)
-optdepends=(r-testthat r-knitr r-roxygen2 r-markdown)
+license=(MIT)
+depends=('r>=3.4' 'r-cli>=3.0.0'  r-curl r-glue r-magrittr r-openssl r-r6 r-rappdirs 'r-rlang>=1.0.0' r-withr)
+optdepends=(r-askpass r-bench r-clipr r-covr r-docopt r-httpuv r-jose r-jsonlite r-knitr r-purrr r-rmarkdown r-testthat r-tibble r-webfakes r-xml2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('90496d057c800fa623462c9fdfd8c9ef0f20e6a9d4cefd434d87a61ba3255650')
+sha256sums=('5d1ab62541f7817112519f0f9d00d6a2555bab5b2da7f5c6d579b0c307d7f2bf')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
@@ -24,4 +23,3 @@ package() {
 
   cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
 }
-

@@ -2,18 +2,18 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=readxl
-_cranver=1.4.1
+_cranver=1.4.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Read Excel Files"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL3)
-depends=('r>=3.4' r-cellranger 'r-tibble>=2.0.1' 'r-cpp11>=0.4.0' r-progress)
-optdepends=(r-knitr r-rmarkdown r-testthat)
+license=(MIT)
+depends=('r>=3.5' r-cellranger 'r-tibble>=2.0.1' 'r-cpp11>=0.4.0' r-progress)
+optdepends=(r-covr r-knitr r-rmarkdown r-testthat r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('f6bebb7f940fb21baacd60345b7075c77eb1d026466c55e6a36148de680da1fa')
+sha256sums=('387304e2c5be0dca4861ec0232f0d92cc1882b660ca917f8f2a8a4ae858aba11')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

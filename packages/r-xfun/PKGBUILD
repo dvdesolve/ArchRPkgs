@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=xfun
-_cranver=0.36
+_cranver=0.37
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(MIT)
 depends=(r)
 optdepends=(r-testit r-rstudioapi r-tinytex r-mime r-markdown r-knitr r-htmltools r-remotes r-pak r-rhub r-renv r-curl r-jsonlite r-magick r-rmarkdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('a8170de571d044eee8c852180b847b1984f8e868a9d5edd1c5e2e663171869ee')
+sha256sums=('3b619ff0b2aea36a1d422d1f7ca2e5cef0102e1d127c94c87acf5e6e8358e1f9')
 
 build(){
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -3,7 +3,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=tidyverse
-_cranver=1.3.2
+_cranver=2.0.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,10 +11,10 @@ pkgdesc="Easily Install and Load the 'Tidyverse'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.3' 'r-broom>=0.7.10' 'r-cli>=3.1.0' 'r-crayon>=1.4.2' 'r-dbplyr>=2.1.1' 'r-dplyr>=1.0.7' 'r-dtplyr>=1.2.0' 'r-forcats>=0.5.1' 'r-ggplot2>=3.3.5' 'r-googledrive>=2.0.0' 'r-googlesheets4>=1.0.0' 'r-haven>=2.4.3' 'r-hms>=1.1.1' 'r-httr>=1.4.2' 'r-jsonlite>=1.7.2' 'r-lubridate>=1.8.0' 'r-magrittr>=2.0.1' 'r-modelr>=0.1.8' 'r-pillar>=1.6.4' 'r-purrr>=0.3.4' 'r-readr>=2.1.1' 'r-readxl>=1.3.1' 'r-reprex>=2.0.1' 'r-rlang>=0.4.12' 'r-rstudioapi>=0.13' 'r-rvest>=1.0.2' 'r-stringr>=1.4.0' 'r-tibble>=3.1.6' 'r-tidyr>=1.1.4' 'r-xml2>=1.3.3')
-optdepends=(r-covr r-feather r-glue r-knitr r-rmarkdown r-testthat)
+depends=('r>=3.3' 'r-broom>=1.0.3' 'r-conflicted>=1.2.0' 'r-cli>=3.6.0' 'r-dbplyr>=2.3.0' 'r-dplyr>=1.1.0' 'r-dtplyr>=1.2.2' 'r-forcats>=1.0.0' 'r-ggplot2>=3.4.1' 'r-googledrive>=2.0.0' 'r-googlesheets4>=1.0.1' 'r-haven>=2.5.1' 'r-hms>=1.1.2' 'r-httr>=1.4.4' 'r-jsonlite>=1.8.4' 'r-lubridate>=1.9.2' 'r-magrittr>=2.0.3' 'r-modelr>=0.1.10' 'r-pillar>=1.8.1' 'r-purrr>=1.0.1' 'r-ragg>=1.2.5' 'r-readr>=2.1.4' 'r-readxl>=1.4.2' 'r-reprex>=2.0.2' 'r-rlang>=1.0.6' 'r-rstudioapi>=0.14' 'r-rvest>=1.0.3' 'r-stringr>=1.5.0' 'r-tibble>=3.1.8' 'r-tidyr>=1.3.0' 'r-xml2>=1.3.3')
+optdepends=(r-covr r-feather r-glue r-mockr r-knitr r-rmarkdown r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('37fbf8b72e49e96b1770dfb8e37f3e9e29269e8d6c96d6d3902561252ec1cf61')
+sha256sums=('3d3c2d135056333247d309d1c2cc98cc0d87e2c781f4c6fbceab28d28c0728e5')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,11 +1,11 @@
 pkgbase = r-httr
 	pkgdesc = Tools for Working with URLs and HTTP
-	pkgver = 1.4.4
+	pkgver = 1.4.5
 	pkgrel = 1
 	url = https://cran.r-project.org/package=httr
 	arch = any
 	license = MIT
-	depends = r>=3.2
+	depends = r>=3.5
 	depends = r-curl>=3.0.0
 	depends = r-jsonlite
 	depends = r-mime
@@ -20,7 +20,7 @@ pkgbase = r-httr
 	optdepends = r-rmarkdown
 	optdepends = r-testthat
 	optdepends = r-xml2
-	source = https://cran.r-project.org/src/contrib/httr_1.4.4.tar.gz
-	sha256sums = 41d82523f3ee260d409a7b5ae4136190cbc5aecbc270b40ed7064f83e7f5435d
+	source = https://cran.r-project.org/src/contrib/httr_1.4.5.tar.gz
+	sha256sums = f93bac7f882b0df099abca47dd5aae3686fb3cd2d3e9926fcd639bcddff76f6c
 
 pkgname = r-httr

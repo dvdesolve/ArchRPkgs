@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=RSQLite
-_cranver=2.2.20
+_cranver=2.3.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="SQLite Interface for R"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(LGPL2.1 LGPL3)
-depends=('r>=3.1.0' r-bit64 'r-blob>=1.2.0' 'r-dbi>=1.1.0' r-memoise r-pkgconfig 'r-rcpp>=1.0.7' 'r-plogr>=0.2.0')
+depends=('r>=3.1.0' r-bit64 'r-blob>=1.2.0' 'r-dbi>=1.1.0' r-memoise r-pkgconfig 'r-plogr>=0.2.0' r-cpp11)
 optdepends=(r-callr r-dbitest r-gert r-gh r-hms r-knitr r-magrittr r-rmarkdown r-rvest r-testthat r-withr r-xml2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('52b5d572dcecca59e4c06d3d3dfdf4159dae83e1d7d34bcf97958ee7c5cba7ce')
+sha256sums=('442e19a1d08ed072e795e2c968cd7e9e2cf9e1a7412bf6b30d21d34ffe175d33')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,6 +1,6 @@
 pkgbase = r-classint
 	pkgdesc = Choose Univariate Class Intervals
-	pkgver = 0.4.8
+	pkgver = 0.4.9
 	pkgrel = 1
 	url = https://cran.r-project.org/package=classInt
 	arch = i686
@@ -15,7 +15,8 @@ pkgbase = r-classint
 	optdepends = r-units
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
-	source = https://cran.r-project.org/src/contrib/classInt_0.4-8.tar.gz
-	sha256sums = 6ae9617f5b71bbecfa204a4f36b5972808bafd060d87a4a5bac17f3ad2ca59b3
+	optdepends = r-tinytest
+	source = https://cran.r-project.org/src/contrib/classInt_0.4-9.tar.gz
+	sha256sums = 5b11af7d08f8793c7b47ee7c68b8e371cb23027165d30abddbd8b2abcc20e1c3
 
 pkgname = r-classint
