@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=cachem
-_cranver=1.0.7
+_cranver=1.0.8
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Cache R Objects with Automatic Pruning"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r r-rlang r-fastmap)
+depends=(r r-rlang 'r-fastmap>=1.1.1')
 optdepends=(r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('234fad2a947d1e1fb87d3fa92abf9197877772e31bc81ae5991ae69689b6320a')
+sha256sums=('ea9ca919fe615dce8770758ecc2fc88ac99074f66ff1cde3a0b95d40007f45c2')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,6 +1,6 @@
 pkgbase = r-fs
 	pkgdesc = Cross-Platform File System Operations Based on 'libuv'
-	pkgver = 1.6.1
+	pkgver = 1.6.2
 	pkgrel = 1
 	url = https://cran.r-project.org/package=fs
 	arch = i686
@@ -18,7 +18,7 @@ pkgbase = r-fs
 	optdepends = r-tibble
 	optdepends = r-vctrs
 	optdepends = r-withr
-	source = https://cran.r-project.org/src/contrib/fs_1.6.1.tar.gz
-	sha256sums = faf1e421a2c270c60c0a30c74e1a48faad45b339163716102d77d64d23d76732
+	source = https://cran.r-project.org/src/contrib/fs_1.6.2.tar.gz
+	sha256sums = 548b7c0ed5ab26dc4fbd88707ae12987bcaef834dbc6de4e17d453846dc436b2
 
 pkgname = r-fs
