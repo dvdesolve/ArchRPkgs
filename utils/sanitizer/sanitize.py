@@ -59,11 +59,73 @@ PKG_ROOT = os.path.join("..", "..", "packages")
 CACHE_ROOT = "cache"
 
 SUPPORTED_REPOS = [
-    {
-        "name": "CRAN",
-        "url": "cran.r-project.org",
-        "pkg_regex": r"<td> Package&nbsp;source: </td>\n<td> <a href=\"(.*?)\">"
-    }
+        {
+            "name": "CRAN",
+            "url": "cran.r-project.org",
+            "pkg_regex": r"<td> Package&nbsp;source: </td>\n<td> <a href=\"(.*?)\">"
+        }
+]
+
+SUPPORTED_LICS = {
+        "AGPL-3": "AGPL3",
+        "Apache License": "Apache",
+        "Apache License (== 2.0)": "Apache",
+        "Apache License 2.0": "Apache",
+        "Artistic-2.0": "Artistic2.0",
+        "BSD_2_clause": "BSD",
+        "BSD_3_clause": "BSD",
+        "BSL-1.0": "custom:BSL-1.0",
+        "CC0": "custom:CC0",
+        "Common Public License Version 1.0": "CPL",
+        "GPL": "GPL",
+        "GPL (>= 2)": "GPL2",
+        "GPL (>= 2.0)": "GPL2",
+        "GPL (>= 3)": "GPL3",
+        "GPL (>= 3.0)": "GPL3",
+        "GPL-2": "GPL2",
+        "GPL-3": "GPL3",
+        "LGPL": "LGPL",
+        "LGPL (>= 2)": "LGPL2.1",
+        "LGPL (>= 2.1)": "LGPL2.1",
+        "LGPL (>= 3)": "LGPL3",
+        "LGPL-2": "LGPL2.1",
+        "LGPL-2.1": "LGPL2.1",
+        "LGPL-3": "GPL3",
+        "MPL-1.1": "MPL",
+        "MPL-2.0": "MPL2",
+        "MIT": "MIT",
+        "Unlimited": "unknown"
+}
+
+LIC_ORDER = [
+        "AGPL-3",
+        "Apache License (== 2.0)",
+        "Apache License 2.0",
+        "Apache License",
+        "Artistic-2.0",
+        "BSD_2_clause",
+        "BSD_3_clause",
+        "BSL-1.0",
+        "CC0",
+        "Common Public License Version 1.0",
+        "LGPL (>= 2.1)",
+        "LGPL (>= 2)",
+        "LGPL (>= 3)",
+        "LGPL-2",
+        "LGPL-2.1",
+        "LGPL-3",
+        "LGPL",
+        "GPL (>= 2.0)",
+        "GPL (>= 2)",
+        "GPL (>= 3.0)",
+        "GPL (>= 3)",
+        "GPL-2",
+        "GPL-3",
+        "GPL",
+        "MIT",
+        "MPL-1.1",
+        "MPL-2.0",
+        "Unlimited"
 ]
 
 SCRIPT_VERSION = "0.0.1"
@@ -175,9 +237,44 @@ def check_arch(current, upstream):
 def check_license(current, upstream):
     """ check for license specification violations """
 
-    # TODO
-    # need to parse properly - strip 'file LICENSE/LICENCE', split by comma, etc
-    pass
+    # at first we should remove unrelated symbols and terms from license name
+    lic = upstream
+    lic = lic.replace("file LICENSE", "")
+    lic = lic.replace("file LICENCE", "")
+    lic = lic.replace(" |", "")
+    lic = lic.replace(" +", "")
+    lic = lic.strip()
+
+    lics_new = set()
+
+    # populate set with upstream licenses
+    for l in LIC_ORDER:
+        # if we've found exact match
+        if lic.find(l) != -1:
+            lics_new.add(SUPPORTED_LICS[l])
+            lic = lic.replace(l, "")
+            lic = lic.strip()
+
+            # if we've already checked everything just exit
+            if len(lic) == 0:
+                break
+
+    # check for each current license presented in PKGBUILD
+    lics_our = current.copy()
+
+    for l in current:
+        # if we've found exact match
+        if l in lics_new:
+            lics_new.remove(l)
+            lics_our.remove(l)
+
+    if len(lics_new) != 0:
+        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+              f' Missing licenses: {MessageColor.data}{lics_new}{MessageColor.nc}')
+
+    if len(lics_our) != 0:
+        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+              f' Extra licenses: {MessageColor.data}{lics_our}{MessageColor.nc}')
 
 def check_depends(current, upstream_depends, upstream_imports, upstream_linkingto):
     """ check for problems with dependencies """
