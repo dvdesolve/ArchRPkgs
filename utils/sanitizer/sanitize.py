@@ -279,15 +279,23 @@ def check_license(current, upstream):
 def check_depends(current, upstream_depends, upstream_imports, upstream_linkingto):
     """ check for problems with dependencies """
 
+    print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+          f' DEPENDS: {MessageColor.data}{upstream_depends}{MessageColor.nc}')
+    print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+          f' IMPORTS: {MessageColor.data}{upstream_imports}{MessageColor.nc}')
+    print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+          f' LINKINGTO: {MessageColor.data}{upstream_linkingto}{MessageColor.nc}')
     # TODO
-    # split by comma, strip whitespaces, prepend with 'r-' (ignoring R itself), parse version info Arch-way and compare with PKGBUILD (also check for extra dependencies)
+    # split by comma, strip whitespaces, prepend with 'r-' (ignoring R itself), parse version info Arch-way and compare with PKGBUILD
     pass
 
 def check_optdepends(current, upstream):
     """ check for problems with optional dependencies """
 
+    print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+          f' OPTDEPENDS: {MessageColor.data}{upstream}{MessageColor.nc}')
     # TODO
-    # split by comma, strip whitespaces, prepend with 'r-' (ignoring R itself), parse version info Arch-way and compare with PKGBUILD (also check for extra dependencies)
+    # split by comma, strip whitespaces, prepend with 'r-' (ignoring R itself), parse version info Arch-way and compare with PKGBUILD
     pass
 
 def parse_description(package):
@@ -333,16 +341,16 @@ def parse_description(package):
     r_license = r_license[0]
     check_license(package["License"], r_license)
 
-    r_depends = None if r_depends[0] is robjects.NA_Character else r_depends[0]
-    r_imports = None if r_imports[0] is robjects.NA_Character else r_imports[0]
-    r_linkingto = None if r_linkingto[0] is robjects.NA_Character else r_linkingto[0]
+    r_depends = None if (r_depends[0] is robjects.NA_Character or len(r_depends[0]) == 0) else r_depends[0]
+    r_imports = None if (r_imports[0] is robjects.NA_Character or len(r_imports[0]) == 0) else r_imports[0]
+    r_linkingto = None if (r_linkingto[0] is robjects.NA_Character or len(r_linkingto[0]) == 0) else r_linkingto[0]
     check_depends(package["Depends"], r_depends, r_imports, r_linkingto)
 
-    r_suggests = None if r_suggests[0] is robjects.NA_Character else r_suggests[0]
+    r_suggests = None if (r_suggests[0] is robjects.NA_Character or len(r_suggests[0]) == 0) else r_suggests[0]
     check_optdepends(package["Optdepends"], r_suggests)
 
     # we can't parse it consistently so just show a warning with its contents if it's non-null
-    r_systemreqs = None if r_systemreqs[0] is robjects.NA_Character else r_systemreqs[0]
+    r_systemreqs = None if (r_systemreqs[0] is robjects.NA_Character or len(r_systemreqs[0]) == 0) else r_systemreqs[0]
 
     if r_systemreqs is not None:
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
