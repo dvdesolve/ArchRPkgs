@@ -272,6 +272,7 @@ def check_license(current, upstream):
     for l in current:
         # if we've found exact match
         if l in lics_new:
+            # remove from both lists
             lics_new.remove(l)
             lics_our.remove(l)
 
@@ -402,97 +403,29 @@ def check_optdepends(current, upstream):
     upstream = [x for x in upstream if x] # remove empty items
     upstream = list(set(upstream)) # leave only unique items
 
-    print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-          f' OPTDEPENDS: {MessageColor.data}{upstream}{MessageColor.nc}')
-    return
-
-    # prepend with proper prefix and store into dict
-    deps_new = {}
+    # prepend with proper prefix and store into list
+    deps_new = []
 
     for d in upstream:
-        # split by possible version specifier
-        spec = d.split(">=")
+        # convert to lowercase
+        deps_new.append(archname(d))
 
-        # handle "R" correctly and convert to lowercase
-        spec[0] = archname(spec[0]) if spec[0] != "R" else "r"
+    # now we're ready to walk through the final lists of dependencies and check for inconsistencies
+    deps_our = current.copy()
 
-        # fix version info if necessary
-        if len(spec) == 2 and spec[1] is not None:
-            spec[1] = archver(spec[1])
-
-        # check if element already exists in dict and update info if necessary
-        if spec[0] in deps_new:
-            # compare with existing version info and update to newer possible
-            if len(spec) == 2:
-                if deps_new[spec[0]] is None or compare_ver(deps_new[spec[0]], spec[1]) < 0:
-                    deps_new[spec[0]] = spec[1]
-        else:
-            if len(spec) == 1:
-                deps_new[spec[0]] = None
-            else:
-                deps_new[spec[0]] = spec[1]
-
-    # explicitly add R as dependency
-    if "r" not in deps_new:
-        deps_new["r"] = None
-
-    # now it's time to populate similar dict for current dependencies
-    deps_our = {}
-
-    for d in current:
-        # split by possible version specifier
-        spec = d.split(">=")
-
-        # check if version spec is presented and add to the dict
-        if len(spec) == 1:
-            deps_our[spec[0]] = None
-        else:
-            deps_our[spec[0]] = spec[1]
-
-    # make a copy for iteration
-    current = deps_our.copy()
-
-    # now we're ready to walk through the final lists of dependencies and check for problems
     for d in current:
         if d in deps_new:
-            # check for version incosistencies
-            if deps_our[d] is None and deps_new[d] is not None:
-                print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-                      f' For dependency {MessageColor.data}{d}{MessageColor.nc} version should be set to {MessageColor.data}>={deps_new[d]}{MessageColor.nc}')
-            elif deps_our[d] is not None and deps_new[d] is None:
-                print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-                      f' For dependency {MessageColor.data}{d}{MessageColor.nc} version shouldn\'t be set at all')
-            elif deps_our[d] is not None and deps_new[d] is not None and compare_ver(deps_our[d], deps_new[d]) != 0:
-                print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-                      f' For dependency {MessageColor.data}{d}{MessageColor.nc} version mismatches with upstream: {MessageColor.old}{deps_our[d]}{MessageColor.nc} vs {MessageColor.new}{deps_new[d]}{MessageColor.nc}')
-
             # remove from both lists
-            deps_new.pop(d)
-            deps_our.pop(d)
+            deps_new.remove(d)
+            deps_our.remove(d)
 
     if len(deps_new) != 0:
-        d_new = []
-
-        for d, v in deps_new.items():
-            if v is None:
-                d_new.append(d)
-            else:
-                d_new.append(f'{d}>={v}')
-
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Missing dependencies: {MessageColor.data}{", ".join(d_new)}{MessageColor.nc}')
+              f' Missing optional dependencies: {MessageColor.data}{", ".join(deps_new)}{MessageColor.nc}')
 
     if len(deps_our) != 0:
-        d_our = []
-
-        for d, v in deps_our.items():
-            if v is None:
-                d_our.append(d)
-            else:
-                d_our.append(f'{d}>={v}')
-
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Extra dependencies: {MessageColor.data}{", ".join(d_our)}{MessageColor.nc}')
+              f' Extra optional dependencies: {MessageColor.data}{", ".join(deps_our)}{MessageColor.nc}')
 
 def parse_description(package):
     robjects.r['options'](warn = -1) # suppress unrelated warnings
