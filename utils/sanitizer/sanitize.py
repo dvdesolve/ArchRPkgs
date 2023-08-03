@@ -132,19 +132,30 @@ SCRIPT_VERSION = "0.0.1"
 
 
 ## helper functions
-#def process_deps(deplist):
-#    result = deplist.split(",")
-#
-#    for i, s in enumerate(result):
-#        pkg = s.strip()
-#
-#        nv = pkg.split(" (", 1)
-#        name = nv[0]
-#        ver = nv[1].rstrip(")") if len(nv) == 2 else None
-#
-#        result[i] = "{} ~~~ {}".format(name, ver)
-#
-#    return result
+def archver(rver):
+    """ convert R package version to conform to Arch standards
+        https://wiki.archlinux.org/index.php/R_package_guidelines """
+
+    return re.sub(r"[:-]", ".", rver)
+
+def archname(rname):
+    """ convert R package name to conform to Arch standards
+        https://wiki.archlinux.org/index.php/R_package_guidelines """
+
+    return f'r-{rname.lower()}'
+
+def compare_ver(old, new):
+    """ compare to archversions """
+
+    old = [int(x) for x in old.split(".")]
+    new = [int(x) for x in new.split(".")]
+
+    if old < new:
+        return -1
+    elif old > new:
+        return 1
+    else:
+        return 0
 
 def clear_cache():
     """ clear package cache """
@@ -209,11 +220,7 @@ def get_src(package, repo, force_down):
 def check_version(current, upstream):
     """ check for updates """
 
-    # compare versions in field-by-field way
-    our = [int(x) for x in current.split(".")]
-    new = [int(x) for x in upstream.split(".")]
-
-    if our < new:
+    if compare_ver(current, upstream) == -1:
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
               f' Package is outdated: {MessageColor.old}{current}{MessageColor.nc} vs {MessageColor.new}{upstream}{MessageColor.nc}')
 
@@ -270,32 +277,121 @@ def check_license(current, upstream):
 
     if len(lics_new) != 0:
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Missing licenses: {MessageColor.data}{lics_new}{MessageColor.nc}')
+              f' Missing licenses: {MessageColor.data}{", ".join(lics_new)}{MessageColor.nc}')
 
     if len(lics_our) != 0:
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Extra licenses: {MessageColor.data}{lics_our}{MessageColor.nc}')
+              f' Extra licenses: {MessageColor.data}{", ".join(lics_our)}{MessageColor.nc}')
 
 def check_depends(current, upstream_depends, upstream_imports, upstream_linkingto):
     """ check for problems with dependencies """
 
-    print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-          f' DEPENDS: {MessageColor.data}{upstream_depends}{MessageColor.nc}')
-    print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-          f' IMPORTS: {MessageColor.data}{upstream_imports}{MessageColor.nc}')
-    print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-          f' LINKINGTO: {MessageColor.data}{upstream_linkingto}{MessageColor.nc}')
-    # TODO
-    # split by comma, strip whitespaces, prepend with 'r-' (ignoring R itself), parse version info Arch-way and compare with PKGBUILD
-    pass
+    # handle Nones
+    upstream_depends = "" if upstream_depends is None else upstream_depends
+    upstream_imports = "" if upstream_imports is None else upstream_imports
+    upstream_linkingto = "" if upstream_linkingto is None else upstream_linkingto
+
+    # merge and cleanup upstream dependencies
+    upstream = ",".join([upstream_depends, upstream_imports, upstream_linkingto]) # join all together
+    upstream = upstream.replace(", ", ",") # fix inconsistencies with item separation
+    upstream = upstream.replace(")", "") # remove unnecessary closing parenthesis
+    upstream = upstream.replace(" (>= ", ">=") # early preparations for version checking
+    upstream = upstream.replace(" (> ", ">=")
+    upstream = upstream.split(",") # split to separate dependencies
+    upstream = [x for x in upstream if x] # remove empty items
+    upstream = list(set(upstream)) # leave only unique items
+
+    # prepend with proper prefix and store into dict
+    deps_new = {}
+
+    for d in upstream:
+        # split by possible version specifier
+        spec = d.split(">=")
+
+        # handle "R" correctly and convert to lowercase
+        spec[0] = archname(spec[0]) if spec[0] != "R" else "r"
+
+        # fix version info if necessary
+        if len(spec) == 2 and spec[1] is not None:
+            spec[1] = archver(spec[1])
+
+        # check if element already exists in dict and update info if necessary
+        if spec[0] in deps_new:
+            # compare with existing version info and update to newer possible
+            if len(spec) == 2:
+                if deps_new[spec[0]] is None or compare_ver(deps_new[spec[0]], spec[1]) < 0:
+                    deps_new[spec[0]] = spec[1]
+        else:
+            if len(spec) == 1:
+                deps_new[spec[0]] = None
+            else:
+                deps_new[spec[0]] = spec[1]
+
+    # explicitly add R as dependency
+    if "r" not in deps_new:
+        deps_new["r"] = None
+
+    # now it's time to populate similar dict for current dependencies
+    deps_our = {}
+
+    for d in current:
+        # split by possible version specifier
+        spec = d.split(">=")
+
+        # check if version spec is presented and add to the dict
+        if len(spec) == 1:
+            deps_our[spec[0]] = None
+        else:
+            deps_our[spec[0]] = spec[1]
+
+    # make a copy for iteration
+    current = deps_our.copy()
+
+    # now we're ready to walk through the final lists of dependencies and check for problems
+    for d in current:
+        if d in deps_new:
+            # check for version incosistencies
+            if deps_our[d] is None and deps_new[d] is not None:
+                print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+                      f' For dependency {MessageColor.data}{d}{MessageColor.nc} version should be set to {MessageColor.data}>={deps_new[d]}{MessageColor.nc}')
+            elif deps_our[d] is not None and deps_new[d] is None:
+                print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+                      f' For dependency {MessageColor.data}{d}{MessageColor.nc} version shouldn\'t be set at all')
+            elif deps_our[d] is not None and deps_new[d] is not None and compare_ver(deps_our[d], deps_new[d]) != 0:
+                print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+                      f' For dependency {MessageColor.data}{d}{MessageColor.nc} version mismatches with upstream: {MessageColor.old}{deps_our[d]}{MessageColor.nc} vs {MessageColor.new}{deps_new[d]}{MessageColor.nc}')
+
+            # remove from both lists
+            deps_new.pop(d)
+            deps_our.pop(d)
+
+    if len(deps_new) != 0:
+        d_new = []
+
+        for d, v in deps_new.items():
+            if v is None:
+                d_new.append(d)
+            else:
+                d_new.append(f'{d}>={v}')
+
+        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+              f' Missing dependencies: {MessageColor.data}{", ".join(d_new)}{MessageColor.nc}')
+
+    if len(deps_our) != 0:
+        d_our = []
+
+        for d, v in deps_our.items():
+            if v is None:
+                d_our.append(d)
+            else:
+                d_our.append(f'{d}>={v}')
+
+        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+              f' Extra dependencies: {MessageColor.data}{", ".join(d_our)}{MessageColor.nc}')
 
 def check_optdepends(current, upstream):
     """ check for problems with optional dependencies """
 
-    print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-          f' OPTDEPENDS: {MessageColor.data}{upstream}{MessageColor.nc}')
-    # TODO
-    # split by comma, strip whitespaces, prepend with 'r-' (ignoring R itself), parse version info Arch-way and compare with PKGBUILD
     pass
 
 def parse_description(package):
@@ -329,7 +425,7 @@ def parse_description(package):
 
     # convert to Arch standards first
     # https://wiki.archlinux.org/index.php/R_package_guidelines
-    r_ver = re.sub(r"[:-]", ".", r_ver[0])
+    r_ver = archver(r_ver[0])
     check_version(package["Version"], r_ver)
 
     r_title = r_title[0]
