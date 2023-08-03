@@ -499,6 +499,7 @@ def sanitize(packages, force_down):
     # final list to be processed
     pkglist = []
 
+    # TODO possible parallelization here
     # for each of the package listed get its URL for future online requests
     for package in dirlist:
         name = os.path.join(PKG_ROOT, package, ".SRCINFO")
@@ -550,6 +551,7 @@ def sanitize(packages, force_down):
 
         return
 
+    # TODO possible parallelization here
     # we'll sanitize NOW!
     for package in pkglist:
         # get repo information from package URL
