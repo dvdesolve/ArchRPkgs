@@ -11,8 +11,8 @@ pkgbase = r-r5r
 	depends = r-data.table
 	depends = r-httr
 	depends = r-jsonlite
-	depends = r-rjava>=0.9-10
-	depends = r-sf>=1.0-6
+	depends = r-rjava>=0.9.10
+	depends = r-sf>=1.0.6
 	depends = r-sfheaders
 	depends = r-zip
 	depends = java-environment>=11.0

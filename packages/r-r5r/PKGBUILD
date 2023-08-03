@@ -10,7 +10,7 @@ pkgdesc="Rapid Realistic Routing with 'R5'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.6' r-checkmate r-curl r-data.table r-httr r-jsonlite 'r-rjava>=0.9-10' 'r-sf>=1.0-6' r-sfheaders r-zip 'java-environment>=11.0')
+depends=('r>=3.6' r-checkmate r-curl r-data.table r-httr r-jsonlite 'r-rjava>=0.9.10' 'r-sf>=1.0.6' r-sfheaders r-zip 'java-environment>=11.0')
 optdepends=(r-covr r-dplyr r-ggplot2 r-gtfstools r-h3jsr r-interp r-knitr r-patchwork r-rmarkdown r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('96954430079674565654e6666e8565b4a8b051a49a82c22c0663ac05979230c1')

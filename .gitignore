@@ -8,6 +8,9 @@
 # staging packages
 staging/
 
+# sanitizer cache
+utils/sanitizer/cache
+
 # build output
 *namcap.log
 *prepare.log
