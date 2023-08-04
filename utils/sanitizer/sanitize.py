@@ -276,6 +276,10 @@ def check_license(current, upstream):
             lics_new.remove(l)
             lics_our.remove(l)
 
+    if len(lic) != 0:
+        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+              f' Unknown licenses: {MessageColor.data}{lic}{MessageColor.nc}')
+
     if len(lics_new) != 0:
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
               f' Missing licenses: {MessageColor.data}{", ".join(lics_new)}{MessageColor.nc}')
