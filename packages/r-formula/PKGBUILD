@@ -4,12 +4,12 @@ _cranname=Formula
 _cranver=1.2-5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Extended Model Formulas"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=2.0.0')
+depends=('r>=2.0.0' r-stats)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('86254674600d64e18b65d52f42d7ebfc217c8e1945cb63ac06da22cbf04d355c')
 

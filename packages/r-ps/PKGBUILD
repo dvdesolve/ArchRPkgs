@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=ps
-_cranver=1.7.2
+_cranver=1.7.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="List, Query, Manipulate System Processes"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.4')
-optdepends=(r-callr r-covr r-curl r-pillar r-pingr r-processx r-r6 r-rlang r-testthat)
+depends=('r>=3.4' r-utils)
+optdepends=(r-callr r-covr r-curl r-pillar r-pingr r-processx r-r6 r-rlang r-testthat r-webfakes)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('9225ebdedb5c1b245bb38b01ce88084c0fc7eafcff6c4fda2e299003ace6b21a')
+sha256sums=('1abc3ae3c55797b994973f7e43bf5c7bbb4da649a0dcfad36675e196dba4cb4e')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

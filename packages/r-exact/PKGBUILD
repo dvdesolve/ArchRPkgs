@@ -4,12 +4,13 @@ _cranname=Exact
 _cranver=3.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Unconditional Exact Test"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.5.0' r-rootsolve)
+depends=('r>=3.5.0' r-rootsolve r-graphics r-stats r-utils)
+optdepends=(r-exactdata)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('53b4e20cbb57615970c572fc4e7a780a510bde8b5deadec3880095f6e17a6328')
 

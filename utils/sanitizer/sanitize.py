@@ -266,6 +266,12 @@ def check_license(current, upstream):
             if len(lic) == 0:
                 break
 
+    lics_new = list(lics_new)
+
+    if len(lics_new) == 0:
+        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
+              f' License should be {MessageColor.data}unknown{MessageColor.nc}')
+
     # check for each current license presented in PKGBUILD
     lics_our = current.copy()
 
@@ -276,15 +282,20 @@ def check_license(current, upstream):
             lics_new.remove(l)
             lics_our.remove(l)
 
+    # TODO in case of unknown license should install LICENSE/LICENCE file
     if len(lic) != 0:
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
               f' Unknown licenses: {MessageColor.data}{lic}{MessageColor.nc}')
 
     if len(lics_new) != 0:
+        lics_new.sort()
+
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
               f' Missing licenses: {MessageColor.data}{", ".join(lics_new)}{MessageColor.nc}')
 
     if len(lics_our) != 0:
+        lics_our.sort()
+
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
               f' Extra licenses: {MessageColor.data}{", ".join(lics_our)}{MessageColor.nc}')
 
@@ -301,7 +312,9 @@ def check_depends(current, upstream_depends, upstream_imports, upstream_linkingt
     upstream = upstream.replace(", ", ",") # fix inconsistencies with item separation
     upstream = upstream.replace(")", "") # remove unnecessary closing parenthesis
     upstream = upstream.replace(" (>= ", ">=") # early preparations for version checking
-    upstream = upstream.replace(" (> ", ">=")
+    upstream = upstream.replace("(>= ", ">=")
+    upstream = upstream.replace(" (> ", ">=") # TODO should handle strict greater than correctly
+    upstream = upstream.replace("(> ", ">=") # TODO should handle strict greater than correctly
     upstream = upstream.split(",") # split to separate dependencies
     upstream = [x for x in upstream if x] # remove empty items
     upstream = list(set(upstream)) # leave only unique items
@@ -370,6 +383,7 @@ def check_depends(current, upstream_depends, upstream_imports, upstream_linkingt
             deps_new.pop(d)
             deps_our.pop(d)
 
+    # TODO check against suppresion lists
     if len(deps_new) != 0:
         d_new = []
 
@@ -379,9 +393,13 @@ def check_depends(current, upstream_depends, upstream_imports, upstream_linkingt
             else:
                 d_new.append(f'{d}>={v}')
 
+        d_new.sort()
+
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
               f' Missing dependencies: {MessageColor.data}{", ".join(d_new)}{MessageColor.nc}')
 
+    # TODO check against suppresion lists
+    # TODO split by starting string (r-) to tell truly and possibly extra dependencies
     if len(deps_our) != 0:
         d_our = []
 
@@ -390,6 +408,8 @@ def check_depends(current, upstream_depends, upstream_imports, upstream_linkingt
                 d_our.append(d)
             else:
                 d_our.append(f'{d}>={v}')
+
+        d_our.sort()
 
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
               f' Extra dependencies: {MessageColor.data}{", ".join(d_our)}{MessageColor.nc}')
@@ -403,6 +423,7 @@ def check_optdepends(current, upstream):
     # cleanup upstream dependencies
     upstream = upstream.replace(", ", ",") # fix inconsistencies with item separation
     upstream = re.sub(r" \(.*?\)", "", upstream) # remove version info because it's of no use in PKGBUILD for optdepends
+    upstream = re.sub(r"\(.*?\)", "", upstream)
     upstream = upstream.split(",") # split to separate dependencies
     upstream = [x for x in upstream if x] # remove empty items
     upstream = list(set(upstream)) # leave only unique items
@@ -412,7 +433,7 @@ def check_optdepends(current, upstream):
 
     for d in upstream:
         # convert to lowercase
-        deps_new.append(archname(d))
+        deps_new.append(archname(d).strip()) # because 2nd regexp in this function can leave unwanted spaces
 
     # now we're ready to walk through the final lists of dependencies and check for inconsistencies
     deps_our = current.copy()
@@ -423,11 +444,18 @@ def check_optdepends(current, upstream):
             deps_new.remove(d)
             deps_our.remove(d)
 
+    # TODO check against suppresion lists
     if len(deps_new) != 0:
+        deps_new.sort()
+
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
               f' Missing optional dependencies: {MessageColor.data}{", ".join(deps_new)}{MessageColor.nc}')
 
+    # TODO check against suppresion lists
+    # TODO split by starting string (r-) to tell truly and possibly extra dependencies
     if len(deps_our) != 0:
+        deps_our.sort()
+
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
               f' Extra optional dependencies: {MessageColor.data}{", ".join(deps_our)}{MessageColor.nc}')
 
@@ -482,6 +510,7 @@ def parse_description(package):
     r_suggests = None if (r_suggests[0] is robjects.NA_Character or len(r_suggests[0]) == 0) else r_suggests[0]
     check_optdepends(package["Optdepends"], r_suggests)
 
+    # TODO check against suppresion lists
     # we can't parse it consistently so just show a warning with its contents if it's non-null
     r_systemreqs = None if (r_systemreqs[0] is robjects.NA_Character or len(r_systemreqs[0]) == 0) else r_systemreqs[0]
 
@@ -555,6 +584,9 @@ def sanitize(packages, force_down):
 
         return
 
+    # sort for convenience
+    pkglist = sorted(pkglist, key = lambda d: d["Name"])
+
     # TODO possible parallelization here
     # we'll sanitize NOW!
     for package in pkglist:
@@ -586,6 +618,7 @@ def main():
     parser = argparse.ArgumentParser(prog = 'ArchRPkgs sanitizer',
                                      description = 'Sanitize and validate R packages')
 
+    # TODO add optional flags for checking pkgrels, suppressing different kinds of errors/warnings
     parser.add_argument('packages',
                         nargs = '*',
                         help = 'list of packages to be sanitized. If list is empty then all packages in current repo will be sanitized')

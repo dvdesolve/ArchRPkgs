@@ -1,0 +1,41 @@
+pkgbase = r-hyperspec
+	pkgdesc = Work with Hyperspectral Data, i.e. Spectra + Meta Information (Spatial, Time, Concentration, ...)
+	pkgver = 0.100.0
+	pkgrel = 1
+	url = https://cran.r-project.org/package=hyperSpec
+	arch = any
+	license = GPL3
+	depends = r>=3.6.0
+	depends = r-lattice
+	depends = r-grid
+	depends = r-ggplot2>=2.2.0
+	depends = r-xml2
+	depends = r-testthat
+	depends = r-methods
+	depends = r-utils
+	depends = r-latticeextra
+	depends = r-lazyeval
+	depends = r-dplyr
+	optdepends = r-r.matlab
+	optdepends = r-tripack
+	optdepends = r-deldir
+	optdepends = r-rgl
+	optdepends = r-plotrix
+	optdepends = r-sp
+	optdepends = r-baseline
+	optdepends = r-compiler
+	optdepends = r-inline
+	optdepends = r-rcpp
+	optdepends = r-mass
+	optdepends = r-fastcluster
+	optdepends = r-pls
+	optdepends = r-mvtnorm
+	optdepends = r-digest
+	optdepends = r-reshape
+	optdepends = r-devtools
+	optdepends = r-r.rsp
+	optdepends = r-tibble
+	source = https://cran.r-project.org/src/contrib/hyperSpec_0.100.0.tar.gz
+	sha256sums = bacc870a188a9c5fd0bbe3b4138f636b118c1d913d420c6c2925e052a9d11c54
+
+pkgname = r-hyperspec

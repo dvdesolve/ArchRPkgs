@@ -1,7 +1,7 @@
 pkgbase = r-coin
 	pkgdesc = Conditional Inference Procedures in a Permutation Test Framework
 	pkgver = 1.4.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=coin
 	arch = i686
 	arch = x86_64
@@ -12,6 +12,12 @@ pkgbase = r-coin
 	depends = r-modeltools>=0.2.9
 	depends = r-mvtnorm>=1.0.5
 	depends = r-multcomp
+	depends = r-methods
+	depends = r-parallel
+	depends = r-stats
+	depends = r-stats4
+	depends = r-survival
+	depends = r-utils
 	optdepends = r-xtable
 	optdepends = r-e1071
 	optdepends = r-vcd

@@ -5,13 +5,13 @@ _cranname=lifecycle
 _cranver=1.0.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Manage the Life Cycle of your Package Functions"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=3.4' 'r-cli>=3.4.0' r-glue 'r-rlang>=1.0.6')
-optdepends=(r-covr r-crayon r-knitr r-lintr r-rmarkdown r-testthat r-tibble r-tidyverse r-vctrs r-withr)
+optdepends=(r-covr r-crayon r-knitr r-lintr r-rmarkdown r-testthat r-tibble r-tidyverse r-vctrs r-withr r-tools)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('6459fdc3211585c0cdf120427579c12149b02161efe273a64b825c05e9aa69c2')
 

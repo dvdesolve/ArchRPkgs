@@ -1,0 +1,25 @@
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_cranname=hyperSpec
+_cranver=0.100.0
+pkgname=r-${_cranname,,}
+pkgver=${_cranver//[:-]/.}
+pkgrel=1
+pkgdesc="Work with Hyperspectral Data, i.e. Spectra + Meta Information (Spatial, Time, Concentration, ...)"
+arch=(any)
+url="https://cran.r-project.org/package=${_cranname}"
+license=(GPL3)
+depends=('r>=3.6.0' r-lattice r-grid 'r-ggplot2>=2.2.0' r-xml2 r-testthat r-methods r-utils r-latticeextra r-lazyeval r-dplyr)
+optdepends=(r-r.matlab r-tripack r-deldir r-rgl r-plotrix r-sp r-baseline r-compiler r-inline r-rcpp r-mass r-fastcluster r-pls r-mvtnorm r-digest r-reshape r-devtools r-r.rsp r-tibble)
+source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
+sha256sums=('bacc870a188a9c5fd0bbe3b4138f636b118c1d913d420c6c2925e052a9d11c54')
+
+build() {
+  R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
+}
+
+package() {
+  install -dm0755 "${pkgdir}/usr/lib/R/library"
+
+  cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
+}

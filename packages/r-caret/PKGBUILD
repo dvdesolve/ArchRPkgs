@@ -4,7 +4,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=caret
-_cranver=6.0-93
+_cranver=6.0-94
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,10 +12,10 @@ pkgdesc="Classification and Regression Training"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=3.2.0' r-ggplot2 r-e1071 r-foreach 'r-modelmetrics>=1.2.2.2' r-plyr r-proc 'r-recipes>=0.1.10' r-reshape2 'r-withr>=2.0.0')
-optdepends=(r-bradleyterry2 r-covr r-cubist r-dplyr r-earth r-ellipse r-fastica r-gam r-ipred r-kernlab r-klar r-knitr r-mda r-mlbench r-mlmetrics r-pamr r-party r-pls r-proxy r-randomforest r-rann r-rmarkdown r-spls r-subselect r-superpc r-testthat r-themis)
+depends=('r>=3.2.0' r-ggplot2 r-e1071 r-foreach 'r-modelmetrics>=1.2.2.2' r-plyr r-proc 'r-recipes>=0.1.10' r-reshape2 'r-withr>=2.0.0' r-grdevices 'r-lattice>=0.20' r-methods r-nlme r-stats r-stats4 r-utils)
+optdepends=(r-bradleyterry2 r-covr r-cubist r-dplyr r-earth r-ellipse r-fastica r-gam r-ipred r-kernlab r-klar r-knitr r-mda r-mlbench r-mlmetrics r-pamr r-party r-pls r-proxy r-randomforest r-rann r-rmarkdown r-spls r-subselect r-superpc r-testthat r-themis r-mass r-matrix r-mgcv r-nnet r-rpart)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('4c156b88879d390436a54779ea19ffbae3f476533d83caaf30400d76130c4a07')
+sha256sums=('2715e83ca260bb739cd926a55b0d2da1e3f6308b17b56862466e738d930d29a8')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

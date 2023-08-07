@@ -5,11 +5,11 @@ _cranname=carData
 _cranver=3.0-5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Companion to Applied Regression Data Sets"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
+license=(GPL2)
 depends=('r>=3.5.0')
 optdepends=(r-car)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")

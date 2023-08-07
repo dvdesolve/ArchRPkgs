@@ -1,13 +1,15 @@
 pkgbase = r-fansi
 	pkgdesc = ANSI Control Sequence Aware String Functions
 	pkgver = 1.0.4
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=fansi
 	arch = i686
 	arch = x86_64
 	license = GPL2
 	license = GPL3
 	depends = r>=3.1.0
+	depends = r-grdevices
+	depends = r-utils
 	optdepends = r-unitizer
 	optdepends = r-knitr
 	optdepends = r-rmarkdown

@@ -4,12 +4,12 @@ _cranname=colourpicker
 _cranver=1.2.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="A Colour Picker Tool for Shiny and for Selecting Colours in Plots"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.1.0' r-ggplot2 r-htmltools 'r-htmlwidgets>=0.7' r-jsonlite 'r-miniui>=0.1.1' 'r-shiny>=0.11.1' 'r-shinyjs>=2.0.0')
+depends=('r>=3.1.0' r-ggplot2 r-htmltools 'r-htmlwidgets>=0.7' r-jsonlite 'r-miniui>=0.1.1' 'r-shiny>=0.11.1' 'r-shinyjs>=2.0.0' r-utils)
 optdepends=(r-knitr r-rmarkdown r-rstudioapi r-shinydisconnect)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('bc2c80eee046219038baef9f8f213c9824d7fec7f893f6a1b881dd44b4a8638a')

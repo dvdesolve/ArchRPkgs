@@ -1,12 +1,14 @@
 pkgbase = r-foreach
 	pkgdesc = Provides Foreach Looping Construct
 	pkgver = 1.5.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=foreach
 	arch = any
-	license = Apache2.0
+	license = Apache
 	depends = r>=2.5.0
 	depends = r-iterators
+	depends = r-codetools
+	depends = r-utils
 	optdepends = r-randomforest
 	optdepends = r-domc
 	optdepends = r-doparallel

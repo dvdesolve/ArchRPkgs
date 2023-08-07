@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=car
-_cranver=3.1-1
+_cranver=3.1-2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Companion to Applied Regression"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.5.0' 'r-cardata>=3.0.0' r-abind 'r-pbkrtest>=0.4.4' r-quantreg 'r-lme4>=1.1.27.1' r-scales)
-optdepends=(r-alr4 r-coxme r-effects r-knitr r-leaps r-lmtest r-matrixmodels r-rgl r-rio r-sandwich r-sparsem r-survey)
+license=(GPL2)
+depends=('r>=3.5.0' 'r-cardata>=3.0.0' r-abind 'r-pbkrtest>=0.4.4' r-quantreg 'r-lme4>=1.1.27.1' r-scales r-graphics r-grdevices r-mass r-mgcv r-nlme r-nnet r-stats r-utils)
+optdepends=(r-alr4 r-coxme r-effects r-knitr r-leaps r-lmtest r-matrixmodels r-rgl r-rio r-sandwich r-sparsem r-survey r-boot r-matrix r-mvtnorm r-survival)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8fc55815eed7e46a32b54da9e0bfa4b74a8d082d73d896e3372f2a413b6bd2bc')
+sha256sums=('89263491977ac8e9406b2f4b1638bf06c7ddd1b0e0e3ecda4be61420474674c8')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

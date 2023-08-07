@@ -1,31 +1,36 @@
 pkgbase = r-ggpp
 	pkgdesc = Grammar Extensions to 'ggplot2'
-	pkgver = 0.5.1
+	pkgver = 0.5.3
 	pkgrel = 1
 	url = https://cran.r-project.org/package=ggpp
 	arch = any
 	license = GPL2
-	license = GPL3
 	depends = r>=4.0.0
 	depends = r-ggplot2>=3.3.6
-	depends = r-rlang>=0.4.7
-	depends = r-magrittr>=1.5
-	depends = r-glue>=1.4.2
+	depends = r-rlang>=1.0.6
+	depends = r-magrittr>=2.0.1
+	depends = r-glue>=1.6.0
 	depends = r-gridextra>=2.3
-	depends = r-scales>=1.1.1
-	depends = r-tibble>=3.0.3
-	depends = r-dplyr>=1.0.2
-	depends = r-xts>=0.12.0
-	depends = r-zoo>=1.8.8
+	depends = r-scales>=1.2.0
+	depends = r-tibble>=3.1.8
+	depends = r-dplyr>=1.1.0
+	depends = r-xts>=0.13.0
+	depends = r-zoo>=1.8.11
 	depends = r-polynom>=1.4.0
-	depends = r-lubridate>=1.7.9
+	depends = r-lubridate>=1.9.0
 	depends = r-stringr>=1.4.0
+	depends = r-grdevices
+	depends = r-grid
+	depends = r-mass>=7.3.58
+	depends = r-stats
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
 	optdepends = r-ggrepel
 	optdepends = r-gginnards
 	optdepends = r-magick
-	source = https://cran.r-project.org/src/contrib/ggpp_0.5.1.tar.gz
-	sha256sums = 6a8ef6dc8a54d3a735f01ee9f7c51f1d12c7ce289b40e7d02cb267be5f027b31
+	optdepends = r-testthat
+	optdepends = r-vdiffr
+	source = https://cran.r-project.org/src/contrib/ggpp_0.5.3.tar.gz
+	sha256sums = 8c351fbf1355556a20c5614bb8d3d9c73b7916ec973a70975b1271c1e9950cea
 
 pkgname = r-ggpp

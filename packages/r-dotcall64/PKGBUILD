@@ -4,14 +4,14 @@ _cranname=dotCall64
 _cranver=1.0-2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Enhanced Foreign Function Interface Supporting Long Vectors"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
+license=(GPL2)
 depends=('r>=3.1' gcc-fortran)
 makedepends=(gcc-fortran)
-optdepends=(r-microbenchmark r-rcolorbrewer r-roxygen2 r-spam r-testthat)
+optdepends=(r-microbenchmark r-rcolorbrewer r-roxygen2 r-spam r-testthat r-openmpcontroller)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('e0c7728aebbea5ebf06dfeefae4fc0a240e6dde7c2bf13f2ed041b91d337a4ac')
 

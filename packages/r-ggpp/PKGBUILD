@@ -2,18 +2,18 @@
 # Contributor: Hyacinthe Cartiaux <hyacinthe.cartiaux@free.fr>
 
 _cranname=ggpp
-_cranver=0.5.1
+_cranver=0.5.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Grammar Extensions to 'ggplot2'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=4.0.0' 'r-ggplot2>=3.3.6' 'r-rlang>=0.4.7' 'r-magrittr>=1.5' 'r-glue>=1.4.2' 'r-gridextra>=2.3' 'r-scales>=1.1.1' 'r-tibble>=3.0.3' 'r-dplyr>=1.0.2' 'r-xts>=0.12.0' 'r-zoo>=1.8.8' 'r-polynom>=1.4.0' 'r-lubridate>=1.7.9' 'r-stringr>=1.4.0')
-optdepends=(r-knitr r-rmarkdown r-ggrepel r-gginnards r-magick)
+license=(GPL2)
+depends=('r>=4.0.0' 'r-ggplot2>=3.3.6' 'r-rlang>=1.0.6' 'r-magrittr>=2.0.1' 'r-glue>=1.6.0' 'r-gridextra>=2.3' 'r-scales>=1.2.0' 'r-tibble>=3.1.8' 'r-dplyr>=1.1.0' 'r-xts>=0.13.0' 'r-zoo>=1.8.11' 'r-polynom>=1.4.0' 'r-lubridate>=1.9.0' 'r-stringr>=1.4.0' r-grdevices r-grid 'r-mass>=7.3.58' r-stats)
+optdepends=(r-knitr r-rmarkdown r-ggrepel r-gginnards r-magick r-testthat r-vdiffr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('6a8ef6dc8a54d3a735f01ee9f7c51f1d12c7ce289b40e7d02cb267be5f027b31')
+sha256sums=('8c351fbf1355556a20c5614bb8d3d9c73b7916ec973a70975b1271c1e9950cea')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

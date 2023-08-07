@@ -2,18 +2,18 @@
 # Contributor: frichtlm <frichtlm@gmail.com>
 
 _cranname=broom
-_cranver=1.0.3
+_cranver=1.0.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Convert Statistical Analysis Objects into Tidy Tibbles"
+pkgdesc="Convert Statistical Objects into Tidy Tibbles"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.1' r-backports 'r-dplyr>=1.0.0' r-ellipsis 'r-generics>=0.0.2' r-glue r-purrr r-rlang r-stringr 'r-tibble>=3.0.0' 'r-tidyr>=1.0.0')
-optdepends=(r-aer r-auc r-bbmle r-betareg r-biglm r-bingroup r-btergm r-car r-cardata r-caret r-cmprsk r-coda r-covr r-drc r-e1071 r-emmeans r-epir r-ergm r-fixest r-gam r-gee r-geepack r-glmnet r-glmnetutils r-gmm r-hmisc r-irlba r-interp r-joinerml r-kendall r-knitr r-ks r-lahman r-lavaan r-leaps r-lfe r-lm.beta r-lme4 r-lmodel2 r-lmtest r-lsmeans r-maps r-maptools r-margins r-mclust r-mediation r-metafor r-mfx r-mlogit r-modeldata r-modeltests r-muhaz r-multcomp r-network r-orcutt r-ordinal r-plm r-polca r-psych r-quantreg r-rgeos r-rmarkdown r-robust r-robustbase r-rsample r-sandwich r-sp r-spdep r-spatialreg r-speedglm r-spelling r-survey r-systemfit r-testthat r-tseries r-vars r-zoo)
+depends=('r>=3.5' r-backports 'r-dplyr>=1.0.0' r-ellipsis 'r-generics>=0.0.2' r-glue r-purrr r-rlang r-stringr 'r-tibble>=3.0.0' 'r-tidyr>=1.0.0' r-lifecycle)
+optdepends=(r-aer r-auc r-bbmle r-betareg r-biglm r-bingroup r-btergm r-car r-cardata r-caret r-cmprsk r-coda r-covr r-drc r-e1071 r-emmeans r-epir r-ergm r-fixest r-gam r-gee r-geepack r-glmnet r-glmnetutils r-gmm r-hmisc r-irlba r-interp r-joinerml r-kendall r-knitr r-ks r-lahman r-lavaan r-leaps r-lfe r-lm.beta r-lme4 r-lmodel2 r-lmtest r-lsmeans r-maps r-margins r-mclust r-mediation r-metafor r-mfx r-mlogit r-modeldata r-modeltests r-muhaz r-multcomp r-network r-orcutt r-ordinal r-plm r-polca r-psych r-quantreg r-rmarkdown r-robust r-robustbase r-rsample r-sandwich r-sp r-spdep r-spatialreg r-speedglm r-spelling r-survey r-systemfit r-testthat r-tseries r-vars r-zoo r-boot r-cluster r-ggplot2 r-mass r-mgcv r-nnet r-survival)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('06b3f10c9ee03124dd2a85da09785a2fba9b406fa25c57f9b9db4d71a49a0a55')
+sha256sums=('9d77ddee9ee32ffefdacddcb35adc0ac83035537c4e5ef5cfbd2f8bbd909d991')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

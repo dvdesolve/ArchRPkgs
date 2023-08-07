@@ -1,6 +1,6 @@
 pkgbase = r-ggplot2
 	pkgdesc = Create Elegant Data Visualisations Using the Grammar of Graphics
-	pkgver = 3.4.1
+	pkgver = 3.4.2
 	pkgrel = 1
 	url = https://cran.r-project.org/package=ggplot2
 	arch = any
@@ -11,11 +11,16 @@ pkgbase = r-ggplot2
 	depends = r-gtable>=0.1.1
 	depends = r-isoband
 	depends = r-lifecycle>=1.0.1
-	depends = r-rlang>=1.0.0
+	depends = r-rlang>=1.1.0
 	depends = r-scales>=1.2.0
 	depends = r-tibble
 	depends = r-vctrs>=0.5.0
 	depends = r-withr>=2.5.0
+	depends = r-grdevices
+	depends = r-grid
+	depends = r-mass
+	depends = r-mgcv
+	depends = r-stats
 	optdepends = r-covr
 	optdepends = r-dplyr
 	optdepends = r-ggplot2movies
@@ -38,7 +43,10 @@ pkgbase = r-ggplot2
 	optdepends = r-testthat
 	optdepends = r-vdiffr
 	optdepends = r-xml2
-	source = https://cran.r-project.org/src/contrib/ggplot2_3.4.1.tar.gz
-	sha256sums = 041bc333f90d6026702c8bd5140a1c8ddd270b15742badf8ca5c53f0e02c6d84
+	optdepends = r-lattice
+	optdepends = r-nlme
+	optdepends = r-rpart
+	source = https://cran.r-project.org/src/contrib/ggplot2_3.4.2.tar.gz
+	sha256sums = 70230aa70a2c6f844fc41dd93e5f62af6859dfed390026ae58f223637e5283ca
 
 pkgname = r-ggplot2

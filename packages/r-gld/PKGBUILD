@@ -4,12 +4,12 @@ _cranname=gld
 _cranver=2.6.6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Estimation and Use of the Generalised (Tukey) Lambda Distribution"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=(r r-e1071 r-lmom)
+license=(GPL2)
+depends=(r r-e1071 r-lmom r-graphics r-stats)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('ea23e9781207b5d47ed04e4d5758d9652cab5d1eedcf9fbc9c2ee4d3babffdc4')
 

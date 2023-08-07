@@ -1,15 +1,17 @@
 pkgbase = r-chron
-	pkgdesc = Chronological Objects which can Handle Dates and Times
-	pkgver = 2.3.59
+	pkgdesc = Chronological Objects which Can Handle Dates and Times
+	pkgver = 2.3.61
 	pkgrel = 1
 	url = https://cran.r-project.org/package=chron
 	arch = i686
 	arch = x86_64
 	license = GPL2
 	depends = r>=2.12.0
+	depends = r-graphics
+	depends = r-stats
 	optdepends = r-scales
 	optdepends = r-ggplot2
-	source = https://cran.r-project.org/src/contrib/chron_2.3-59.tar.gz
-	sha256sums = b943a6b97c42e7858dcd4a23deeb1f3a817f9f5086776177627ddc58894601f6
+	source = https://cran.r-project.org/src/contrib/chron_2.3-61.tar.gz
+	sha256sums = a096957625a0438075b3486322ee07c753c7c4ba3efcd04a3ac92476d6c43b9b
 
 pkgname = r-chron

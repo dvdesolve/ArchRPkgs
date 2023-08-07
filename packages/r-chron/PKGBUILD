@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=chron
-_cranver=2.3-59
+_cranver=2.3-61
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Chronological Objects which can Handle Dates and Times"
+pkgdesc="Chronological Objects which Can Handle Dates and Times"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=2.12.0')
+depends=('r>=2.12.0' r-graphics r-stats)
 optdepends=(r-scales r-ggplot2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b943a6b97c42e7858dcd4a23deeb1f3a817f9f5086776177627ddc58894601f6')
+sha256sums=('a096957625a0438075b3486322ee07c753c7c4ba3efcd04a3ac92476d6c43b9b')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

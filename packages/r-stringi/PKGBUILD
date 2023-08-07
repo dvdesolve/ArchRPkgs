@@ -5,12 +5,12 @@ _cranname=stringi
 _cranver=1.7.12
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
-pkgdesc="Character String Processing Facilities"
+pkgrel=2
+pkgdesc="Fast and Portable Character String Processing Facilities"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(custom)
-depends=('r>=3.1' 'icu>=55')
+license=(unknown)
+depends=('r>=3.1' r-stats r-utils r-tools 'icu>=55')
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('efe8ac2900001f986a75db5641fbb24587a6d23de274a6a85c39dfa58921e009')
 

@@ -4,12 +4,12 @@ _cranname=ggridges
 _cranver=0.5.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Ridgeline Plots in 'ggplot2'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.2' 'r-ggplot2>=3.0.0' 'r-scales>=0.4.1' 'r-withr>=2.1.1')
+depends=('r>=3.2' 'r-ggplot2>=3.0.0' 'r-scales>=0.4.1' 'r-withr>=2.1.1' 'r-grid>=3.0.0')
 optdepends=(r-covr r-dplyr r-patchwork r-ggplot2movies r-forcats r-knitr r-rmarkdown r-testthat r-vdiffr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('2bf71c2034804cec637e6748dc51d8cadad01d3ea4d14ace754327f082e8d851')

@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=checkmate
-_cranver=2.1.0
+_cranver=2.2.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Fast and Versatile Argument Checks"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(BSD3)
-depends=('r>=3.0.0' 'r-backports>=1.1.0')
+license=(BSD)
+depends=('r>=3.0.0' 'r-backports>=1.1.0' r-utils)
 optdepends=(r-r6 r-fastmatch r-data.table r-devtools r-ggplot2 r-knitr r-magrittr r-microbenchmark r-rmarkdown r-testthat r-tinytest r-tibble)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b784dd5163a0350d084ef34882d9781373839dedeaa9a8b8e6187d773d0d21c6')
+sha256sums=('96ec14b057e875465f8ef194f35b8e124cd5b5919697692fb392706201359118')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

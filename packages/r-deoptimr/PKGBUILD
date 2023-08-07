@@ -1,17 +1,17 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=DEoptimR
-_cranver=1.0-11
+_cranver=1.1-0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Differential Evolution Optimization in Pure R"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=(r)
+license=(GPL2)
+depends=(r r-stats)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('1874b30f4b75f9bfa891986598f1ebe1fce27fdced14f8f417d3535cac08165b')
+sha256sums=('164104919c0aa3755679d60457095f76c4ba029e75df305d8fd0f432538fd696')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=multcompView
-_cranver=0.1-8
+_cranver=0.1-9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Visualizations of Paired Comparisons"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=(r)
-optdepends=(r-multcomp r-pgirmess)
+license=(GPL)
+depends=(r r-grid)
+optdepends=(r-multcomp r-pgirmess r-mass)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('123d539172ad6fc63d83d1fc7f356a5ed7b691e7803827480118bebc374fd8e5')
+sha256sums=('1f3993e9d51f3c7a711a881b6a20081a85ffab60c27828ceb3640a6b4c887397')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

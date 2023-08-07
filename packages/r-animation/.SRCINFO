@@ -1,14 +1,15 @@
 pkgbase = r-animation
 	pkgdesc = A Gallery of Animations in Statistics and Utilities to Create Animations
 	pkgver = 2.7
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=animation
 	arch = any
-	license = GPL2
-	license = GPL3
+	license = GPL
 	depends = r>=2.14.0
 	depends = r-magick
 	optdepends = r-testit
+	optdepends = r-class
+	optdepends = r-mass
 	optdepends = imagemagick: saveGIF() support
 	optdepends = graphicsmagick: saveGIF() support
 	optdepends = lyx: saveGIF() support

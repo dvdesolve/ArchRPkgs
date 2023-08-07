@@ -1,16 +1,17 @@
 pkgbase = r-confintr
 	pkgdesc = Confidence Intervals
-	pkgver = 0.2.0
+	pkgver = 1.0.2
 	pkgrel = 1
 	url = https://cran.r-project.org/package=confintr
 	arch = any
 	license = GPL2
-	license = GPL3
 	depends = r>=3.1.0
+	depends = r-boot
+	depends = r-stats
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
 	optdepends = r-testthat
-	source = https://cran.r-project.org/src/contrib/confintr_0.2.0.tar.gz
-	sha256sums = 6f315e8bd01d79701f30dd7c31267b216a284dd53dead607b2d856edcbcef7fe
+	source = https://cran.r-project.org/src/contrib/confintr_1.0.2.tar.gz
+	sha256sums = 7a104a2e7ef43405e70013bc99529a28bfe4cc4b61cdcc7dddc73426a665293e
 
 pkgname = r-confintr

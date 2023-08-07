@@ -4,12 +4,12 @@ _cranname=gfonts
 _cranver=0.2.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Offline 'Google' Fonts for 'Markdown' and 'Shiny'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=2.10' r-htmltools r-shiny r-crul r-jsonlite r-glue r-crayon)
+depends=('r>=2.10' r-htmltools r-shiny r-crul r-jsonlite r-glue r-crayon r-utils)
 optdepends=(r-knitr r-rmarkdown r-testthat r-vcr r-covr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('72e2eead5280b45aadbbd9385971d65e9866fd659270b1c3c1eb98330f024aa6')

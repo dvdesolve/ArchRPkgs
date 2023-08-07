@@ -1,11 +1,14 @@
 pkgbase = r-crayon
 	pkgdesc = Colored Terminal Output
 	pkgver = 1.5.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=crayon
 	arch = any
 	license = MIT
 	depends = r
+	depends = r-grdevices
+	depends = r-methods
+	depends = r-utils
 	optdepends = r-mockery
 	optdepends = r-rstudioapi
 	optdepends = r-testthat

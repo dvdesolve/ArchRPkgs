@@ -6,13 +6,13 @@ _cranname=e1071
 _cranver=1.7-13
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Misc Functions of the Department of Statistics, Probability Theory Group (Formerly: E1071), TU Wien"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=(r r-proxy)
-optdepends=(r-mlbench r-randomforest r-sparsem r-xtable r-slam)
+depends=(r r-proxy r-class r-graphics r-grdevices r-methods r-stats r-utils)
+optdepends=(r-mlbench r-randomforest r-sparsem r-xtable r-slam r-cluster r-mass r-matrix r-nnet r-rpart)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('da94e191af6e69aa0f9e3250d4b823674cc869339d914f761ebf2824177b6b2f')
 

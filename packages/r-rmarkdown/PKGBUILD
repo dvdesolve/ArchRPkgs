@@ -6,18 +6,18 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=rmarkdown
-_cranver=2.20
+_cranver=2.23
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Dynamic Documents for R"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=3.0' 'r-bslib>=0.2.5.1' 'r-evaluate>=0.13' 'r-htmltools>=0.5.1' r-jquerylib r-jsonlite 'r-knitr>=1.22' 'r-stringr>=1.2.0' 'r-tinytex>=0.31' 'r-xfun>=0.36' 'r-yaml>=2.1.19' pandoc)
-optdepends=(r-digest r-dygraphs r-fs r-rsconnect r-downlit r-katex r-sass r-shiny r-testthat r-tibble r-tufte r-vctrs r-withr)
+depends=('r>=3.0' 'r-bslib>=0.2.5.1' 'r-evaluate>=0.13' 'r-htmltools>=0.5.1' r-jquerylib r-jsonlite 'r-knitr>=1.22' 'r-stringr>=1.2.0' 'r-tinytex>=0.31' 'r-xfun>=0.36' 'r-yaml>=2.1.19' r-methods 'r-fontawesome>=0.5.0' r-utils r-tools pandoc)
+optdepends=(r-digest r-dygraphs r-fs r-rsconnect r-downlit r-katex r-sass r-shiny r-testthat r-tibble r-vctrs r-withr r-cleanrmd)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('d7f7059bfcb43e4b92432d69ba0e0c74ad10a20f153689262a3e848adb60159d')
+sha256sums=('668d086f0ca597ef6f665b471f19b176be45971828b74ec8c25c3a46947bc825')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

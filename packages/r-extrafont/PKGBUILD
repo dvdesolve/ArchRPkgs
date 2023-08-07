@@ -4,12 +4,12 @@ _cranname=extrafont
 _cranver=0.19
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
-pkgdesc="Tools for using fonts"
+pkgrel=2
+pkgdesc="Tools for Using Fonts"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=2.15' r-extrafontdb r-rttf2pt1)
+depends=('r>=2.15' r-extrafontdb r-rttf2pt1 r-grdevices r-utils)
 optdepends=(r-fontcm)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('4e8f90152df13fc5dee573222a26b4d66553493fdf6af1c7777e59521ccdab8d')

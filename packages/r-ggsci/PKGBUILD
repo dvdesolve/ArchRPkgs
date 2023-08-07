@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=ggsci
-_cranver=2.9
+_cranver=3.0.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Scientific Journal and Sci-Fi Themed Color Palettes for 'ggplot2'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=3.0.2' r-scales 'r-ggplot2>=2.0.0')
-optdepends=(r-knitr r-rmarkdown r-gridextra r-reshape2)
+depends=('r>=3.5.0' r-scales 'r-ggplot2>=2.0.0' r-grdevices)
+optdepends=(r-knitr r-rmarkdown r-gridextra r-reshape2 r-ragg)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('4af14e6f3657134c115d5ac5e65a2ed74596f9a8437c03255447cd959fe9e33c')
+sha256sums=('8901316516d78f82a2a8685d93ba479424bcfd8cb5e28a28adbd50e68964e129')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

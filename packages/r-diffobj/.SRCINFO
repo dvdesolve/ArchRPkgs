@@ -1,7 +1,7 @@
 pkgbase = r-diffobj
 	pkgdesc = Diffs for R Objects
 	pkgver = 0.3.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=diffobj
 	arch = i686
 	arch = x86_64
@@ -9,6 +9,10 @@ pkgbase = r-diffobj
 	license = GPL3
 	depends = r>=3.1.0
 	depends = r-crayon>=1.3.2
+	depends = r-methods
+	depends = r-stats
+	depends = r-tools
+	depends = r-utils
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
 	source = https://cran.r-project.org/src/contrib/diffobj_0.3.5.tar.gz

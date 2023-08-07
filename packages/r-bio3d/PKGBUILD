@@ -4,13 +4,13 @@ _cranname=bio3d
 _cranver=2.4-4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Biological Structure Analysis"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.1.0' r-rcpp)
-optdepends=(r-xml r-rcurl r-ncdf4 r-igraph r-bigmemory r-knitr r-rmarkdown r-testthat r-httr r-msa r-biostrings)
+license=(GPL2)
+depends=('r>=3.1.0' r-rcpp r-graphics r-grdevices r-grid r-parallel r-stats r-utils)
+optdepends=(r-xml r-rcurl r-ncdf4 r-igraph r-bigmemory r-knitr r-rmarkdown r-testthat r-httr r-msa r-biostrings r-lattice)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('5654eac10d33e4235ef89292e3b99006d8812b6bfaaa3d6fb540312160fd9de9')
 

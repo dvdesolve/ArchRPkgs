@@ -2,18 +2,18 @@
 # Contributor: portaloffreedom
 
 _cranname=gdtools
-_cranver=0.3.1
+_cranver=0.3.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Utilities for Graphical Rendering"
+pkgdesc="Utilities for Graphical Rendering and Fonts Management"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=4.0.0' 'r-rcpp>=0.12.12' 'r-systemfonts>=0.1.1' r-htmltools r-memoise r-gfonts r-curl 'r-fontquiver>=0.2.0' cairo freetype2 fontconfig)
-optdepends=(r-testthat)
+depends=('r>=4.0.0' 'r-rcpp>=0.12.12' 'r-systemfonts>=0.1.1' r-htmltools r-gfonts r-curl 'r-fontquiver>=0.2.0' r-tools cairo freetype2 fontconfig)
+optdepends=(r-testthat r-methods)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('fba6166bdefe742d94f33d8904bf2d66432b063cf426d28b3bef22bcd3cc6698')
+sha256sums=('da5a189841475b1d69c94a30ff834eb44560c69e6c0ec0a257006e1f59e83483')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

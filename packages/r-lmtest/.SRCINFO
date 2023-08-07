@@ -1,7 +1,7 @@
 pkgbase = r-lmtest
 	pkgdesc = Testing Linear Regression Models
 	pkgver = 0.9.40
-	pkgrel = 2
+	pkgrel = 3
 	url = https://cran.r-project.org/package=lmtest
 	arch = i686
 	arch = x86_64
@@ -9,13 +9,17 @@ pkgbase = r-lmtest
 	license = GPL3
 	makedepends = gcc-fortran
 	depends = r>=3.0.0
-	depends = gcc-fortran
 	depends = r-zoo
+	depends = r-stats
+	depends = r-graphics
+	depends = gcc-fortran
 	optdepends = r-car
 	optdepends = r-strucchange
 	optdepends = r-sandwich
 	optdepends = r-dynlm
 	optdepends = r-aer
+	optdepends = r-stats4
+	optdepends = r-survival
 	source = https://cran.r-project.org/src/contrib/lmtest_0.9-40.tar.gz
 	sha256sums = 64400d4d6cc635316531042971f1783539686e9015c76f5741c07304fa14d997
 

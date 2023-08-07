@@ -1,0 +1,21 @@
+pkgbase = r-signal
+	pkgdesc = Signal Processing
+	pkgver = 0.7.7
+	pkgrel = 1
+	url = https://cran.r-project.org/package=signal
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = gcc-fortran
+	depends = r>=3.5.0
+	depends = r-mass
+	depends = r-graphics
+	depends = r-grdevices
+	depends = r-stats
+	depends = r-utils
+	depends = gcc-fortran
+	optdepends = r-pracma
+	source = https://cran.r-project.org/src/contrib/signal_0.7-7.tar.gz
+	sha256sums = 67a015c46d67de7548c3adb83a1b22524de75501a861d91668c3c2ea761a4e61
+
+pkgname = r-signal

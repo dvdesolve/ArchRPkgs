@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=downlit
-_cranver=0.4.2
+_cranver=0.4.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,9 +10,9 @@ arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=3.4.0' r-brio r-desc r-digest r-evaluate r-fansi r-memoise r-rlang r-vctrs r-withr r-yaml)
-optdepends=(r-covr r-htmltools r-jsonlite r-massspecwavelet r-pkgload r-rmarkdown r-testthat r-xml2)
+optdepends=(r-covr r-htmltools r-jsonlite r-massspecwavelet r-pkgload r-rmarkdown r-testthat r-xml2 r-mass)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('33dff66909104d1a5ba8e57b1288986e82b61fd5e91dce0cd358d53724b37e3c')
+sha256sums=('6c0fbe98ece8a511973263f8e8a35574df0cfc45edea7452b53b8d326436b3bd')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

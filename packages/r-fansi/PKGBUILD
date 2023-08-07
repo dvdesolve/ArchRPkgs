@@ -5,12 +5,12 @@ _cranname=fansi
 _cranver=1.0.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="ANSI Control Sequence Aware String Functions"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)
-depends=('r>=3.1.0')
+depends=('r>=3.1.0' r-grdevices r-utils)
 optdepends=(r-unitizer r-knitr r-rmarkdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('3163214e6c40922bbb495229259ed8ce1bebd98b77098a6936d234e43da9c49f')

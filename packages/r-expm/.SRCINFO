@@ -1,14 +1,15 @@
 pkgbase = r-expm
 	pkgdesc = Matrix Exponential, Log, 'etc'
 	pkgver = 0.999.7
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=expm
 	arch = i686
 	arch = x86_64
 	license = GPL2
-	license = GPL3
 	makedepends = gcc-fortran
 	depends = r
+	depends = r-matrix
+	depends = r-methods
 	depends = gcc-fortran
 	optdepends = r-rcolorbrewer
 	optdepends = r-sfsmisc

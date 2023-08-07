@@ -1,11 +1,11 @@
 pkgbase = r-feather
 	pkgdesc = R Bindings to the Feather 'API'
 	pkgver = 0.3.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=feather
 	arch = i686
 	arch = x86_64
-	license = Apache2.0
+	license = Apache
 	depends = r
 	depends = r-rcpp
 	depends = r-tibble>=2.0.0

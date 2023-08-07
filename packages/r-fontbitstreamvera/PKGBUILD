@@ -4,11 +4,11 @@ _cranname=fontBitstreamVera
 _cranver=0.1.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Fonts with 'Bitstream Vera Fonts' License"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(custom)
+license=(unknown)
 depends=('r>=3.0.0')
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('3298b3dd95605bdda0c5fce5594c9bedde6aa63d89b216d5c83c6c092b6d375a')

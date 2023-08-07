@@ -4,12 +4,12 @@ _cranname=bigmemory
 _cranver=4.6.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Manage Massive Matrices with Shared Memory and Memory-Mapped Files"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(LGPL3 Apache2.0)
-depends=('r>=3.2.0' r-bigmemory.sri r-rcpp 'r-uuid>=1.0.2' r-bh)
+license=(GPL3 Apache)
+depends=('r>=3.2.0' r-bigmemory.sri r-rcpp 'r-uuid>=1.0.2' r-bh r-methods r-utils)
 optdepends=(r-testthat r-remotes)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('b56e157c87ed6c4fc69d4cb9c697ae9a2001726e776e41aa7c48b35327b65141')

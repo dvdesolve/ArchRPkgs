@@ -4,11 +4,11 @@ _cranname=fontLiberation
 _cranver=0.1.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Liberation Fonts"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(custom)
+license=(unknown)
 depends=('r>=3.0')
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('acdea423e005873aa509e280074a3cef4796e4f7e9d77b3945d77b451ea039f0')

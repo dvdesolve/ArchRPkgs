@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=evaluate
-_cranver=0.20
+_cranver=0.21
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Parsing and Evaluation Tools that Provide More Details than the Default
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.0.2')
-optdepends=(r-covr r-ggplot2 r-testthat)
+depends=('r>=3.0.2' r-methods)
+optdepends=(r-covr r-ggplot2 r-testthat r-lattice r-rlang r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('35f5d9e85603600b58960923d591c5ca1115153febba7c612867d8b5598afff0')
+sha256sums=('3178c99cee8917d7d128806d064d4fecce7845ed07f42e759dcc0adda89c22b9')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

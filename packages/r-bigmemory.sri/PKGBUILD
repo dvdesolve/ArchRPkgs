@@ -4,12 +4,12 @@ _cranname=bigmemory.sri
 _cranver=0.1.6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
-pkgdesc="A shared resource interface for Bigmemory Project packages"
+pkgrel=2
+pkgdesc="A Shared Resource Interface for Bigmemory Project Packages"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(LGPL3 Apache2.0)
-depends=(r)
+license=(GPL3 Apache)
+depends=(r r-methods)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('3bfa6ac966ce0ea93283f5856a853d0ee5ff85aedd7a7d1ca8a93d0aa642860c')
 

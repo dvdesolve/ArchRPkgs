@@ -1,12 +1,13 @@
 pkgbase = r-bsda
 	pkgdesc = Basic Statistics and Data Analysis
 	pkgver = 1.2.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=BSDA
 	arch = any
 	license = GPL3
 	depends = r>=2.10
 	depends = r-e1071
+	depends = r-lattice
 	optdepends = r-ggplot2
 	optdepends = r-dplyr
 	optdepends = r-tidyr

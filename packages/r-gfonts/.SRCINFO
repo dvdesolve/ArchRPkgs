@@ -1,7 +1,7 @@
 pkgbase = r-gfonts
 	pkgdesc = Offline 'Google' Fonts for 'Markdown' and 'Shiny'
 	pkgver = 0.2.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=gfonts
 	arch = any
 	license = GPL3
@@ -12,6 +12,7 @@ pkgbase = r-gfonts
 	depends = r-jsonlite
 	depends = r-glue
 	depends = r-crayon
+	depends = r-utils
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
 	optdepends = r-testthat

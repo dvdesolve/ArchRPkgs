@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=future
-_cranver=1.31.0
+_cranver=1.33.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Unified Parallel and Distributed Processing in R for Everyone"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(LGPL2.1 LGPL3)
-depends=(r r-digest 'r-globals>=0.16.1' 'r-listenv>=0.8.0' 'r-parallelly>=1.32.1')
-optdepends=(r-rhpcblasctl r-r.rsp r-markdown)
+license=(LGPL2.1)
+depends=(r r-digest 'r-globals>=0.16.1' 'r-listenv>=0.8.0' 'r-parallelly>=1.34.0' r-parallel r-utils)
+optdepends=(r-rhpcblasctl r-r.rsp r-markdown r-methods)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b2db8f859a13066f004fa147012e8533b11e41df9516988cd2d5961c78dfdf2a')
+sha256sums=('4228eb9b35ce4b56bf4168977661fed4f83bb36131b2dc7120b2898d8747935b')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

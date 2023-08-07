@@ -1,12 +1,13 @@
 pkgbase = r-brobdingnag
 	pkgdesc = Very Large Numbers in R
 	pkgver = 1.2.9
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=Brobdingnag
 	arch = any
-	license = GPL2
-	license = GPL3
+	license = GPL
 	depends = r>=2.13.0
+	depends = r-matrix>=1.5.0
+	depends = r-methods
 	optdepends = r-cubature
 	optdepends = r-testthat
 	source = https://cran.r-project.org/src/contrib/Brobdingnag_1.2-9.tar.gz

@@ -1,17 +1,19 @@
 pkgbase = r-bigmemory
 	pkgdesc = Manage Massive Matrices with Shared Memory and Memory-Mapped Files
 	pkgver = 4.6.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=bigmemory
 	arch = i686
 	arch = x86_64
-	license = LGPL3
-	license = Apache2.0
+	license = GPL3
+	license = Apache
 	depends = r>=3.2.0
 	depends = r-bigmemory.sri
 	depends = r-rcpp
 	depends = r-uuid>=1.0.2
 	depends = r-bh
+	depends = r-methods
+	depends = r-utils
 	optdepends = r-testthat
 	optdepends = r-remotes
 	source = https://cran.r-project.org/src/contrib/bigmemory_4.6.1.tar.gz

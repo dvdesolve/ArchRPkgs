@@ -1,7 +1,7 @@
 pkgbase = r-desc
 	pkgdesc = Manipulate DESCRIPTION Files
 	pkgver = 1.4.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=desc
 	arch = any
 	license = MIT
@@ -9,6 +9,7 @@ pkgbase = r-desc
 	depends = r-cli
 	depends = r-r6
 	depends = r-rprojroot
+	depends = r-utils
 	optdepends = r-callr
 	optdepends = r-covr
 	optdepends = r-gh

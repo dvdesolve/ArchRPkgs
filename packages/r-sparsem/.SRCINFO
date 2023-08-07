@@ -1,14 +1,17 @@
 pkgbase = r-sparsem
 	pkgdesc = Sparse Linear Algebra
 	pkgver = 1.81
-	pkgrel = 2
+	pkgrel = 3
 	url = https://cran.r-project.org/package=SparseM
 	arch = i686
 	arch = x86_64
 	license = GPL2
-	license = GPL3
 	makedepends = gcc-fortran
 	depends = r>=2.15
+	depends = r-methods
+	depends = r-stats
+	depends = r-utils
+	depends = r-graphics
 	depends = gcc-fortran
 	source = https://cran.r-project.org/src/contrib/SparseM_1.81.tar.gz
 	sha256sums = bd838f381ace680fa38508ff70b3d83cb9ffa28ac1ab568509249bca53c34b33

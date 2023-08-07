@@ -2,18 +2,18 @@
 # Contributor: haha662 <haha662 at outlook dot com>
 
 _cranname=bookdown
-_cranver=0.32
+_cranver=0.34
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Authoring Books and Technical Documents with R Markdown"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=3.5.0' 'r-htmltools>=0.3.6' 'r-knitr>=1.38' 'r-rmarkdown>=2.14' r-jquerylib 'r-xfun>=0.29' 'r-tinytex>=0.12' 'r-yaml>=2.1.19' pandoc)
+depends=('r>=3.5.0' 'r-htmltools>=0.3.6' 'r-knitr>=1.38' 'r-rmarkdown>=2.14' r-jquerylib 'r-xfun>=0.39' 'r-tinytex>=0.12' 'r-yaml>=2.1.19' pandoc)
 optdepends=(r-bslib r-downlit r-htmlwidgets r-jsonlite r-rstudioapi r-miniui r-rsconnect r-servr r-shiny r-tibble r-testit r-tufte r-xml2 r-webshot r-testthat r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('c6db107a158ea7e1ad92a740810fb630b9d841231215b5c9bac113cda12a816f')
+sha256sums=('b49eae6ceab5e29a501bbcd8d4443091bc44fcfe114c66ece4657ea599c03211')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

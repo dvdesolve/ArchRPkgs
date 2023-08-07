@@ -5,12 +5,12 @@ _cranname=classInt
 _cranver=0.4-9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Choose Univariate Class Intervals"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=2.2' r-e1071 gcc-fortran)
+license=(GPL2)
+depends=('r>=2.2' r-e1071 r-class r-graphics r-grdevices r-kernsmooth r-stats gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-spdata r-units r-knitr r-rmarkdown r-tinytest)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")

@@ -1,7 +1,7 @@
 pkgbase = r-ggpubr
 	pkgdesc = 'ggplot2' Based Publication Ready Plots
 	pkgver = 0.6.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=ggpubr
 	arch = any
 	license = GPL2
@@ -22,10 +22,14 @@ pkgbase = r-ggpubr
 	depends = r-rstatix>=0.7.2
 	depends = r-tibble
 	depends = r-magrittr
+	depends = r-grid
+	depends = r-stats
+	depends = r-utils
 	optdepends = r-knitr
 	optdepends = r-rcolorbrewer
 	optdepends = r-gtable
 	optdepends = r-testthat
+	optdepends = r-grdevices
 	source = https://cran.r-project.org/src/contrib/ggpubr_0.6.0.tar.gz
 	sha256sums = 2e6ec5d8151991d17ef8832259cf545fa0d1a50b326ba8c1c4657700171df774
 

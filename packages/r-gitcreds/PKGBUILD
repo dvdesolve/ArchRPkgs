@@ -4,13 +4,13 @@ _cranname=gitcreds
 _cranver=0.1.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Query 'git' Credentials from 'R'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=3.4' git)
-optdepends=(r-covr r-knitr r-mockery r-oskeyring r-rmarkdown r-testthat r-withr)
+optdepends=(r-covr r-knitr r-mockery r-oskeyring r-rmarkdown r-testthat r-withr r-codetools)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('41c6abcca5635062b123ffb5af2794770eca5ebd97b05c5a64b24fa1c803c75d')
 

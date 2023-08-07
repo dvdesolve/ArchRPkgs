@@ -1,6 +1,6 @@
 pkgbase = r-brms
 	pkgdesc = Bayesian Regression Models using 'Stan'
-	pkgver = 2.18.0
+	pkgver = 2.19.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=brms
 	arch = any
@@ -22,6 +22,13 @@ pkgbase = r-brms
 	depends = r-coda
 	depends = r-abind
 	depends = r-backports
+	depends = r-grdevices
+	depends = r-matrix>=1.1.1
+	depends = r-nlme
+	depends = r-parallel
+	depends = r-rlang>=1.0.0
+	depends = r-stats
+	depends = r-utils
 	optdepends = r-testthat
 	optdepends = r-emmeans
 	optdepends = r-projpred
@@ -45,7 +52,8 @@ pkgbase = r-brms
 	optdepends = r-shiny
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
-	source = https://cran.r-project.org/src/contrib/brms_2.18.0.tar.gz
-	sha256sums = 63914be03cd1c4e6333317d22d7827ba2dc0414cb0dc88337cf74763ba07e111
+	optdepends = r-cmdstanr
+	source = https://cran.r-project.org/src/contrib/brms_2.19.0.tar.gz
+	sha256sums = 0e146842c7acfcc6b8273df536eabb5279fb3bf2ae27ce1696f7d838d94fe5c1
 
 pkgname = r-brms

@@ -1,12 +1,16 @@
 pkgbase = r-colorspace
 	pkgdesc = A Toolbox for Manipulating and Assessing Colors and Palettes
 	pkgver = 2.1.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=colorspace
 	arch = i686
 	arch = x86_64
-	license = BSD3
+	license = BSD
 	depends = r>=3.0.0
+	depends = r-graphics
+	depends = r-grdevices
+	depends = r-methods
+	depends = r-stats
 	optdepends = r-kernlab
 	optdepends = r-mvtnorm
 	optdepends = r-vcd
@@ -24,6 +28,12 @@ pkgbase = r-colorspace
 	optdepends = r-scico
 	optdepends = r-viridis
 	optdepends = r-wesanderson
+	optdepends = r-datasets
+	optdepends = r-grid
+	optdepends = r-kernsmooth
+	optdepends = r-mass
+	optdepends = r-tcltk
+	optdepends = r-utils
 	source = https://cran.r-project.org/src/contrib/colorspace_2.1-0.tar.gz
 	sha256sums = 04078abb6b54119c90dc7085d62916bf292ccb163e213f9ea70567d1be82614c
 

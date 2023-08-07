@@ -1,12 +1,11 @@
 pkgbase = r-anytime
 	pkgdesc = Anything to 'POSIXct' or 'Date' Converter
 	pkgver = 0.3.9
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=anytime
 	arch = i686
 	arch = x86_64
 	license = GPL2
-	license = GPL3
 	depends = r>=3.2.0
 	depends = r-rcpp>=0.12.9
 	depends = r-bh

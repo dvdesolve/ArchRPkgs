@@ -4,13 +4,13 @@ _cranname=conflicted
 _cranver=1.2.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="An Alternative Conflict Resolution Strategy"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=3.2' 'r-cli>=3.4.0' r-memoise 'r-rlang>=1.0.0')
-optdepends=(r--callr r-covr r-dplyr r-pkglooad r-testthat r-withr)
+optdepends=(r-callr r-covr r-dplyr r-pkgload r-testthat r-withr r-matrix r-methods)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('c99b86bb52da3e7d1f4d96d70c77304d0434db5bd906edd8d743e89ac9223088')
 

@@ -6,12 +6,12 @@ _cranname=expm
 _cranver=0.999-7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Matrix Exponential, Log, 'etc'"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=(r gcc-fortran)
+license=(GPL2)
+depends=(r r-matrix r-methods gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-rcolorbrewer r-sfsmisc r-rmpfr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")

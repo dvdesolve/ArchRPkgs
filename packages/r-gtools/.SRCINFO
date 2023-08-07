@@ -1,12 +1,15 @@
 pkgbase = r-gtools
 	pkgdesc = Various R Programming Tools
 	pkgver = 3.9.4
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=gtools
 	arch = i686
 	arch = x86_64
 	license = GPL2
 	depends = r
+	depends = r-methods
+	depends = r-stats
+	depends = r-utils
 	optdepends = r-car
 	optdepends = r-gplots
 	optdepends = r-knitr

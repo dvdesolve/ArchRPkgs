@@ -1,17 +1,17 @@
 pkgbase = r-googlesheets4
 	pkgdesc = Access Google Sheets using the Sheets API V4
-	pkgver = 1.0.1
+	pkgver = 1.1.1
 	pkgrel = 1
 	url = https://cran.r-project.org/package=googlesheets4
 	arch = any
 	license = MIT
-	depends = r>=3.4
+	depends = r>=3.6
 	depends = r-cellranger
 	depends = r-cli>=3.0.0
 	depends = r-curl
-	depends = r-gargle>=1.2.0
+	depends = r-gargle>=1.5.0
 	depends = r-glue>=1.3.0
-	depends = r-googledrive>=2.0.0
+	depends = r-googledrive>=2.1.0
 	depends = r-httr
 	depends = r-ids
 	depends = r-magrittr
@@ -20,14 +20,15 @@ pkgbase = r-googlesheets4
 	depends = r-rlang>=1.0.2
 	depends = r-tibble>=2.1.1
 	depends = r-vctrs>=0.2.3
-	optdepends = r-covr
+	depends = r-lifecycle
+	depends = r-methods
+	depends = r-utils
+	depends = r-withr
 	optdepends = r-readr
 	optdepends = r-rmarkdown
-	optdepends = r-sodium
 	optdepends = r-spelling
 	optdepends = r-testthat
-	optdepends = r-withr
-	source = https://cran.r-project.org/src/contrib/googlesheets4_1.0.1.tar.gz
-	sha256sums = 284ecbce98944093cb065c1b0b32074eae7b45fd74b87d7815c7ca6deca76591
+	source = https://cran.r-project.org/src/contrib/googlesheets4_1.1.1.tar.gz
+	sha256sums = c5cc63348c54b9de8492e7b12b249245746ea1ff33e306f12431f4fc9386fccf
 
 pkgname = r-googlesheets4

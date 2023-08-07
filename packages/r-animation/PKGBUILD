@@ -4,13 +4,13 @@ _cranname=animation
 _cranver=2.7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="A Gallery of Animations in Statistics and Utilities to Create Animations"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
+license=(GPL)
 depends=('r>=2.14.0' r-magick)
-optdepends=(r-testit
+optdepends=(r-testit r-class r-mass
             'imagemagick: saveGIF() support'
             'graphicsmagick: saveGIF() support'
             'lyx: saveGIF() support'

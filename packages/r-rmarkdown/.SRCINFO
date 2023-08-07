@@ -1,7 +1,7 @@
 pkgbase = r-rmarkdown
 	pkgdesc = Dynamic Documents for R
-	pkgver = 2.20
-	pkgrel = 2
+	pkgver = 2.23
+	pkgrel = 1
 	url = https://cran.r-project.org/package=rmarkdown
 	arch = any
 	license = GPL3
@@ -16,6 +16,10 @@ pkgbase = r-rmarkdown
 	depends = r-tinytex>=0.31
 	depends = r-xfun>=0.36
 	depends = r-yaml>=2.1.19
+	depends = r-methods
+	depends = r-fontawesome>=0.5.0
+	depends = r-utils
+	depends = r-tools
 	depends = pandoc
 	optdepends = r-digest
 	optdepends = r-dygraphs
@@ -27,10 +31,10 @@ pkgbase = r-rmarkdown
 	optdepends = r-shiny
 	optdepends = r-testthat
 	optdepends = r-tibble
-	optdepends = r-tufte
 	optdepends = r-vctrs
 	optdepends = r-withr
-	source = https://cran.r-project.org/src/contrib/rmarkdown_2.20.tar.gz
-	sha256sums = d7f7059bfcb43e4b92432d69ba0e0c74ad10a20f153689262a3e848adb60159d
+	optdepends = r-cleanrmd
+	source = https://cran.r-project.org/src/contrib/rmarkdown_2.23.tar.gz
+	sha256sums = 668d086f0ca597ef6f665b471f19b176be45971828b74ec8c25c3a46947bc825
 
 pkgname = r-rmarkdown

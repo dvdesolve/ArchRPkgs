@@ -1,13 +1,14 @@
 pkgbase = r-callr
 	pkgdesc = Call R from R
 	pkgver = 3.7.3
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=callr
 	arch = any
 	license = MIT
 	depends = r>=3.4
 	depends = r-processx>=3.6.1
 	depends = r-r6
+	depends = r-utils
 	optdepends = r-asciicast
 	optdepends = r-cli
 	optdepends = r-covr

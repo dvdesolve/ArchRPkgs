@@ -2,7 +2,7 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=gtable
-_cranver=0.3.1
+_cranver=0.3.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Arrange 'Grobs' in Tables"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.0')
+depends=('r>=3.5' r-cli r-glue r-grid r-lifecycle 'r-rlang>=1.1.0')
 optdepends=(r-covr r-testthat r-knitr r-rmarkdown r-ggplot2 r-profvis)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8bd62c5722d5188914d667cabab12991c555f657f4f5ce7b547571ae3aec7cb5')
+sha256sums=('2f9a58d978e2a487b7fd8841539ea33cf948e55ddf6f7a9bd2dd3362600a7b3a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

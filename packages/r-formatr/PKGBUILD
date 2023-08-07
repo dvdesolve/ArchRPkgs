@@ -5,11 +5,11 @@ _cranname=formatR
 _cranver=1.14
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Format R Code Automatically"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
+license=(GPL)
 depends=('r>=3.2.3')
 optdepends=(r-rstudioapi r-shiny r-testit r-rmarkdown r-knitr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")

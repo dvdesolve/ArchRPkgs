@@ -5,12 +5,12 @@ _cranname=gtools
 _cranver=3.9.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Various R Programming Tools"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=(r)
+depends=(r r-methods r-stats r-utils)
 optdepends=(r-car r-gplots r-knitr r-rstudioapi r-sgp r-taxize)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('59cf8b194fe98b1cc05dbb4d686810a1068f59d8b402b731548a898ece85f111')

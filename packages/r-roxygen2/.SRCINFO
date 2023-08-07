@@ -1,7 +1,7 @@
 pkgbase = r-roxygen2
 	pkgdesc = In-Line Documentation for R
 	pkgver = 7.2.3
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=roxygen2
 	arch = i686
 	arch = x86_64
@@ -21,6 +21,8 @@ pkgbase = r-roxygen2
 	depends = r-withr
 	depends = r-xml2
 	depends = r-cpp11
+	depends = r-methods
+	depends = r-utils
 	optdepends = r-covr
 	optdepends = r-r.methodss3
 	optdepends = r-r.oo

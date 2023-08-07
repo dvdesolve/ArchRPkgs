@@ -4,7 +4,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=git2r
-_cranver=0.31.0
+_cranver=0.32.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,11 +12,11 @@ pkgdesc="Provides Access to Git Repositories"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.4' libgit2 zlib openssl)
+depends=('r>=3.4' r-graphics r-utils libgit2 zlib openssl)
 optdepends=(r-getpass
             'libssh2: SSH transport support')
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('f1db9278fa4604600a64beaedcf86dda595d7c8a10cdb1f7300a6635e73cd66d')
+sha256sums=('1b5d254c0c684a56751d26d482823d0006964eb1f55c558f365d037f5e984671')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

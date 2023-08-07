@@ -2,18 +2,18 @@
 # Contributor: dhn <neilson+aur@sent.com>
 
 _cranname=ecb
-_cranver=0.4.1
+_cranver=0.4.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Programmatic Access to the European Central Bank's Statistical Data Warehouse"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(CC0)
+license=(custom:CC0)
 depends=(r r-curl r-rsdmx r-xml2 r-httr)
 optdepends=(r-knitr r-rmarkdown r-dplyr r-lubridate r-ggplot2 r-testthat r-zoo)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b27c2a213d2110cb780f17eee7a7b981080d94d503abbff73b6cdf7548d443e3')
+sha256sums=('24db2d4491f582d8c8091e66b89d60d1a961965f69e2fe2a48ddf3bfb80739a6')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,7 +1,7 @@
 pkgbase = r-colourpicker
 	pkgdesc = A Colour Picker Tool for Shiny and for Selecting Colours in Plots
 	pkgver = 1.2.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=colourpicker
 	arch = any
 	license = MIT
@@ -13,6 +13,7 @@ pkgbase = r-colourpicker
 	depends = r-miniui>=0.1.1
 	depends = r-shiny>=0.11.1
 	depends = r-shinyjs>=2.0.0
+	depends = r-utils
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
 	optdepends = r-rstudioapi
