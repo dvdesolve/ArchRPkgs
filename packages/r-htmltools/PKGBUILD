@@ -3,18 +3,18 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=htmltools
-_cranver=0.5.4
+_cranver=0.5.6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Tools for HTML"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=2.14.1' r-digest r-base64enc 'r-rlang>=0.4.10' 'r-fastmap>=1.1.0' r-ellipsis)
+license=(GPL2)
+depends=('r>=2.14.1' r-digest r-base64enc 'r-rlang>=0.4.12' 'r-fastmap>=1.1.0' r-ellipsis r-grdevices r-utils)
 optdepends=(r-markdown r-testthat r-withr r-cairo r-ragg r-shiny)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('008228a8690d39d8ae2716bc614e76337fdbe2bac4e96258c10245fdf24f327e')
+sha256sums=('15eb8e2745c3be5e9926aa773f21d551435e903aa1dd20712f8ab54055b5a067')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

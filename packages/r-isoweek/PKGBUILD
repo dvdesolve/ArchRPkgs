@@ -5,11 +5,11 @@ _cranname=ISOweek
 _cranver=0.6-2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Week of the year and weekday according to ISO 8601"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
+license=(GPL2)
 depends=(r r-stringr)
 optdepends=(r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")

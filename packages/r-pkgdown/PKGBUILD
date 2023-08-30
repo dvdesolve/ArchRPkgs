@@ -4,13 +4,13 @@ _cranname=pkgdown
 _cranver=2.0.7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Make Static HTML Documentation for a Package"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=3.1.0' 'r-bslib>=0.3.1' 'r-callr>=3.7.3' r-cli r-desc r-digest 'r-downlit>=0.4.0' 'r-fs>=1.4.0' 'r-httr>=1.4.2' r-jsonlite r-magrittr r-memoise r-purrr r-ragg 'r-rlang>=1.0.0' 'r-rmarkdown>=1.1.9007' r-tibble r-whisker 'r-withr>=2.4.3' 'r-xml2>=1.3.1' r-yaml)
-optdepends=(r-covr r-diffviewer r-evaluate r-htmltools r-htmlwidgets r-knitr r-lifecycle r-openssl r-pkgload r-rsconnect r-rstudioapi r-rticles r-sass r-testthat)
+optdepends=(r-covr r-diffviewer r-evaluate r-htmltools r-htmlwidgets r-knitr r-lifecycle r-openssl r-pkgload r-rsconnect r-rstudioapi r-rticles r-sass r-testthat r-methods r-tools)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('f33872869dfa8319182d87e90eab3245ff69293b3b791471bf9538afb81b356a')
 

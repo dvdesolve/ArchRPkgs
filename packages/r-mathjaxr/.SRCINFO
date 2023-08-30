@@ -1,9 +1,10 @@
 pkgbase = r-mathjaxr
 	pkgdesc = Using 'Mathjax' in Rd Files
 	pkgver = 1.6.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=mathjaxr
-	arch = any
+	arch = i686
+	arch = x86_64
 	license = GPL3
 	depends = r
 	optdepends = r-js

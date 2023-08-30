@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=markdown
-_cranver=1.5
+_cranver=1.8
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Render Markdown with the C Library 'Sundown'"
-arch=(i686 x86_64)
+pkgdesc="Render Markdown with 'commonmark'"
+arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2)
-depends=('r>=2.11.1' r-commonmark 'r-xfun>=0.35')
+license=(MIT)
+depends=('r>=2.11.1' 'r-commonmark>=1.9.0' 'r-xfun>=0.38' r-utils)
 optdepends=(r-knitr r-rmarkdown r-yaml r-rcurl)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('001503f95fa59b399c0fc9178b0a4f5ab745f38879d38985c6642e944c2e9816')
+sha256sums=('0de97777c0a8262a1e24ca34cc81a3bef2952d46bdc4c6a619ddb56c9ba0e5ab')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

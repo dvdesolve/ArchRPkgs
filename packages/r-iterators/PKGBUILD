@@ -5,12 +5,12 @@ _cranname=iterators
 _cranver=1.0.14
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Provides Iterator Construct"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(Apache2.0)
-depends=('r>=2.5.0')
+license=(Apache)
+depends=('r>=2.5.0' r-utils)
 optdepends=(r-runit r-foreach)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('cef3075a0930e1408c764e4da56bbadd4f7d14315809df8f38dd51f80ccc677b')

@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=posterior
-_cranver=1.4.0
+_cranver=1.4.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Tools for Working with Posterior Distributions"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(BSD3)
-depends=('r>=3.2.0' r-abind r-checkmate 'r-rlang>=1.0.6' 'r-tibble>=3.1.0' 'r-vctrs>=0.5.0' r-tensora r-pillar r-distributional r-matrixstats)
+license=(BSD)
+depends=('r>=3.2.0' r-abind r-checkmate 'r-rlang>=1.0.6' 'r-tibble>=3.1.0' 'r-vctrs>=0.5.0' r-tensora r-pillar r-distributional r-matrixstats r-methods r-parallel r-stats)
 optdepends=(r-testthat r-caret r-gbm r-randomforest r-e1071 r-dplyr r-tidyr r-knitr r-ggplot2 r-rmarkdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('f546658678a2c8c86130922c06f9045b4078bc11a91fa98b0462a5d733133f9d')
+sha256sums=('2b8953fa8d6890a105521023c431ddea725465eb95cf9454a88852e43ebb58d3')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

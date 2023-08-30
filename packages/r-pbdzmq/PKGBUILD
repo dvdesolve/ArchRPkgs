@@ -5,8 +5,8 @@ _cranname=pbdZMQ
 _cranver=0.3-9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
-pkgdesc="Programming with Big Data – Interface to 'ZeroMQ'"
+pkgrel=2
+pkgdesc="Programming with Big Data -- Interface to 'ZeroMQ'"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)

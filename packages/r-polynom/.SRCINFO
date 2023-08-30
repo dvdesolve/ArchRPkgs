@@ -1,11 +1,13 @@
 pkgbase = r-polynom
 	pkgdesc = A Collection of Functions to Implement a Class for Univariate Polynomial Manipulations
 	pkgver = 1.4.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=polynom
 	arch = any
 	license = GPL2
 	depends = r
+	depends = r-graphics
+	depends = r-stats
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
 	source = https://cran.r-project.org/src/contrib/polynom_1.4-1.tar.gz

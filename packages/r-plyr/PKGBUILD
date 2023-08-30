@@ -6,13 +6,13 @@ _cranname=plyr
 _cranver=1.8.8
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Tools for Splitting, Applying and Combining Data"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=3.1.0' 'r-rcpp>=0.11.0')
-optdepends=(r-abind r-covr r-doparallel r-foreach r-iterators r-itertools r-testthat)
+optdepends=(r-abind r-covr r-doparallel r-foreach r-iterators r-itertools r-testthat r-tcltk)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('a73211b4bbe13e4e5e764966a8dd90172c1cc311938dd464d142e1c7a701070c')
 

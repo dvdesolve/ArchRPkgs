@@ -4,12 +4,12 @@ _cranname=modeltools
 _cranver=0.2-23
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Tools and Classes for Statistical Models"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=(r)
+depends=(r r-methods r-stats r-stats4)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('6b3e8d5af1a039db5c178498dbf354ed1c5627a8cea9229726644053443210ef')
 

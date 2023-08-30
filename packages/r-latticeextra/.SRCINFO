@@ -1,22 +1,27 @@
 pkgbase = r-latticeextra
 	pkgdesc = Extra Graphical Utilities Based on Lattice
 	pkgver = 0.6.30
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=latticeExtra
 	arch = any
 	license = GPL2
-	license = GPL3
 	depends = r>=3.6.0
 	depends = r-png
 	depends = r-jpeg
 	depends = r-rcolorbrewer
 	depends = r-interp
+	depends = r-grdevices
+	depends = r-grid
+	depends = r-lattice
+	depends = r-mass
+	depends = r-stats
+	depends = r-utils
 	optdepends = r-maps
 	optdepends = r-mapproj
 	optdepends = r-deldir
-	optdepends = r-tripack
 	optdepends = r-quantreg
 	optdepends = r-zoo
+	optdepends = r-mgcv
 	source = https://cran.r-project.org/src/contrib/latticeExtra_0.6-30.tar.gz
 	sha256sums = c550a76913624818482bf237d48883c58e368ba356ced8ed5e76146672279eed
 

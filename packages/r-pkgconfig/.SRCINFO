@@ -1,11 +1,12 @@
 pkgbase = r-pkgconfig
 	pkgdesc = Private Configuration for 'R' Packages
 	pkgver = 2.0.3
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=pkgconfig
 	arch = any
 	license = MIT
 	depends = r
+	depends = r-utils
 	optdepends = r-covr
 	optdepends = r-testthat
 	optdepends = r-disposables

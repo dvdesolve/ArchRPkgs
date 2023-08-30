@@ -1,10 +1,10 @@
 pkgbase = r-lambda.r
 	pkgdesc = Modeling Data with Functional Programming
 	pkgver = 1.2.4
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=lambda.r
 	arch = any
-	license = LGPL3
+	license = GPL3
 	depends = r>=3.0.0
 	depends = r-formatr
 	optdepends = r-testit

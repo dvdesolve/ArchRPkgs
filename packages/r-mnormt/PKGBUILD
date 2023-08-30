@@ -5,8 +5,8 @@ _cranname=mnormt
 _cranver=2.1.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
-pkgdesc="The Multivariate Normal and t Distributions"
+pkgrel=2
+pkgdesc="The Multivariate Normal and t Distributions, and Their Truncated Versions"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 GPL3)

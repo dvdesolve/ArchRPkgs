@@ -4,11 +4,11 @@ _cranname=listenv
 _cranver=0.9.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Environments Behaving (Almost) as Lists"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(LGPL2.1 LPGL3)
+license=(LGPL2.1)
 depends=('r>=3.1.2')
 optdepends=(r-r.utils r-r.rsp r-markdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")

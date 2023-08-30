@@ -1,19 +1,19 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=igraph
-_cranver=1.4.1
+_cranver=1.5.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Network Analysis and Visualization"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=(r r-magrittr 'r-pkgconfig>=2.0.0' r-rlang gcc-fortran)
+license=(GPL2)
+depends=('r>=3.5.0' r-magrittr 'r-pkgconfig>=2.0.0' r-rlang r-cli 'r-cpp11>=0.2.0' r-graphics r-grdevices r-lifecycle r-matrix r-methods r-stats r-utils gcc-fortran)
 makedepends=(gcc-fortran)
-optdepends=(r-ape r-digest r-graph r-igraphdata r-rgl r-scales r-testthat r-withr r-vdiffr r-knitr r-rmarkdown gmp libxml2 glpk)
+optdepends=(r-ape r-digest r-graph r-igraphdata r-rgl r-scales r-testthat r-withr r-vdiffr r-knitr r-rmarkdown r-callr r-decor r-stats4 r-tcltk gmp libxml2 glpk)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('08a258f46ae87bcbe7f7cf47d46d2bbedb0663407921a30fc89892674b505df1')
+sha256sums=('add90a1e77ad4a5d95641f0556553e3f1d1c4443cb2d5afb70171efd278ab14a')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

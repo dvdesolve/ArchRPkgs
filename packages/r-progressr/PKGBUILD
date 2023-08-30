@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=progressr
-_cranver=0.13.0
+_cranver=0.14.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="An Inclusive, Unifying API for Progress Updates"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=3.5.0' r-digest)
-optdepends=(r-beepr r-cli r-crayon r-pbmcapply r-progress r-purrr r-foreach r-plyr r-dofuture r-future r-future.apply r-furrr r-rpushbullet r-rstudioapi r-shiny r-commonmark r-base64enc)
+depends=('r>=3.5.0' r-digest r-utils)
+optdepends=(r-beepr r-cli r-crayon r-pbmcapply r-progress r-purrr r-foreach r-plyr r-dofuture r-future r-future.apply r-furrr r-rpushbullet r-rstudioapi r-shiny r-commonmark r-base64enc r-graphics r-tcltk r-tools)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('0ffb3dcadde0cc191bad0ff9e05d000aa65e2fc339cfc94ebbb263088df5a4e1')
+sha256sums=('9a2899f879a5577f043be99c18d52bfe4d655cc52a96cae834e8a301b36258af')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

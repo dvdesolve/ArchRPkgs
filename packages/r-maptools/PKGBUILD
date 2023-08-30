@@ -2,18 +2,18 @@
 # Contributor: Danilo J. S. Bellini <danilo dot bellini at gmail dot com>
 
 _cranname=maptools
-_cranver=1.1-6
+_cranver=1.1-8
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Tools for Handling Spatial Objects"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=2.10' 'r-sp>=1.0.11')
+license=(GPL2)
+depends=('r>=2.10' 'r-sp>=1.0.11' 'r-foreign>=0.8' r-grdevices r-grid r-lattice r-methods r-stats r-utils)
 optdepends=(r-rgeos r-spatstat.geom r-pbsmapping r-maps r-rcolorbrewer r-raster r-polyclip r-plotrix r-spatstat.linnet r-spatstat.utils r-spatstat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('d6a5df52db03b2231f21921b693c67f85df3c3b376181aa13ef4f21710f69308')
+sha256sums=('5e8579e3f559161935f1dde622ece703eefa2a28a677ce553d7f27611e66e0f7')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

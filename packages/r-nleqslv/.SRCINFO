@@ -1,12 +1,11 @@
 pkgbase = r-nleqslv
 	pkgdesc = Solve Systems of Nonlinear Equations
 	pkgver = 3.3.4
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=nleqslv
 	arch = i686
 	arch = x86_64
 	license = GPL2
-	license = GPL3
 	makedepends = gcc-fortran
 	depends = r
 	depends = gcc-fortran

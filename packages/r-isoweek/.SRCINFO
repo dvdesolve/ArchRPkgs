@@ -1,11 +1,10 @@
 pkgbase = r-isoweek
 	pkgdesc = Week of the year and weekday according to ISO 8601
 	pkgver = 0.6.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=ISOweek
 	arch = any
 	license = GPL2
-	license = GPL3
 	depends = r
 	depends = r-stringr
 	optdepends = r-testthat

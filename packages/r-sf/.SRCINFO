@@ -1,6 +1,6 @@
 pkgbase = r-sf
 	pkgdesc = Simple Features for R
-	pkgver = 1.0.9
+	pkgver = 1.0.14
 	pkgrel = 1
 	url = https://cran.r-project.org/package=sf
 	arch = i686
@@ -14,6 +14,13 @@ pkgbase = r-sf
 	depends = r-rcpp>=0.12.18
 	depends = r-s2>=1.1.0
 	depends = r-units>=0.7.0
+	depends = r-graphics
+	depends = r-grdevices
+	depends = r-grid
+	depends = r-methods
+	depends = r-stats
+	depends = r-tools
+	depends = r-utils
 	depends = gdal>=2.0.1
 	depends = geos>=3.4.0
 	depends = proj>=4.8.0
@@ -52,7 +59,8 @@ pkgbase = r-sf
 	optdepends = r-tmap
 	optdepends = r-vctrs
 	optdepends = r-wk
-	source = https://cran.r-project.org/src/contrib/sf_1.0-9.tar.gz
-	sha256sums = 85c0c71a0a64750281e79aa96e36d13e6285927008b2d37d699e52aba7d8013b
+	optdepends = r-matrix
+	source = https://cran.r-project.org/src/contrib/sf_1.0-14.tar.gz
+	sha256sums = 8b535648d537a1a95920c938e43692c1dfaac8d293ff3f506334001352c339f7
 
 pkgname = r-sf

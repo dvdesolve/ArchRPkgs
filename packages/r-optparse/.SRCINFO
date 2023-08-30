@@ -1,13 +1,13 @@
 pkgbase = r-optparse
 	pkgdesc = Command Line Option Parser
 	pkgver = 1.7.3
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=optparse
 	arch = any
 	license = GPL2
-	license = GPL3
 	depends = r>=3.6.0
 	depends = r-getopt>=1.20.2
+	depends = r-methods
 	optdepends = r-knitr
 	optdepends = r-stringr
 	optdepends = r-testthat

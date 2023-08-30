@@ -1,6 +1,6 @@
 pkgbase = r-profvis
 	pkgdesc = Interactive Visualizations for Profiling R Code
-	pkgver = 0.3.7
+	pkgver = 0.3.8
 	pkgrel = 1
 	url = https://cran.r-project.org/package=profvis
 	arch = i686
@@ -9,6 +9,9 @@ pkgbase = r-profvis
 	depends = r>=3.0
 	depends = r-htmlwidgets>=0.3.2
 	depends = r-stringr
+	depends = r-purrr
+	depends = r-rlang>=0.4.9
+	depends = r-vctrs
 	optdepends = r-knitr
 	optdepends = r-ggplot2
 	optdepends = r-rmarkdown
@@ -16,7 +19,7 @@ pkgbase = r-profvis
 	optdepends = r-devtools
 	optdepends = r-shiny
 	optdepends = r-htmltools
-	source = https://cran.r-project.org/src/contrib/profvis_0.3.7.tar.gz
-	sha256sums = 43974863cb793f81dbea4b94096343c321f7739c9038980405c9b16b04a906b9
+	source = https://cran.r-project.org/src/contrib/profvis_0.3.8.tar.gz
+	sha256sums = ec02c75bc9907a73564e691adfa8e06651ca0bd73b7915412960231cd265b4b2
 
 pkgname = r-profvis

@@ -4,12 +4,12 @@ _cranname=optparse
 _cranver=1.7.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Command Line Option Parser"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.6.0' 'r-getopt>=1.20.2')
+license=(GPL2)
+depends=('r>=3.6.0' 'r-getopt>=1.20.2' r-methods)
 optdepends=(r-knitr r-stringr r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('6287e1af051d4a65037900ce7b30bd962039450dd4eab63b6f2491eace6a07ed')

@@ -1,7 +1,7 @@
 pkgbase = r-ncappc
 	pkgdesc = NCA Calculations and Population Model Diagnosis
 	pkgver = 0.3.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=ncappc
 	arch = any
 	license = GPL3
@@ -25,6 +25,9 @@ pkgbase = r-ncappc
 	depends = r-ggplot2>=2.0.0
 	depends = r-gridextra>=2.0.0
 	depends = r-bookdown
+	depends = r-grdevices
+	depends = r-grid
+	depends = r-stats
 	optdepends = r-testthat
 	source = https://cran.r-project.org/src/contrib/ncappc_0.3.0.tar.gz
 	sha256sums = fd5b16b2b80fac18283c0a57069ba81b8f584f4996af34d0207db43c7504c02d

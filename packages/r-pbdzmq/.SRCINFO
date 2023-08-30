@@ -1,7 +1,7 @@
 pkgbase = r-pbdzmq
-	pkgdesc = Programming with Big Data – Interface to 'ZeroMQ'
+	pkgdesc = Programming with Big Data -- Interface to 'ZeroMQ'
 	pkgver = 0.3.9
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=pbdZMQ
 	arch = i686
 	arch = x86_64

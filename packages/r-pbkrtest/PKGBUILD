@@ -5,12 +5,12 @@ _cranname=pbkrtest
 _cranver=0.5.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
-pkgdesc="Parametric Bootstrap and Kenward Roger Based Methods for Mixed Model Comparison"
+pkgrel=2
+pkgdesc="Parametric Bootstrap, Kenward-Roger and Satterthwaite Based Methods for Test in Mixed Models"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=4.1.0' 'r-lme4>=1.1.31' r-broom r-dplyr r-numderiv)
+license=(GPL2)
+depends=('r>=4.1.0' 'r-lme4>=1.1.31' r-broom r-dplyr r-numderiv r-mass 'r-matrix>=1.2.3' r-methods r-parallel)
 optdepends=(r-knitr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('8e79adf035a0fcf3c82145ad55847497379e009f7be880ba3007ebeb2e69b6e3')

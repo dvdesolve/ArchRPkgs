@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=magick
-_cranver=2.7.3
+_cranver=2.7.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,9 +10,9 @@ arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=(r 'r-rcpp>=0.12.12' r-magrittr r-curl imagemagick)
-optdepends=(r-av r-spelling r-jsonlite r-knitr r-rmarkdown r-rsvg r-webp r-pdftools r-ggplot2 r-gapminder r-irdisplay r-tesseract r-gifski)
+optdepends=(r-av r-spelling r-jsonlite r-knitr r-rmarkdown r-rsvg r-webp r-pdftools r-ggplot2 r-gapminder r-irdisplay r-tesseract r-gifski libgdal.so.32)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('83877b2e23ea43fbc1164de9c2422eafbe7858393ac384df5adf3a7eec122441')
+sha256sums=('69b6162d39b71e1de16c641c3e6ccc747d226017e6540e4aa0a29376bffe9da2')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

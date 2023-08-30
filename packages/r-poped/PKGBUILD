@@ -4,13 +4,13 @@ _cranname=PopED
 _cranver=0.6.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Population (and Individual) Optimal Experimental Design"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(LGPL3)
-depends=('r>=2.14' r-ggplot2 r-mvtnorm 'r-dplyr>=0.7.0' r-magrittr r-purrr r-stringr r-tibble r-gtools)
-optdepends=(r-testthat r-hmisc r-ga r-desolve r-rcpp r-shiny r-rhandsontable r-knitr r-rmarkdown r-gridextra r-covr r-devtools r-mrgsolve)
+depends=('r>=2.14' r-ggplot2 r-mvtnorm 'r-dplyr>=0.7.0' r-magrittr r-purrr r-stringr r-tibble r-gtools r-boot r-codetools r-mass r-stats r-utils)
+optdepends=(r-testthat r-hmisc r-ga r-desolve r-rcpp r-shiny r-rhandsontable r-knitr r-rmarkdown r-gridextra r-covr r-devtools r-mrgsolve r-nlme)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('407dbb1802f4f345f53c5e8c86d29b61e96beffb127df2a2d41171a34fc81469')
 

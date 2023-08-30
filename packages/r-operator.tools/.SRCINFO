@@ -1,11 +1,12 @@
 pkgbase = r-operator.tools
 	pkgdesc = Utilities for Working with R's Operators
 	pkgver = 1.6.3
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=operator.tools
 	arch = any
 	license = GPL2
 	depends = r
+	depends = r-utils>=3.3.2
 	optdepends = r-operators
 	optdepends = r-magrittr
 	optdepends = r-testthat

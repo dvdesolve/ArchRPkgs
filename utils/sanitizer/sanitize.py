@@ -111,8 +111,8 @@ LIC_ORDER = [
         "LGPL (>= 2.1)",
         "LGPL (>= 2)",
         "LGPL (>= 3)",
-        "LGPL-2",
         "LGPL-2.1",
+        "LGPL-2",
         "LGPL-3",
         "LGPL",
         "GPL (>= 2.0)",
@@ -291,13 +291,13 @@ def check_license(current, upstream):
         lics_new.sort()
 
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Missing licenses: {MessageColor.data}{", ".join(lics_new)}{MessageColor.nc}')
+              f' Missing licenses: {MessageColor.data}{" ".join(lics_new)}{MessageColor.nc}')
 
     if len(lics_our) != 0:
         lics_our.sort()
 
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Extra licenses: {MessageColor.data}{", ".join(lics_our)}{MessageColor.nc}')
+              f' Extra licenses: {MessageColor.data}{" ".join(lics_our)}{MessageColor.nc}')
 
 def check_depends(current, upstream_depends, upstream_imports, upstream_linkingto):
     """ check for problems with dependencies """
@@ -396,7 +396,7 @@ def check_depends(current, upstream_depends, upstream_imports, upstream_linkingt
         d_new.sort()
 
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Missing dependencies: {MessageColor.data}{", ".join(d_new)}{MessageColor.nc}')
+              f' Missing dependencies: {MessageColor.data}{" ".join(d_new)}{MessageColor.nc}')
 
     # TODO check against suppresion lists
     # TODO split by starting string (r-) to tell truly and possibly extra dependencies
@@ -412,7 +412,7 @@ def check_depends(current, upstream_depends, upstream_imports, upstream_linkingt
         d_our.sort()
 
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Extra dependencies: {MessageColor.data}{", ".join(d_our)}{MessageColor.nc}')
+              f' Extra dependencies: {MessageColor.data}{" ".join(d_our)}{MessageColor.nc}')
 
 def check_optdepends(current, upstream):
     """ check for problems with optional dependencies """
@@ -449,7 +449,7 @@ def check_optdepends(current, upstream):
         deps_new.sort()
 
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Missing optional dependencies: {MessageColor.data}{", ".join(deps_new)}{MessageColor.nc}')
+              f' Missing optional dependencies: {MessageColor.data}{" ".join(deps_new)}{MessageColor.nc}')
 
     # TODO check against suppresion lists
     # TODO split by starting string (r-) to tell truly and possibly extra dependencies
@@ -457,7 +457,7 @@ def check_optdepends(current, upstream):
         deps_our.sort()
 
         print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Extra optional dependencies: {MessageColor.data}{", ".join(deps_our)}{MessageColor.nc}')
+              f' Extra optional dependencies: {MessageColor.data}{" ".join(deps_our)}{MessageColor.nc}')
 
 def parse_description(package):
     robjects.r['options'](warn = -1) # suppress unrelated warnings

@@ -5,12 +5,12 @@ _cranname=proxy
 _cranver=0.4-27
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Distance and Similarity Measures"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.4.0')
+depends=('r>=3.4.0' r-stats r-utils)
 optdepends=(r-cba)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('249991a4c4d70ad139e93f3a24e17f161ad1ec854951813ea192daf79478563f')

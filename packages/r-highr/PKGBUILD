@@ -10,7 +10,7 @@ pkgrel=1
 pkgdesc="Syntax Highlighting for R Source Code"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
+license=(GPL)
 depends=('r>=3.3.0' 'r-xfun>=0.18')
 optdepends=(r-knitr r-markdown r-testit)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")

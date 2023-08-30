@@ -4,18 +4,18 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=jsonlite
-_cranver=1.8.4
+_cranver=1.8.7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="A Robust, High Performance JSON Parser and Generator for R"
+pkgdesc="A Simple and Robust JSON Parser and Generator for R"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r)
+depends=(r r-methods)
 optdepends=(r-httr r-vctrs r-testthat r-knitr r-rmarkdown r-r.rsp r-sf)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('79eaabe042226b0918aa828cc63d54fee8be67ae7c67f5e0d3010f468efb1278')
+sha256sums=('7d42b7784b72d728698ea02b97818df51e2015ffa39fec2eaa2400771b0f601c')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

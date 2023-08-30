@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=intervals
-_cranver=0.15.2
+_cranver=0.15.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,9 +9,9 @@ pkgdesc="Tools for Working with Points and Intervals"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(Artistic2.0)
-depends=('r>=2.9.0')
+depends=('r>=2.9.0' r-graphics r-methods r-utils)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('0bd23b0ce817ddd851238233d8a5420bf3a6d29e75fd361418cbc50118777c57')
+sha256sums=('50c0e1e3aab3e7b72cc1f0a6559d96caa3a360e969c38538479907e6cbe39f8f')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -4,12 +4,12 @@ _cranname=ncappc
 _cranver=0.3.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="NCA Calculations and Population Model Diagnosis"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=2.15.3' r-scales r-gtable r-knitr r-xtable r-reshape2 r-dplyr r-cairo 'r-readr>=0.2.2' r-lazyeval r-poped r-magrittr r-rlang r-purrr r-tibble r-rmarkdown r-tidyr 'r-ggplot2>=2.0.0' 'r-gridextra>=2.0.0' r-bookdown)
+depends=('r>=2.15.3' r-scales r-gtable r-knitr r-xtable r-reshape2 r-dplyr r-cairo 'r-readr>=0.2.2' r-lazyeval r-poped r-magrittr r-rlang r-purrr r-tibble r-rmarkdown r-tidyr 'r-ggplot2>=2.0.0' 'r-gridextra>=2.0.0' r-bookdown r-grdevices r-grid r-stats)
 optdepends=(r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('fd5b16b2b80fac18283c0a57069ba81b8f584f4996af34d0207db43c7504c02d')

@@ -5,12 +5,12 @@ _cranname=pkgconfig
 _cranver=2.0.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Private Configuration for 'R' Packages"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r)
+depends=(r r-utils)
 optdepends=(r-covr r-testthat r-disposables)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('330fef440ffeb842a7dcfffc8303743f1feae83e8d6131078b5a44ff11bc3850')

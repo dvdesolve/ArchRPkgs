@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=interp
-_cranver=1.1-3
+_cranver=1.1-4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Interpolation Methods"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
+license=(GPL2)
 depends=('r>=3.5.0' 'r-rcpp>=0.12.9' r-deldir r-rcppeigen)
-optdepends=(r-sp r-deriv r-ryacas r-ggplot2 r-gridextra r-stringi r-stringr)
+optdepends=(r-sp r-deriv r-ryacas r-ggplot2 r-gridextra r-stringi r-stringr r-lattice r-mass r-scatterplot3d)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b74e606b38cfb02985c1f9e3e45093620f76c0307b1b0b4058761e871eb5fa3f')
+sha256sums=('4f7b5d388132a4d76e8635e2a7c4fa0d705df2b49e7d108faa16ce2236e34d06')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

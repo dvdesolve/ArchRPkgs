@@ -2,7 +2,7 @@
 # Contributor: Pranav K Anupam <pranavanupam@yahoo.com>
 
 _cranname=modelr
-_cranver=0.1.10
+_cranver=0.1.11
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,9 +11,9 @@ arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
 depends=('r>=3.2' r-broom r-magrittr 'r-purrr>=0.2.2' 'r-rlang>=1.0.6' r-tibble 'r-tidyr>=0.8.0' r-tidyselect r-vctrs)
-optdepends=(r-covr r-ggplot2 r-testthat)
+optdepends=(r-covr r-ggplot2 r-testthat r-compiler)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('9345a6e86363181e369c5e9de190fcab62d05e284fc65f1c4d30acfbce6a0f63')
+sha256sums=('94ebd506e9ccf3bf25318be6a182f8f89c3669a77b41864a0b9dbcc1d4337bd3')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,13 +1,13 @@
 pkgbase = r-haven
 	pkgdesc = Import and Export 'SPSS', 'Stata' and 'SAS' Files
-	pkgver = 2.5.2
+	pkgver = 2.5.3
 	pkgrel = 1
 	url = https://cran.r-project.org/package=haven
 	arch = i686
 	arch = x86_64
 	license = MIT
 	makedepends = make
-	depends = r>=3.4
+	depends = r>=3.6
 	depends = r-cli>=3.0.0
 	depends = r-forcats>=0.2.0
 	depends = r-hms
@@ -18,6 +18,8 @@ pkgbase = r-haven
 	depends = r-vctrs>=0.3.0
 	depends = r-cpp11
 	depends = zlib
+	depends = r-lifecycle
+	depends = r-methods
 	optdepends = r-covr
 	optdepends = r-crayon
 	optdepends = r-fs
@@ -26,7 +28,7 @@ pkgbase = r-haven
 	optdepends = r-rmarkdown
 	optdepends = r-testthat
 	optdepends = r-utf8
-	source = https://cran.r-project.org/src/contrib/haven_2.5.2.tar.gz
-	sha256sums = 2131fb0377ae1beffae54bf4beb8b3a876e9b6b9841a5acc39a2a2615023561d
+	source = https://cran.r-project.org/src/contrib/haven_2.5.3.tar.gz
+	sha256sums = 9a5999afad09f0cf80515241b2ff19a0c480658c4bd3810638ad52762e04b7e3
 
 pkgname = r-haven

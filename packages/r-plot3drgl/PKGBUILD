@@ -4,12 +4,12 @@ _cranname=plot3Drgl
 _cranver=1.0.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Plotting Multi-Dimensional Data - Using 'rgl'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=3.2.3' r-rgl r-plot3d)
+depends=('r>=3.2.3' r-rgl r-plot3d r-grdevices)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('6d87a9a32aba3aa64f751268cabd14dbd3e0eca2bd5f0a4b11366cd1e2f51bdd')
 

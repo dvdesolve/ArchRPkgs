@@ -1,11 +1,10 @@
 pkgbase = r-manipulatewidget
 	pkgdesc = Add Even More Interactivity to Interactive Charts
 	pkgver = 0.11.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=manipulateWidget
 	arch = any
 	license = GPL2
-	license = GPL3
 	depends = r>=2.10
 	depends = r-shiny>=1.0.3
 	depends = r-miniui
@@ -15,6 +14,10 @@ pkgbase = r-manipulatewidget
 	depends = r-base64enc
 	depends = r-webshot
 	depends = r-shinyjs
+	depends = r-codetools
+	depends = r-grdevices
+	depends = r-methods
+	depends = r-tools
 	optdepends = r-dygraphs
 	optdepends = r-leaflet
 	optdepends = r-plotly

@@ -1,7 +1,7 @@
 pkgbase = r-hwriter
-	pkgdesc = HTML Writer - Outputs R objects in HTML format
+	pkgdesc = HTML Writer - Outputs R Objects in HTML Format
 	pkgver = 1.3.2.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=hwriter
 	arch = any
 	license = LGPL2.1

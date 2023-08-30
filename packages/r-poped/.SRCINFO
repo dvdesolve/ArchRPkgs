@@ -1,7 +1,7 @@
 pkgbase = r-poped
 	pkgdesc = Population (and Individual) Optimal Experimental Design
 	pkgver = 0.6.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=PopED
 	arch = any
 	license = LGPL3
@@ -14,6 +14,11 @@ pkgbase = r-poped
 	depends = r-stringr
 	depends = r-tibble
 	depends = r-gtools
+	depends = r-boot
+	depends = r-codetools
+	depends = r-mass
+	depends = r-stats
+	depends = r-utils
 	optdepends = r-testthat
 	optdepends = r-hmisc
 	optdepends = r-ga
@@ -27,6 +32,7 @@ pkgbase = r-poped
 	optdepends = r-covr
 	optdepends = r-devtools
 	optdepends = r-mrgsolve
+	optdepends = r-nlme
 	source = https://cran.r-project.org/src/contrib/PopED_0.6.0.tar.gz
 	sha256sums = 407dbb1802f4f345f53c5e8c86d29b61e96beffb127df2a2d41171a34fc81469
 

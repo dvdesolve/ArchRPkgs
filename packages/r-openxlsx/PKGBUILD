@@ -5,12 +5,12 @@ _cranname=openxlsx
 _cranver=4.2.5.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Read, Write and Edit xlsx Files"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.3.0' r-rcpp r-stringi r-zip)
+depends=('r>=3.3.0' r-rcpp r-stringi r-zip r-grdevices r-methods r-stats r-utils)
 optdepends=(r-knitr r-rmarkdown r-roxygen2 r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('ee7089e7e5832ef22ee0d0eebf7cca5096ce23afb2bcdb58700be62526fc9b67')

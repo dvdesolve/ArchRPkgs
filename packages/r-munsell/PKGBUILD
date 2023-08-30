@@ -5,12 +5,12 @@ _cranname=munsell
 _cranver=0.5.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Utilities for Using Munsell Colours"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r r-colorspace)
+depends=(r r-colorspace r-methods)
 optdepends=(r-ggplot2 r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('d0f3a9fb30e2b5d411fa61db56d4be5733a2621c0edf017d090bdfa5e377e199')

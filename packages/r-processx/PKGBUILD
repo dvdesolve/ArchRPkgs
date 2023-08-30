@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=processx
-_cranver=3.8.0
+_cranver=3.8.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Execute and Control System Processes"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.4.0' 'r-ps>=1.2.0' r-r6)
-optdepends=(r-callr r-cli r-covr r-curl r-debugme r-rlang r-testthat r-withr)
+depends=('r>=3.4.0' 'r-ps>=1.2.0' r-r6 r-utils)
+optdepends=(r-callr r-cli r-covr r-curl r-debugme r-rlang r-testthat r-withr r-codetools r-parallel r-webfakes)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('9270d9d26c4314151062801a5c1fc57556b4fcb41dbf3558cb5bd230b18ffb0b')
+sha256sums=('e91b87af5b23c14b71003ec880f749dca81fd74f0601ab59ea1847c7fe857ecd')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

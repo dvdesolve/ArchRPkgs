@@ -5,8 +5,8 @@ _cranname=minqa
 _cranver=1.2.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
-pkgdesc="Derivative-free optimization algorithms by quadratic approximation"
+pkgrel=2
+pkgdesc="Derivative-Free Optimization Algorithms by Quadratic Approximation"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)

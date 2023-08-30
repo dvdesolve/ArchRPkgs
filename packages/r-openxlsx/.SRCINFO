@@ -1,7 +1,7 @@
 pkgbase = r-openxlsx
 	pkgdesc = Read, Write and Edit xlsx Files
 	pkgver = 4.2.5.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=openxlsx
 	arch = i686
 	arch = x86_64
@@ -10,6 +10,10 @@ pkgbase = r-openxlsx
 	depends = r-rcpp
 	depends = r-stringi
 	depends = r-zip
+	depends = r-grdevices
+	depends = r-methods
+	depends = r-stats
+	depends = r-utils
 	optdepends = r-knitr
 	optdepends = r-rmarkdown
 	optdepends = r-roxygen2
