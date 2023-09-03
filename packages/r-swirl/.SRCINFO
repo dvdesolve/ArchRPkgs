@@ -1,7 +1,7 @@
 pkgbase = r-swirl
 	pkgdesc = Learn R, in R
 	pkgver = 2.4.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=swirl
 	arch = any
 	license = MIT
@@ -12,6 +12,8 @@ pkgbase = r-swirl
 	depends = r-yaml
 	depends = r-rcurl
 	depends = r-digest
+	depends = r-methods
+	depends = r-tools
 	optdepends = r-stringi
 	source = https://cran.r-project.org/src/contrib/swirl_2.4.5.tar.gz
 	sha256sums = 3c7de1556b4f15734e2cb0a783d78b80165dd90cb97da23e176b3a6cb3b01e33

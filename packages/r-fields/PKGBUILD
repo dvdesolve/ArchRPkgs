@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=fields
-_cranver=14.1
+_cranver=15.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=3
+pkgrel=1
 pkgdesc="Tools for Spatial Data"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.5.0' r-spam r-viridis r-maps r-methods gcc-fortran)
+depends=('r>=3.5.0' r-spam r-maps r-methods r-viridislite gcc-fortran)
 makedepends=(gcc-fortran)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('57c4c5592443d2ee869014b3199989b5edd1aff52e24f1cd313b8f9b34a95434')
+sha256sums=('1f270f2331522ef93e04a8b199dfab17995ac02aaa0a68eeca90fef55f6cad3d')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

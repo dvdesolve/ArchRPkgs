@@ -2,18 +2,18 @@
 # Contributor: getzze <getzze@gmail.com>
 
 _cranname=rgeos
-_cranver=0.6-1
+_cranver=0.6-4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Interface to Geometry Engine - Open Source ('GEOS')"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.3.0' 'r-sp>=1.1.0' 'geos>=3.2.0')
+license=(GPL2)
+depends=('r>=3.3.0' 'r-sp>=1.1.0' 'geos>=3.2.0' r-graphics r-methods r-stats r-utils)
 optdepends=(r-maptools r-testthat r-xml r-maps r-rgdal)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('420dbd48c0e8c840686b6ed29384715723d6926a1f9b0c437c60ad1853eef7f2')
+sha256sums=('9d03c4de96fd3fad55ff8d1ff8113dcaaa00f15d9d0588e54c9f91751bcede11')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,7 +1,7 @@
 pkgbase = r-readr
 	pkgdesc = Read Rectangular Text Data
 	pkgver = 2.1.4
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=readr
 	arch = i686
 	arch = x86_64
@@ -18,6 +18,8 @@ pkgbase = r-readr
 	depends = r-vroom>=1.6.0
 	depends = r-cpp11
 	depends = r-tzdb>=0.1.1
+	depends = r-methods
+	depends = r-utils
 	optdepends = r-covr
 	optdepends = r-curl
 	optdepends = r-knitr
@@ -29,6 +31,7 @@ pkgbase = r-readr
 	optdepends = r-waldo
 	optdepends = r-withr
 	optdepends = r-xml2
+	optdepends = r-datasets
 	source = https://cran.r-project.org/src/contrib/readr_2.1.4.tar.gz
 	sha256sums = 98144fa48c4fa61ef8c73ede8f87a2d2c5c44e9502b7875b266eb79984fbeb0d
 

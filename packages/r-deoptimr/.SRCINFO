@@ -1,13 +1,13 @@
 pkgbase = r-deoptimr
 	pkgdesc = Differential Evolution Optimization in Pure R
-	pkgver = 1.1.0
+	pkgver = 1.1.2
 	pkgrel = 1
 	url = https://cran.r-project.org/package=DEoptimR
 	arch = any
 	license = GPL2
 	depends = r
 	depends = r-stats
-	source = https://cran.r-project.org/src/contrib/DEoptimR_1.1-0.tar.gz
-	sha256sums = 164104919c0aa3755679d60457095f76c4ba029e75df305d8fd0f432538fd696
+	source = https://cran.r-project.org/src/contrib/DEoptimR_1.1-2.tar.gz
+	sha256sums = 78b58e26c791adf79a303c212ebff19330f1b5e700a34182857b761faf679e6b
 
 pkgname = r-deoptimr

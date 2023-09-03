@@ -269,8 +269,10 @@ def check_license(current, upstream):
     lics_new = list(lics_new)
 
     if len(lics_new) == 0:
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' License should be {MessageColor.data}unknown{MessageColor.nc}')
+        lics_new.append("unknown")
+
+    if len(lics_new) >= 2 and "unknown" in lics_new:
+        lics_new.remove("unknown")
 
     # check for each current license presented in PKGBUILD
     lics_our = current.copy()

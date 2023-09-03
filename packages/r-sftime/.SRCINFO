@@ -1,13 +1,13 @@
 pkgbase = r-sftime
 	pkgdesc = Classes and Methods for Simple Feature Objects that Have a Time Column
 	pkgver = 0.2.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=sftime
 	arch = any
-	license = Apache1.1
-	license = Apache2.0
+	license = Apache
 	depends = r
 	depends = r-sf>=1.0.7
+	depends = r-methods
 	optdepends = r-knitr
 	optdepends = r-spacetime
 	optdepends = r-rmarkdown

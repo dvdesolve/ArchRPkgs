@@ -4,12 +4,12 @@ _cranname=restfulr
 _cranver=0.0.15
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="R Interface to RESTful Web Services"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(Artistic2.0)
-depends=('r>=3.4.0' r-xml r-rcurl r-rjson 'r-s4vectors>=0.13.15' r-yaml)
+depends=('r>=3.4.0' r-xml r-rcurl r-rjson 'r-s4vectors>=0.13.15' r-yaml r-methods)
 optdepends=(r-getpass r-rsolr r-runit)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('40ff8f1fb2987af2223e1a855bb1680c5ce2143fbce7ebc42f1edb291f80e692')

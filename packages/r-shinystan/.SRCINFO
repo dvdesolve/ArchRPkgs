@@ -1,7 +1,7 @@
 pkgbase = r-shinystan
 	pkgdesc = Interactive Visual and Numerical Diagnostics and Posterior Analysis for Bayesian Models
 	pkgver = 2.6.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=shinystan
 	arch = any
 	license = GPL3
@@ -22,6 +22,9 @@ pkgbase = r-shinystan
 	depends = r-threejs>=0.2.1
 	depends = r-xtable
 	depends = r-xts>=0.9.7
+	depends = r-methods
+	depends = r-stats
+	depends = r-utils
 	optdepends = r-coda
 	optdepends = r-knitr
 	optdepends = r-posterior
@@ -29,6 +32,7 @@ pkgbase = r-shinystan
 	optdepends = r-rsconnect
 	optdepends = r-rstanarm
 	optdepends = r-testthat
+	optdepends = r-cmdstanr
 	source = https://cran.r-project.org/src/contrib/shinystan_2.6.0.tar.gz
 	sha256sums = a084856a2d66d8744f2c72e3e19ca35e600a508ed7ef1f7ebed8c7fc0738d529
 

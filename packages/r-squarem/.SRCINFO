@@ -1,11 +1,10 @@
 pkgbase = r-squarem
 	pkgdesc = Squared Extrapolation Methods for Accelerating EM-Like Monotone Algorithms
 	pkgver = 2021.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=SQUAREM
 	arch = any
 	license = GPL2
-	license = GPL3
 	depends = r>=3.0
 	optdepends = r-setrng
 	source = https://cran.r-project.org/src/contrib/SQUAREM_2021.1.tar.gz

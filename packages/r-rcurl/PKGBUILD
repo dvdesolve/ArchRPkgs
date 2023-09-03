@@ -2,19 +2,19 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=RCurl
-_cranver=1.98-1.10
+_cranver=1.98-1.12
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="General Network (HTTP/FTP/...) Client Interface for R"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(BSD3)
-depends=('r>=3.4.0' r-bitops curl)
+license=(BSD)
+depends=('r>=3.4.0' r-bitops r-methods curl)
 makedepends=(make)
 optdepends=(r-xml)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('5a622bcf8b6fb77f4b01e9473d3685f64f51401240630bb25b0266a61306f1d4')
+sha256sums=('1a83fef04e9573b402171a6e4a4b27857a3d045eec8970f8f7233850bba626b2')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

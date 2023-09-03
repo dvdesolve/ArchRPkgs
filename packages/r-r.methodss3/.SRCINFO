@@ -1,12 +1,13 @@
 pkgbase = r-r.methodss3
 	pkgdesc = S3 Methods Simplified
 	pkgver = 1.8.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=R.methodsS3
 	arch = any
 	license = LGPL2.1
-	license = LGPL3
 	depends = r>=2.13.0
+	depends = r-utils
+	optdepends = r-codetools
 	source = https://cran.r-project.org/src/contrib/R.methodsS3_1.8.2.tar.gz
 	sha256sums = 822d5e61dad4c91e8883be2b38d7b89f87492046d0fe345704eb5d2658927c2e
 

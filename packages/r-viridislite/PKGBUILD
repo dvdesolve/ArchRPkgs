@@ -2,18 +2,18 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=viridisLite
-_cranver=0.4.1
+_cranver=0.4.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Default Color Maps from 'matplotlib' (Lite Version)"
+pkgdesc="Colorblind-Friendly Color Maps (Lite Version)"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=2.10')
 optdepends=(r-hexbin r-ggplot2 r-testthat r-covr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('a896db1ccae5fc1a8b3764d02f24cef74ef7a8341cf9f3401c4efe799870ea97')
+sha256sums=('893f111d31deccd2cc959bc9db7ba2ce9020a2dd1b9c1c009587e449c4cce1a1')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,7 +1,7 @@
 pkgbase = r-rstan
 	pkgdesc = R Interface to Stan
 	pkgver = 2.21.8
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=rstan
 	arch = i686
 	arch = x86_64
@@ -18,6 +18,8 @@ pkgbase = r-rstan
 	depends = r-pkgbuild
 	depends = r-rcppeigen>=0.3.3.3.0
 	depends = r-bh>=1.72.0.2
+	depends = r-methods
+	depends = r-stats4
 	depends = pandoc
 	optdepends = r-runit
 	optdepends = r-shinystan
@@ -27,6 +29,11 @@ pkgbase = r-rstan
 	optdepends = r-rstudioapi
 	optdepends = r-knitr
 	optdepends = r-v8
+	optdepends = r-bh
+	optdepends = r-kernsmooth
+	optdepends = r-matrix
+	optdepends = r-parallel
+	optdepends = r-rcppeigen
 	source = https://cran.r-project.org/src/contrib/rstan_2.21.8.tar.gz
 	sha256sums = b2d4edc315419037970c9fa2e8740b934966d88d40548152811f3d4a28475075
 

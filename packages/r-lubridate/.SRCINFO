@@ -1,7 +1,7 @@
 pkgbase = r-lubridate
 	pkgdesc = Make Dealing with Dates a Little Easier
 	pkgver = 1.9.2
-	pkgrel = 2
+	pkgrel = 3
 	url = https://cran.r-project.org/package=lubridate
 	arch = i686
 	arch = x86_64
@@ -10,6 +10,7 @@ pkgbase = r-lubridate
 	depends = r-generics
 	depends = r-timechange>=0.1.1
 	depends = r-methods
+	depends = tzdata
 	optdepends = r-covr
 	optdepends = r-knitr
 	optdepends = r-rmarkdown

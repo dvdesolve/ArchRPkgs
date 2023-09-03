@@ -1,18 +1,19 @@
 pkgbase = r-stars
 	pkgdesc = Spatiotemporal Arrays, Raster and Vector Data Cubes
-	pkgver = 0.6.0
+	pkgver = 0.6.3
 	pkgrel = 1
 	url = https://cran.r-project.org/package=stars
 	arch = any
-	license = Apache1.1
-	license = Apache2.0
+	license = Apache
 	depends = r>=3.3.0
 	depends = r-abind
-	depends = r-sf>=1.0.9
+	depends = r-sf>=1.0.10
 	depends = r-classint>=0.4.1
 	depends = r-lwgeom
 	depends = r-rlang
 	depends = r-units
+	depends = r-methods
+	depends = r-parallel
 	optdepends = r-cairo
 	optdepends = r-pcict
 	optdepends = r-rnetcdf
@@ -39,7 +40,6 @@ pkgbase = r-stars
 	optdepends = r-plm
 	optdepends = r-randomforest
 	optdepends = r-raster
-	optdepends = r-rgdal
 	optdepends = r-rmarkdown
 	optdepends = r-sp
 	optdepends = r-spacetime
@@ -48,10 +48,15 @@ pkgbase = r-stars
 	optdepends = r-terra
 	optdepends = r-testthat
 	optdepends = r-tidyr
-	optdepends = r-virirdis
 	optdepends = r-xts
 	optdepends = r-zoo
-	source = https://cran.r-project.org/src/contrib/stars_0.6-0.tar.gz
-	sha256sums = 49fde4f78d1a5e09e6746e700c2e323a5102d7be05f02675c10cc6852ed68b7f
+	optdepends = r-cubble
+	optdepends = r-openstreetmap
+	optdepends = r-starsdata
+	optdepends = r-tibble
+	optdepends = r-tsibble
+	optdepends = r-viridis
+	source = https://cran.r-project.org/src/contrib/stars_0.6-3.tar.gz
+	sha256sums = 8cbb0ffb4d928aab63787ac84dccb890c964eccedaf8fb1fef934f7a0da92522
 
 pkgname = r-stars

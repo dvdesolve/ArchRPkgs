@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=shinyWidgets
-_cranver=0.7.6
+_cranver=0.8.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Custom Inputs Widgets for Shiny"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=3.1.0' r-anytime r-bslib r-sass 'r-shiny>=1.6.0' 'r-htmltools>=0.5.1' r-jsonlite r-rlang)
-optdepends=(r-shinydashboard r-testthat r-covr r-shinydashboardplus r-bs4dash r-argonr r-argondash r-tablerdash r-ggplot2 r-dt r-scales)
+depends=('r>=3.1.0' r-anytime r-bslib r-sass 'r-shiny>=1.6.0' 'r-htmltools>=0.5.1' r-jsonlite r-rlang r-grdevices)
+optdepends=(r-shinydashboard r-testthat r-covr r-shinydashboardplus r-ggplot2 r-dt r-scales)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('5392d287828f32f7708e49d1a2030d27f05118cdb3865ca630deccf632ed8478')
+sha256sums=('1ae8e5986a4f46ff27b1450f669faec7c3202e5fa2b2d298cb68abdcec31a6b0')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

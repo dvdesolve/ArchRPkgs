@@ -4,13 +4,13 @@ _cranname=ragg
 _cranver=1.2.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Graphic Devices Based on AGG"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r 'r-systemfonts>=1.0.3' 'r-textshaping>=0.3.0')
-optdepends=(r-covr r-testthat)
+depends=(r 'r-systemfonts>=1.0.3' 'r-textshaping>=0.3.0' freetype2 libpng libtiff libjpeg)
+optdepends=(r-covr r-testthat r-graphics r-grid)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('936f4d75e0e01cdeefb9f57d121cdd7812d0de5a9e1a3a8315f92ce1c84da8f9')
 

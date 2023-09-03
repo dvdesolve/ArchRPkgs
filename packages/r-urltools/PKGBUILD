@@ -4,12 +4,12 @@ _cranname=urltools
 _cranver=1.7.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Vectorised Tools for URL Handling and Parsing"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=2.10' r-rcpp r-triebeard)
+depends=('r>=2.10' r-rcpp r-triebeard r-methods)
 optdepends=(r-testthat r-knitr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('6020355c1b16a9e3956674e5dea9ac5c035c8eb3eb6bbdd841a2b5528cafa313')

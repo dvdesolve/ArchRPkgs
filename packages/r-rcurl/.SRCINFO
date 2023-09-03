@@ -1,17 +1,18 @@
 pkgbase = r-rcurl
 	pkgdesc = General Network (HTTP/FTP/...) Client Interface for R
-	pkgver = 1.98.1.10
+	pkgver = 1.98.1.12
 	pkgrel = 1
 	url = https://cran.r-project.org/package=RCurl
 	arch = i686
 	arch = x86_64
-	license = BSD3
+	license = BSD
 	makedepends = make
 	depends = r>=3.4.0
 	depends = r-bitops
+	depends = r-methods
 	depends = curl
 	optdepends = r-xml
-	source = https://cran.r-project.org/src/contrib/RCurl_1.98-1.10.tar.gz
-	sha256sums = 5a622bcf8b6fb77f4b01e9473d3685f64f51401240630bb25b0266a61306f1d4
+	source = https://cran.r-project.org/src/contrib/RCurl_1.98-1.12.tar.gz
+	sha256sums = 1a83fef04e9573b402171a6e4a4b27857a3d045eec8970f8f7233850bba626b2
 
 pkgname = r-rcurl

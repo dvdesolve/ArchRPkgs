@@ -4,13 +4,13 @@ _cranname=systemfonts
 _cranver=1.0.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="System Native Font Finding"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=3.2.0' 'r-cpp11>=0.2.1' fontconfig freetype2)
-optdepends=(r-testthat r-covr r-knitr r-rmarkdown)
+optdepends=(r-testthat r-covr r-knitr r-rmarkdown r-tools)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('ef766c75b942f147d382664a00d6a4930f1bfe0cce9d88943f571682a85a84c0')
 

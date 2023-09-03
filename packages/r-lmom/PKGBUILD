@@ -1,10 +1,10 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=lmom
-_cranver=2.9
+_cranver=3.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="L-Moments"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -12,7 +12,7 @@ license=(CPL)
 depends=('r>=3.0.0' gcc-fortran r-graphics r-stats)
 makedepends=(gcc-fortran)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('363e62751a73e0870fd0206206f1743a884a23aeac9b31b9afc71c0a1b51bb90')
+sha256sums=('4b0ae8638a63b45ddedfd65c15e3206d34e947a2b5d31e9aa8c55446d69a0291')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

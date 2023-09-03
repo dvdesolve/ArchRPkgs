@@ -1,7 +1,7 @@
 pkgbase = r-clock
 	pkgdesc = Date-Time Types and Tools
 	pkgver = 0.7.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=clock
 	arch = i686
 	arch = x86_64
@@ -10,7 +10,7 @@ pkgbase = r-clock
 	depends = r-rlang>=1.1.0
 	depends = r-tzdb>=0.4.0
 	depends = r-vctrs>=0.6.1
-	depends = r-cpp11>=0.4.4
+	depends = r-cpp11>=0.4.3
 	depends = r-cli>=3.6.1
 	depends = r-lifecycle>=1.0.3
 	optdepends = r-covr

@@ -1,15 +1,14 @@
 pkgbase = r-tgp
 	pkgdesc = Bayesian Treed Gaussian Process Models
 	pkgver = 2.4.21
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=tgp
 	arch = i686
 	arch = x86_64
-	license = LGPL2
-	license = LGPL2.1
-	license = LGPL3
+	license = LGPL
 	depends = r>=2.14.0
 	depends = r-maptree
+	optdepends = r-mass
 	source = https://cran.r-project.org/src/contrib/tgp_2.4-21.tar.gz
 	sha256sums = 88f3383bdccbcc567194c147807dfe5de537be487f3b68ef8253f351f3692e8a
 

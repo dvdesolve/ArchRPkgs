@@ -1,11 +1,10 @@
 pkgbase = r-diagram
 	pkgdesc = Functions for Visualising Simple Graphs (Networks), Plotting Flow Diagrams
 	pkgver = 1.6.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=diagram
 	arch = any
 	license = GPL2
-	license = GPL3
 	depends = r>=2.01
 	depends = r-shape
 	depends = r-stats

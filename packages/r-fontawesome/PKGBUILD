@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=fontawesome
-_cranver=0.5.1
+_cranver=0.5.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(MIT)
 depends=('r>=3.3.0' 'r-rlang>=1.0.6' 'r-htmltools>=0.5.1.1')
 optdepends=(r-covr r-dplyr r-knitr r-testthat r-rsvg)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('f4ebbbe2ee8d2e2c0342b72095cfe668bd9800ea6c4bf7180300544bde7e566c')
+sha256sums=('da3de2a9717084d1400d48edd783f06c66b8c910ce9c8d753d1b7d99be1c5cc9')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

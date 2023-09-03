@@ -4,12 +4,13 @@ _cranname=R2HTML
 _cranver=2.3.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="HTML Exportation for R Objects"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=2.0')
+license=(GPL2)
+depends=('r>=2.0' r-graphics r-grdevices r-methods r-stats r-utils)
+optdepends=(r-boot r-cluster r-nlme r-nnet r-rpart r-splines r-survival)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('4a7e181a1c444f83ccac7eb8b19962de08dd649ae5b9868813d008196e4e0f8b')
 

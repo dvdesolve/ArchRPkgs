@@ -6,12 +6,12 @@ _cranname=timeDate
 _cranver=4022.108
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Rmetrics - Chronological and Calendar Objects"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.6.0')
+license=(GPL2)
+depends=('r>=3.6.0' r-graphics r-methods r-stats r-utils)
 optdepends=(r-runit)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('a5949b4fe2f6bdff751fc0793df8e3150cc25c078d48a28c066c10a6c4bfceef')

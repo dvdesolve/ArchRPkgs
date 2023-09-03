@@ -2,17 +2,17 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=labeling
-_cranver=0.4.2
+_cranver=0.4.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Axis Labeling"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=(r r-graphics r-stats)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('e022d79276173e0d62bf9e37d7574db65ab439eb2ae1833e460b1cff529bd165')
+sha256sums=('c62f4fc2cc74377d7055903c5f1913b7295f7587456fe468592738a483e264f2')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

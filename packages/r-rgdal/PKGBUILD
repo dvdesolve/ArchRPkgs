@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=rgdal
-_cranver=1.6-4
+_cranver=1.6-7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Bindings for the 'Geospatial' Data Abstraction Library"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.5.0' 'r-sp>=1.1.0' 'proj>=4.8.0' 'gdal>=1.11.4')
+license=(GPL2)
+depends=('r>=3.5.0' 'r-sp>=1.1.0' 'proj>=4.8.0' 'gdal>=1.11.4' r-graphics r-grdevices r-methods r-stats r-utils)
 optdepends=(r-knitr r-dbi r-rsqlite r-maptools r-mapview r-rmarkdown r-curl r-rgeos)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('932c53351061170753ac68ca28316134945a3159e9558e3d49d925e468d62ca7')
+sha256sums=('555cedfdadb05db90b061d4b056f96d8b7010c00ea54bc6c1bbcc7684fadae33')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

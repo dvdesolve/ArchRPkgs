@@ -4,13 +4,13 @@ _cranname=gstat
 _cranver=2.1-1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Spatial and Spatio-Temporal Geostatistical Modelling, Prediction and Simulation"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
 depends=('r>=2.10' 'r-sp>=0.9.72' r-zoo 'r-sf>=0.7.2' r-sftime 'r-spacetime>=1.2.8' r-stars r-fnn r-graphics r-lattice r-methods r-stats r-utils)
-optdepends=(r-fields r-maps r-mapdata r-maptools r-rgdal r-rgeos r-xts r-raster r-future r-future.apply r-maptools r-rgdal r-rgeos)
+optdepends=(r-fields r-maps r-mapdata r-xts r-raster r-future r-future.apply)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('48b205e65155effb6827fca062f2a409a0922241b7714cc6c8248f141b125d25')
 

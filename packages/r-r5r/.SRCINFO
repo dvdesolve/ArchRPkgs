@@ -1,6 +1,6 @@
 pkgbase = r-r5r
 	pkgdesc = Rapid Realistic Routing with 'R5'
-	pkgver = 1.0.0
+	pkgver = 1.1.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=r5r
 	arch = any
@@ -12,9 +12,11 @@ pkgbase = r-r5r
 	depends = r-httr
 	depends = r-jsonlite
 	depends = r-rjava>=0.9.10
-	depends = r-sf>=1.0.6
+	depends = r-sf>=1.0.12
 	depends = r-sfheaders
 	depends = r-zip
+	depends = r-utils
+	depends = r-concaveman
 	depends = java-environment>=11.0
 	optdepends = r-covr
 	optdepends = r-dplyr
@@ -26,7 +28,9 @@ pkgbase = r-r5r
 	optdepends = r-patchwork
 	optdepends = r-rmarkdown
 	optdepends = r-testthat
-	source = https://cran.r-project.org/src/contrib/r5r_1.0.0.tar.gz
-	sha256sums = 96954430079674565654e6666e8565b4a8b051a49a82c22c0663ac05979230c1
+	optdepends = r-parallel
+	optdepends = r-accessibility
+	source = https://cran.r-project.org/src/contrib/r5r_1.1.0.tar.gz
+	sha256sums = afaa5249d6eeb0cbd138e9ad2930151e651be6621896b8f12778ee0371cc871f
 
 pkgname = r-r5r

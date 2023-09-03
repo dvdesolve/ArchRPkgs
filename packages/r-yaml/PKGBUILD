@@ -6,11 +6,11 @@ _cranname=yaml
 _cranver=2.3.7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Methods to Convert R Data to YAML and Back"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(BSD3)
+license=(BSD)
 depends=(r)
 optdepends=(r-runit)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")

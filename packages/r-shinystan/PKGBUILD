@@ -4,13 +4,13 @@ _cranname=shinystan
 _cranver=2.6.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Interactive Visual and Numerical Diagnostics and Posterior Analysis for Bayesian Models"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=3.1.0' 'r-shiny>=1.0.3' 'r-bayesplot>=1.5.0' r-colourpicker 'r-dt>=0.2' 'r-dygraphs>=1.1.1.2' 'r-ggplot2>=2.1.1' r-gridextra r-gtools 'r-markdown>=0.7.4' r-reshape2 'r-rstan>=2.17.1' 'r-shinyjs>=0.6.0' 'r-shinythemes>=1.0.1' 'r-threejs>=0.2.1' r-xtable 'r-xts>=0.9.7')
-optdepends=(r-coda r-knitr r-posterior r-rmarkdown r-rsconnect r-rstanarm r-testthat)
+depends=('r>=3.1.0' 'r-shiny>=1.0.3' 'r-bayesplot>=1.5.0' r-colourpicker 'r-dt>=0.2' 'r-dygraphs>=1.1.1.2' 'r-ggplot2>=2.1.1' r-gridextra r-gtools 'r-markdown>=0.7.4' r-reshape2 'r-rstan>=2.17.1' 'r-shinyjs>=0.6.0' 'r-shinythemes>=1.0.1' 'r-threejs>=0.2.1' r-xtable 'r-xts>=0.9.7' r-methods r-stats r-utils)
+optdepends=(r-coda r-knitr r-posterior r-rmarkdown r-rsconnect r-rstanarm r-testthat r-cmdstanr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('a084856a2d66d8744f2c72e3e19ca35e600a508ed7ef1f7ebed8c7fc0738d529')
 

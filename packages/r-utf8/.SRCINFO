@@ -1,11 +1,11 @@
 pkgbase = r-utf8
 	pkgdesc = Unicode Text Processing
 	pkgver = 1.2.3
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=utf8
 	arch = i686
 	arch = x86_64
-	license = Apache2.0
+	license = Apache
 	depends = r>=2.10
 	optdepends = r-cli
 	optdepends = r-covr

@@ -4,12 +4,12 @@ _cranname=clock
 _cranver=0.7.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Date-Time Types and Tools"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.5.0' 'r-rlang>=1.1.0' 'r-tzdb>=0.4.0' 'r-vctrs>=0.6.1' 'r-cpp11>=0.4.4' 'r-cli>=3.6.1' 'r-lifecycle>=1.0.3')
+depends=('r>=3.5.0' 'r-rlang>=1.1.0' 'r-tzdb>=0.4.0' 'r-vctrs>=0.6.1' 'r-cpp11>=0.4.3' 'r-cli>=3.6.1' 'r-lifecycle>=1.0.3')
 optdepends=(r-covr r-knitr r-magrittr r-pillar r-rmarkdown r-testthat r-withr r-slider)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('54e57a3b3f8c308d67536e2a75d48f3493cf7fe821bfa4da9159b4fb2ceca874')

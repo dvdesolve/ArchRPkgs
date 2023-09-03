@@ -5,13 +5,13 @@ _cranname=readr
 _cranver=2.1.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Read Rectangular Text Data"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.5' 'r-cli>=3.2.0' r-clipr r-crayon 'r-hms>=0.4.1' 'r-lifecycle>=0.2.0' r-r6 r-rlang r-tibble 'r-vroom>=1.6.0' r-cpp11 'r-tzdb>=0.1.1')
-optdepends=(r-covr r-curl r-knitr r-rmarkdown r-spelling r-stringi r-testthat r-tzdb r-waldo r-withr r-xml2)
+depends=('r>=3.5' 'r-cli>=3.2.0' r-clipr r-crayon 'r-hms>=0.4.1' 'r-lifecycle>=0.2.0' r-r6 r-rlang r-tibble 'r-vroom>=1.6.0' r-cpp11 'r-tzdb>=0.1.1' r-methods r-utils)
+optdepends=(r-covr r-curl r-knitr r-rmarkdown r-spelling r-stringi r-testthat r-tzdb r-waldo r-withr r-xml2 r-datasets)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('98144fa48c4fa61ef8c73ede8f87a2d2c5c44e9502b7875b266eb79984fbeb0d')
 

@@ -1,11 +1,11 @@
 pkgbase = r-rttf2pt1
 	pkgdesc = 'ttf2pt1' Program
 	pkgver = 1.3.12
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=Rttf2pt1
 	arch = i686
 	arch = x86_64
-	license = custom
+	license = unknown
 	depends = r>=2.15
 	source = https://cran.r-project.org/src/contrib/Rttf2pt1_1.3.12.tar.gz
 	sha256sums = 0b4b7a303990369a6944de817b6bd220b400942fcabf42c04fb5b56f1b40a583

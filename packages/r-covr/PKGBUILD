@@ -6,13 +6,13 @@ _cranname=covr
 _cranver=3.6.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Test Coverage for Packages"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
 depends=('r>=3.1.0' r-digest r-jsonlite r-rex r-httr r-crayon 'r-withr>=1.0.2' r-yaml r-methods r-stats r-utils)
-optdepends=(r-r6 r-curl r-knitr r-rmarkdown r-htmltools r-dt r-testthat r-rlang r-rstudioapi r-xml2 r-memoise r-mockery r-parallel)
+optdepends=(r-r6 r-curl r-knitr r-rmarkdown r-htmltools r-dt r-testthat r-rlang r-rstudioapi r-xml2 r-memoise r-mockery r-parallel r-covr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('ace68ce7516147b4d77f591a498cbd7b2803062c1b47252e7a35081af0ea485b')
 

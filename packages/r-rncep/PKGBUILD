@@ -4,12 +4,12 @@ _cranname=RNCEP
 _cranver=1.0.10
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Obtain, Organize, and Visualize NCEP Weather Data"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=2.10' r-maps r-rcolorbrewer r-abind r-fields r-tgp r-sp tcl tk)
+license=(GPL2)
+depends=('r>=2.10' r-maps r-rcolorbrewer r-abind r-fields r-tgp r-sp r-graphics r-tcltk tcl tk)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('91d566e2fe411fd22fa5779034f8244cfadf776d57248e21865caa73d93d4aa6')
 

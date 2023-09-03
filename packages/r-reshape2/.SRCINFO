@@ -1,7 +1,7 @@
 pkgbase = r-reshape2
 	pkgdesc = Flexibly Reshape Data: A Reboot of the Reshape Package
 	pkgver = 1.4.4
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=reshape2
 	arch = i686
 	arch = x86_64
@@ -12,6 +12,7 @@ pkgbase = r-reshape2
 	depends = r-stringr
 	optdepends = r-covr
 	optdepends = r-testthat
+	optdepends = r-lattice
 	source = https://cran.r-project.org/src/contrib/reshape2_1.4.4.tar.gz
 	sha256sums = d88dcf9e2530fa9695fc57d0c78adfc5e361305fe8919fe09410b17da5ca12d8
 

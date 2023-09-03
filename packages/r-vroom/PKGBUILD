@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=vroom
-_cranver=1.6.1
+_cranver=1.6.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Read and Write Rectangular Text Data Quickly"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.4' r-bit64 'r-cli>=3.2.0' r-crayon r-glue r-hms 'r-lifecycle>=1.0.3' 'r-rlang>=0.4.2' 'r-tibble>=2.0.0' r-tidyselect 'r-tzdb>=0.1.1' 'r-vctrs>=0.2.0' r-withr 'r-cpp11>=0.2.0' 'r-progress>=1.2.1')
-optdepends=(r-archive r-bench r-covr r-curl r-dplyr r-forcats r-fs r-ggplot2 r-knitr r-patchwork r-prettyunits r-purrr r-rmarkdown r-rstudioapi r-scales r-spelling r-testthat r-tidyr r-waldo r-xml2)
+depends=('r>=3.4' r-bit64 'r-cli>=3.2.0' r-crayon r-glue r-hms 'r-lifecycle>=1.0.3' 'r-rlang>=0.4.2' 'r-tibble>=2.0.0' r-tidyselect 'r-tzdb>=0.1.1' 'r-vctrs>=0.2.0' r-withr 'r-cpp11>=0.2.0' 'r-progress>=1.2.1' r-methods r-stats)
+optdepends=(r-archive r-bench r-covr r-curl r-dplyr r-forcats r-fs r-ggplot2 r-knitr r-patchwork r-prettyunits r-purrr r-rmarkdown r-rstudioapi r-scales r-spelling r-testthat r-tidyr r-waldo r-xml2 r-utils)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('eb0e33d53212f9c7e8b38d632c98bd5015365cc13f55dadb15ff0d404b31807c')
+sha256sums=('dc4800e52b4a57cf63b88412cd35d25dca4e226374242dea95a12c62361a5f63')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

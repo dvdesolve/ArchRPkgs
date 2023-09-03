@@ -1,6 +1,6 @@
 pkgbase = r-rstantools
 	pkgdesc = Tools for Developing R Packages Interfacing with 'Stan'
-	pkgver = 2.2.0
+	pkgver = 2.3.1.1
 	pkgrel = 1
 	url = https://cran.r-project.org/package=rstantools
 	arch = any
@@ -9,6 +9,8 @@ pkgbase = r-rstantools
 	depends = r-desc
 	depends = r-rcpp>=0.12.16
 	depends = r-rcppparallel>=5.0.1
+	depends = r-stats
+	depends = r-utils
 	depends = pandoc
 	optdepends = r-rstan
 	optdepends = r-usethis
@@ -19,7 +21,7 @@ pkgbase = r-rstantools
 	optdepends = r-roxygen2
 	optdepends = r-rmarkdown
 	optdepends = r-rstudioapi
-	source = https://cran.r-project.org/src/contrib/rstantools_2.2.0.tar.gz
-	sha256sums = cb810baeb90c67668361b666c6862df9917aff6aaec63d2c3a485f28407c4eb7
+	source = https://cran.r-project.org/src/contrib/rstantools_2.3.1.1.tar.gz
+	sha256sums = f260ee54c11461d0f80f447e6fa6909337ede09806cd48f4a89ae9d59804e22e
 
 pkgname = r-rstantools

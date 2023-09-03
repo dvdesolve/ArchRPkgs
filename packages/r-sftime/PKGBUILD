@@ -4,12 +4,12 @@ _cranname=sftime
 _cranver=0.2-0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Classes and Methods for Simple Feature Objects that Have a Time Column"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(Apache1.1 Apache2.0)
-depends=(r 'r-sf>=1.0.7')
+license=(Apache)
+depends=(r 'r-sf>=1.0.7' r-methods)
 optdepends=(r-knitr r-spacetime r-rmarkdown r-dplyr r-trajectories r-stars r-ncmeta r-tidyr r-ggplot2 r-magrittr r-sp r-rlang)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('d82a1d750fb0fe7fe9962e520f00f8f969fe075a9bb53592180b4ff41430b1fa')

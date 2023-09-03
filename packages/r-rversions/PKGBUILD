@@ -4,12 +4,12 @@ _cranname=rversions
 _cranver=2.1.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=1
+pkgrel=2
 pkgdesc="Query 'R' Versions, Including 'r-release' and 'r-oldrel'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r r-curl 'r-xml2>=1.0.0')
+depends=(r r-curl 'r-xml2>=1.0.0' r-utils)
 optdepends=(r-covr r-mockery r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
 sha256sums=('de5818233e8271132fe8ea70145618950b35786e0d2f270e39bf3338f3b8b160')

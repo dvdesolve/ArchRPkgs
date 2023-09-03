@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=V8
-_cranver=4.2.2
+_cranver=4.3.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Embedded JavaScript and WebAssembly Engine for R"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r 'r-rcpp>=0.12.12' 'r-jsonlite>=1.0' 'r-curl>=1.0' nodejs)
+depends=(r 'r-rcpp>=0.12.12' 'r-jsonlite>=1.0' 'r-curl>=1.0' r-utils nodejs)
 optdepends=(r-testthat r-knitr r-rmarkdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('50653527198637a37c010052f394839f50a3c643975aac1d04e42d36f8e5313b')
+sha256sums=('0cd4cab8a1b6e949eb09129d7d42adfc2380f88fd127a3a4c1bc9d90e06da213')
 
 build() {
   V8_PKG_LIBS="-lnode" V8_PKG_CFLAGS="-I/usr/include/node" R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

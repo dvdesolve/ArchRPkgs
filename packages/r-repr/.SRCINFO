@@ -1,7 +1,7 @@
 pkgbase = r-repr
 	pkgdesc = Serializable Representations
 	pkgver = 1.1.6
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=repr
 	arch = any
 	license = GPL3
@@ -10,11 +10,14 @@ pkgbase = r-repr
 	depends = r-jsonlite
 	depends = r-pillar>=1.4.0
 	depends = r-base64enc
+	depends = r-grdevices
+	depends = r-utils
 	optdepends = r-highr
 	optdepends = r-cairo
 	optdepends = r-stringr
 	optdepends = r-testthat
 	optdepends = r-leaflet
+	optdepends = r-methods
 	source = https://cran.r-project.org/src/contrib/repr_1.1.6.tar.gz
 	sha256sums = 3d2e6c9b363c1ec4811688deff7fb22093cadc9e0a333930382093d93c16673f
 

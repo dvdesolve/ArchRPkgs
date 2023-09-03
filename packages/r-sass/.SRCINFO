@@ -1,6 +1,6 @@
 pkgbase = r-sass
 	pkgdesc = Syntactically Awesome Style Sheets ('Sass')
-	pkgver = 0.4.5
+	pkgver = 0.4.7
 	pkgrel = 1
 	url = https://cran.r-project.org/package=sass
 	arch = i686
@@ -8,7 +8,7 @@ pkgbase = r-sass
 	license = MIT
 	makedepends = make
 	depends = r
-	depends = r-fs
+	depends = r-fs>=1.2.4
 	depends = r-rlang>=0.4.10
 	depends = r-htmltools>=0.5.1
 	depends = r-r6
@@ -19,7 +19,7 @@ pkgbase = r-sass
 	optdepends = r-withr
 	optdepends = r-shiny
 	optdepends = r-curl
-	source = https://cran.r-project.org/src/contrib/sass_0.4.5.tar.gz
-	sha256sums = eba161d982d2db108c8c0b61ec6b41a20d3adec430c7cc39537ab388c1007a90
+	source = https://cran.r-project.org/src/contrib/sass_0.4.7.tar.gz
+	sha256sums = 717a08b63615a4fd9e494f775c33f0f965db83677cf1cc37849afc3da1c5e9ee
 
 pkgname = r-sass

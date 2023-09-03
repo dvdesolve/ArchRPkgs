@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=webshot
-_cranver=0.5.4
+_cranver=0.5.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL2)
 depends=('r>=3.0' r-magrittr r-jsonlite r-callr phantomjs imagemagick graphicsmagick optipng)
 optdepends=(r-httpuv r-knitr r-rmarkdown r-shiny r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('3dc2b9baef7855e1deea060276b9ccc6375eee36b7100987cbb1f8e5cd7a8f24')
+sha256sums=('d675913ccac80e0af8ee396f95a24124eae6c42d80aed9f47f7a88218ecbb913')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

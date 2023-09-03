@@ -1,7 +1,7 @@
 pkgbase = r-gstat
 	pkgdesc = Spatial and Spatio-Temporal Geostatistical Modelling, Prediction and Simulation
 	pkgver = 2.1.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://cran.r-project.org/package=gstat
 	arch = i686
 	arch = x86_64
@@ -22,16 +22,10 @@ pkgbase = r-gstat
 	optdepends = r-fields
 	optdepends = r-maps
 	optdepends = r-mapdata
-	optdepends = r-maptools
-	optdepends = r-rgdal
-	optdepends = r-rgeos
 	optdepends = r-xts
 	optdepends = r-raster
 	optdepends = r-future
 	optdepends = r-future.apply
-	optdepends = r-maptools
-	optdepends = r-rgdal
-	optdepends = r-rgeos
 	source = https://cran.r-project.org/src/contrib/gstat_2.1-1.tar.gz
 	sha256sums = 48b205e65155effb6827fca062f2a409a0922241b7714cc6c8248f141b125d25
 

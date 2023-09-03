@@ -1,6 +1,6 @@
 pkgbase = r-fontawesome
 	pkgdesc = Easily Work with 'Font Awesome' Icons
-	pkgver = 0.5.1
+	pkgver = 0.5.2
 	pkgrel = 1
 	url = https://cran.r-project.org/package=fontawesome
 	arch = any
@@ -13,7 +13,7 @@ pkgbase = r-fontawesome
 	optdepends = r-knitr
 	optdepends = r-testthat
 	optdepends = r-rsvg
-	source = https://cran.r-project.org/src/contrib/fontawesome_0.5.1.tar.gz
-	sha256sums = f4ebbbe2ee8d2e2c0342b72095cfe668bd9800ea6c4bf7180300544bde7e566c
+	source = https://cran.r-project.org/src/contrib/fontawesome_0.5.2.tar.gz
+	sha256sums = da3de2a9717084d1400d48edd783f06c66b8c910ce9c8d753d1b7d99be1c5cc9
 
 pkgname = r-fontawesome

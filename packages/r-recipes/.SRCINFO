@@ -1,11 +1,11 @@
 pkgbase = r-recipes
-	pkgdesc = Preprocessing Tools to Create Design Matrices
-	pkgver = 1.0.5
+	pkgdesc = Preprocessing and Feature Engineering Steps for Modeling
+	pkgver = 1.0.8
 	pkgrel = 1
 	url = https://cran.r-project.org/package=recipes
 	arch = any
 	license = MIT
-	depends = r>=3.4
+	depends = r>=3.6
 	depends = r-dplyr>=1.1.0
 	depends = r-cli
 	depends = r-clock>=0.6.1
@@ -13,12 +13,12 @@ pkgbase = r-recipes
 	depends = r-generics>=0.1.2
 	depends = r-glue
 	depends = r-gower
-	depends = r-hardhat>=1.2.0
+	depends = r-hardhat>=1.3.0
 	depends = r-ipred>=0.9.12
 	depends = r-lifecycle>=1.0.3
 	depends = r-lubridate>=1.8.0
 	depends = r-magrittr
-	depends = r-purrr>=0.2.3
+	depends = r-purrr>=1.0.0
 	depends = r-rlang>=1.0.3
 	depends = r-tibble
 	depends = r-tidyr>=1.0.0
@@ -26,6 +26,9 @@ pkgbase = r-recipes
 	depends = r-timedate
 	depends = r-vctrs>=0.5.0
 	depends = r-withr
+	depends = r-stats
+	depends = r-utils
+	depends = r-matrix
 	optdepends = r-covr
 	optdepends = r-ddalpha
 	optdepends = r-dials
@@ -44,7 +47,8 @@ pkgbase = r-recipes
 	optdepends = r-testthat
 	optdepends = r-workflows
 	optdepends = r-xml2
-	source = https://cran.r-project.org/src/contrib/recipes_1.0.5.tar.gz
-	sha256sums = fd8b0d4282f490b5bd3853543c9a0518783caa9fa9280534aaab40f9bdd3cfb2
+	optdepends = r-rpart
+	source = https://cran.r-project.org/src/contrib/recipes_1.0.8.tar.gz
+	sha256sums = d3d20824b36e1195ed072b632c3be89714c335f56c0a2e942386fdadcd78a00d
 
 pkgname = r-recipes
