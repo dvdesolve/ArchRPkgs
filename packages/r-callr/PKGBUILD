@@ -1,10 +1,10 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=callr
-_cranver=3.7.3
+_cranver=3.7.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Call R from R"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -12,7 +12,7 @@ license=(MIT)
 depends=('r>=3.4' 'r-processx>=3.6.1' r-r6 r-utils)
 optdepends=(r-asciicast r-cli r-covr r-mockery r-ps r-rprojroot r-spelling r-testthat r-withr)
 source=("http://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('567bfedf073a1d4c5785f0553341608a214938110567b9a6495ff20ebb2fd04e')
+sha256sums=('18a11e8f7324d5b013149af69a32784aea7433863492aaabccd8d227b73b472c')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

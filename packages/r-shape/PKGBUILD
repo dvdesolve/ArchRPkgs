@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=shape
-_cranver=1.4.6
+_cranver=1.4.6.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,7 +11,7 @@ url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
 depends=('r>=2.01' r-stats r-graphics r-grdevices)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b9103e5ed05c223c8147dbe3b87a0d73184697343634a353a2ae722f7ace0b7b')
+sha256sums=('43f9bd0f997fd6cf1838efd8b2509c9a6396513f4e54a20360481634affd22a4')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

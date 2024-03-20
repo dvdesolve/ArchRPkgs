@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=crosstalk
-_cranver=1.2.0
+_cranver=1.2.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(MIT)
 depends=(r 'r-htmltools>=0.3.6' r-jsonlite r-lazyeval r-r6)
 optdepends=(r-shiny r-ggplot2 r-testthat r-sass r-bslib)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('4237baab35cd246a8a98fb9cf4ce53b6ddbc31d00742ded4edea0479613d1ea0')
+sha256sums=('680cf08416d6d5a1194dd85ee5695c268af9d4d01b201448e1d486c6e06014f1')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

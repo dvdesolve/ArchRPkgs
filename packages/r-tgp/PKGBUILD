@@ -1,10 +1,10 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=tgp
-_cranver=2.4-21
+_cranver=2.4-22
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Bayesian Treed Gaussian Process Models"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -12,7 +12,7 @@ license=(LGPL)
 depends=('r>=2.14.0' r-maptree)
 optdepends=(r-mass)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('88f3383bdccbcc567194c147807dfe5de537be487f3b68ef8253f351f3692e8a')
+sha256sums=('c6d34dace2c9fbc1ad548a0dd4ee3964489c1f24eea05096332cc62eb06cf63e')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,27 +1,27 @@
 pkgbase = r-rstan
 	pkgdesc = R Interface to Stan
-	pkgver = 2.21.8
-	pkgrel = 2
+	pkgver = 2.32.6
+	pkgrel = 1
 	url = https://cran.r-project.org/package=rstan
 	arch = i686
 	arch = x86_64
 	license = GPL3
 	makedepends = make
 	depends = r>=3.4.0
-	depends = r-stanheaders>=2.21.0
-	depends = r-ggplot2>=3.0.0
-	depends = r-inline
-	depends = r-gridextra>=2.0.0
-	depends = r-rcpp>=0.12.0
-	depends = r-rcppparallel>=5.0.1
-	depends = r-loo>=2.3.0
-	depends = r-pkgbuild
-	depends = r-rcppeigen>=0.3.3.3.0
-	depends = r-bh>=1.72.0.2
+	depends = r-stanheaders>=2.32.0
+	depends = r-ggplot2>=3.3.5
+	depends = r-inline>=0.3.19
+	depends = r-gridextra>=2.3
+	depends = r-rcpp>=1.0.7
+	depends = r-rcppparallel>=5.1.4
+	depends = r-loo>=2.4.1
+	depends = r-pkgbuild>=1.2.0
+	depends = r-rcppeigen>=0.3.4.0.0
+	depends = r-bh>=1.75.0.0
 	depends = r-methods
 	depends = r-stats4
+	depends = r-quickjsr
 	depends = pandoc
-	optdepends = r-runit
 	optdepends = r-shinystan
 	optdepends = r-bayesplot
 	optdepends = r-rmarkdown
@@ -29,12 +29,12 @@ pkgbase = r-rstan
 	optdepends = r-rstudioapi
 	optdepends = r-knitr
 	optdepends = r-v8
-	optdepends = r-bh
 	optdepends = r-kernsmooth
 	optdepends = r-matrix
 	optdepends = r-parallel
-	optdepends = r-rcppeigen
-	source = https://cran.r-project.org/src/contrib/rstan_2.21.8.tar.gz
-	sha256sums = b2d4edc315419037970c9fa2e8740b934966d88d40548152811f3d4a28475075
+	optdepends = r-coda
+	optdepends = r-testthat
+	source = https://cran.r-project.org/src/contrib/rstan_2.32.6.tar.gz
+	sha256sums = 3390d00191bbd3b0739dd19fe437b99a041a6b04be208877b48419d1348a1a70
 
 pkgname = r-rstan

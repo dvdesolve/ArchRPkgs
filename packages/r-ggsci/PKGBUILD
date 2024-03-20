@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=ggsci
-_cranver=3.0.0
+_cranver=3.0.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL3)
 depends=('r>=3.5.0' r-scales 'r-ggplot2>=2.0.0' r-grdevices)
 optdepends=(r-knitr r-rmarkdown r-gridextra r-reshape2 r-ragg)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8901316516d78f82a2a8685d93ba479424bcfd8cb5e28a28adbd50e68964e129')
+sha256sums=('c72836d750c5bde960311516ee16253cb3952920614c3ba2ab1847aac6ee5a61')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

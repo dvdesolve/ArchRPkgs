@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=stars
-_cranver=0.6-3
+_cranver=0.6-4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Spatiotemporal Arrays, Raster and Vector Data Cubes"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(Apache)
-depends=('r>=3.3.0' r-abind 'r-sf>=1.0.10' 'r-classint>=0.4.1' r-lwgeom r-rlang r-units r-methods r-parallel)
-optdepends=(r-cairo r-pcict r-rnetcdf r-clue r-covr r-cubelyr r-digest r-dplyr r-exactextractr r-fnn r-future.apply r-ggforce r-ggplot2 r-ggthemes r-gstat r-httr r-jsonlite r-knitr r-maps r-mapdata r-ncdfgeom r-ncmeta r-pbapply r-plm r-randomforest r-raster r-rmarkdown r-sp r-spacetime r-spatstat r-spatstat.geom r-terra r-testthat r-tidyr r-xts r-zoo r-cubble r-openstreetmap r-starsdata r-tibble r-tsibble r-viridis)
+depends=('r>=3.3.0' r-abind 'r-sf>=1.0.10' 'r-classint>=0.4.1' r-rlang r-units r-methods r-parallel)
+optdepends=(r-cairo r-pcict r-rnetcdf r-clue r-covr r-cubelyr r-digest r-dplyr r-exactextractr r-fnn r-future.apply r-ggforce r-ggplot2 r-ggthemes r-gstat r-httr r-jsonlite r-knitr r-maps r-mapdata r-ncdfgeom r-ncmeta r-pbapply r-plm r-randomforest r-raster r-rmarkdown r-sp r-spacetime r-spatstat r-spatstat.geom r-terra r-testthat r-tidyr r-xts r-zoo r-cubble r-openstreetmap r-starsdata r-tibble r-tsibble r-viridis r-lwgeom)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8cbb0ffb4d928aab63787ac84dccb890c964eccedaf8fb1fef934f7a0da92522')
+sha256sums=('424a4cfde4c3524f8bd44a1090c8d725662af8cc636f785d951d4aa45c130d57')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

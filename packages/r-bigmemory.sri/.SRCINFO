@@ -1,14 +1,14 @@
 pkgbase = r-bigmemory.sri
 	pkgdesc = A Shared Resource Interface for Bigmemory Project Packages
-	pkgver = 0.1.6
-	pkgrel = 2
+	pkgver = 0.1.8
+	pkgrel = 1
 	url = https://cran.r-project.org/package=bigmemory.sri
 	arch = any
 	license = GPL3
 	license = Apache
 	depends = r
 	depends = r-methods
-	source = https://cran.r-project.org/src/contrib/bigmemory.sri_0.1.6.tar.gz
-	sha256sums = 3bfa6ac966ce0ea93283f5856a853d0ee5ff85aedd7a7d1ca8a93d0aa642860c
+	source = https://cran.r-project.org/src/contrib/bigmemory.sri_0.1.8.tar.gz
+	sha256sums = 029a4ed24aa17636a20b83857d55fe6a9283acb8b647cbc75280dea8ec987771
 
 pkgname = r-bigmemory.sri

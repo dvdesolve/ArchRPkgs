@@ -2,18 +2,18 @@
 # Contributor: Grey Christoforo <first name at last name dot net>
 
 _cranname=stringr
-_cranver=1.5.0
+_cranver=1.5.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Simple, Consistent Wrappers for Common String Operations"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.3' r-cli 'r-glue>=1.6.1' r-magrittr 'r-rlang>=1.0.0' 'r-stringi>=1.5.3' r-vctrs 'r-lifecycle>=1.0.3')
-optdepends=(r-covr r-htmltools r-htmlwidgets r-knitr r-rmarkdown r-testthat)
+depends=('r>=3.6' r-cli 'r-glue>=1.6.1' r-magrittr 'r-rlang>=1.0.0' 'r-stringi>=1.5.3' 'r-vctrs>=0.4.0' 'r-lifecycle>=1.0.3')
+optdepends=(r-covr r-htmltools r-htmlwidgets r-knitr r-rmarkdown r-testthat r-dplyr r-gt r-tibble)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('52b159d7700a139111b4caf939e7c9c6ab3e01185181400d70a74c552826633a')
+sha256sums=('a4adec51bb3f04214b1d8ef40d3a58949f21b1497cbeaf2ba552e0891eef45de')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

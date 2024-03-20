@@ -2,18 +2,18 @@
 # Contributor: frichtlm <frichtlm@gmail.com>
 
 _cranname=glue
-_cranver=1.6.2
+_cranver=1.7.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Interpreted String Literals"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.4' r-methods)
-optdepends=(r-covr r-crayon r-dbi r-dplyr r-forcats r-ggplot2 r-knitr r-magrittr r-microbenchmark r-r.utils r-rmarkdown r-rprintf r-rsqlite r-stringr r-testthat r-vctrs r-waldo r-withr)
+depends=('r>=3.6' r-methods)
+optdepends=(r-crayon r-dbi r-dplyr r-knitr r-magrittr r-rmarkdown r-rsqlite r-testthat r-vctrs r-waldo r-withr r-rlang)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('9da518f12be584c90e75fe8e07f711ee3f6fc0d03d817f72c25dc0f66499fdbf')
+sha256sums=('1af51b51f52c1aeb3bfe9349f55896dd78b5542ffdd5654e432e4d646e4a86dc')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

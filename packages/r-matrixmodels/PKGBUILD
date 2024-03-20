@@ -4,17 +4,17 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=MatrixModels
-_cranver=0.5-1
+_cranver=0.5-3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Modelling with Sparse And Dense Matrices"
+pkgdesc="Modelling with Sparse and Dense Matrices"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2 GPL3)
-depends=('r>=3.6.0')
+license=(GPL2)
+depends=('r>=3.6.0' 'r-matrix>=1.6.0' r-methods r-stats)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('3fc55bdfa5ab40c75bf395e90983d14c9715078c33c727c1658e4e1f36e43ea9')
+sha256sums=('c2db5406c6b0b9d348b44eea215a39c64fc087099fea1342a04d50326577f20f')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

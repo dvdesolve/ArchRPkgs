@@ -1,7 +1,7 @@
 pkgbase = r-plotrix
 	pkgdesc = Various Plotting Functions
-	pkgver = 3.8.2
-	pkgrel = 2
+	pkgver = 3.8.4
+	pkgrel = 1
 	url = https://cran.r-project.org/package=plotrix
 	arch = any
 	license = GPL2
@@ -10,7 +10,7 @@ pkgbase = r-plotrix
 	depends = r-grdevices
 	depends = r-stats
 	depends = r-utils
-	source = https://cran.r-project.org/src/contrib/plotrix_3.8-2.tar.gz
-	sha256sums = bb72953102889cea41cd6521874e35d2458ebd10aab97ba6f262e102cac0bc1f
+	source = https://cran.r-project.org/src/contrib/plotrix_3.8-4.tar.gz
+	sha256sums = e6a22d93ab61c67af21cbbe1fe333c06934cf576a44745bf2beee59bceaae8d6
 
 pkgname = r-plotrix

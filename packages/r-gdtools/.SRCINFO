@@ -1,6 +1,6 @@
 pkgbase = r-gdtools
 	pkgdesc = Utilities for Graphical Rendering and Fonts Management
-	pkgver = 0.3.3
+	pkgver = 0.3.7
 	pkgrel = 1
 	url = https://cran.r-project.org/package=gdtools
 	arch = i686
@@ -19,7 +19,7 @@ pkgbase = r-gdtools
 	depends = fontconfig
 	optdepends = r-testthat
 	optdepends = r-methods
-	source = https://cran.r-project.org/src/contrib/gdtools_0.3.3.tar.gz
-	sha256sums = da5a189841475b1d69c94a30ff834eb44560c69e6c0ec0a257006e1f59e83483
+	source = https://cran.r-project.org/src/contrib/gdtools_0.3.7.tar.gz
+	sha256sums = d292c3b8574adc38007662085c3d1cf5d17e8019f085295d594380d85cf2b394
 
 pkgname = r-gdtools

@@ -2,7 +2,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=rio
-_cranver=0.5.30
+_cranver=1.0.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="A Swiss-Army Knife for Data I/O"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.6' 'r-haven>=1.1.2' 'r-curl>=0.6' 'r-data.table>=1.9.8' 'r-readxl>=0.1.1' r-openxlsx r-tibble r-foreign r-stats r-tools r-utils)
-optdepends=(r-bit64 r-testthat r-knitr r-magrittr r-arrow r-clipr r-feather r-fst r-hexview r-jsonlite r-pzfx r-readods r-readr r-rmarkdown r-rmatio r-xml2 r-yaml r-datasets)
+depends=('r>=3.6' 'r-haven>=1.1.2' 'r-curl>=0.6' 'r-data.table>=1.11.2' 'r-readxl>=0.1.1' r-lifecycle r-r.utils r-stringi r-writexl r-tibble r-foreign r-stats r-tools r-utils)
+optdepends=(r-bit64 r-testthat r-knitr r-magrittr r-arrow r-clipr r-fst r-hexview r-jsonlite r-pzfx r-readods r-readr r-rmarkdown r-rmatio r-xml2 r-yaml r-datasets r-gs)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8087b14ab7e26c653b6cb161503a146aee5a53edc6c703311ef5cedf236f1746')
+sha256sums=('754c137c5588870f75665d0acc149f0ef28250edc057d5d4ac6fa25ba9547bee')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

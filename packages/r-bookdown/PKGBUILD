@@ -2,7 +2,7 @@
 # Contributor: haha662 <haha662 at outlook dot com>
 
 _cranname=bookdown
-_cranver=0.35
+_cranver=0.38
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL3)
 depends=('r>=3.5.0' 'r-htmltools>=0.3.6' 'r-knitr>=1.38' 'r-rmarkdown>=2.14' r-jquerylib 'r-xfun>=0.39' 'r-tinytex>=0.12' 'r-yaml>=2.1.19' pandoc)
 optdepends=(r-bslib r-downlit r-htmlwidgets r-jsonlite r-rstudioapi r-miniui r-rsconnect r-servr r-shiny r-tibble r-testit r-tufte r-xml2 r-webshot r-testthat r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8d7be9d158655fbf5229b96fc618195e451b61162208192894246671f9bdffbb')
+sha256sums=('edb9434460b7c9d27f92d14f31f7d02b2df31521e5472d50596cf8dd75391fc4')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

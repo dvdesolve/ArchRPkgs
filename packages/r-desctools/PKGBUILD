@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=DescTools
-_cranver=0.99.49
+_cranver=0.99.54
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Tools for Descriptive Statistics"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=4.0.0' r-mvtnorm r-expm 'r-rcpp>=0.12.10' r-rstudioapi r-exact r-gld r-data.table r-readxl r-httr r-bh r-base r-boot r-graphics r-grdevices r-mass r-methods r-stats r-utils r-withr)
+depends=('r>=4.2.0' r-mvtnorm r-expm 'r-rcpp>=0.12.10' r-rstudioapi r-exact r-gld r-data.table r-readxl r-httr r-cli r-base r-boot r-graphics r-grdevices r-mass r-methods r-stats r-utils r-withr)
 optdepends=(r-vgam r-r.rsp r-testthat r-rdcomclient r-tcltk)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('4522cd2b308bafd0d26220496daa35c62fa891d2ef7ac6572e8419f03b825f68')
+sha256sums=('470a16405d52d7e8595ac025a0d2bf50b78edaebe83af358903e201168a80b9b')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

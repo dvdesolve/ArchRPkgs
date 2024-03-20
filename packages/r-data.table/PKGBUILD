@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=data.table
-_cranver=1.14.8
+_cranver=1.15.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Extension of \`data.frame\`"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MPL2)
 depends=('r>=3.1.0' r-methods zlib)
-optdepends=(r-bit64 r-bit r-curl r-r.utils r-xts r-nanotime r-zoo r-yaml r-knitr r-rmarkdown)
+optdepends=(r-bit64 r-bit r-r.utils r-xts r-zoo r-yaml r-knitr r-markdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('14b2ce5367df9c9bb58f373555066f5dcb629c156149b5565de36d69557139fd')
+sha256sums=('d2c433e5c730a32b2127fbb91d5054aa5912e1aaed17e96f3e29517f4765ee12')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

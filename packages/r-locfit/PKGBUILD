@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=locfit
-_cranver=1.5-9.8
+_cranver=1.5-9.9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL2)
 depends=('r>=4.1.0' r-lattice)
 optdepends=(r-interp r-gam)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('0d0a9bfb32e50e8f8f97de771f91b17db1db7c5be35027f2d7840a7293e11de3')
+sha256sums=('93d142b6061c5ca8ea8cf1efd8c9f6ac73c86353ff064f93ded8b93d7d88f2d4')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

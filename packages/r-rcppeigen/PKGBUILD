@@ -3,18 +3,18 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=RcppEigen
-_cranver=0.3.3.9.3
+_cranver=0.3.4.0.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="'Rcpp' Integration for the 'Eigen' Templated Linear Algebra Library"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.6.0' 'r-rcpp>=0.11.0' 'r-matrix>=1.1.0' r-stats r-utils)
+depends=('r>=3.6.0' 'r-rcpp>=0.11.0' r-matrix r-stats r-utils)
 optdepends=(r-inline r-tinytest r-pkgkitten r-microbenchmark)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('5873a47fd6587d916f86119ab140c6736abf80ac45d06ff1c9d198708e7d1c76')
+sha256sums=('28d4a02011129f9b7a2a2bbe69ec4cca7676b072d5aca9dc1cefa8f96af45136')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

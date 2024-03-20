@@ -1,17 +1,17 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=PK
-_cranver=1.3-5
+_cranver=1.3-6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Basic Non-Compartmental Pharmacokinetics"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
 depends=('r>=2.2.1' r-utils)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('06ae5f972ef04557d5b3c92506d7ea0898184a420990a71914cc1a683616fff3')
+sha256sums=('77a7a2c25ce46c8844431621965b8ed2d5e116f8dbd17c9595c2e2ba82b0d657')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

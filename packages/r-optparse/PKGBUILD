@@ -1,10 +1,10 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=optparse
-_cranver=1.7.3
+_cranver=1.7.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Command Line Option Parser"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -12,7 +12,7 @@ license=(GPL2)
 depends=('r>=3.6.0' 'r-getopt>=1.20.2' r-methods)
 optdepends=(r-knitr r-stringr r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('6287e1af051d4a65037900ce7b30bd962039450dd4eab63b6f2491eace6a07ed')
+sha256sums=('93a2d66594fa72d4e67e4cc2863306e5537f5b10a0d57aa819c8051340225d88')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

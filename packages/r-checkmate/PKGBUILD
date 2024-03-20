@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=checkmate
-_cranver=2.2.0
+_cranver=2.3.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(BSD)
 depends=('r>=3.0.0' 'r-backports>=1.1.0' r-utils)
 optdepends=(r-r6 r-fastmatch r-data.table r-devtools r-ggplot2 r-knitr r-magrittr r-microbenchmark r-rmarkdown r-testthat r-tinytest r-tibble)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('96ec14b057e875465f8ef194f35b8e124cd5b5919697692fb392706201359118')
+sha256sums=('e7e6ba0cca400137f352a599ea29cf35a83f40a5ad26e7c4f06e6c35471884f6')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

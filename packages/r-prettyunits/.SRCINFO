@@ -1,15 +1,15 @@
 pkgbase = r-prettyunits
 	pkgdesc = Pretty, Human Readable Formatting of Quantities
-	pkgver = 1.1.1
-	pkgrel = 2
+	pkgver = 1.2.0
+	pkgrel = 1
 	url = https://cran.r-project.org/package=prettyunits
 	arch = any
 	license = MIT
-	depends = r
+	depends = r>=2.10
 	optdepends = r-covr
 	optdepends = r-testthat
 	optdepends = r-codetools
-	source = https://cran.r-project.org/src/contrib/prettyunits_1.1.1.tar.gz
-	sha256sums = 9a199aa80c6d5e50fa977bc724d6e39dae1fc597a96413053609156ee7fb75c5
+	source = https://cran.r-project.org/src/contrib/prettyunits_1.2.0.tar.gz
+	sha256sums = f059f27e2a5c82e351fe05b87ad712f7afc273c651450453f59d99af5deeacea
 
 pkgname = r-prettyunits

@@ -3,17 +3,17 @@
 # Contributor: Alex Branham <alex.branham@gmail.com>
 
 _cranname=coda
-_cranver=0.19-4
+_cranver=0.19-4.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Output Analysis and Diagnostics for MCMC"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
 depends=('r>=2.14.0' r-lattice)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('422d3cfd34797a3631e9c4812431940599c0ca4bb9937797bed07b7b1d6fe58f')
+sha256sums=('f4b451d86fbb56ff9ade043ddd6b0944368c37d0dad12d02837750ecdc708ad6')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

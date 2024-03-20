@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=cowplot
-_cranver=1.1.1
+_cranver=1.1.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Streamlined Plot Theme and Plot Annotations for 'ggplot2'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.5.0' 'r-ggplot2>=2.2.1' r-gtable r-rlang r-scales r-grdevices r-grid r-methods)
+depends=('r>=3.5.0' 'r-ggplot2>=3.4.0' r-gtable r-rlang r-scales r-grdevices r-grid r-methods)
 optdepends=(r-cairo r-covr r-dplyr r-forcats r-gridgraphics r-knitr r-magick r-maps r-paswr r-patchwork r-rmarkdown r-ragg r-testthat r-tidyr r-vdiffr r-venndiagram r-lattice)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('c7dce625b456dffc59ba100c816e16226048d12fdd29a7335dc1f6f6e12eed48')
+sha256sums=('8756971af5c50381cf00ec7ed622fd5cf3d70f534bdfa3ebadd157b5aef5b273')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

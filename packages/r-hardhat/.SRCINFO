@@ -1,6 +1,6 @@
 pkgbase = r-hardhat
 	pkgdesc = Construct Modeling Packages
-	pkgver = 1.3.0
+	pkgver = 1.3.1
 	pkgrel = 1
 	url = https://cran.r-project.org/package=hardhat
 	arch = any
@@ -22,7 +22,7 @@ pkgbase = r-hardhat
 	optdepends = r-testthat
 	optdepends = r-usethis
 	optdepends = r-matrix
-	source = https://cran.r-project.org/src/contrib/hardhat_1.3.0.tar.gz
-	sha256sums = fe9ff009e2ba6dd4d70cbb541430f88d85c0a28d6a1c2772e4910c79b81fe82e
+	source = https://cran.r-project.org/src/contrib/hardhat_1.3.1.tar.gz
+	sha256sums = 0ea674778656a00206a1e76cf09aabff4cc18df670e27b9304ae1ce0fdde1b6c
 
 pkgname = r-hardhat

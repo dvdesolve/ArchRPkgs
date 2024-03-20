@@ -2,7 +2,7 @@
 # Contributor: haha662 <haha662 at outlook dot com>
 
 _cranname=servr
-_cranver=0.27
+_cranver=0.29
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="A Simple HTTP Server to Serve Static Files or Dynamic Documents"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL)
-depends=('r>=3.0.0' 'r-mime>=0.2' 'r-httpuv>=1.5.2' r-xfun r-jsonlite)
+depends=('r>=3.0.0' 'r-mime>=0.2' 'r-httpuv>=1.5.2' 'r-xfun>=0.42' r-jsonlite)
 optdepends=(r-later r-rstudioapi r-knitr r-rmarkdown r-tools)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('01c23c56bbe483486b9daac831953ce1d5d1814966b9044c03c69884065458c5')
+sha256sums=('a39e51a480af65039c6929956df86bf9f65b4b5b34fb443bb2795f991edefcfe')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

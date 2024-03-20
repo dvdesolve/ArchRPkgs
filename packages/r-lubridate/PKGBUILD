@@ -3,10 +3,10 @@
 # Contributor: wagnerflo <florian@wagner-flo.net>
 
 _cranname=lubridate
-_cranver=1.9.2
+_cranver=1.9.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=3
+pkgrel=1
 pkgdesc="Make Dealing with Dates a Little Easier"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -14,7 +14,7 @@ license=(GPL2)
 depends=('r>=3.2' r-generics 'r-timechange>=0.1.1' r-methods tzdata)
 optdepends=(r-covr r-knitr r-rmarkdown r-testthat r-vctrs)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8976431a4affe989261cbaa5e09cd44bb42a3b16eed59a42c1698da34c6544a7')
+sha256sums=('2b6e1406d231b0a14d60b99cc406d159fea5465a5694725ad25343f12cf37fff')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

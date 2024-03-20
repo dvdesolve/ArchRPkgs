@@ -1,12 +1,12 @@
 pkgbase = r-noncompart
 	pkgdesc = Noncompartmental Analysis for Pharmacokinetic Data
-	pkgver = 0.6.0
+	pkgver = 0.7.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=NonCompart
 	arch = any
 	license = GPL3
 	depends = r
-	source = https://cran.r-project.org/src/contrib/NonCompart_0.6.0.tar.gz
-	sha256sums = fb031e8d04f68e1392baf3bad12d4c005ba5a16330e93f06463dc7425a46aa31
+	source = https://cran.r-project.org/src/contrib/NonCompart_0.7.0.tar.gz
+	sha256sums = ee9a5b67ee7e6f4cb794950d5128f45635b27a98e9554ee45cfe7e150ac03ab2
 
 pkgname = r-noncompart

@@ -2,17 +2,17 @@
 # Contributor: portaloffreedom
 
 _cranname=pbdZMQ
-_cranver=0.3-9
+_cranver=0.3-11
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Programming with Big Data -- Interface to 'ZeroMQ'"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
 depends=('r>=3.5.0' 'zeromq>=4.0.4')
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('d033238d0a9810581f6b40c7c75263cfc495a585653bbff98e957c37954e0fb6')
+sha256sums=('da7e204d857370201f75a05fbd808a2f409d440cc96855bb8f48f4a5dd75405b')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

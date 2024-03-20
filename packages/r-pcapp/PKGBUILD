@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=pcaPP
-_cranver=2.0-3
+_cranver=2.0-4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Robust PCA by Projection Pursuit"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=(r r-mvtnorm r-methods)
+depends=('r>=3.6.2' r-mvtnorm r-methods)
 optdepends=(r-robustbase)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('1aac554f039753bf9d026090e47d66b82bf3f1f75479ed0adefa3f7bbb55d603')
+sha256sums=('d6c5670611d92ffa11904746a62191e6bcf294fb96afee10cb25ebbbd8458133')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

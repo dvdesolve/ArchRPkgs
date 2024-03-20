@@ -2,7 +2,7 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=sf
-_cranver=1.0-14
+_cranver=1.0-15
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,9 +11,9 @@ arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2 MIT)
 depends=('r>=3.3.0' 'r-classint>=0.4.1' 'r-dbi>=0.8' r-magrittr 'r-rcpp>=0.12.18' 'r-s2>=1.1.0' 'r-units>=0.7.0' r-graphics r-grdevices r-grid r-methods r-stats r-tools r-utils 'gdal>=2.0.1' 'geos>=3.4.0' 'proj>=4.8.0' sqlite)
-optdepends=(r-blob r-covr r-dplyr r-ggplot2 r-knitr r-lwgeom r-maps r-mapview r-microbenchmark r-odbc r-pbapply r-pillar r-pool r-raster r-rlang r-rmarkdown r-rpostgres r-rpostgresql r-rsqlite r-sp r-spatstat r-spatstat.geom r-spatstat.random r-spatstat.linnet r-spatstat.utils r-stars r-terra r-testthat r-tibble r-tidyr r-tidyselect r-tmap r-vctrs r-wk r-matrix)
+optdepends=(r-blob r-covr r-dplyr r-ggplot2 r-knitr r-lwgeom r-maps r-mapview r-microbenchmark r-odbc r-pbapply r-pillar r-pool r-raster r-rlang r-rmarkdown r-rpostgres r-rpostgresql r-rsqlite r-sp r-spatstat r-spatstat.geom r-spatstat.random r-spatstat.linnet r-spatstat.utils r-stars r-terra r-testthat r-tibble r-tidyr r-tidyselect r-tmap r-vctrs r-wk r-matrix r-nanoarrow)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8b535648d537a1a95920c938e43692c1dfaac8d293ff3f506334001352c339f7')
+sha256sums=('c81d9291c7528b70b8a061959db7f9aa7c1fe24475e649f59ff22570a2833c2d')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

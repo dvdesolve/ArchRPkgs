@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=filelock
-_cranver=1.0.2
+_cranver=1.0.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Portable File Locking"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r)
+depends=('r>=3.4')
 optdepends=(r-callr r-covr r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('ac2915950789b16c43a625a2b8dab6ba423588db4a7d0daa75b74518b82b1403')
+sha256sums=('2dcd0ec453f5ec4d96f69b0c472569d57d3c5f9956a82a48492ee02f12071137')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

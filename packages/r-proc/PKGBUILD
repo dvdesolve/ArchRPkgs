@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=pROC
-_cranver=1.18.4
+_cranver=1.18.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL3)
 depends=('r>=2.14' r-plyr 'r-rcpp>=0.11.1' r-methods)
 optdepends=(r-microbenchmark r-logcondens r-doparallel r-testthat r-vdiffr r-ggplot2 r-mass r-rlang r-tcltk)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('d590ea7bab21559150ee58bc0833d41451c6ae6d33a725898dc190ba68c80a53')
+sha256sums=('5593c841a6df5a2f2d209d0c14401971eb9427092ed9c3ac2059273807b42c89')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

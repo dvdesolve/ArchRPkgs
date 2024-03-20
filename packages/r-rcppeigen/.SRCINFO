@@ -1,21 +1,21 @@
 pkgbase = r-rcppeigen
 	pkgdesc = 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra Library
-	pkgver = 0.3.3.9.3
-	pkgrel = 2
+	pkgver = 0.3.4.0.0
+	pkgrel = 1
 	url = https://cran.r-project.org/package=RcppEigen
 	arch = i686
 	arch = x86_64
 	license = GPL2
 	depends = r>=3.6.0
 	depends = r-rcpp>=0.11.0
-	depends = r-matrix>=1.1.0
+	depends = r-matrix
 	depends = r-stats
 	depends = r-utils
 	optdepends = r-inline
 	optdepends = r-tinytest
 	optdepends = r-pkgkitten
 	optdepends = r-microbenchmark
-	source = https://cran.r-project.org/src/contrib/RcppEigen_0.3.3.9.3.tar.gz
-	sha256sums = 5873a47fd6587d916f86119ab140c6736abf80ac45d06ff1c9d198708e7d1c76
+	source = https://cran.r-project.org/src/contrib/RcppEigen_0.3.4.0.0.tar.gz
+	sha256sums = 28d4a02011129f9b7a2a2bbe69ec4cca7676b072d5aca9dc1cefa8f96af45136
 
 pkgname = r-rcppeigen

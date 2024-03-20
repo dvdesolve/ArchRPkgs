@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
-_cranname=rgdal
-_cranver=1.6-7
+_cranname=writexl
+_cranver=1.5.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
-pkgdesc="Bindings for the 'Geospatial' Data Abstraction Library"
+pkgdesc="Export Data Frames to Excel 'xlsx' Format"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
-license=(GPL2)
-depends=('r>=3.5.0' 'r-sp>=1.1.0' 'proj>=4.8.0' 'gdal>=1.11.4' r-graphics r-grdevices r-methods r-stats r-utils)
-optdepends=(r-knitr r-dbi r-rsqlite r-maptools r-mapview r-rmarkdown r-curl r-rgeos)
+license=(BSD)
+depends=(r zlib)
+optdepends=(r-spelling r-readxl r-nycflights13 r-testthat r-bit64)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('555cedfdadb05db90b061d4b056f96d8b7010c00ea54bc6c1bbcc7684fadae33')
+sha256sums=('e253dc58f00abf51e9b727ae132e8b301e359fb23df0afc40c3ebec3fb096dce')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

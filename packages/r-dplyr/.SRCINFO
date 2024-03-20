@@ -1,6 +1,6 @@
 pkgbase = r-dplyr
 	pkgdesc = A Grammar of Data Manipulation
-	pkgver = 1.1.2
+	pkgver = 1.1.4
 	pkgrel = 1
 	url = https://cran.r-project.org/package=dplyr
 	arch = i686
@@ -17,7 +17,7 @@ pkgbase = r-dplyr
 	depends = r-rlang>=1.1.0
 	depends = r-tibble>=3.2.0
 	depends = r-tidyselect>=1.2.0
-	depends = r-vctrs>=0.6.0
+	depends = r-vctrs>=0.6.4
 	depends = r-methods
 	depends = r-utils
 	optdepends = r-bench
@@ -41,7 +41,7 @@ pkgbase = r-dplyr
 	optdepends = r-testthat
 	optdepends = r-tidyr
 	optdepends = r-withr
-	source = https://cran.r-project.org/src/contrib/dplyr_1.1.2.tar.gz
-	sha256sums = c220c38a3a44977c43eeae3d9aef90e8bb297150cad0993ea8d3cc13150096e3
+	source = https://cran.r-project.org/src/contrib/dplyr_1.1.4.tar.gz
+	sha256sums = cf730414d5d4ab387b4e9890a4b1df9d17a3903488e8da8df1cf2e11e44558cb
 
 pkgname = r-dplyr

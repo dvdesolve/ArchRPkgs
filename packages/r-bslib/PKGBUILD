@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=bslib
-_cranver=0.5.1
+_cranver=0.6.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Custom 'Bootstrap' 'Sass' Themes for 'shiny' and 'rmarkdown'"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=2.10' 'r-htmltools>=0.5.4' r-jsonlite 'r-sass>=0.4.0' 'r-jquerylib>=0.1.3' r-rlang r-cachem 'r-memoise>=2.0.1' r-base64enc r-mime r-grdevices)
+depends=('r>=2.10' 'r-htmltools>=0.5.7' r-jsonlite 'r-sass>=0.4.0' 'r-jquerylib>=0.1.3' r-rlang r-cachem 'r-memoise>=2.0.1' r-base64enc r-mime r-grdevices r-lifecycle)
 optdepends=(r-shiny r-rmarkdown r-thematic r-knitr r-testthat r-withr r-rappdirs r-curl r-magrittr r-fontawesome r-bsicons r-ggplot2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b175612322e3ba929cf67a9261dd253346a981ce15bbb63d4a6874f54d5ef00e')
+sha256sums=('642735afd7d3895f1ac8c5a5f7f5e08001bfabcf62a56d2d85904655a2e931db')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

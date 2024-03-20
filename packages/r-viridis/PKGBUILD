@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=viridis
-_cranver=0.6.4
+_cranver=0.6.5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(MIT)
 depends=('r>=2.10' 'r-viridislite>=0.4.0' 'r-ggplot2>=1.0.1' r-gridextra)
 optdepends=(r-hexbin r-scales r-knitr r-dichromat r-colorspace r-httr r-mapproj r-vdiffr r-svglite r-testthat r-covr r-rmarkdown r-maps r-terra r-mass)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('0ba2a88bc38ff8be4d074ed2bc17fd9d746e96ed4dec03fa079d96a06541d6dc')
+sha256sums=('862b5cb6be115deea0207cdd3c8bb33de28552cfdc29900777512fd488d0005c')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

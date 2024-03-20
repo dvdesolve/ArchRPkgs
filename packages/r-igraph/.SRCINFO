@@ -1,6 +1,6 @@
 pkgbase = r-igraph
 	pkgdesc = Network Analysis and Visualization
-	pkgver = 1.5.1
+	pkgver = 2.0.3
 	pkgrel = 1
 	url = https://cran.r-project.org/package=igraph
 	arch = i686
@@ -12,7 +12,7 @@ pkgbase = r-igraph
 	depends = r-pkgconfig>=2.0.0
 	depends = r-rlang
 	depends = r-cli
-	depends = r-cpp11>=0.2.0
+	depends = r-cpp11>=0.4.7
 	depends = r-graphics
 	depends = r-grdevices
 	depends = r-lifecycle
@@ -20,6 +20,7 @@ pkgbase = r-igraph
 	depends = r-methods
 	depends = r-stats
 	depends = r-utils
+	depends = r-vctrs
 	depends = gcc-fortran
 	optdepends = r-ape
 	optdepends = r-digest
@@ -39,7 +40,7 @@ pkgbase = r-igraph
 	optdepends = gmp
 	optdepends = libxml2
 	optdepends = glpk
-	source = https://cran.r-project.org/src/contrib/igraph_1.5.1.tar.gz
-	sha256sums = add90a1e77ad4a5d95641f0556553e3f1d1c4443cb2d5afb70171efd278ab14a
+	source = https://cran.r-project.org/src/contrib/igraph_2.0.3.tar.gz
+	sha256sums = 8e8a172d4567219474562cfb1085496be3ab356483c4e88011aca1fc3b2d8f76
 
 pkgname = r-igraph

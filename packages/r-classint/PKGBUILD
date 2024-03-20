@@ -2,10 +2,10 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=classInt
-_cranver=0.4-9
+_cranver=0.4-10
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Choose Univariate Class Intervals"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -14,7 +14,7 @@ depends=('r>=2.2' r-e1071 r-class r-graphics r-grdevices r-kernsmooth r-stats gc
 makedepends=(gcc-fortran)
 optdepends=(r-spdata r-units r-knitr r-rmarkdown r-tinytest)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('5b11af7d08f8793c7b47ee7c68b8e371cb23027165d30abddbd8b2abcc20e1c3')
+sha256sums=('c3561eafbc493ac02840191d4f1e4d2ef437ca8eb20f41fc5eca28f00ee42b8b')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

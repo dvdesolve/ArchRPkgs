@@ -1,6 +1,6 @@
 pkgbase = r-zip
 	pkgdesc = Cross-Platform 'zip' Compression
-	pkgver = 2.3.0
+	pkgver = 2.3.1
 	pkgrel = 1
 	url = https://cran.r-project.org/package=zip
 	arch = i686
@@ -12,7 +12,7 @@ pkgbase = r-zip
 	optdepends = r-r6
 	optdepends = r-testthat
 	optdepends = r-withr
-	source = https://cran.r-project.org/src/contrib/zip_2.3.0.tar.gz
-	sha256sums = 33eba844922af9981732ee6ec1582d46cf04c562344f09a0f0f14a22c6f74543
+	source = https://cran.r-project.org/src/contrib/zip_2.3.1.tar.gz
+	sha256sums = 83754408781c525917f36535865d28214893de0778b5f337e050cb543cacc28f
 
 pkgname = r-zip

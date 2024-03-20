@@ -1,11 +1,12 @@
 pkgbase = r-lava
 	pkgdesc = Latent Variable Models
-	pkgver = 1.7.2.1
-	pkgrel = 2
+	pkgver = 1.8.0
+	pkgrel = 1
 	url = https://cran.r-project.org/package=lava
 	arch = any
 	license = GPL3
 	depends = r>=3.0
+	depends = r-cli
 	depends = r-future.apply
 	depends = r-numderiv
 	depends = r-progressr
@@ -17,12 +18,12 @@ pkgbase = r-lava
 	depends = r-survival
 	depends = r-utils
 	optdepends = r-data.table
+	optdepends = r-mass
 	optdepends = r-ellipse
 	optdepends = r-fields
 	optdepends = r-geepack
 	optdepends = r-graph
 	optdepends = r-knitr
-	optdepends = r-bookdown
 	optdepends = r-rmarkdown
 	optdepends = r-igraph
 	optdepends = r-lavasearch2
@@ -32,16 +33,14 @@ pkgbase = r-lava
 	optdepends = r-polycor
 	optdepends = r-quantreg
 	optdepends = r-rgl
-	optdepends = r-r.rsp
 	optdepends = r-targeted
 	optdepends = r-testthat
 	optdepends = r-visnetwork
-	optdepends = r-zoo
 	optdepends = r-kernsmooth
 	optdepends = r-matrix
 	optdepends = r-nlme
 	optdepends = r-rgraphviz
-	source = https://cran.r-project.org/src/contrib/lava_1.7.2.1.tar.gz
-	sha256sums = d42b1f5c7e4e76718e4f014c44608295f82b5de0eb25ce8e9b35c40c7839ef2e
+	source = https://cran.r-project.org/src/contrib/lava_1.8.0.tar.gz
+	sha256sums = 8db996eeca012c58736f2d3b97f569c03e9361e20f31513c090a9386eb87e87f
 
 pkgname = r-lava

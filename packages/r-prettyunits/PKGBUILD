@@ -1,18 +1,18 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=prettyunits
-_cranver=1.1.1
+_cranver=1.2.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Pretty, Human Readable Formatting of Quantities"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r)
+depends=('r>=2.10')
 optdepends=(r-covr r-testthat r-codetools)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('9a199aa80c6d5e50fa977bc724d6e39dae1fc597a96413053609156ee7fb75c5')
+sha256sums=('f059f27e2a5c82e351fe05b87ad712f7afc273c651450453f59d99af5deeacea')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

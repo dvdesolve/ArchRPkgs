@@ -3,7 +3,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=htmltools
-_cranver=0.5.6
+_cranver=0.5.7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,10 +11,10 @@ pkgdesc="Tools for HTML"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=2.14.1' r-digest r-base64enc 'r-rlang>=0.4.12' 'r-fastmap>=1.1.0' r-ellipsis r-grdevices r-utils)
+depends=('r>=2.14.1' r-digest r-base64enc 'r-rlang>=1.0.0' 'r-fastmap>=1.1.0' r-ellipsis r-grdevices r-utils)
 optdepends=(r-markdown r-testthat r-withr r-cairo r-ragg r-shiny)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('15eb8e2745c3be5e9926aa773f21d551435e903aa1dd20712f8ab54055b5a067')
+sha256sums=('ecb0d82619063f49e4d001c44fcc1b811a06928fd66c2bb8c86632798d98b386')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
@@ -25,4 +25,3 @@ package() {
 
   cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
 }
-

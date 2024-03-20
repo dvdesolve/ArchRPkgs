@@ -3,7 +3,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=rvest
-_cranver=1.0.3
+_cranver=1.0.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,10 +11,10 @@ pkgdesc="Easily Harvest (Scrape) Web Pages"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.2' r-glue r-cli 'r-httr>=0.5' 'r-lifecycle>=1.0.0' r-magrittr 'r-rlang>=1.0.0' r-selectr r-tibble 'r-xml2>=1.3' r-withr)
-optdepends=(r-covr r-knitr r-readr r-repurrrsive r-rmarkdown r-spelling r-stringi r-testthat r-webfakes)
+depends=('r>=3.6' r-glue r-cli 'r-httr>=0.5' 'r-lifecycle>=1.0.3' r-magrittr 'r-rlang>=1.1.0' r-selectr r-tibble 'r-xml2>=1.3')
+optdepends=(r-covr r-knitr r-readr r-repurrrsive r-rmarkdown r-spelling r-stringi r-testthat r-webfakes r-chromote r-r6)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('a465ef7391afaa3c26eebe8c61db02314ac04c4d8de5aa53f090716763d21c1e')
+sha256sums=('7d707c6b2994cf7b6c1d665bec872d2ef5c55f30e7c343c447a8a386a6049ca6')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

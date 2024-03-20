@@ -1,10 +1,10 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=apcluster
-_cranver=1.4.10
+_cranver=1.4.11
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=3
+pkgrel=1
 pkgdesc="Affinity Propagation Clustering"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -12,7 +12,7 @@ license=(GPL2)
 depends=('r>=3.3.0' 'r-rcpp>=0.11.1' r-graphics r-grdevices r-matrix r-methods r-stats)
 optdepends=(r-knitr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('a214f72fa2f84563f3ca1aabb5322ef3e266007a6273ee8434bc2e2a7b9040a0')
+sha256sums=('4497da8766802cb18a5729ddb629368a17a967436d696941deb4b21da73e3333')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

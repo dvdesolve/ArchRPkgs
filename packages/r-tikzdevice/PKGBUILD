@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=tikzDevice
-_cranver=0.12.5
+_cranver=0.12.6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL2)
 depends=('r>=2.14.0' 'r-filehash>=2.3' r-png texlive-bin)
 optdepends=(r-evaluate r-formatr r-ggplot2 r-knitr r-maps r-scales r-stringr r-testthat r-withr r-covr r-lattice)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7d060c35bdbeb46c2b0f0386a1f0912f7a48f46092958627977123ddcde65aec')
+sha256sums=('04db2163ca9acb640161fb84dfc492f16abc6f5acc0c64782c197457e15004ac')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

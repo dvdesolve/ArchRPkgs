@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=httpuv
-_cranver=1.6.11
+_cranver=1.6.14
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ depends=('r>=2.15.1' 'r-rcpp>=1.0.7' r-r6 r-promises 'r-later>=0.8.0' r-utils zl
 makedepends=(make)
 optdepends=(r-testthat r-callr r-curl r-websocket)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('8ba79e0a8351274daf2dc566c71f88e891127cdedca62ad77a4b27a8103eeef5')
+sha256sums=('4026acae26bd99873e269b062f343f2239131130b43fdfd6a1a5a89b913cd181')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

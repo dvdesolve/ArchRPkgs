@@ -1,6 +1,6 @@
 pkgbase = r-shiny
 	pkgdesc = Web Application Framework for R
-	pkgver = 1.7.5
+	pkgver = 1.8.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=shiny
 	arch = any
@@ -45,7 +45,7 @@ pkgbase = r-shiny
 	optdepends = r-showtext
 	optdepends = r-sass
 	optdepends = r-datasets
-	source = https://cran.r-project.org/src/contrib/shiny_1.7.5.tar.gz
-	sha256sums = eddb971b22e634b78ee24829f5fe6d2f7f87ec38538a93fdfedc45a706928a40
+	source = https://cran.r-project.org/src/contrib/shiny_1.8.0.tar.gz
+	sha256sums = f28740ba28707e8b3dabb2ad27b002dae555317010660702163bb0daefe04641
 
 pkgname = r-shiny

@@ -3,10 +3,10 @@
 # Contributor: Alex Branham <alex.branham@gmail.com>
 
 _cranname=expm
-_cranver=0.999-7
+_cranver=0.999-9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Matrix Exponential, Log, 'etc'"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -15,7 +15,7 @@ depends=(r r-matrix r-methods gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-rcolorbrewer r-sfsmisc r-rmpfr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('28f249b914b8dd33eee16663fc793e57afd0e301e16067bf9f27fa8e591ba0f1')
+sha256sums=('83a1234aca8d3c4f7c6a1101a8ce8b56aaca924e7283880fa2667b38948ffed4')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

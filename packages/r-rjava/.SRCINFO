@@ -1,7 +1,7 @@
 pkgbase = r-rjava
 	pkgdesc = Low-Level R to Java Interface
-	pkgver = 1.0.6
-	pkgrel = 2
+	pkgver = 1.0.11
+	pkgrel = 1
 	url = https://cran.r-project.org/package=rJava
 	arch = i686
 	arch = x86_64
@@ -10,7 +10,7 @@ pkgbase = r-rjava
 	depends = r>=3.6.0
 	depends = r-methods
 	depends = java-environment
-	source = https://cran.r-project.org/src/contrib/rJava_1.0-6.tar.gz
-	sha256sums = e290d0493317a5d6c452793e92baa914e37ef03faef19b2e436329b4ec8658c6
+	source = https://cran.r-project.org/src/contrib/rJava_1.0-11.tar.gz
+	sha256sums = 9ea0ccf5553d86f7de8649a8324766c4f0810f35b7be561640dd87fd37986417
 
 pkgname = r-rjava

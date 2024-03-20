@@ -1,6 +1,6 @@
 pkgbase = r-processx
 	pkgdesc = Execute and Control System Processes
-	pkgver = 3.8.2
+	pkgver = 3.8.4
 	pkgrel = 1
 	url = https://cran.r-project.org/package=processx
 	arch = i686
@@ -21,7 +21,7 @@ pkgbase = r-processx
 	optdepends = r-codetools
 	optdepends = r-parallel
 	optdepends = r-webfakes
-	source = https://cran.r-project.org/src/contrib/processx_3.8.2.tar.gz
-	sha256sums = e91b87af5b23c14b71003ec880f749dca81fd74f0601ab59ea1847c7fe857ecd
+	source = https://cran.r-project.org/src/contrib/processx_3.8.4.tar.gz
+	sha256sums = 6627672d7fb109f37dc1d0eaef913f4cfc7ad8ac807abf0397e6d37753b1e70b
 
 pkgname = r-processx

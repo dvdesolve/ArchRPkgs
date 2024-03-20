@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=interp
-_cranver=1.1-4
+_cranver=1.1-6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(GPL2)
 depends=('r>=3.5.0' 'r-rcpp>=0.12.9' r-deldir r-rcppeigen)
 optdepends=(r-sp r-deriv r-ryacas r-ggplot2 r-gridextra r-stringi r-stringr r-lattice r-mass r-scatterplot3d)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('4f7b5d388132a4d76e8635e2a7c4fa0d705df2b49e7d108faa16ce2236e34d06')
+sha256sums=('3674044e5334ecdf124054303929c084fc0797d3123e28576a230492ea6ecd34')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

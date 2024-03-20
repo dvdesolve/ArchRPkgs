@@ -1,18 +1,18 @@
 # Contributorr: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=desc
-_cranver=1.4.2
+_cranver=1.4.3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Manipulate DESCRIPTION Files"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.4' r-cli r-r6 r-rprojroot r-utils)
+depends=('r>=3.4' r-cli r-r6 r-utils)
 optdepends=(r-callr r-covr r-gh r-spelling r-testthat r-whoami r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('758acf14be478c09ba7e84ade3a7ce512becf35d44e5e6a997b932065f2a227c')
+sha256sums=('54468da73dd78fc9e7c565c41cfe3331802c2134b2e61a9ad197215317092f26')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

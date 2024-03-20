@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=deldir
-_cranver=1.0-9
+_cranver=2.0-4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ depends=('r>=3.5.0' r-graphics r-grdevices gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-polyclip)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('127a24ec3aa7e41e441d5b2f5654f3b59fbe47bf61ba8038d81a6110c8670687')
+sha256sums=('d418acb28ec3707b6d64c7466d0cefbb49b098537f37558d8f7a5befd34a4653')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

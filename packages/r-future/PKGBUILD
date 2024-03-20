@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=future
-_cranver=1.33.0
+_cranver=1.33.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(LGPL2.1)
 depends=(r r-digest 'r-globals>=0.16.1' 'r-listenv>=0.8.0' 'r-parallelly>=1.34.0' r-parallel r-utils)
 optdepends=(r-rhpcblasctl r-r.rsp r-markdown r-methods)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('4228eb9b35ce4b56bf4168977661fed4f83bb36131b2dc7120b2898d8747935b')
+sha256sums=('198079e714944bb72110462cc6bf82061b0a643c303b59c6a1276acb613e6bf7')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

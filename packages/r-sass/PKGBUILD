@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=sass
-_cranver=0.4.7
+_cranver=0.4.9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ depends=(r 'r-fs>=1.2.4' 'r-rlang>=0.4.10' 'r-htmltools>=0.5.1' r-r6 r-rappdirs)
 makedepends=(make)
 optdepends=(r-testthat r-knitr r-rmarkdown r-withr r-shiny r-curl)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('717a08b63615a4fd9e494f775c33f0f965db83677cf1cc37849afc3da1c5e9ee')
+sha256sums=('e133049aad7964e0f6150257e1470b3748f36029322265ee797b8caf7517d4d2')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

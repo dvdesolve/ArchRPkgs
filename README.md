@@ -1,6 +1,9 @@
 # R packages for Arch Linux
 This repository contains ready-to-use `PKGBUILD`s for manual building of R packages and installing them with Pacman.
 
+## PROJECT IS GOING TO ARCHIVE
+Unfortunately, I have no more time and power to keep project alive. It was great experience and I hope that my work helped someone. Since 20.03.2024 the project is going to be read only. Latest binary build available up to this date will reside in my repository till 01.01.2025 and then will be deleted. This GitHub repo is going to be archived but will remain accessible to anyone. Hope that enthusiasts will take it for their needs and improve existing toolset presented in this repo. Thank you, everyone!
+
 ## Adding packages
 If you don't know how to write your own `PKGBUILD`s feel free to ask me for adding new package via issue mechanism of GitHub.
 

@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=robustbase
-_cranver=0.99-0
+_cranver=0.99-2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ depends=('r>=3.5.0' r-deoptimr r-graphics r-methods r-stats r-utils gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-robust r-fit.models r-mpv r-xtable r-ggplot2 r-ggally r-rcolorbrewer r-reshape2 r-sfsmisc r-catdata r-doparallel r-foreach r-skewt r-boot r-cluster r-grid r-lattice r-mass r-matrix)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('437d422eec29c4345ea65efa6b2c7c21944059a79643d74f4187e06db6e35077')
+sha256sums=('b6a69628f7ae36b5eb553412365afb3227fde2f7b64000cfad77ba3562fecd44')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

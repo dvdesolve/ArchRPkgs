@@ -2,7 +2,7 @@
 # Contributor: Jooa <aur at (name) dot xyz>
 
 _cranname=sp
-_cranver=2.0-0
+_cranver=2.1-3
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Classes and Methods for Spatial Data"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=3.2.0' r-graphics r-grdevices r-grid r-lattice r-methods r-stats r-utils)
-optdepends=(r-rcolorbrewer r-rgdal r-rgeos r-gstat r-maptools r-deldir r-knitr r-rmarkdown r-sf r-raster r-terra)
+depends=('r>=3.5.0' r-graphics r-grdevices r-grid r-lattice r-methods r-stats r-utils)
+optdepends=(r-rcolorbrewer r-gstat r-deldir r-knitr r-rmarkdown r-sf r-raster r-terra)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('09f8db5fc93061021d7aa296e1e0b3c5543a5eddd3e5f658d4eb52851d5f88f1')
+sha256sums=('fa939272e534811b34cfca7d1c619448b1e4f90240c092e25bb8764445c68454')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,17 +1,17 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=parallelly
-_cranver=1.36.0
+_cranver=1.37.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
 pkgdesc="Enhancing the 'parallel' Package"
-arch=(any)
+arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(LGPL2.1)
 depends=(r r-parallel r-tools r-utils)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('b9c0a29155944aae8fdb4cab00c521c7ed16af250450dd2a3dd69d5661427c88')
+sha256sums=('df7e4eb18df8a30c87cc651bdc2e6ded20736c3484984facabb89a98e07a36a1')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

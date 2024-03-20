@@ -1,19 +1,19 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=dotCall64
-_cranver=1.0-2
+_cranver=1.1-1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Enhanced Foreign Function Interface Supporting Long Vectors"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
 depends=('r>=3.1' gcc-fortran)
 makedepends=(gcc-fortran)
-optdepends=(r-microbenchmark r-rcolorbrewer r-roxygen2 r-spam r-testthat r-openmpcontroller)
+optdepends=(r-microbenchmark r-rcolorbrewer r-roxygen2 r-spam r-testthat r-rhpcblasctl)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('e0c7728aebbea5ebf06dfeefae4fc0a240e6dde7c2bf13f2ed041b91d337a4ac')
+sha256sums=('21b8d7d747c07aaf8a82d61ec98fe0539afcaa5a565d9c2fc55be65b6af2c91b')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

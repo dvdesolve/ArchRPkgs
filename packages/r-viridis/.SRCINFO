@@ -1,6 +1,6 @@
 pkgbase = r-viridis
 	pkgdesc = Colorblind-Friendly Color Maps for R
-	pkgver = 0.6.4
+	pkgver = 0.6.5
 	pkgrel = 1
 	url = https://cran.r-project.org/package=viridis
 	arch = any
@@ -24,7 +24,7 @@ pkgbase = r-viridis
 	optdepends = r-maps
 	optdepends = r-terra
 	optdepends = r-mass
-	source = https://cran.r-project.org/src/contrib/viridis_0.6.4.tar.gz
-	sha256sums = 0ba2a88bc38ff8be4d074ed2bc17fd9d746e96ed4dec03fa079d96a06541d6dc
+	source = https://cran.r-project.org/src/contrib/viridis_0.6.5.tar.gz
+	sha256sums = 862b5cb6be115deea0207cdd3c8bb33de28552cfdc29900777512fd488d0005c
 
 pkgname = r-viridis

@@ -2,7 +2,7 @@
 # Contributor: Alex Branham <alex.branham@gmail.com>
 
 _cranname=StanHeaders
-_cranver=2.26.27
+_cranver=2.32.6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="C++ Header Files for Stan"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(BSD)
-depends=('r>=3.4.0' 'r-rcppparallel>=5.1.4' r-rcppeigen pandoc)
+depends=('r>=3.6.0' 'r-rcppparallel>=5.1.4' 'r-rcppeigen>=0.3.4.0.0' pandoc)
 optdepends=(r-rcpp r-bh r-knitr r-rmarkdown r-rstan r-matrix r-methods r-withr)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('70e06546eadc448fc272d4b790620304d02a181df28cc924380bb5f10f83c9b1')
+sha256sums=('898061f5b36c9e68cf5d8f1129a52534bc8b26b515e5dd247140de5820cbe1a2')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

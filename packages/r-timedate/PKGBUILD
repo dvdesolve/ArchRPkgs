@@ -3,10 +3,10 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=timeDate
-_cranver=4022.108
+_cranver=4032.109
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Rmetrics - Chronological and Calendar Objects"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -14,7 +14,7 @@ license=(GPL2)
 depends=('r>=3.6.0' r-graphics r-methods r-stats r-utils)
 optdepends=(r-runit)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('a5949b4fe2f6bdff751fc0793df8e3150cc25c078d48a28c066c10a6c4bfceef')
+sha256sums=('402841bda47e8c31f49773de2ff5447e9780bc7c8af5fb18be9287b546fcb958')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=loo
-_cranver=2.6.0
+_cranver=2.7.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Efficient Leave-One-Out Cross-Validation and WAIC for Bayesian Models"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
-depends=('r>=3.1.2' r-checkmate 'r-matrixstats>=0.52' r-stats r-parallel pandoc haskell-citeproc)
-optdepends=(r-bayesplot r-brms r-ggplot2 r-knitr r-rmarkdown r-rstan r-rstanarm r-rstantools r-spdep r-testthat r-posterior r-graphics)
+depends=('r>=3.1.2' r-checkmate 'r-matrixstats>=0.52' r-stats r-parallel 'r-posterior>=1.5.0' pandoc haskell-citeproc)
+optdepends=(r-bayesplot r-brms r-ggplot2 r-knitr r-rmarkdown r-rstan r-rstanarm r-rstantools r-spdep r-testthat r-graphics)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('66da60fdf53a62cbc93797fa696a4cc43bce77f1721dd4bc1a58d25b3f981210')
+sha256sums=('7664f331555e569d6037100048681e3a696fb9ca2e87907712eb54faa85bcb36')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

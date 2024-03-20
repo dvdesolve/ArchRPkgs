@@ -2,7 +2,7 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=sfheaders
-_cranver=0.4.3
+_cranver=0.4.4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Converts Between R Objects and Simple Feature Objects"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.0.2' 'r-geometries>=0.2.2' 'r-rcpp>=1.0.10')
+depends=('r>=3.0.2' 'r-geometries>=0.2.4' 'r-rcpp>=1.0.10')
 optdepends=(r-covr r-knitr r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('a3a11b7297de2c85405fbdfcb6b47462cb053b727ef7a8d9ec9bd5977a8e4348')
+sha256sums=('f65ffe67b1d07beb6904b8960c66be684f5526b4d6450ab46c630c77e9b9bd07')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
@@ -24,4 +24,3 @@ package() {
 
   cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
 }
-

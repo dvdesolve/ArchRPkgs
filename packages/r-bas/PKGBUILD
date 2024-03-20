@@ -2,18 +2,18 @@
 # Contributor: DuckSoft <realducksoft@gmail.com>
 
 _cranname=BAS
-_cranver=1.6.4
+_cranver=1.7.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Bayesian Variable Selection and Model Averaging using Bayesian Adaptive Sampling"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3)
 depends=('r>=3.0' r-graphics r-grdevices r-stats r-utils)
-optdepends=(r-knitr r-ggplot2 r-ggally r-rmarkdown r-roxygen2 r-dplyr r-glmbb r-testthat r-covr r-mass)
+optdepends=(r-knitr r-ggplot2 r-ggally r-rmarkdown r-roxygen2 r-dplyr r-glmbb r-testthat r-covr r-mass r-faraway)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('e517909f3896dad497507b6113ced7db03ad9ce3c97183b998ea06692e1bfef0')
+sha256sums=('28bfbb71ce9e4d76e95a25ab012c9aba1c2c842d207bdad4c935524179cae6c8')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

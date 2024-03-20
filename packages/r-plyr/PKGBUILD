@@ -3,10 +3,10 @@
 # Contributor: Matt Frichtl <frichtlm@gmail.com>
 
 _cranname=plyr
-_cranver=1.8.8
+_cranver=1.8.9
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Tools for Splitting, Applying and Combining Data"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -14,7 +14,7 @@ license=(MIT)
 depends=('r>=3.1.0' 'r-rcpp>=0.11.0')
 optdepends=(r-abind r-covr r-doparallel r-foreach r-iterators r-itertools r-testthat r-tcltk)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('a73211b4bbe13e4e5e764966a8dd90172c1cc311938dd464d142e1c7a701070c')
+sha256sums=('15b5e7f711d53bf41b8687923983b8ef424563aa2f74c5195feb5b1df1aee103')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

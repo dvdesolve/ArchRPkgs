@@ -3,7 +3,7 @@
 # Contributor: Alex Branham <branham@utexas.edu>
 
 _cranname=lintr
-_cranver=3.1.0
+_cranver=3.1.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -11,10 +11,10 @@ pkgdesc="A 'Linter' for R Code"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=('r>=3.5' r-backports r-cyclocomp r-digest r-glue r-knitr r-rex 'r-xml2>=1.0.0' 'r-xmlparsedata>=1.0.5' r-codetools r-stats r-utils)
+depends=('r>=3.5' 'r-backports>=1.1.7' r-cyclocomp r-digest r-glue r-knitr r-rex 'r-xml2>=1.0.0' 'r-xmlparsedata>=1.0.5' r-codetools r-stats r-utils)
 optdepends=(r-httr r-mockery r-patrick r-rmarkdown r-rstudioapi r-testthat r-tibble r-withr r-bookdown r-crayon r-jsonlite r-rlang r-tufte)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('f71e5953d30156380f4776be5fe55a4f7a414ab4a2c26be475c1ee007f9663cd')
+sha256sums=('bcf146f4e74e6bf132fcbee7c9a43cd9c8abb4787e76a4164fa20468c180871d')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

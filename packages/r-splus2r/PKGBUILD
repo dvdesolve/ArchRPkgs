@@ -2,17 +2,17 @@
 # Contributor: Hyacinthe Cartiaux <hyacinthe.cartiaux@free.fr>
 
 _cranname=splus2R
-_cranver=1.3-3
+_cranver=1.3-5
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Supplemental S-PLUS Functionality in R"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
 depends=('r>=2.7.2' r-methods)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('7d5c90842debaf6046d445e3fce4f9721baad0339aa7193339705ef68568bf0c')
+sha256sums=('e7b0ea5672c5480424b056f3c30edc7858f868d3e2d7f5a3593e17fed5bfeb24')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

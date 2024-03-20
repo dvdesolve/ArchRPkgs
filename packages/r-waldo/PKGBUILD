@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=waldo
-_cranver=0.5.1
+_cranver=0.5.2
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -9,10 +9,10 @@ pkgdesc="Find Differences Between R Objects"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(MIT)
-depends=(r r-cli 'r-diffobj>=0.3.4' r-fansi r-glue r-rematch2 'r-rlang>=1.0.0' r-tibble r-methods)
+depends=('r>=3.6' r-cli 'r-diffobj>=0.3.4' r-fansi r-glue r-rematch2 'r-rlang>=1.0.0' r-tibble r-methods)
 optdepends=(r-covr r-r6 r-testthat r-withr r-xml2)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('45bf076cff449e3c506c95857734bb73fdf30040333709b8845d09a12c6fdf46')
+sha256sums=('82cdae1ab2c5e7e5dbf5c6bdf832020b46e152732053fb45de7c9a81afdf2e05')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

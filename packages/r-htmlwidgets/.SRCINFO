@@ -1,19 +1,19 @@
 pkgbase = r-htmlwidgets
 	pkgdesc = HTML Widgets for R
-	pkgver = 1.6.2
+	pkgver = 1.6.4
 	pkgrel = 1
 	url = https://cran.r-project.org/package=htmlwidgets
 	arch = any
 	license = MIT
 	depends = r
-	depends = r-htmltools>=0.5.4
+	depends = r-htmltools>=0.5.7
 	depends = r-jsonlite>=0.9.16
 	depends = r-yaml
 	depends = r-knitr>=1.8
 	depends = r-rmarkdown
 	depends = r-grdevices
 	optdepends = r-testthat
-	source = https://cran.r-project.org/src/contrib/htmlwidgets_1.6.2.tar.gz
-	sha256sums = 7fda1672a4c0fbc203c790677b6ee7c40d2c2d72be4f6772f75288fc712b10bc
+	source = https://cran.r-project.org/src/contrib/htmlwidgets_1.6.4.tar.gz
+	sha256sums = 7cb08f0b30485dac26f72e4056ec4ed8825d1398e8b9f25ed63db228fe3a0ed0
 
 pkgname = r-htmlwidgets

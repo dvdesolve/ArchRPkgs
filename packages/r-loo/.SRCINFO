@@ -1,6 +1,6 @@
 pkgbase = r-loo
 	pkgdesc = Efficient Leave-One-Out Cross-Validation and WAIC for Bayesian Models
-	pkgver = 2.6.0
+	pkgver = 2.7.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=loo
 	arch = any
@@ -10,6 +10,7 @@ pkgbase = r-loo
 	depends = r-matrixstats>=0.52
 	depends = r-stats
 	depends = r-parallel
+	depends = r-posterior>=1.5.0
 	depends = pandoc
 	depends = haskell-citeproc
 	optdepends = r-bayesplot
@@ -22,9 +23,8 @@ pkgbase = r-loo
 	optdepends = r-rstantools
 	optdepends = r-spdep
 	optdepends = r-testthat
-	optdepends = r-posterior
 	optdepends = r-graphics
-	source = https://cran.r-project.org/src/contrib/loo_2.6.0.tar.gz
-	sha256sums = 66da60fdf53a62cbc93797fa696a4cc43bce77f1721dd4bc1a58d25b3f981210
+	source = https://cran.r-project.org/src/contrib/loo_2.7.0.tar.gz
+	sha256sums = 7664f331555e569d6037100048681e3a696fb9ca2e87907712eb54faa85bcb36
 
 pkgname = r-loo

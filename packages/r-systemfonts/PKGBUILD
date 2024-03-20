@@ -1,10 +1,10 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=systemfonts
-_cranver=1.0.4
+_cranver=1.0.6
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="System Native Font Finding"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -12,7 +12,7 @@ license=(MIT)
 depends=('r>=3.2.0' 'r-cpp11>=0.2.1' fontconfig freetype2)
 optdepends=(r-testthat r-covr r-knitr r-rmarkdown r-tools)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('ef766c75b942f147d382664a00d6a4930f1bfe0cce9d88943f571682a85a84c0')
+sha256sums=('d1586e7b6ecdcb5af6559a30f58b806d347e570724313cb9cb655a27ad581dd7')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,17 +1,17 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=bigmemory.sri
-_cranver=0.1.6
+_cranver=0.1.8
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="A Shared Resource Interface for Bigmemory Project Packages"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL3 Apache)
 depends=(r r-methods)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('3bfa6ac966ce0ea93283f5856a853d0ee5ff85aedd7a7d1ca8a93d0aa642860c')
+sha256sums=('029a4ed24aa17636a20b83857d55fe6a9283acb8b647cbc75280dea8ec987771')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

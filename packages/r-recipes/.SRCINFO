@@ -1,6 +1,6 @@
 pkgbase = r-recipes
 	pkgdesc = Preprocessing and Feature Engineering Steps for Modeling
-	pkgver = 1.0.8
+	pkgver = 1.0.10
 	pkgrel = 1
 	url = https://cran.r-project.org/package=recipes
 	arch = any
@@ -19,7 +19,7 @@ pkgbase = r-recipes
 	depends = r-lubridate>=1.8.0
 	depends = r-magrittr
 	depends = r-purrr>=1.0.0
-	depends = r-rlang>=1.0.3
+	depends = r-rlang>=1.1.0
 	depends = r-tibble
 	depends = r-tidyr>=1.0.0
 	depends = r-tidyselect>=1.2.0
@@ -48,7 +48,7 @@ pkgbase = r-recipes
 	optdepends = r-workflows
 	optdepends = r-xml2
 	optdepends = r-rpart
-	source = https://cran.r-project.org/src/contrib/recipes_1.0.8.tar.gz
-	sha256sums = d3d20824b36e1195ed072b632c3be89714c335f56c0a2e942386fdadcd78a00d
+	source = https://cran.r-project.org/src/contrib/recipes_1.0.10.tar.gz
+	sha256sums = cfc5bdf7ec23c65f94730af8a53362fcc9a765988c5749f1568503bf8e4c9bd4
 
 pkgname = r-recipes

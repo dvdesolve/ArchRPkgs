@@ -2,7 +2,7 @@
 # Contributor: dhn <neilson+aur@sent.com>
 
 _cranname=gdata
-_cranver=2.19.0
+_cranver=3.0.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -10,10 +10,10 @@ pkgdesc="Various R Programming Tools for Data Manipulation"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(GPL2)
-depends=('r>=2.3.0' r-gtools 'perl>=5.10.0' r-methods r-stats r-utils)
+depends=(r r-gtools 'perl>=5.10.0' r-methods r-stats r-utils)
 optdepends=(r-runit)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('d145be8665b583e6ea590644969917ed9bcf4d954e18c7dc12f53890d26763d3')
+sha256sums=('a456b9921765a705fe8e51780dfbbc6ca005abc948b2f80effeccd468601b17f')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
@@ -24,4 +24,3 @@ package() {
 
   cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
 }
-

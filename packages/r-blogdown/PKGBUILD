@@ -2,7 +2,7 @@
 # Contributor: haha662 <haha662 at outlook dot com>
 
 _cranname=blogdown
-_cranver=1.18
+_cranver=1.19
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL3)
 depends=('r>=3.5.0' 'r-bookdown>=0.22' r-htmltools 'r-httpuv>=1.4.0' r-jsonlite 'r-knitr>=1.25' r-later 'r-rmarkdown>=2.8' 'r-servr>=0.21' 'r-xfun>=0.34' 'r-yaml>=2.1.19' hugo pandoc)
 optdepends=(r-miniui r-processx r-rstudioapi r-shiny r-stringr r-testit r-whoami r-tools)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('de7565114afeecf25b2f0802e97fc847106a6fe3dc722f35d57ad1be33603aa1')
+sha256sums=('0523a4a4b067ca57c7c067a7049b4bc692bb6d743e65d96199836295f47c9d3e')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

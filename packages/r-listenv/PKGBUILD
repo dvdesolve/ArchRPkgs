@@ -1,10 +1,10 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=listenv
-_cranver=0.9.0
+_cranver=0.9.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Environments Behaving (Almost) as Lists"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -12,7 +12,7 @@ license=(LGPL2.1)
 depends=('r>=3.1.2')
 optdepends=(r-r.utils r-r.rsp r-markdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('352841e04f0725d361b78cfdc75e00511f740d97237dd651ea86aa5484674887')
+sha256sums=('422aaf487b91c6512b83c05536f8dac255db79b16ee85254acc59a3fda8c1c3b')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,18 +1,18 @@
 pkgbase = r-gdata
 	pkgdesc = Various R Programming Tools for Data Manipulation
-	pkgver = 2.19.0
+	pkgver = 3.0.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=gdata
 	arch = any
 	license = GPL2
-	depends = r>=2.3.0
+	depends = r
 	depends = r-gtools
 	depends = perl>=5.10.0
 	depends = r-methods
 	depends = r-stats
 	depends = r-utils
 	optdepends = r-runit
-	source = https://cran.r-project.org/src/contrib/gdata_2.19.0.tar.gz
-	sha256sums = d145be8665b583e6ea590644969917ed9bcf4d954e18c7dc12f53890d26763d3
+	source = https://cran.r-project.org/src/contrib/gdata_3.0.0.tar.gz
+	sha256sums = a456b9921765a705fe8e51780dfbbc6ca005abc948b2f80effeccd468601b17f
 
 pkgname = r-gdata

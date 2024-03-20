@@ -2,7 +2,7 @@
 # Contributor: Kibouo <csonka.mihaly@hotmail.com>
 
 _cranname=mvtnorm
-_cranver=1.2-3
+_cranver=1.2-4
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -14,7 +14,7 @@ depends=('r>=3.5.0' r-stats gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-numderiv r-qrng)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('2adadc5df5e5303d51c9b0c1881930f51ff84bfb9b1a9754354e012f982bc6c7')
+sha256sums=('848287bb0016eaeab7cef474087ed4e6fadb805e26c767c816c204037d3d9aff')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=textshaping
-_cranver=0.3.6
+_cranver=0.3.7
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(MIT)
 depends=('r>=3.2.0' 'r-systemfonts>=1.0.0' 'r-cpp11>=0.2.1' freetype2 harfbuzz fribidi)
 optdepends=(r-covr r-knitr r-rmarkdown)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('80e2c087962f55ce2811fbc798b09f5638c06c6b28c10cd3cb3827005b902ada')
+sha256sums=('fa924dbe1fb4138b80d6c26ee42f4203843f1d34f77e2a5e42514e6fcc97ec42')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

@@ -1,7 +1,7 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=gert
-_cranver=1.9.3
+_cranver=2.0.1
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -12,7 +12,7 @@ license=(MIT)
 depends=(r r-askpass 'r-credentials>=1.2.1' 'r-openssl>=2.0.3' 'r-rstudioapi>=0.11' r-sys 'r-zip>=2.1.0' 'libgit2>=1.0')
 optdepends=(r-spelling r-knitr r-rmarkdown r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('628c236fb9d6aacd42d3703515d54c3d4a9a61e9058ee8c33bec7de5c36e6827')
+sha256sums=('0ed784837809ce89797ea77834d420e89351728f70d8d2f4b34487df813cd092')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

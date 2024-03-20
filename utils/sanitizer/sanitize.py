@@ -30,29 +30,6 @@ class RepoSearchError(Exception):
     def __init__(self, reason):
         self.reason = reason
 
-class MessageColor:
-    """ color codes """
-
-    red = "\033[1;31m"
-    green = "\033[1;32m"
-    yellow = "\033[1;33m"
-    blue = "\033[1;34m"
-    purple = "\033[1;35m"
-    nc = "\033[0m"
-    error = red
-    ok = green
-    warn = yellow
-    info = purple
-    data = blue
-    old = red
-    new = green
-
-class MessageText:
-    """ messages """
-
-    skipping = f'. {MessageColor.yellow}Skipping{MessageColor.nc}'
-    exiting = f'. {MessageColor.red}Exiting{MessageColor.nc}'
-
 
 ## some defaults
 PKG_ROOT = os.path.join("..", "..", "packages")
@@ -130,8 +107,40 @@ LIC_ORDER = [
 
 SCRIPT_VERSION = "0.0.1"
 
+MC_nc = ""
+MC_error = ""
+MC_ok = ""
+MC_warn = ""
+MC_info = ""
+MC_data = ""
+MC_old = ""
+MC_new = ""
+
+MT_skipping = f'. Skipping'
+MT_exiting = f'. Exiting'
+
 
 ## helper functions
+def colorize():
+    global MC_nc, MC_error, MC_ok, MC_warn, MC_info, MC_data, MC_old, MC_new, MT_skipping, MT_exiting
+
+    MC_red = "\033[1;31m"
+    MC_green = "\033[1;32m"
+    MC_yellow = "\033[1;33m"
+    MC_blue = "\033[1;34m"
+    MC_purple = "\033[1;35m"
+    MC_nc = "\033[0m"
+    MC_error = MC_red
+    MC_ok = MC_green
+    MC_warn = MC_yellow
+    MC_info = MC_purple
+    MC_data = MC_blue
+    MC_old = MC_red
+    MC_new = MC_green
+
+    MT_skipping = f'. {MC_yellow}Skipping{MC_nc}'
+    MT_exiting = f'. {MC_red}Exiting{MC_nc}'
+
 def archver(rver):
     """ convert R package version to conform to Arch standards
         https://wiki.archlinux.org/index.php/R_package_guidelines """
@@ -170,8 +179,8 @@ def clear_cache():
                 elif os.path.isdir(fp):
                     shutil.rmtree(fp)
             except Exception as e:
-                print(f'{MessageColor.error}[ERR ]{MessageColor.nc}'
-                      f' Failed to delete {MessageColor.data}{fp}{MessageColor.nc}: {e}')
+                print(f'{MC_error}[ERR ]{MC_nc}'
+                      f' Failed to delete {MC_data}{fp}{MC_nc}: {e}')
 
 def get_src(package, repo, force_down):
     """ download package source and extract DESCRIPTION """
@@ -187,9 +196,10 @@ def get_src(package, repo, force_down):
             fn = os.path.basename(urlparse(pkgurl).path)
             fp = os.path.join(CACHE_ROOT, "packages", fn)
 
+            # TODO add check for file size equality
             if force_down or not os.path.isfile(fp):
-                print(f'{MessageColor.info}[INFO]{MessageColor.nc}'
-                      f' Downloading {MessageColor.data}{fn}{MessageColor.nc}...')
+                print(f'{MC_info}[INFO]{MC_nc}'
+                      f' Downloading {MC_data}{fn}{MC_nc}...')
 
                 try:
                     with urlopen(pkgurl) as response2, open(fp, "wb") as pkgsrc:
@@ -198,8 +208,8 @@ def get_src(package, repo, force_down):
 
 
                 except Exception as e:
-                    print(f'{MessageColor.error}[ERR ]{MessageColor.nc}'
-                          f' Error occured during downloading {MessageColor.data}{fn}{MessageColor.nc}: {e}')
+                    print(f'{MC_error}[ERR ]{MC_nc}'
+                          f' Error occured during downloading {MC_data}{fn}{MC_nc}: {e}')
 
             # extract DESCRIPTION file from package
             orig_name = fn.split('_')[0]
@@ -214,32 +224,32 @@ def get_src(package, repo, force_down):
             srcgz.close()
 
     except Exception as e:
-        print(f'{MessageColor.error}[ERR ]{MessageColor.nc}'
-              f' Error occured during retrieving {MessageColor.data}{package["URL"]}{MessageColor.nc}: {e}')
+        print(f'{MC_error}[ERR ]{MC_nc}'
+              f' Error occured during retrieving {MC_data}{package["URL"]}{MC_nc}: {e}')
 
 def check_version(current, upstream):
     """ check for updates """
 
     if compare_ver(current, upstream) == -1:
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Package is outdated: {MessageColor.old}{current}{MessageColor.nc} vs {MessageColor.new}{upstream}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Package is outdated: {MC_old}{current}{MC_nc} vs {MC_new}{upstream}{MC_nc}')
 
 def check_title(current, upstream):
     """ check if package description have changed """
 
     if current != upstream:
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Package description differs from upstream: {MessageColor.old}{current}{MessageColor.nc} vs {MessageColor.new}{upstream}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Package description differs from upstream: {MC_old}{current}{MC_nc} vs {MC_new}{upstream}{MC_nc}')
 
 def check_arch(current, upstream):
     """ check for architecture specification violations """
 
     if upstream == "yes" and sorted(current) != sorted(["i686", "x86_64"]):
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Architectures should be {MessageColor.data}i686, x86_64{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Architectures should be {MC_data}i686, x86_64{MC_nc}')
     elif upstream == "no" and current != ["any"]:
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Architecture should be {MessageColor.data}any{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Architecture should be {MC_data}any{MC_nc}')
 
 def check_license(current, upstream):
     """ check for license specification violations """
@@ -286,20 +296,20 @@ def check_license(current, upstream):
 
     # TODO in case of unknown license should install LICENSE/LICENCE file
     if len(lic) != 0:
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Unknown licenses: {MessageColor.data}{lic}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Unknown licenses: {MC_data}{lic}{MC_nc}')
 
     if len(lics_new) != 0:
         lics_new.sort()
 
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Missing licenses: {MessageColor.data}{" ".join(lics_new)}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Missing licenses: {MC_data}{" ".join(lics_new)}{MC_nc}')
 
     if len(lics_our) != 0:
         lics_our.sort()
 
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Extra licenses: {MessageColor.data}{" ".join(lics_our)}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Extra licenses: {MC_data}{" ".join(lics_our)}{MC_nc}')
 
 def check_depends(current, upstream_depends, upstream_imports, upstream_linkingto):
     """ check for problems with dependencies """
@@ -372,14 +382,14 @@ def check_depends(current, upstream_depends, upstream_imports, upstream_linkingt
         if d in deps_new:
             # check for version incosistencies
             if deps_our[d] is None and deps_new[d] is not None:
-                print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-                      f' For dependency {MessageColor.data}{d}{MessageColor.nc} version should be set to {MessageColor.data}>={deps_new[d]}{MessageColor.nc}')
+                print(f'{MC_warn}[WARN]{MC_nc}'
+                      f' For dependency {MC_data}{d}{MC_nc} version should be set to {MC_data}>={deps_new[d]}{MC_nc}')
             elif deps_our[d] is not None and deps_new[d] is None:
-                print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-                      f' For dependency {MessageColor.data}{d}{MessageColor.nc} version shouldn\'t be set at all')
+                print(f'{MC_warn}[WARN]{MC_nc}'
+                      f' For dependency {MC_data}{d}{MC_nc} version shouldn\'t be set at all')
             elif deps_our[d] is not None and deps_new[d] is not None and compare_ver(deps_our[d], deps_new[d]) != 0:
-                print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-                      f' For dependency {MessageColor.data}{d}{MessageColor.nc} version mismatches with upstream: {MessageColor.old}{deps_our[d]}{MessageColor.nc} vs {MessageColor.new}{deps_new[d]}{MessageColor.nc}')
+                print(f'{MC_warn}[WARN]{MC_nc}'
+                      f' For dependency {MC_data}{d}{MC_nc} version mismatches with upstream: {MC_old}{deps_our[d]}{MC_nc} vs {MC_new}{deps_new[d]}{MC_nc}')
 
             # remove from both lists
             deps_new.pop(d)
@@ -397,8 +407,8 @@ def check_depends(current, upstream_depends, upstream_imports, upstream_linkingt
 
         d_new.sort()
 
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Missing dependencies: {MessageColor.data}{" ".join(d_new)}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Missing dependencies: {MC_data}{" ".join(d_new)}{MC_nc}')
 
     # TODO check against suppresion lists
     # TODO split by starting string (r-) to tell truly and possibly extra dependencies
@@ -413,8 +423,8 @@ def check_depends(current, upstream_depends, upstream_imports, upstream_linkingt
 
         d_our.sort()
 
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Extra dependencies: {MessageColor.data}{" ".join(d_our)}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Extra dependencies: {MC_data}{" ".join(d_our)}{MC_nc}')
 
 def check_optdepends(current, upstream):
     """ check for problems with optional dependencies """
@@ -450,16 +460,16 @@ def check_optdepends(current, upstream):
     if len(deps_new) != 0:
         deps_new.sort()
 
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Missing optional dependencies: {MessageColor.data}{" ".join(deps_new)}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Missing optional dependencies: {MC_data}{" ".join(deps_new)}{MC_nc}')
 
     # TODO check against suppresion lists
     # TODO split by starting string (r-) to tell truly and possibly extra dependencies
     if len(deps_our) != 0:
         deps_our.sort()
 
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' Extra optional dependencies: {MessageColor.data}{" ".join(deps_our)}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' Extra optional dependencies: {MC_data}{" ".join(deps_our)}{MC_nc}')
 
 def parse_description(package):
     robjects.r['options'](warn = -1) # suppress unrelated warnings
@@ -517,8 +527,8 @@ def parse_description(package):
     r_systemreqs = None if (r_systemreqs[0] is robjects.NA_Character or len(r_systemreqs[0]) == 0) else r_systemreqs[0]
 
     if r_systemreqs is not None:
-        print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-              f' SystemRequirements is not empty, please re-check by hand: {MessageColor.data}{r_systemreqs}{MessageColor.nc}')
+        print(f'{MC_warn}[WARN]{MC_nc}'
+              f' SystemRequirements is not empty, please re-check by hand: {MC_data}{r_systemreqs}{MC_nc}')
 
     return package
 
@@ -576,12 +586,12 @@ def sanitize(packages, force_down):
                 pkg = {"Name": package, "Version": pkgver, "Description": pkgdesc, "URL": pkgurl, "Arch": pkgarchs, "License": pkglics, "Depends": pkgdeps, "Optdepends": pkgoptdeps}
                 pkglist.append(pkg)
         else:
-            print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-                  f' Info for package {MessageColor.data}{package}{MessageColor.nc} can\'t be read{MessageText.skipping}')
+            print(f'{MC_warn}[WARN]{MC_nc}'
+                  f' Info for package {MC_data}{package}{MC_nc} can\'t be read{MT_skipping}')
 
     # check if there's something to do
     if len(pkglist) == 0:
-        print(f'{MessageColor.info}[INFO]{MessageColor.nc}'
+        print(f'{MC_info}[INFO]{MC_nc}'
               f' There are no R packages to be processed')
 
         return
@@ -596,13 +606,13 @@ def sanitize(packages, force_down):
         domain = "{uri.netloc}".format(uri = urlparse(package["URL"])).lower()
 
         if not any(r["url"] == domain for r in SUPPORTED_REPOS):
-            print(f'{MessageColor.warn}[WARN]{MessageColor.nc}'
-                  f' Package {MessageColor.data}{package["Name"]}{MessageColor.nc}: repository {MessageColor.data}{domain}{MessageColor.nc} is unsupported (yet){MessageText.skipping}')
+            print(f'{MC_warn}[WARN]{MC_nc}'
+                  f' Package {MC_data}{package["Name"]}{MC_nc}: repository {MC_data}{domain}{MC_nc} is unsupported (yet){MT_skipping}')
 
         repo = next(r for r in SUPPORTED_REPOS if r["url"] == domain)
 
-        print(f'{MessageColor.info}[INFO]{MessageColor.nc}'
-              f' Processing package {MessageColor.data}{package["Name"]}{MessageColor.nc}')
+        print(f'{MC_info}[INFO]{MC_nc}'
+              f' Processing package {MC_data}{package["Name"]}{MC_nc}')
 
         # download package source first
         get_src(package, repo, force_down)
@@ -624,33 +634,39 @@ def main():
     parser.add_argument('packages',
                         nargs = '*',
                         help = 'list of packages to be sanitized. If list is empty then all packages in current repo will be sanitized')
-    parser.add_argument('-f',
+    parser.add_argument('-f', # TODO add check for file size equality
                         action = 'store_true',
                         help = 'force to download every package source (by default only missing ones will be downloaded)')
     parser.add_argument('-c',
                         action = 'store_true',
                         help = 'clear package cache before proceeding further. NOTE: if no packages were given on a command line only cache clearing will be done!')
+    parser.add_argument('-g',
+                        action = 'store_true',
+                        help = 'disable coloring')
     parser.add_argument('--version',
                         action = 'version',
                         version = f'Sanitizer v{SCRIPT_VERSION}')
     args = vars(parser.parse_args())
 
     # process arguments
+    if not args["g"]:
+        colorize()
+
     if args["c"]:
-        print(f'{MessageColor.info}[INFO]{MessageColor.nc}'
+        print(f'{MC_info}[INFO]{MC_nc}'
               f' Performing cache clearing...\n')
         clear_cache()
 
         if len(args["packages"]) == 0:
-            print(f'{MessageColor.ok}[OK  ]{MessageColor.nc}'
+            print(f'{MC_ok}[OK  ]{MC_nc}'
                   f' Job done')
             sys.exit(0)
 
-    print(f'{MessageColor.info}[INFO]{MessageColor.nc}'
+    print(f'{MC_info}[INFO]{MC_nc}'
           f' Will sanitize and validate R packages NOW!\n')
     sanitize(args["packages"], args["f"])
 
-    print(f'{MessageColor.ok}[OK  ]{MessageColor.nc}'
+    print(f'{MC_ok}[OK  ]{MC_nc}'
           f' Job done')
 
 

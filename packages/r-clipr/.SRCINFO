@@ -1,7 +1,7 @@
 pkgbase = r-clipr
 	pkgdesc = Read and Write from the System Clipboard
 	pkgver = 0.8.0
-	pkgrel = 2
+	pkgrel = 3
 	url = https://cran.r-project.org/package=clipr
 	arch = any
 	license = GPL3
@@ -9,6 +9,7 @@ pkgbase = r-clipr
 	depends = r-utils
 	depends = xclip
 	depends = xsel
+	depends = wl-clipboard
 	optdepends = r-covr
 	optdepends = r-knitr
 	optdepends = r-rmarkdown

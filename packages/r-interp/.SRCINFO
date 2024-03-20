@@ -1,6 +1,6 @@
 pkgbase = r-interp
 	pkgdesc = Interpolation Methods
-	pkgver = 1.1.4
+	pkgver = 1.1.6
 	pkgrel = 1
 	url = https://cran.r-project.org/package=interp
 	arch = i686
@@ -20,7 +20,7 @@ pkgbase = r-interp
 	optdepends = r-lattice
 	optdepends = r-mass
 	optdepends = r-scatterplot3d
-	source = https://cran.r-project.org/src/contrib/interp_1.1-4.tar.gz
-	sha256sums = 4f7b5d388132a4d76e8635e2a7c4fa0d705df2b49e7d108faa16ce2236e34d06
+	source = https://cran.r-project.org/src/contrib/interp_1.1-6.tar.gz
+	sha256sums = 3674044e5334ecdf124054303929c084fc0797d3123e28576a230492ea6ecd34
 
 pkgname = r-interp

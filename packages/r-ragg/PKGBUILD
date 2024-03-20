@@ -1,10 +1,10 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=ragg
-_cranver=1.2.5
+_cranver=1.3.0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Graphic Devices Based on AGG"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -12,7 +12,7 @@ license=(MIT)
 depends=(r 'r-systemfonts>=1.0.3' 'r-textshaping>=0.3.0' freetype2 libpng libtiff libjpeg)
 optdepends=(r-covr r-testthat r-graphics r-grid)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('936f4d75e0e01cdeefb9f57d121cdd7812d0de5a9e1a3a8315f92ce1c84da8f9')
+sha256sums=('328c24d35b6b08317f21413902c35e32fd6a953d3e7401fa8b0f5d13895614b2')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

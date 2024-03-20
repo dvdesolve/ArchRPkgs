@@ -1,19 +1,19 @@
 # Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
 
 _cranname=spam
-_cranver=2.9-1
+_cranver=2.10-0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=3
+pkgrel=1
 pkgdesc="SPArse Matrix"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(BSD LGPL2.1)
-depends=('r>=3.5' r-dotcall64 r-methods r-grid gcc-fortran)
+depends=('r>=3.5' r-dotcall64 r-methods r-grid 'r-rcpp>=1.0.8.3' gcc-fortran)
 makedepends=(gcc-fortran)
 optdepends=(r-spam64 r-fields r-testthat r-r.rsp r-truncdist r-knitr r-rmarkdown r-matrix)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('c32e219279988b1bfc258aaf64f5a46efa558202848a9ae64946ffbe8b497ddb')
+sha256sums=('719c86a23801ecf051ffd8291912ee3567af4010e74af470fbf09e274728ac79')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

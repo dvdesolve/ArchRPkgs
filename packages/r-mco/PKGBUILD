@@ -2,7 +2,7 @@
 # Contributor: getzze <getzze@gmail.com>
 
 _cranname=mco
-_cranver=1.15.6
+_cranver=1.16
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
 pkgrel=1
@@ -13,7 +13,7 @@ license=(GPL2)
 depends=('r>=3.0.0')
 optdepends=(r-scatterplot3d r-testthat)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('17ebe279cb9c89b7cd8054ac50d3b657d2b10dadbc584b88da7e79c3a9680582')
+sha256sums=('5d115221d03deec973e380a6520ca871f94680397d223c4f9399ec68a17be5eb')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"
@@ -24,4 +24,3 @@ package() {
 
   cp -a --no-preserve=ownership "${_cranname}" "${pkgdir}/usr/lib/R/library"
 }
-

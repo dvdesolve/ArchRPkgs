@@ -2,17 +2,17 @@
 # Contributor: frichtlm <frichtlm@gmail.com>
 
 _cranname=BH
-_cranver=1.81.0-1
+_cranver=1.84.0-0
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Boost C++ Header Files"
 arch=(any)
 url="https://cran.r-project.org/package=${_cranname}"
 license=(custom:BSL-1.0)
 depends=(r)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('f51c8badd6f181e06353314e1d15a6ec1495cc498ee74b6fa4ea8aba6e97ff64')
+sha256sums=('6fb660755f572cd975073d7052075654acf8db12d208954ca223b8e4f77ef1ac')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l ${srcdir}

@@ -2,10 +2,10 @@
 # Contributor: peippo <christoph+aur@christophfink.com>
 
 _cranname=rJava
-_cranver=1.0-6
+_cranver=1.0-11
 pkgname=r-${_cranname,,}
 pkgver=${_cranver//[:-]/.}
-pkgrel=2
+pkgrel=1
 pkgdesc="Low-Level R to Java Interface"
 arch=(i686 x86_64)
 url="https://cran.r-project.org/package=${_cranname}"
@@ -13,7 +13,7 @@ license=(LGPL2.1)
 depends=('r>=3.6.0' r-methods java-environment)
 makedepends=(make)
 source=("https://cran.r-project.org/src/contrib/${_cranname}_${_cranver}.tar.gz")
-sha256sums=('e290d0493317a5d6c452793e92baa914e37ef03faef19b2e436329b4ec8658c6')
+sha256sums=('9ea0ccf5553d86f7de8649a8324766c4f0810f35b7be561640dd87fd37986417')
 
 build() {
   R CMD INSTALL ${_cranname}_${_cranver}.tar.gz -l "${srcdir}"

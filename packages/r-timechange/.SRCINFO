@@ -1,6 +1,6 @@
 pkgbase = r-timechange
 	pkgdesc = Efficient Manipulation of Date-Times
-	pkgver = 0.2.0
+	pkgver = 0.3.0
 	pkgrel = 1
 	url = https://cran.r-project.org/package=timechange
 	arch = i686
@@ -11,7 +11,7 @@ pkgbase = r-timechange
 	depends = tzdata
 	optdepends = r-testthat
 	optdepends = r-knitr
-	source = https://cran.r-project.org/src/contrib/timechange_0.2.0.tar.gz
-	sha256sums = 3d602008052123daef94a5c3f5154c5461b4ec0432ab70c37273d7ddd252f7f1
+	source = https://cran.r-project.org/src/contrib/timechange_0.3.0.tar.gz
+	sha256sums = d85c0b5514ab9578d16032e703c33f197feaed1a424c834ebfcbf0ad46ae46b4
 
 pkgname = r-timechange
